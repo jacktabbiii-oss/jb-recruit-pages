@@ -1,0 +1,19 @@
+{
+  "name": "jb-recruit-pages",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Private, per-recruit pitch pages for JB Sports with open alerts and private film.",
+  "scripts": {
+    "new": "node scripts/new-recruit.js",
+    "off": "node scripts/toggle.js off",
+    "on": "node scripts/toggle.js on",
+    "upload": "node scripts/upload-media.js",
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.700.0",
+    "@aws-sdk/s3-request-presigner": "^3.700.0",
+    "resend": "^4.0.0"
+  }
+}

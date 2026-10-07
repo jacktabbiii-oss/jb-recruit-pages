@@ -1,0 +1,459 @@
+{
+  "slug": "college-example",
+  "token": "EXAMPLE_TOKEN",
+  "active": true,
+  "mode": "college",
+  "familyLabel": "For the Reeds",
+  "heroVideo": {
+    "clip": null,
+    "len": ""
+  },
+  "first": "Marcus",
+  "last": "Reed",
+  "position": "WR",
+  "school": "[School]",
+  "number": 7,
+  "height": "6-1",
+  "weight": "195",
+  "draftClass": "Class of 2029",
+  "photos": [
+    {
+      "src": null,
+      "cap": "Game action",
+      "sub": "",
+      "wm": "84"
+    },
+    {
+      "src": null,
+      "cap": "Portrait",
+      "sub": "",
+      "wm": "TE"
+    },
+    {
+      "src": null,
+      "cap": "In-line",
+      "sub": "",
+      "wm": "84"
+    },
+    {
+      "src": null,
+      "cap": "Red zone",
+      "sub": "",
+      "wm": "6"
+    },
+    {
+      "src": null,
+      "cap": "Sideline",
+      "sub": "",
+      "wm": "LT"
+    },
+    {
+      "src": null,
+      "cap": "Draft night",
+      "sub": "",
+      "wm": "27"
+    }
+  ],
+  "plays": [
+    {
+      "k": "Clip 01 · Separation",
+      "t": "[Game · Qtr · Down]",
+      "n": "<b>Jack:</b> [the release and the route where you win early]",
+      "clip": null,
+      "len": "0:10"
+    },
+    {
+      "k": "Clip 02 · After the catch",
+      "t": "[Game · Qtr · Down]",
+      "n": "<b>Jack:</b> [what a coordinator sees here]",
+      "clip": null,
+      "len": "0:12"
+    },
+    {
+      "k": "Clip 03 · Next step",
+      "t": "[Game · Qtr · Down]",
+      "n": "<b>Jack:</b> [the one thing to add this off-season, and how we add it]",
+      "clip": null,
+      "len": "0:14"
+    }
+  ],
+  "defaultPick": 90,
+  "timeline": [
+    {
+      "when": "Now",
+      "what": "This season",
+      "jb": "Jack at games. Weekly film notes. NIL deals reviewed by Ryan before you sign.",
+      "now": true
+    },
+    {
+      "when": "Winter",
+      "what": "Off-season",
+      "jb": "Nashville access. A position-specific plan with the coaches and trainers the NFL guys use."
+    },
+    {
+      "when": "Spring",
+      "what": "Name",
+      "jb": "A clean social presence, and the right partners once performance earns them. Ryan reads anything with a signature line."
+    },
+    {
+      "when": "Year 2 to 3",
+      "what": "Produce",
+      "jb": "Film, growth, the right conversations with scouts at the right time. We are quiet until it counts."
+    },
+    {
+      "when": "Senior fall",
+      "what": "Draft year",
+      "jb": "The draft version of this page, with your tape in it. Same team, no handoff."
+    },
+    {
+      "when": "April",
+      "what": "The league",
+      "jb": "Combine, Pro Day, draft night. Ryan on the rookie deal."
+    }
+  ],
+  "positionGroup": "WR",
+  "roster": [
+    [
+      "George Kittle",
+      "49ers"
+    ],
+    [
+      "Sam LaPorta",
+      "Lions"
+    ],
+    [
+      "Tucker Kraft",
+      "Packers"
+    ],
+    [
+      "Jake Ferguson",
+      "Cowboys"
+    ],
+    [
+      "Noah Gray",
+      "Chiefs"
+    ],
+    [
+      "Daniel Bellinger",
+      "Titans"
+    ],
+    [
+      "Gunnar Helm",
+      "Titans"
+    ],
+    [
+      "Hayden Rucci",
+      "49ers"
+    ],
+    [
+      "Riley Nowakowski",
+      "Steelers"
+    ],
+    [
+      "Mitchell Evans",
+      "Panthers"
+    ],
+    [
+      "Carson Towt",
+      "Colts"
+    ],
+    [
+      "Tanner McLachlan",
+      "FA"
+    ],
+    [
+      "Caden Prieskorn",
+      "FA"
+    ]
+  ],
+  "wall": [
+    [
+      "George Kittle",
+      "TE · 49ers",
+      "top",
+      "/clients/kittle.webp"
+    ],
+    [
+      "Sam LaPorta",
+      "TE · Lions",
+      "pro",
+      "/clients/laporta.webp"
+    ],
+    [
+      "Tucker Kraft",
+      "TE · Packers",
+      "",
+      "/clients/kraft.webp"
+    ],
+    [
+      "Jake Ferguson",
+      "TE · Cowboys",
+      "pro",
+      "/clients/ferguson.webp"
+    ],
+    [
+      "Noah Gray",
+      "TE · Chiefs",
+      ""
+    ],
+    [
+      "Geno Stone",
+      "DB · Bills",
+      ""
+    ],
+    [
+      "Amani Hooker",
+      "DB · Titans",
+      ""
+    ],
+    [
+      "Daniel Bellinger",
+      "TE · Titans",
+      ""
+    ],
+    [
+      "Gunnar Helm",
+      "TE · Titans",
+      ""
+    ],
+    [
+      "Anthony Nelson",
+      "DE · Buccaneers",
+      ""
+    ],
+    [
+      "Jay Higgins",
+      "LB · Ravens",
+      ""
+    ],
+    [
+      "Josh Butler",
+      "CB · Cowboys",
+      ""
+    ],
+    [
+      "Charlie Heck",
+      "OL · Dolphins",
+      ""
+    ],
+    [
+      "Connor Colby",
+      "OL · 49ers",
+      ""
+    ],
+    [
+      "Kristian Welch",
+      "LB · Packers",
+      ""
+    ],
+    [
+      "Hunter Wohler",
+      "DB · Colts",
+      ""
+    ]
+  ],
+  "rosterAll": [
+    [
+      "Josh Butler",
+      "CB · Cowboys"
+    ],
+    [
+      "Sebastian Castro",
+      "DB · Steelers"
+    ],
+    [
+      "Connor Colby",
+      "OL · 49ers"
+    ],
+    [
+      "Charlie Heck",
+      "OL · Dolphins"
+    ],
+    [
+      "Jay Higgins",
+      "LB · Ravens"
+    ],
+    [
+      "Amani Hooker",
+      "DB · Titans"
+    ],
+    [
+      "Anthony Nelson",
+      "DE · Buccaneers"
+    ],
+    [
+      "Geno Stone",
+      "DB · Bills"
+    ],
+    [
+      "Kristian Welch",
+      "LB · Packers"
+    ],
+    [
+      "Kaden Wetjen",
+      "WR · Steelers"
+    ],
+    [
+      "Hunter Wohler",
+      "DB · Colts"
+    ]
+  ],
+  "quotes": [
+    {
+      "q": "Amazing experience. Grew mentally, physically, and positionally.",
+      "who": "Daniel Bellinger · 4th round",
+      "clip": null,
+      "img": "/elevate/bellinger.webp"
+    },
+    {
+      "q": "In-depth program, no shortage of reps, unreal learning curve.",
+      "who": "Sam LaPorta · 2nd round",
+      "clip": null,
+      "img": "/elevate/laporta.webp"
+    },
+    {
+      "q": "Personal, powerful, bottom line... prepared.",
+      "who": "Jake Ferguson · 4th round",
+      "clip": null,
+      "img": "/elevate/ferguson.webp"
+    }
+  ],
+  "parentQA": [
+    {
+      "q": "Is any of this allowed?",
+      "a": "<b>Yes, when it is done in the open.</b> NIL representation is governed by state law, NCAA rules and the school's own policy. We register where registration is required, every agreement goes in writing, and we file what the school asks for. If something would cost him eligibility, we do not do it. <b>[Ryan: confirm state and school requirements before this goes out.]</b>"
+    },
+    {
+      "q": "What does it cost us?",
+      "a": "Nothing up front. Our fee is a percentage of NIL and marketing income we bring in, stated in the agreement before anything is signed. We walk through the exact terms with you in person."
+    },
+    {
+      "q": "Who reads the contracts?",
+      "a": "Ryan Hays, a licensed attorney and NFL contract advisor since 2012. Collective agreements, brand deals, exclusivity, what happens if a coach leaves. He reads all of it before your son signs."
+    },
+    {
+      "q": "What if it isn't working at his school?",
+      "a": "Then we have a protocol for that. It is a last resort. The plan is to make it work where he is. If a move is ever the right call, it is made with a short list, a real need on the other end, and everything in writing."
+    },
+    {
+      "q": "Who answers at 2 a.m.?",
+      "a": "Jack first, then Ryan. Both have his number, and there is no account manager in between."
+    },
+    {
+      "q": "Who are you, really?",
+      "a": "35 years. Combined 50 years representing NFL players. Six clients who were the highest paid at their position. Jack played and coached. Ryan is a licensed attorney. Call any parent of a current client; we will give you the numbers."
+    }
+  ],
+  "handle": [
+    [
+      "Compliance",
+      "Registrations, disclosures, school paperwork. Done right, filed on time."
+    ],
+    [
+      "NIL deals",
+      "Every agreement read by Ryan before you sign. Nothing exclusive you did not mean to sign."
+    ],
+    [
+      "Money",
+      "Budget, taxes on NIL income, advisors screened."
+    ],
+    [
+      "Brand",
+      "Once performance earns it."
+    ],
+    [
+      "Training",
+      "Off-season access to the Nashville program."
+    ],
+    [
+      "School",
+      "Academic support and the people at the school who matter, handled."
+    ],
+    [
+      "Family",
+      "Your parents know what is going on before they have to ask."
+    ],
+    [
+      "The league",
+      "Same team from here to draft night. No handoff."
+    ]
+  ],
+  "contact": {
+    "name": "Jack",
+    "phone": "(732) 675-0705",
+    "phoneE164": "+17326750705",
+    "email": "jacktabb@nfladvisor.com"
+  },
+  "cta": {
+    "label": "Set up a meeting",
+    "sms": "Hey Jack, it's Marcus. I'd like to set up a time to meet."
+  },
+  "alertTo": [
+    "jacktabb@nfladvisor.com"
+  ],
+  "unlocked": [],
+  "ask": {
+    "h": "Thirty minutes with Jack and Ryan",
+    "lede": "Everything on this page is the short version. What the next three years look like, and who would be in your corner for them, is a conversation. Bring your parents."
+  },
+  "copy": [
+    [
+      "#proofH",
+      "Guys who started where you are"
+    ],
+    [
+      "#proofLede",
+      "JB Sports has represented first-rounders, Pro Bowlers and All-Pros. Every one of them was once exactly where you are, with the same decisions in front of him."
+    ],
+    [
+      "#trainH",
+      "Train where the NFL guys train"
+    ],
+    [
+      "#trainLede",
+      "Nashville, off-season. The same room Kittle, LaPorta and Kraft prepared in. Below is what that looks like."
+    ],
+    [
+      "#fitEyebrow",
+      "02 · The plan"
+    ],
+    [
+      "#fitH",
+      "Three years at your school, built on purpose"
+    ],
+    [
+      "#fitLede",
+      "Slide each one. This is what we build your college years around, so the draft conversation starts now instead of your senior fall."
+    ]
+  ],
+  "fit": [
+    [
+      "Development",
+      "Position coach, scheme, strength staff, the NFL track record"
+    ],
+    [
+      "Playing time",
+      "Early snaps vs. growing behind a vet"
+    ],
+    [
+      "NIL and brand",
+      "Partners that fit who you are, in writing"
+    ],
+    [
+      "The degree",
+      "Program, academic support, finishing"
+    ],
+    [
+      "Family",
+      "Keeping the people who got you here close"
+    ]
+  ],
+  "fitTail": "This is the plan for the next three years at your school. Ryan reads every agreement before you sign.",
+  "draftMoments": [
+    {
+      "yt": "QAdPpzFOJQo",
+      "who": "Tucker Kraft",
+      "what": "Draft night · Rd 3, Pk 78 · Packers"
+    }
+  ]
+}

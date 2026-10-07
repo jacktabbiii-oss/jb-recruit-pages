@@ -1,0 +1,423 @@
+{
+  "slug": "eli-finley",
+  "token": "oINLiDf3Kye2",
+  "active": true,
+  "mode": "draft",
+  "familyLabel": "For the Finleys",
+  "heroVideo": {
+    "clip": null,
+    "len": "1:20"
+  },
+  "first": "Eli",
+  "last": "Finley",
+  "position": "TE",
+  "school": "Louisiana Tech",
+  "number": 84,
+  "height": "6-4",
+  "weight": "250",
+  "draftClass": 2027,
+  "photos": [
+    {
+      "src": "/recruits/eli-finley/game-01-cutout.webp",
+      "cutout": true,
+      "cap": "Game action",
+      "sub": "Louisiana Tech · #84",
+      "wm": "84"
+    },
+    {
+      "src": "/recruits/eli-finley/game-02-cutout.webp",
+      "cutout": true,
+      "cap": "Blue",
+      "sub": "Louisiana Tech · #84",
+      "wm": "TE"
+    },
+    {
+      "src": "/recruits/eli-finley/game-01.webp",
+      "cap": "In stride",
+      "sub": "[opponent · date]",
+      "wm": "84"
+    },
+    {
+      "src": "/recruits/eli-finley/game-02.webp",
+      "cap": "Pregame",
+      "sub": "[game]",
+      "wm": "84"
+    },
+    {
+      "src": null,
+      "cap": "Sideline",
+      "sub": "[game]",
+      "wm": "LT"
+    },
+    {
+      "src": null,
+      "cap": "Draft night",
+      "sub": "Washington, D.C.",
+      "wm": "27"
+    }
+  ],
+  "plays": [
+    {
+      "k": "Clip 01 · Run game",
+      "t": "[Game · Qtr · Down]",
+      "n": "<b>Jack:</b> [what you do as an in-line blocker here that most college TEs can't]",
+      "clip": null,
+      "len": "0:12"
+    },
+    {
+      "k": "Clip 02 · Routes",
+      "t": "[Game · Qtr · Down]",
+      "n": "<b>Jack:</b> [the route where you separate, and why a TE coach stops the tape here]",
+      "clip": null,
+      "len": "0:10"
+    },
+    {
+      "k": "Clip 03 · The ask",
+      "t": "[Game · Qtr · Down]",
+      "n": "<b>Jack:</b> [the one thing scouts will want answered at the Combine, and how ElevaTE answers it]",
+      "clip": null,
+      "len": "0:14"
+    }
+  ],
+  "defaultPick": 90,
+  "timeline": [
+    {
+      "when": "Oct 2026",
+      "what": "Senior season",
+      "jb": "Jack at games. Weekly film notes. We start the scout conversations now.",
+      "now": true
+    },
+    {
+      "when": "Dec 2026",
+      "what": "Season ends",
+      "jb": "<b>Decision point.</b> Sign with JB, then straight to Nashville."
+    },
+    {
+      "when": "Jan and Feb 2027",
+      "what": "Senior Bowl",
+      "jb": "We push for the invite and manage every team meeting that week."
+    },
+    {
+      "when": "Jan to Feb",
+      "what": "ElevaTE · Nashville",
+      "jb": "TE-only Combine prep with Jeremy Holt. Your personal plan unlocks here."
+    },
+    {
+      "when": "Feb to Mar",
+      "what": "NFL Combine",
+      "jb": "Interview prep, medical strategy, the 40 and the 3-cone numbers we're targeting."
+    },
+    {
+      "when": "Mar 2027",
+      "what": "Pro Day",
+      "jb": "We decide what you run again and what you stand on."
+    },
+    {
+      "when": "Apr 29 to May 1",
+      "what": "2027 Draft · Washington, D.C.",
+      "jb": "On the National Mall. Ryan negotiates the rookie deal."
+    },
+    {
+      "when": "2027",
+      "what": "Rookie year",
+      "jb": "Relocation, budget, insurance, advisors screened. NFL-ready in year one."
+    },
+    {
+      "when": "2030",
+      "what": "Second contract",
+      "jb": "This is the one that sets you up. It's where JB set the TE market in 2020."
+    }
+  ],
+  "positionGroup": "TE",
+  "roster": [
+    [
+      "George Kittle",
+      "49ers"
+    ],
+    [
+      "Sam LaPorta",
+      "Lions"
+    ],
+    [
+      "Tucker Kraft",
+      "Packers"
+    ],
+    [
+      "Jake Ferguson",
+      "Cowboys"
+    ],
+    [
+      "Noah Gray",
+      "Chiefs"
+    ],
+    [
+      "Daniel Bellinger",
+      "Titans"
+    ],
+    [
+      "Gunnar Helm",
+      "Titans"
+    ],
+    [
+      "Hayden Rucci",
+      "49ers"
+    ],
+    [
+      "Riley Nowakowski",
+      "Steelers"
+    ],
+    [
+      "Mitchell Evans",
+      "Panthers"
+    ],
+    [
+      "Carson Towt",
+      "Colts"
+    ],
+    [
+      "Tanner McLachlan",
+      "FA"
+    ],
+    [
+      "Caden Prieskorn",
+      "FA"
+    ]
+  ],
+  "wall": [
+    [
+      "George Kittle",
+      "TE · 49ers",
+      "top",
+      "/clients/kittle.webp"
+    ],
+    [
+      "Sam LaPorta",
+      "TE · Lions",
+      "pro",
+      "/clients/laporta.webp"
+    ],
+    [
+      "Tucker Kraft",
+      "TE · Packers",
+      "",
+      "/clients/kraft.webp"
+    ],
+    [
+      "Jake Ferguson",
+      "TE · Cowboys",
+      "pro",
+      "/clients/ferguson.webp"
+    ],
+    [
+      "Noah Gray",
+      "TE · Chiefs",
+      ""
+    ],
+    [
+      "Geno Stone",
+      "DB · Bills",
+      ""
+    ],
+    [
+      "Amani Hooker",
+      "DB · Titans",
+      ""
+    ],
+    [
+      "Daniel Bellinger",
+      "TE · Titans",
+      ""
+    ],
+    [
+      "Gunnar Helm",
+      "TE · Titans",
+      ""
+    ],
+    [
+      "Anthony Nelson",
+      "DE · Buccaneers",
+      ""
+    ],
+    [
+      "Jay Higgins",
+      "LB · Ravens",
+      ""
+    ],
+    [
+      "Josh Butler",
+      "CB · Cowboys",
+      ""
+    ],
+    [
+      "Charlie Heck",
+      "OL · Dolphins",
+      ""
+    ],
+    [
+      "Connor Colby",
+      "OL · 49ers",
+      ""
+    ],
+    [
+      "Kristian Welch",
+      "LB · Packers",
+      ""
+    ],
+    [
+      "Hunter Wohler",
+      "DB · Colts",
+      ""
+    ]
+  ],
+  "rosterAll": [
+    [
+      "Josh Butler",
+      "CB · Cowboys"
+    ],
+    [
+      "Sebastian Castro",
+      "DB · Steelers"
+    ],
+    [
+      "Connor Colby",
+      "OL · 49ers"
+    ],
+    [
+      "Charlie Heck",
+      "OL · Dolphins"
+    ],
+    [
+      "Jay Higgins",
+      "LB · Ravens"
+    ],
+    [
+      "Amani Hooker",
+      "DB · Titans"
+    ],
+    [
+      "Anthony Nelson",
+      "DE · Buccaneers"
+    ],
+    [
+      "Geno Stone",
+      "DB · Bills"
+    ],
+    [
+      "Kristian Welch",
+      "LB · Packers"
+    ],
+    [
+      "Kaden Wetjen",
+      "WR · Steelers"
+    ],
+    [
+      "Hunter Wohler",
+      "DB · Colts"
+    ]
+  ],
+  "quotes": [
+    {
+      "q": "Amazing experience. Grew mentally, physically, and positionally.",
+      "who": "Daniel Bellinger · 4th round",
+      "clip": null,
+      "img": "/elevate/bellinger.webp"
+    },
+    {
+      "q": "In-depth program, no shortage of reps, unreal learning curve.",
+      "who": "Sam LaPorta · 2nd round",
+      "clip": null,
+      "img": "/elevate/laporta.webp"
+    },
+    {
+      "q": "Personal, powerful, bottom line... prepared.",
+      "who": "Jake Ferguson · 4th round",
+      "clip": null,
+      "img": "/elevate/ferguson.webp"
+    }
+  ],
+  "parentQA": [
+    {
+      "q": "Who answers at 2 a.m.?",
+      "a": "Jack first, then Ryan. Both have Eli's number, and there is no account manager or call center in between. We're a mid-size agency on purpose: he will not be represented in the shadow of a higher-profile client."
+    },
+    {
+      "q": "How do fees work?",
+      "a": "Agent fees on NFL playing contracts are capped by the NFLPA, and ours go in writing before anything is signed. Nothing is owed up front, and nothing is owed on money he never receives. We'll walk through the exact terms with you in person."
+    },
+    {
+      "q": "How do you protect what he earns?",
+      "a": "Ryan writes the guarantee and injury language himself. Beyond the contract: we screen every financial advisor and money manager before he meets them, coordinate taxes, set up disability insurance, and build a budget in year one. The goal is a lifetime of financial security. A good first contract is only the start."
+    },
+    {
+      "q": "What happens if he gets hurt?",
+      "a": "Injury settlements, grievances, and second medical opinions are ours to handle, and the disability policy is in place before the first snap. We've done this for players at every level of the roster."
+    },
+    {
+      "q": "What if he's not drafted where we hope?",
+      "a": "We have placed undrafted free agents who are still in the league. The draft slot decides the first contract; preparation decides the second. ElevaTE exists to make year one count regardless of the round."
+    },
+    {
+      "q": "Who are you, really?",
+      "a": "35 years. Combined 50 years of experience representing NFL players. Six clients who were the highest paid at their position. Jack played the position; Ryan is a licensed attorney. You can call any parent of a current client; we'll give you the numbers."
+    }
+  ],
+  "handle": [
+    [
+      "Contract",
+      "Rookie deal, extensions, guarantees, fine appeals, grievances. Ryan writes the language."
+    ],
+    [
+      "Money",
+      "Budget in year one. Every advisor and money manager screened before you meet them."
+    ],
+    [
+      "Taxes",
+      "Multi-state filings coordinated. You sign; you don't chase."
+    ],
+    [
+      "Insurance",
+      "Disability policy in place before the first snap. Second medical opinions on us to arrange."
+    ],
+    [
+      "The move",
+      "Relocation, housing, car, travel. You land in a city with a place to live."
+    ],
+    [
+      "Media",
+      "Interview prep, press, social. Nothing you say gets you in trouble."
+    ],
+    [
+      "Training",
+      "Off-season plans, Nashville access, recovery. Every year, not just the draft."
+    ],
+    [
+      "After",
+      "Post-career benefits filed, planning done. The career ends; the security doesn't."
+    ]
+  ],
+  "contact": {
+    "name": "Jack",
+    "phone": "(732) 675-0705",
+    "phoneE164": "+17326750705",
+    "email": "jacktabb@nfladvisor.com"
+  },
+  "cta": {
+    "label": "Set up a meeting",
+    "sms": "Hey Jack, it's Eli. I'd like to set up a time to meet."
+  },
+  "alertTo": [
+    "jacktabb@nfladvisor.com"
+  ],
+  "unlocked": [],
+  "ask": {
+    "h": "Thirty minutes with Jack and Ryan",
+    "lede": "Everything on this page is the short version. The plan for you, the numbers behind it, and the people who'd be in your corner are a conversation, not a web page. Bring your parents."
+  },
+  "draftMoments": [
+    {
+      "yt": "QAdPpzFOJQo",
+      "who": "Tucker Kraft",
+      "what": "Draft night · Rd 3, Pk 78 · Packers"
+    }
+  ]
+}

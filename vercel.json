@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    { "source": "/r/:slug/:token", "destination": "/api/page?slug=:slug&token=:token" },
+    { "source": "/r/:slug", "destination": "/api/page?slug=:slug" }
+  ],
+  "headers": [
+    { "source": "/(.*)", "headers": [
+      { "key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive" },
+      { "key": "X-Frame-Options", "value": "DENY" },
+      { "key": "Referrer-Policy", "value": "no-referrer" }
+    ] }
+  ],
+  "functions": { "api/*.js": { "maxDuration": 10, "includeFiles": "{template.html,recruits/*.json}" } }
+}

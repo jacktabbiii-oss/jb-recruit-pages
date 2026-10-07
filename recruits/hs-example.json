@@ -1,0 +1,464 @@
+{
+  "slug": "hs-example",
+  "token": "EXAMPLE_TOKEN",
+  "active": true,
+  "mode": "hs",
+  "familyLabel": "For the Carters",
+  "heroVideo": {
+    "clip": null,
+    "len": ""
+  },
+  "first": "Jalen",
+  "last": "Carter",
+  "position": "DB",
+  "school": "[High school]",
+  "number": 2,
+  "height": "6-0",
+  "weight": "180",
+  "draftClass": "Class of 2028",
+  "photos": [
+    {
+      "src": null,
+      "cap": "Game action",
+      "sub": "",
+      "wm": "84"
+    },
+    {
+      "src": null,
+      "cap": "Portrait",
+      "sub": "",
+      "wm": "TE"
+    },
+    {
+      "src": null,
+      "cap": "In-line",
+      "sub": "",
+      "wm": "84"
+    },
+    {
+      "src": null,
+      "cap": "Red zone",
+      "sub": "",
+      "wm": "6"
+    },
+    {
+      "src": null,
+      "cap": "Sideline",
+      "sub": "",
+      "wm": "LT"
+    },
+    {
+      "src": null,
+      "cap": "Draft night",
+      "sub": "",
+      "wm": "27"
+    }
+  ],
+  "plays": [
+    {
+      "k": "Clip 01 · Coverage",
+      "t": "[Game · Qtr · Down]",
+      "n": "<b>Jack:</b> [what a college DB coach sees in this rep]",
+      "clip": null,
+      "len": "0:10"
+    },
+    {
+      "k": "Clip 02 · Tackling",
+      "t": "[Game · Qtr · Down]",
+      "n": "<b>Jack:</b> [the play that answers the size question]",
+      "clip": null,
+      "len": "0:12"
+    },
+    {
+      "k": "Clip 03 · Next step",
+      "t": "[Game · Qtr · Down]",
+      "n": "<b>Jack:</b> [the one thing to add before camps, and how]",
+      "clip": null,
+      "len": "0:14"
+    }
+  ],
+  "defaultPick": 90,
+  "timeline": [
+    {
+      "when": "Now",
+      "what": "This season",
+      "jb": "Film cut and sent where it matters. Jack at games when he can be.",
+      "now": true
+    },
+    {
+      "when": "Winter",
+      "what": "Camps and combines",
+      "jb": "Which ones are worth the trip, what to run, what to skip."
+    },
+    {
+      "when": "Spring",
+      "what": "Offers",
+      "jb": "We help your family read them: what is real, what is conditional, what is a number for the news."
+    },
+    {
+      "when": "Summer",
+      "what": "Visits",
+      "jb": "The questions to ask the position coach, the strength staff, the academic office. Written down."
+    },
+    {
+      "when": "[dates]",
+      "what": "Signing period",
+      "jb": "<b>[Confirm the current early and regular signing dates.]</b> The decision is made before the pressure, not during it."
+    },
+    {
+      "when": "Year 1",
+      "what": "College",
+      "jb": "The college version of this page. Same team, no handoff."
+    },
+    {
+      "when": "Later",
+      "what": "The league",
+      "jb": "Where every one of the guys on the wall above started: a high school kid with a choice."
+    }
+  ],
+  "positionGroup": "DB",
+  "roster": [
+    [
+      "George Kittle",
+      "49ers"
+    ],
+    [
+      "Sam LaPorta",
+      "Lions"
+    ],
+    [
+      "Tucker Kraft",
+      "Packers"
+    ],
+    [
+      "Jake Ferguson",
+      "Cowboys"
+    ],
+    [
+      "Noah Gray",
+      "Chiefs"
+    ],
+    [
+      "Daniel Bellinger",
+      "Titans"
+    ],
+    [
+      "Gunnar Helm",
+      "Titans"
+    ],
+    [
+      "Hayden Rucci",
+      "49ers"
+    ],
+    [
+      "Riley Nowakowski",
+      "Steelers"
+    ],
+    [
+      "Mitchell Evans",
+      "Panthers"
+    ],
+    [
+      "Carson Towt",
+      "Colts"
+    ],
+    [
+      "Tanner McLachlan",
+      "FA"
+    ],
+    [
+      "Caden Prieskorn",
+      "FA"
+    ]
+  ],
+  "wall": [
+    [
+      "George Kittle",
+      "TE · 49ers",
+      "top",
+      "/clients/kittle.webp"
+    ],
+    [
+      "Sam LaPorta",
+      "TE · Lions",
+      "pro",
+      "/clients/laporta.webp"
+    ],
+    [
+      "Tucker Kraft",
+      "TE · Packers",
+      "",
+      "/clients/kraft.webp"
+    ],
+    [
+      "Jake Ferguson",
+      "TE · Cowboys",
+      "pro",
+      "/clients/ferguson.webp"
+    ],
+    [
+      "Noah Gray",
+      "TE · Chiefs",
+      ""
+    ],
+    [
+      "Geno Stone",
+      "DB · Bills",
+      ""
+    ],
+    [
+      "Amani Hooker",
+      "DB · Titans",
+      ""
+    ],
+    [
+      "Daniel Bellinger",
+      "TE · Titans",
+      ""
+    ],
+    [
+      "Gunnar Helm",
+      "TE · Titans",
+      ""
+    ],
+    [
+      "Anthony Nelson",
+      "DE · Buccaneers",
+      ""
+    ],
+    [
+      "Jay Higgins",
+      "LB · Ravens",
+      ""
+    ],
+    [
+      "Josh Butler",
+      "CB · Cowboys",
+      ""
+    ],
+    [
+      "Charlie Heck",
+      "OL · Dolphins",
+      ""
+    ],
+    [
+      "Connor Colby",
+      "OL · 49ers",
+      ""
+    ],
+    [
+      "Kristian Welch",
+      "LB · Packers",
+      ""
+    ],
+    [
+      "Hunter Wohler",
+      "DB · Colts",
+      ""
+    ]
+  ],
+  "rosterAll": [
+    [
+      "Josh Butler",
+      "CB · Cowboys"
+    ],
+    [
+      "Sebastian Castro",
+      "DB · Steelers"
+    ],
+    [
+      "Connor Colby",
+      "OL · 49ers"
+    ],
+    [
+      "Charlie Heck",
+      "OL · Dolphins"
+    ],
+    [
+      "Jay Higgins",
+      "LB · Ravens"
+    ],
+    [
+      "Amani Hooker",
+      "DB · Titans"
+    ],
+    [
+      "Anthony Nelson",
+      "DE · Buccaneers"
+    ],
+    [
+      "Geno Stone",
+      "DB · Bills"
+    ],
+    [
+      "Kristian Welch",
+      "LB · Packers"
+    ],
+    [
+      "Kaden Wetjen",
+      "WR · Steelers"
+    ],
+    [
+      "Hunter Wohler",
+      "DB · Colts"
+    ]
+  ],
+  "quotes": [
+    {
+      "q": "Amazing experience. Grew mentally, physically, and positionally.",
+      "who": "Daniel Bellinger · 4th round",
+      "clip": null,
+      "img": "/elevate/bellinger.webp"
+    },
+    {
+      "q": "In-depth program, no shortage of reps, unreal learning curve.",
+      "who": "Sam LaPorta · 2nd round",
+      "clip": null,
+      "img": "/elevate/laporta.webp"
+    },
+    {
+      "q": "Personal, powerful, bottom line... prepared.",
+      "who": "Jake Ferguson · 4th round",
+      "clip": null,
+      "img": "/elevate/ferguson.webp"
+    }
+  ],
+  "parentQA": [
+    {
+      "q": "Is any of this allowed for a high school athlete?",
+      "a": "<b>What we can do depends on your state.</b> High school NIL rules vary by state and by athletic association, and some states allow nothing. Where it is not allowed, our role is to educate and advise your family at no cost, with no agreement, so you are ready when the rules change or when he enrolls. <b>[Ryan: confirm the rules for this family's state and the schools in play before this goes out.]</b>"
+    },
+    {
+      "q": "What does it cost us?",
+      "a": "Nothing. There is no fee for guidance during recruiting, and no agreement to sign until there is income it applies to, in a state where that is permitted. We walk through anything with a number on it in person."
+    },
+    {
+      "q": "Will this hurt his eligibility?",
+      "a": "Not if we are involved. Everything we do with a high school athlete is designed around keeping him eligible: we check the rules first, and we say no to things that put that at risk. We would rather lose a deal than cost him a season."
+    },
+    {
+      "q": "How do we know which offers are real?",
+      "a": "We read them with you. A committable offer, a camp offer, a number in a press release and a scholarship are different things. We tell your family which one you are looking at."
+    },
+    {
+      "q": "Who answers the phone?",
+      "a": "Jack first, then Ryan. Both have your number, and there is no account manager in between."
+    },
+    {
+      "q": "Who are you, really?",
+      "a": "35 years. Combined 50 years representing NFL players. Six clients who were the highest paid at their position. Jack played and coached. Ryan is a licensed attorney. Call any parent of a current client; we will give you the numbers."
+    }
+  ],
+  "handle": [
+    [
+      "Film",
+      "Cut, labeled and sent to the coaches who matter."
+    ],
+    [
+      "Camps",
+      "Which ones are worth it. What to run."
+    ],
+    [
+      "Offers",
+      "What is real, what is conditional, what is a headline."
+    ],
+    [
+      "Visits",
+      "The questions to ask, written down before you go."
+    ],
+    [
+      "Eligibility",
+      "Rules checked first. Nothing that risks a season."
+    ],
+    [
+      "Academics",
+      "Core courses, test dates, the clearinghouse."
+    ],
+    [
+      "Family",
+      "Your parents hear it from us before they hear it from a coach."
+    ],
+    [
+      "The league",
+      "Same team from here through college to draft night."
+    ]
+  ],
+  "contact": {
+    "name": "Jack",
+    "phone": "(732) 675-0705",
+    "phoneE164": "+17326750705",
+    "email": "jacktabb@nfladvisor.com"
+  },
+  "cta": {
+    "label": "Set up a meeting",
+    "sms": "Hey Jack, it's Jalen. I'd like to set up a time to meet."
+  },
+  "alertTo": [
+    "jacktabb@nfladvisor.com"
+  ],
+  "unlocked": [],
+  "ask": {
+    "h": "Thirty minutes with Jack and Ryan, parents included",
+    "lede": "Everything on this page is the short version. How to choose a school on purpose, and who would be in your corner through it, is a conversation."
+  },
+  "copy": [
+    [
+      "#proofH",
+      "Guys who started where you are"
+    ],
+    [
+      "#proofLede",
+      "JB Sports has represented first-rounders, Pro Bowlers and All-Pros. Every one of them was once exactly where you are, with the same decisions in front of him."
+    ],
+    [
+      "#trainH",
+      "Train where the NFL guys train"
+    ],
+    [
+      "#trainLede",
+      "Nashville, off-season. The same room Kittle, LaPorta and Kraft prepared in. Below is what that looks like."
+    ],
+    [
+      "#fitEyebrow",
+      "02 · The decision"
+    ],
+    [
+      "#fitH",
+      "How to pick a school on purpose"
+    ],
+    [
+      "#fitLede",
+      "Slide each one. Every program will tell you what they want you to hear. This is how you and your family decide what you want to hear."
+    ]
+  ],
+  "fit": [
+    [
+      "Development",
+      "Position coach, scheme, who they have sent to the league"
+    ],
+    [
+      "Playing time",
+      "A real path to the field, not a promise"
+    ],
+    [
+      "Academics",
+      "The degree, the support, the major you actually want"
+    ],
+    [
+      "Distance from home",
+      "Family in the stands"
+    ],
+    [
+      "NIL, where allowed",
+      "What the rules permit in your state and theirs, in writing"
+    ]
+  ],
+  "fitTail": "This is how your family weighs offers. We help you ask the questions programs do not volunteer answers to.",
+  "draftMoments": [
+    {
+      "yt": "QAdPpzFOJQo",
+      "who": "Tucker Kraft",
+      "what": "Draft night · Rd 3, Pk 78 · Packers"
+    }
+  ]
+}
