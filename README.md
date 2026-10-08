@@ -19,7 +19,7 @@ The slug alone 404s. The token is random per recruit. Parents tab deep link: add
 - New recruit: `npm run new -- "First Last" --from eli-finley` (or `--from college-example` / `--from hs-example`; the mode comes with the file), fill the JSON, deploy.
 - Turn a link off: `npm run off -- eli-finley`, deploy. On again: `npm run on -- eli-finley`.
 - Instant kill without touching files: set `DISABLED_LINKS=eli-finley` in Vercel env vars and redeploy.
-- Film/photos: `npm run upload -- eli-finley ./clip.mp4` prints the id to paste into the JSON (`"clip"` for video, `"src"` for a photo). Keys live under `<slug>/` in a private bucket; the page gets a 10-minute signed URL only when the link checks out.
+- Film/photos: `npm run upload -- eli-finley ./reel.mp4` prints the id to paste into the JSON. One reel of your favorite plays goes in `"reel": {"clip": "<id>", "len": "0:48"}`; the three notes then show as a list under it. Or put a clip id on each play in `plays[]` for three separate players. Photos: `"src": "<id>"` (add `"cutout": true` for a background-removed PNG/WebP). Keys live under `<slug>/` in a private bucket; the page gets a 10-minute signed URL only when the link checks out.
 - Deploy: `vercel --prod`.
 
 ## What Jack receives

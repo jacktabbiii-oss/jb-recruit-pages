@@ -63,6 +63,8 @@ section>.eyebrow{display:block;margin-bottom:10px}
 section>h2{margin-bottom:14px}
 .lede{font-size:1.05rem;max-width:34em}
 .plays{margin-top:18px;display:grid;gap:14px}
+.reel .video{margin:0;aspect-ratio:16/9}
+.play-card.noclip{grid-template-columns:1fr;border-top:1px solid var(--line);padding-top:12px}
 .play-card{display:grid;grid-template-columns:132px 1fr;gap:14px;align-items:start;min-width:0}
 .play-card .video{margin:0;aspect-ratio:4/3}
 .play-card .video .play{width:40px;height:40px}
@@ -546,7 +548,8 @@ $('#trackA').innerHTML=A.concat(A).map(cardHTML).join(''); $('#trackB').innerHTM
 const M=RECRUIT.draftMoments||[];
 $('#moments').innerHTML=M.length?`<span class="eyebrow">Draft night</span><div class="mrow">`+M.map((m,i)=>`<div class="moment" data-yt="${m.yt}" tabindex="0" role="button" aria-label="Play: ${m.who}, ${m.what}"><img src="https://i.ytimg.com/vi/${m.yt}/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></div><div class="cap"><b>${m.who}</b><span>${m.what}</span></div></div>`).join('')+`</div>`:'';
 document.querySelectorAll('.moment').forEach(el=>{const go=()=>{const id=el.dataset.yt;if(TRACK&&TRACK.embeds===false){window.open(`https://www.youtube.com/watch?v=${id}`,'_blank','noopener');return}el.classList.add('live');el.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1" title="Draft night" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`};el.addEventListener('click',go);el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}})});
-$('#plays').innerHTML=RECRUIT.plays.map((c,i)=>`<div class="play-card">${vid(c.clip,c.k,c.len,'',`F${i+1}`)}<div><div class="k">${c.k}</div><div class="t">${c.t}</div><div class="n">${c.n}</div></div></div>`).join('');
+const REEL=RECRUIT.reel&&RECRUIT.reel.clip;
+$('#plays').innerHTML=(REEL?`<div class="reel">${vid(REEL,'Favorite plays reel',RECRUIT.reel.len,'','')}</div>`:'')+RECRUIT.plays.map((c,i)=>`<div class="play-card${REEL?' noclip':''}">${REEL?'':vid(c.clip,c.k,c.len,'',`F${i+1}`)}<div><div class="k">${c.k}</div><div class="t">${c.t}</div><div class="n">${c.n}</div></div></div>`).join('');
 $('#timeline').innerHTML=RECRUIT.timeline.map(t=>`<li${t.now?' class="now"':''}><div class="when">${t.when}</div><div><div class="what">${t.what}</div><div class="jb">${t.jb}</div></div></li>`).join('');
 const isTE=RECRUIT.positionGroup==="TE";
 $('#roster').innerHTML=(isTE
