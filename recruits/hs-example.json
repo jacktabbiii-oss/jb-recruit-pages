@@ -19,39 +19,39 @@
   "photos": [
     {
       "src": null,
+      "cap": "Hero",
+      "sub": "",
+      "wm": ""
+    },
+    {
+      "src": null,
       "cap": "Game action",
       "sub": "",
-      "wm": "84"
+      "wm": ""
     },
     {
       "src": null,
       "cap": "Portrait",
       "sub": "",
-      "wm": "TE"
-    },
-    {
-      "src": null,
-      "cap": "In-line",
-      "sub": "",
-      "wm": "84"
+      "wm": ""
     },
     {
       "src": null,
       "cap": "Red zone",
       "sub": "",
-      "wm": "6"
+      "wm": ""
     },
     {
       "src": null,
       "cap": "Sideline",
       "sub": "",
-      "wm": "LT"
+      "wm": ""
     },
     {
       "src": null,
-      "cap": "Draft night",
+      "cap": "Signing day",
       "sub": "",
-      "wm": "27"
+      "wm": ""
     }
   ],
   "plays": [

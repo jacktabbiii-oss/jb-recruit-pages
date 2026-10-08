@@ -38,7 +38,16 @@ p{margin:0}
 .switch button:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
 
 /* hero */
-.hero{padding-block:36px 28px;border-bottom:1px solid var(--line)}
+.hero{padding-block:0 28px;border-bottom:1px solid var(--line)}
+.hero-art{position:relative;margin:0 -16px 16px;height:min(78vh,620px);overflow:hidden;background:var(--panel)}
+.hero-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--focus,50% 20%)}
+.hero-art.cut img{object-fit:contain;object-position:center bottom;top:6%;height:94%;filter:drop-shadow(0 30px 40px rgba(0,0,0,.7))}
+.hero-art.cut{background:radial-gradient(70% 55% at 50% 85%,rgba(43,155,255,.45),transparent 70%),linear-gradient(180deg,var(--panel),var(--ground))}
+.hero-art::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,17,32,.15) 0%,rgba(10,17,32,0) 35%,rgba(10,17,32,.55) 70%,var(--ground) 100%)}
+.hero-art .ghost{position:absolute;right:-4%;top:2%;font-family:var(--display);font-weight:900;font-size:min(50vw,320px);line-height:.8;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.25);z-index:1;pointer-events:none}
+.hero-art.empty{display:grid;place-items:center;color:var(--muted);font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}
+.hero-art.empty::after{display:none}
+.hero .title{position:relative;margin-top:-120px;z-index:2}
 .hero .for{display:flex;gap:10px;align-items:center;margin-bottom:10px}
 .hero .for span.rule{flex:1;height:1px;background:var(--line)}
 .hero h1{font-size:clamp(4.2rem,20vw,6.4rem);font-weight:900;letter-spacing:-.01em;line-height:.85}
@@ -108,8 +117,10 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
 
 /* photos: duotone frames. Drop a real image into .ph-frame img and it gets the treatment. */
 .ph-frame{position:relative;background:var(--panel-2);border:1px solid var(--line);overflow:hidden;max-width:100%}
-.ph-frame img{display:block;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.15) brightness(.9)}
-.ph-frame::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(43,155,255,.55),rgba(10,17,32,.2) 60%,rgba(200,50,60,.25));mix-blend-mode:screen;pointer-events:none}
+.ph-frame img{display:block;width:100%;height:100%;object-fit:cover;object-position:var(--focus,50% 25%);filter:contrast(1.06) saturate(1.05)}
+.ph-frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,17,32,0) 45%,rgba(10,17,32,.75) 100%);pointer-events:none}
+.ph-frame.tone img{filter:grayscale(1) contrast(1.15) brightness(.9)}
+.ph-frame.tone::after{background:linear-gradient(160deg,rgba(43,155,255,.55),rgba(10,17,32,.2) 60%,rgba(200,50,60,.25));mix-blend-mode:screen}
 .ph-frame .wm{position:absolute;right:-.05em;bottom:-.12em;font-family:var(--display);font-weight:900;font-size:7rem;line-height:1;color:var(--line);opacity:.9;letter-spacing:-.04em;pointer-events:none}
 .ph-frame .lbl{position:absolute;top:10px;left:12px;font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--red);border:1px solid var(--red);padding:2px 6px;z-index:2}
 .ph-frame .cap{position:absolute;left:12px;bottom:10px;right:12px;z-index:2;font-family:var(--mono);font-size:.7rem;color:var(--paper)}
@@ -118,18 +129,20 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
 .hero-photo{margin-top:18px;display:grid;grid-template-columns:1.1fr .9fr;gap:12px;align-items:end}
 .hero-photo .ph-frame{aspect-ratio:3/4}
 .hero-photo .ph-frame.wide{aspect-ratio:4/5;margin-bottom:28px}
+.hero-photo:empty{display:none}
 @media (max-width:420px){.hero-photo{grid-template-columns:1fr 1fr}.hero-photo .ph-frame.wide{margin-bottom:18px}}
 /* film strip */
 .strip{margin-top:18px;display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 .strip::-webkit-scrollbar{display:none}
-.strip .ph-frame{flex:0 0 78%;max-width:320px;aspect-ratio:4/3;scroll-snap-align:start}
-.strip .ph-frame:nth-child(even){aspect-ratio:3/4;flex-basis:52%}
+.strip .ph-frame{flex:0 0 86%;max-width:420px;aspect-ratio:4/5;scroll-snap-align:start}
+.strip .ph-frame:nth-child(even){aspect-ratio:3/4;flex-basis:62%}
+.strip:empty,.strip:empty+.strip-hint{display:none}
 .strip-hint{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:6px}
 /* client marquee */
 .marquee{margin-top:18px;overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;display:grid;gap:10px}
 .track{display:flex;gap:10px;width:max-content}
-.card{width:150px;flex:0 0 150px;background:var(--panel);border:1px solid var(--line);padding:0;position:relative}
-.card .ph-frame{aspect-ratio:1;border:0;border-bottom:1px solid var(--line)}
+.card{width:190px;flex:0 0 190px;background:var(--panel);border:1px solid var(--line);padding:0;position:relative}
+.card .ph-frame{aspect-ratio:4/5;border:0;border-bottom:1px solid var(--line)}
 .card .ph-frame .wm{font-size:4.6rem;right:.02em;bottom:-.1em}
 .card .ph-frame.cutout img{object-fit:contain;object-position:center bottom;padding:6px 6px 0}
 .card .nm{font-family:var(--display);font-size:1.15rem;font-weight:800;text-transform:uppercase;letter-spacing:.02em;line-height:1;padding:10px 10px 2px}
@@ -212,8 +225,8 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
 .person{grid-template-columns:120px 1fr}
 .person .ph-frame{aspect-ratio:3/4}
 .person p+p{margin-top:8px}
-.ph-frame.real img{filter:grayscale(.35) contrast(1.08) brightness(.95)}
-.ph-frame.real::after{background:linear-gradient(160deg,rgba(43,155,255,.28),rgba(10,17,32,.1) 60%,rgba(200,50,60,.12))}
+.ph-frame.real img{filter:none}
+.ph-frame.real::after{background:linear-gradient(180deg,rgba(10,17,32,0) 55%,rgba(10,17,32,.6) 100%)}
 .who{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:stretch}
 .who .ph-frame.tall{aspect-ratio:2/3}
 .whofacts{display:grid;grid-template-rows:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
@@ -326,9 +339,11 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
   </div>
 
   <header class="hero">
-    <div class="ghost" id="ghost" aria-hidden="true"></div>
+    <div class="hero-art" id="heroArt"></div>
+    <div class="title">
     <h1 id="heroName"></h1>
     <div class="tag" id="heroTags"></div>
+    </div>
     <div id="heroVideo"></div>
     <div class="hero-photo" id="heroPhotos"></div>
   </header>
@@ -533,14 +548,19 @@ const mediaURL=id=>`/api/media?s=${encodeURIComponent(TRACK.slug)}&k=${encodeURI
 const vid=(id,label,len,cls='',slotNo='')=> id
   ? `<div class="video ${cls} has-media"><video playsinline controls controlsList="nodownload" preload="metadata" disablePictureInPicture data-track="${label}" src="${String(id).startsWith('/')?id:mediaURL(id)}"></video></div>`
   : `<div class="video ${cls}" tabindex="0" aria-label="${label}">${slotNo?`<span class="slot">Video slot ${slotNo}</span>`:''}<div class="play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></div><div class="cap"><span><b>${label}</b></span><span class="num">${len||''}</span></div></div>`;
-const frame=(ph,extra='')=>`<div class="ph-frame ${extra}${ph.cutout?' cutout':''}">${ph.src?`<img src="${ph.src.startsWith('/')?ph.src:mediaURL(ph.src)}" alt="${ph.cap}">`:`<span class="lbl">Photo</span>`}<span class="wm">${ph.wm||''}</span><div class="cap"><b>${ph.cap}</b> <span>${ph.sub||''}</span></div></div>`;
+const frame=(ph,extra='')=>`<div class="ph-frame ${extra}${ph.cutout?' cutout':''}${ph.tone?' tone':''}"${ph.focus?` style="--focus:${ph.focus}"`:''}>${ph.src?`<img src="${ph.src.startsWith('/')?ph.src:mediaURL(ph.src)}" alt="${ph.cap}">`:`<span class="lbl">Photo</span>`}<span class="wm">${ph.wm||''}</span><div class="cap"><b>${ph.cap}</b> <span>${ph.sub||''}</span></div></div>`;
 $('#tabAthlete').textContent=`For ${RECRUIT.first}`; $('#tabParents').textContent=RECRUIT.familyLabel||`For the ${RECRUIT.last}s`;
-$('#ghost').textContent=RECRUIT.number; $('#ghost').dataset.n=RECRUIT.number;
 $('#heroName').innerHTML=`<span class="first">${RECRUIT.first}</span><span class="last">${RECRUIT.last}</span>`;
 document.title=`${RECRUIT.first} ${RECRUIT.last} × JB Sports`;
 $('#heroVideo').innerHTML=vid(RECRUIT.heroVideo&&RECRUIT.heroVideo.clip,`Jack Tabb III · to ${RECRUIT.first}`,RECRUIT.heroVideo&&RECRUIT.heroVideo.len,'','01');
-$('#heroPhotos').innerHTML=frame(RECRUIT.photos[0],'wide')+frame(RECRUIT.photos[1]);
-$('#strip').innerHTML=RECRUIT.photos.slice(2).map(ph=>frame(ph)).join('');
+/* Hero art: photos[0] is THE photo. cutout:true floats him over a glow; otherwise full-bleed color with a fade. */
+(function(){const h=RECRUIT.photos[0];const el=$('#heroArt');
+  if(h&&h.src){el.className='hero-art'+(h.cutout?' cut':'');if(h.focus)el.style.setProperty('--focus',h.focus);
+    el.innerHTML=`<img src="${h.src.startsWith('/')?h.src:mediaURL(h.src)}" alt="${h.cap||''}"><div class="ghost" aria-hidden="true">${RECRUIT.number}</div>`;}
+  else{el.className='hero-art empty';el.innerHTML=`<span>Hero photo</span><div class="ghost" aria-hidden="true">${RECRUIT.number}</div>`;}
+})();
+$('#heroPhotos').innerHTML=RECRUIT.photos[1]&&RECRUIT.photos[1].src?frame(RECRUIT.photos[1],'wide')+(RECRUIT.photos[2]&&RECRUIT.photos[2].src?frame(RECRUIT.photos[2]):''):'';
+$('#strip').innerHTML=RECRUIT.photos.slice(3).map(ph=>frame(ph)).join('');
 const cardHTML=w=>`<div class="card ${w[2]||''}"><div class="ph-frame${w[3]?' cutout':''}"><span class="wm">${w[0].split(' ').map(x=>x[0]).join('')}</span>${w[3]?`<img src="${w[3].startsWith('/')?w[3]:mediaURL(w[3])}" alt="${w[0]}" loading="lazy">`:''}</div><div class="nm">${w[0]}</div><div class="tm">${w[1]}</div></div>`;
 const half=Math.ceil(RECRUIT.wall.length/2), A=RECRUIT.wall.slice(0,half), B=RECRUIT.wall.slice(half);
 $('#trackA').innerHTML=A.concat(A).map(cardHTML).join(''); $('#trackB').innerHTML=B.concat(B).map(cardHTML).join('');

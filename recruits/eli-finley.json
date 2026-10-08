@@ -18,30 +18,31 @@
   "draftClass": 2027,
   "photos": [
     {
-      "src": "/recruits/eli-finley/game-01-cutout.webp",
-      "cutout": true,
+      "src": "/recruits/eli-finley/game-01.webp",
       "cap": "Game action",
       "sub": "Louisiana Tech · #84",
-      "wm": "84"
-    },
-    {
-      "src": "/recruits/eli-finley/game-02-cutout.webp",
-      "cutout": true,
-      "cap": "Blue",
-      "sub": "Louisiana Tech · #84",
-      "wm": "TE"
-    },
-    {
-      "src": "/recruits/eli-finley/game-01.webp",
-      "cap": "In stride",
-      "sub": "[opponent · date]",
-      "wm": "84"
+      "wm": "84",
+      "focus": "38% 15%"
     },
     {
       "src": "/recruits/eli-finley/game-02.webp",
       "cap": "Pregame",
-      "sub": "[game]",
+      "sub": "Louisiana Tech · #84",
+      "wm": "TE",
+      "focus": "50% 20%"
+    },
+    {
+      "src": "/recruits/eli-finley/game-01-cutout.webp",
+      "cutout": true,
+      "cap": "In stride",
+      "sub": "",
       "wm": "84"
+    },
+    {
+      "src": null,
+      "cap": "Red zone",
+      "sub": "[game]",
+      "wm": "6"
     },
     {
       "src": null,
