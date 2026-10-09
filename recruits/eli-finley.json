@@ -127,7 +127,7 @@
     {
       "when": "2030",
       "what": "Second contract",
-      "jb": "This is the one that sets you up. It's where JB set the TE market in 2020."
+      "jb": "The one that sets you up. Where JB set the TE market in 2020."
     }
   ],
   "positionGroup": "TE",
@@ -370,27 +370,27 @@
   "parentQA": [
     {
       "q": "Who answers at 2 a.m.?",
-      "a": "Jack first, then Ryan. Both have Eli's number, and there is no account manager or call center in between. We're a mid-size agency on purpose: he will not be represented in the shadow of a higher-profile client."
+      "a": "Jack, then Ryan. Both have Eli's number. No account manager, no call center. We stay mid-size so he's never in a bigger client's shadow."
     },
     {
       "q": "How do fees work?",
-      "a": "Agent fees on NFL playing contracts are capped by the NFLPA, and ours go in writing before anything is signed. Nothing is owed up front, and nothing is owed on money he never receives. We'll walk through the exact terms with you in person."
+      "a": "Capped by the NFLPA and put in writing before anything is signed. Nothing up front, and nothing on money he never receives. We'll go through the exact terms in person."
     },
     {
       "q": "How do you protect what he earns?",
-      "a": "Ryan writes the guarantee and injury language himself. Beyond the contract: we screen every financial advisor and money manager before he meets them, coordinate taxes, set up disability insurance, and build a budget in year one. The goal is a lifetime of financial security. A good first contract is only the start."
+      "a": "Ryan writes the guarantee and injury language. We screen every advisor before he meets them, coordinate taxes, set up disability insurance and build a year-one budget. A good first contract is only the start."
     },
     {
       "q": "What happens if he gets hurt?",
-      "a": "Injury settlements, grievances, and second medical opinions are ours to handle, and the disability policy is in place before the first snap. We've done this for players at every level of the roster."
+      "a": "Injury settlements, grievances and second opinions are ours to handle. Disability coverage is in place before the first snap."
     },
     {
       "q": "What if he's not drafted where we hope?",
-      "a": "We have placed undrafted free agents who are still in the league. The draft slot decides the first contract; preparation decides the second. ElevaTE exists to make year one count regardless of the round."
+      "a": "We've placed undrafted free agents who are still in the league. The slot decides the first contract; preparation decides the second. ElevaTE makes year one count in any round."
     },
     {
       "q": "Who are you, really?",
-      "a": "35 years. Combined 50 years of experience representing NFL players. Six clients who were the highest paid at their position. Jack played the position; Ryan is a licensed attorney. You can call any parent of a current client; we'll give you the numbers."
+      "a": "35 years and six clients who became the highest paid at their position. Jack played the position; Ryan is a licensed attorney. Call any current client's parent; we'll give you the numbers."
     }
   ],
   "handle": [
@@ -443,7 +443,7 @@
   "unlocked": [],
   "ask": {
     "h": "Let's sit down and walk it through",
-    "lede": "This page is the outline. In person, we'll go through how we'd take you from senior season to draft night and into your second contract: the plan for Nashville, what your slot could be worth, who handles what, and what you should expect from us at every step. Bring your parents and every question you've got."
+    "lede": "This page is the outline. In person we'll walk you from senior season to draft night and into your second contract: the Nashville plan, what your slot could be worth, who handles what. Bring your parents and your questions."
   },
   "draftMoments": [
     {

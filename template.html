@@ -9,7 +9,7 @@
   --panel-2:#16223A;
   --line:#243354;
   --paper:#EAF0F8;
-  --muted:#8E9DB8;
+  --muted:#A6B3CB;
   --blue:#2B9BFF;
   --blue-ink:#0A1120;
   --red:#C8323C;        /* the one warm note: LA Tech red, used once */
@@ -19,6 +19,7 @@
   color-scheme:dark;
 }
 *{box-sizing:border-box}
+html,body{overflow-x:hidden}@supports (overflow:clip){html,body{overflow-x:clip}}
 body{margin:0;background:var(--ground);color:var(--paper);font-family:var(--body);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
 a{color:var(--blue)}
 .wrap{max-width:600px;margin:0 auto;padding-inline:16px;padding-block:0 48px}
@@ -26,7 +27,7 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:.95;t
 h2{font-size:2.6rem;font-weight:800;letter-spacing:.01em}
 h3{font-size:1.5rem;font-weight:700;letter-spacing:.02em}
 p{margin:0}
-.eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:600}
+.eyebrow{font-family:var(--mono);font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:600}
 .muted{color:var(--muted)}
 .num{font-family:var(--mono);font-variant-numeric:tabular-nums}
 
@@ -52,7 +53,7 @@ p{margin:0}
 .hero-art.mosaic .m img{width:100%;height:100%;object-fit:cover;object-position:var(--focus,50% 20%);display:block}
 .hero-art.mosaic .m.cut{background:radial-gradient(70% 60% at 50% 85%,rgba(43,155,255,.4),transparent 70%),var(--panel-2)}
 .hero-art.mosaic .m.cut img{object-fit:contain;object-position:center bottom;filter:drop-shadow(0 18px 24px rgba(0,0,0,.6))}
-.hero-art.mosaic .m .cap{position:absolute;left:10px;bottom:8px;font-family:var(--mono);font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;color:var(--paper);text-shadow:0 1px 3px rgba(0,0,0,.8)}
+.hero-art.mosaic .m .cap{position:absolute;left:10px;bottom:8px;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--paper);text-shadow:0 1px 3px rgba(0,0,0,.8)}
 .hero-art.mosaic .m1{left:3%;top:3%;width:58%;aspect-ratio:4/5;transform:rotate(-2deg);z-index:2}
 .hero-art.mosaic .m2{right:0;top:0;width:46%;aspect-ratio:3/4;transform:rotate(2.5deg);z-index:1}
 .hero-art.mosaic .m3{right:4%;bottom:0;width:34%;aspect-ratio:3/5;transform:rotate(1.5deg);z-index:3}
@@ -60,14 +61,14 @@ p{margin:0}
 .hero-art.mosaic .m5{left:0;bottom:10%;width:34%;aspect-ratio:4/5;transform:rotate(-3deg);z-index:5}
 .hero-art.mosaic .ghost{right:-2%;top:-8%;z-index:0}
 .hero.mosaic .title{margin-top:28px}
-.hero-art.empty{display:grid;place-items:center;color:var(--muted);font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}
+.hero-art.empty{display:grid;place-items:center;color:var(--muted);font-family:var(--mono);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase}
 .hero-art.empty::after{display:none}
 .hero .title{position:relative;margin-top:-120px;z-index:2}
 .hero .for{display:flex;gap:10px;align-items:center;margin-bottom:10px}
 .hero .for span.rule{flex:1;height:1px;background:var(--line)}
 .hero h1{font-size:clamp(4.2rem,20vw,6.4rem);font-weight:900;letter-spacing:-.01em;line-height:.85}
 .hero h1 .last{display:block;color:var(--blue)}
-.hero .tag{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--mono);font-size:.78rem;color:var(--muted)}
+.hero .tag{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--mono);font-size:.86rem;color:var(--muted)}
 .hero .tag b{color:var(--paper);font-weight:600}
 .hero .tag .honor{color:var(--blue);border:1px solid rgba(43,155,255,.4);padding:1px 8px;border-radius:2px}
 
@@ -76,9 +77,9 @@ p{margin:0}
 .video.vertical{aspect-ratio:9/16;max-height:420px;width:auto}
 .video .play{width:64px;height:64px;border-radius:50%;background:var(--blue);display:grid;place-items:center;color:var(--blue-ink)}
 .video .play svg{margin-left:4px}
-.video .cap{position:absolute;left:12px;bottom:10px;right:12px;font-family:var(--mono);font-size:.72rem;color:var(--muted);display:flex;justify-content:space-between;gap:8px}
+.video .cap{position:absolute;left:12px;bottom:10px;right:12px;font-family:var(--mono);font-size:.8rem;color:var(--muted);display:flex;justify-content:space-between;gap:8px}
 .video .cap b{color:var(--paper);font-weight:600}
-.video .slot{position:absolute;top:10px;left:12px;font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--red);border:1px solid var(--red);padding:2px 6px}
+.video .slot{position:absolute;top:10px;left:12px;font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--red);border:1px solid var(--red);padding:2px 6px}
 
 .video.has-media{display:block;background:#000}
 .video.has-media video{width:100%;height:100%;display:block;object-fit:cover}
@@ -93,9 +94,9 @@ section>h2{margin-bottom:14px}
 .play-card{display:grid;grid-template-columns:132px 1fr;gap:14px;align-items:start;min-width:0}
 .play-card .video{margin:0;aspect-ratio:4/3}
 .play-card .video .play{width:40px;height:40px}
-.play-card .k{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+.play-card .k{font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
 .play-card .t{font-family:var(--display);font-size:1.35rem;font-weight:700;text-transform:uppercase;letter-spacing:.02em;line-height:1;margin:4px 0 6px}
-.play-card .n{font-size:.9rem;color:var(--muted)}
+.play-card .n{font-size:.96rem;color:var(--muted)}
 .play-card .n b{color:var(--paper);font-weight:600}
 @media (max-width:420px){.play-card{grid-template-columns:104px 1fr}}
 
@@ -103,19 +104,19 @@ section>h2{margin-bottom:14px}
 .calc{margin-top:18px;background:var(--panel);border:1px solid var(--line);padding:18px 16px}
 .calc .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
 .calc .pick{font-family:var(--display);font-size:3.4rem;font-weight:900;line-height:1}
-.calc .pick small{font-family:var(--mono);font-size:.75rem;font-weight:600;color:var(--muted);letter-spacing:.08em;margin-left:6px;text-transform:uppercase}
-.calc .round{font-family:var(--mono);font-size:.78rem;color:var(--blue);letter-spacing:.1em;text-transform:uppercase}
+.calc .pick small{font-family:var(--mono);font-size:.8rem;font-weight:600;color:var(--muted);letter-spacing:.08em;margin-left:6px;text-transform:uppercase}
+.calc .round{font-family:var(--mono);font-size:.86rem;color:var(--blue);letter-spacing:.1em;text-transform:uppercase}
 input[type=range]{width:100%;margin:16px 0 6px;accent-color:var(--blue)}
-.calc .ticks{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.64rem;color:var(--muted);letter-spacing:.06em}
+.calc .ticks{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.74rem;color:var(--muted);letter-spacing:.06em}
 .figs{margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
 .figs div{background:var(--panel-2);padding:12px 12px 10px;min-width:0}
-.figs .k{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.figs .k{font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .figs .v{font-family:var(--display);font-size:2rem;font-weight:800;line-height:1.1;margin-top:4px;font-variant-numeric:tabular-nums}
-.calc .foot{margin-top:12px;font-size:.8rem;color:var(--muted);max-width:40em}
-.calc .jb{margin-top:14px;padding:12px;border-left:3px solid var(--blue);background:var(--panel-2);font-size:.92rem}
+.calc .foot{margin-top:12px;font-size:.86rem;color:var(--muted);max-width:40em}
+.calc .jb{margin-top:14px;padding:12px;border-left:3px solid var(--blue);background:var(--panel-2);font-size:.96rem}
 
 .fitrows{display:grid;gap:14px}
-.fitrows label{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.fitrows label{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .fitrows label b{color:var(--paper);font-weight:600}
 .fitrows input[type=range]{margin:6px 0 0}
 section[data-mode]{display:none}
@@ -124,12 +125,12 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
 .tl{margin-top:18px;list-style:none;padding:0;display:grid}
 .tl li{display:grid;grid-template-columns:76px 1fr;gap:12px;padding:12px 0;border-top:1px solid var(--line);min-width:0}
 .tl li:first-child{border-top:0}
-.tl .when{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;padding-top:4px;line-height:1.3}
+.tl .when{font-family:var(--mono);font-size:.8rem;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;padding-top:4px;line-height:1.3}
 .tl .what{font-family:var(--display);font-size:1.4rem;font-weight:700;text-transform:uppercase;letter-spacing:.02em}
-.tl .jb{font-size:.9rem;color:var(--muted);margin-top:2px}
+.tl .jb{font-size:.96rem;color:var(--muted);margin-top:2px}
 .tl .jb b{color:var(--paper);font-weight:600}
 .tl li.now .when{color:var(--blue)}
-.tl li.now .what::after{content:"you are here";font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;color:var(--blue-ink);background:var(--blue);padding:2px 6px;margin-left:8px;vertical-align:middle;text-transform:uppercase}
+.tl li.now .what::after{content:"you are here";white-space:nowrap;display:inline-block;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;color:var(--blue-ink);background:var(--blue);padding:2px 6px;margin-left:8px;vertical-align:middle;text-transform:uppercase}
 
 /* photos: duotone frames. Drop a real image into .ph-frame img and it gets the treatment. */
 .ph-frame{position:relative;background:var(--panel-2);border:1px solid var(--line);overflow:hidden;max-width:100%}
@@ -138,8 +139,8 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
 .ph-frame.tone img{filter:grayscale(1) contrast(1.15) brightness(.9)}
 .ph-frame.tone::after{background:linear-gradient(160deg,rgba(43,155,255,.55),rgba(10,17,32,.2) 60%,rgba(200,50,60,.25));mix-blend-mode:screen}
 .ph-frame .wm{position:absolute;right:-.05em;bottom:-.12em;font-family:var(--display);font-weight:900;font-size:7rem;line-height:1;color:var(--line);opacity:.9;letter-spacing:-.04em;pointer-events:none}
-.ph-frame .lbl{position:absolute;top:10px;left:12px;font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--red);border:1px solid var(--red);padding:2px 6px;z-index:2}
-.ph-frame .cap{position:absolute;left:12px;bottom:10px;right:12px;z-index:2;font-family:var(--mono);font-size:.7rem;color:var(--paper)}
+.ph-frame .lbl{position:absolute;top:10px;left:12px;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--red);border:1px solid var(--red);padding:2px 6px;z-index:2}
+.ph-frame .cap{position:absolute;left:12px;bottom:10px;right:12px;z-index:2;font-family:var(--mono);font-size:.76rem;color:var(--paper)}
 .ph-frame .cap span{color:var(--muted)}
 /* hero photo */
 .hero-photo{margin-top:18px;display:grid;grid-template-columns:1.1fr .9fr;gap:12px;align-items:end}
@@ -153,22 +154,22 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
 .strip .ph-frame{flex:0 0 86%;max-width:420px;aspect-ratio:4/5;scroll-snap-align:start}
 .strip .ph-frame:nth-child(even){aspect-ratio:3/4;flex-basis:62%}
 .strip:empty,.strip:empty+.strip-hint{display:none}
-.strip-hint{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+.strip-hint{font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:6px}
 /* parents: what Ryan reads first + year-one stepper (replace the old video slots) */
 .reads{margin-top:20px;display:grid;gap:10px}
 .reads>div{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--blue);padding:14px 14px 14px 16px}
-.reads .n{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;color:var(--blue)}
+.reads .n{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;color:var(--blue)}
 .reads h4{margin:4px 0 6px;font-family:var(--display);font-size:1.3rem;font-weight:800;text-transform:uppercase;letter-spacing:.02em;line-height:1}
-.reads p{margin:0;font-size:.9rem;color:var(--muted);line-height:1.45}
+.reads p{margin:0;font-size:.96rem;color:var(--muted);line-height:1.45}
 .yr1{margin-top:24px}
-.yr1 .hdr{display:block;font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+.yr1 .hdr{display:block;font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
 .yr1 ol{list-style:none;margin:0;padding:0;counter-reset:y;display:grid;gap:0;position:relative}
 .yr1 li{counter-increment:y;position:relative;padding:0 0 18px 40px}
-.yr1 li::before{content:counter(y);position:absolute;left:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:var(--blue-ink);font-family:var(--mono);font-size:.72rem;font-weight:600;display:grid;place-items:center}
+.yr1 li::before{content:counter(y);position:absolute;left:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:var(--blue-ink);font-family:var(--mono);font-size:.8rem;font-weight:600;display:grid;place-items:center}
 .yr1 li::after{content:"";position:absolute;left:12px;top:28px;bottom:2px;width:2px;background:linear-gradient(var(--blue),rgba(43,155,255,.15))}
 .yr1 li:last-child::after{display:none}
 .yr1 b{display:block;font-family:var(--display);font-size:1.15rem;text-transform:uppercase;letter-spacing:.02em;line-height:1.1;margin-bottom:4px}
-.yr1 span{font-size:.9rem;color:var(--muted);line-height:1.45}
+.yr1 span{font-size:.96rem;color:var(--muted);line-height:1.45}
 /* client marquee: always moving; swipeable on touch; pauses on hover (mouse) or while a finger is on it */
 .track{display:flex;gap:10px;width:max-content}
 /* client marquee */
@@ -181,20 +182,20 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
 .card .ph-frame .wm{font-size:4.6rem;right:.02em;bottom:-.1em}
 .card .ph-frame.cutout img{object-fit:contain;object-position:center top;padding:8px 4px 0}
 .card .nm{font-family:var(--display);font-size:1.15rem;font-weight:800;text-transform:uppercase;letter-spacing:.02em;line-height:1;padding:10px 10px 2px}
-.card .tm{font-family:var(--mono);font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:0 10px 10px}
+.card .tm{font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:0 10px 10px}
 .card .deal{margin:0 10px 10px;border-left:3px solid var(--blue);padding:2px 0 2px 8px}
 .card .deal b{display:block;font-family:var(--display);font-size:1.4rem;font-weight:900;line-height:1;color:var(--blue)}
-.card .deal span{display:block;font-family:var(--mono);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:3px;line-height:1.3}
-.card.new::before{content:"New deal";position:absolute;top:8px;left:8px;z-index:3;font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;background:var(--red);color:#fff;padding:2px 6px}
-.card.top::before{content:"Highest paid";position:absolute;top:8px;left:8px;z-index:3;font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;background:var(--blue);color:var(--blue-ink);padding:2px 6px}
-.card.pro::before{content:"Pro Bowl";position:absolute;top:8px;left:8px;z-index:3;font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;background:var(--paper);color:var(--ground);padding:2px 6px}
+.card .deal span{display:block;font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:3px;line-height:1.3}
+.card.new::before{content:"New deal";position:absolute;top:8px;left:8px;z-index:3;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;background:var(--red);color:#fff;padding:2px 6px}
+.card.top::before{content:"Highest paid";position:absolute;top:8px;left:8px;z-index:3;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;background:var(--blue);color:var(--blue-ink);padding:2px 6px}
+.card.pro::before{content:"Pro Bowl";position:absolute;top:8px;left:8px;z-index:3;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;background:var(--paper);color:var(--ground);padding:2px 6px}
 /* draft-night moments */
 .moments{margin-top:18px}
 .mrow{margin-top:8px;display:grid;grid-template-columns:1fr;gap:10px}
 .moment{position:relative;aspect-ratio:16/9;background:var(--panel);border:1px solid var(--line);overflow:hidden;cursor:pointer;display:grid;place-items:center}
 .moment img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(.3) brightness(.7)}
 .moment .play{position:relative;width:56px;height:56px;border-radius:50%;background:var(--blue);display:grid;place-items:center;color:var(--blue-ink)}
-.moment .cap{position:absolute;left:12px;bottom:10px;right:12px;font-family:var(--mono);font-size:.72rem;color:var(--paper);display:flex;justify-content:space-between;gap:8px;text-shadow:0 1px 2px rgba(0,0,0,.8)}
+.moment .cap{position:absolute;left:12px;bottom:10px;right:12px;font-family:var(--mono);font-size:.8rem;color:var(--paper);display:flex;justify-content:space-between;gap:8px;text-shadow:0 1px 2px rgba(0,0,0,.8)}
 .moment .cap span{color:var(--muted)}
 .moment.live{cursor:default}
 .moment iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
@@ -202,7 +203,7 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
 .brandstrip{margin:14px 0 16px;display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
 .brandstrip div{min-width:0}
 .brandstrip img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border:1px solid var(--line);filter:saturate(.85)}
-.brandstrip span{display:block;font-family:var(--mono);font-size:.6rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:4px;line-height:1.3}
+.brandstrip span{display:block;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:4px;line-height:1.3}
 @media (max-width:420px){.brandstrip{grid-template-columns:repeat(2,1fr)}}
 .elevate-logo{display:block;height:48px;width:auto;margin-bottom:10px;opacity:.9}
 .drafted{margin-top:18px}
@@ -213,24 +214,24 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
 .handle{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
 .handle div{background:var(--panel);padding:16px 14px;min-width:0}
 .handle div .i,.handle div .k,.handle div .d{background:none;padding:0}
-.handle .i{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;color:var(--blue);margin-bottom:8px}
+.handle .i{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;color:var(--blue);margin-bottom:8px}
 .handle .k{font-family:var(--display);font-size:1.25rem;font-weight:700;text-transform:uppercase;letter-spacing:.02em;line-height:1}
-.handle .d{font-size:.82rem;color:var(--muted);margin-top:6px;line-height:1.4}
+.handle .d{font-size:.86rem;color:var(--muted);margin-top:6px;line-height:1.4}
 @media (max-width:380px){.handle{grid-template-columns:1fr}}
 /* proof */
 .stat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:18px}
 .stat div{background:var(--panel);padding:14px 10px;min-width:0}
 .stat .v{font-family:var(--display);font-size:2.4rem;font-weight:900;line-height:1}
-.stat .k{font-size:.74rem;color:var(--muted);margin-top:4px;line-height:1.3}
-.roster{margin-top:18px;columns:2;column-gap:20px;font-family:var(--mono);font-size:.78rem;line-height:1.9}
-.roster div{break-inside:avoid;display:flex;justify-content:space-between;gap:8px;border-bottom:1px dotted var(--line);white-space:nowrap}
+.stat .k{font-size:.8rem;color:var(--muted);margin-top:4px;line-height:1.3}
+.roster{margin-top:18px;columns:2;column-gap:20px;font-family:var(--mono);font-size:.86rem;line-height:1.9}
+.roster div{break-inside:avoid;display:flex;justify-content:space-between;gap:8px;border-bottom:1px dotted var(--line)}
 .roster .t{color:var(--muted)}
-.roster .hdr{font-weight:600;color:var(--blue);letter-spacing:.1em;text-transform:uppercase;font-size:.66rem;border:0;column-span:all;margin-bottom:6px;display:block}
+.roster .hdr{font-weight:600;color:var(--blue);letter-spacing:.1em;text-transform:uppercase;font-size:.74rem;border:0;column-span:all;margin-bottom:6px;display:block}
 
 /* elevate */
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
 @media (max-width:420px){.grid2{grid-template-columns:1fr}}
-.list{margin:14px 0 0;padding:0;list-style:none;columns:2;column-gap:20px;font-size:.9rem}
+.list{margin:14px 0 0;padding:0;list-style:none;columns:2;column-gap:20px;font-size:.96rem}
 .list li{break-inside:avoid;padding:5px 0;border-bottom:1px solid var(--line)}
 .quotes{margin-top:18px;display:grid;gap:10px}
 .quote{display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:center;background:var(--panel);border:1px solid var(--line);padding:10px}
@@ -240,13 +241,13 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
 .quote .ph-frame.qimg::after{display:none}
 .quote .ph-frame.qimg img{filter:none}
 .quote .ph-frame.qimg .wm{font-size:3rem;right:.05em;bottom:-.05em}
-.quote .q{font-size:.92rem}
-.quote .who{font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-top:4px;letter-spacing:.04em}
+.quote .q{font-size:.96rem}
+.quote .who{font-family:var(--mono);font-size:.76rem;color:var(--muted);margin-top:4px;letter-spacing:.04em}
 
 /* locked */
 .locked{margin-top:18px;border:1px dashed var(--line);padding:18px 16px;display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:start;color:var(--muted)}
 .locked h3{color:var(--paper)}
-.locked .when{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-top:6px}
+.locked .when{font-family:var(--mono);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-top:6px}
 .locked svg{margin-top:4px}
 
 /* parents */
@@ -273,21 +274,21 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
 .whofacts{display:grid;grid-template-rows:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
 .whofacts div{background:var(--panel);padding:10px 12px;min-width:0}
 .whofacts .v{font-family:var(--display);font-size:2rem;font-weight:900;line-height:1}
-.whofacts .k{font-size:.74rem;color:var(--muted);line-height:1.3;margin-top:2px}
+.whofacts .k{font-size:.8rem;color:var(--muted);line-height:1.3;margin-top:2px}
 @media (max-width:380px){.who{grid-template-columns:1fr}.who .ph-frame.tall{aspect-ratio:4/3}}
 .person h3{margin-bottom:2px}
-.person .role{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
-.person p{font-size:.9rem;color:var(--muted);margin-top:6px;max-width:36em}
+.person .role{font-family:var(--mono);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+.person p{font-size:.96rem;color:var(--muted);margin-top:6px;max-width:36em}
 
 /* CTA bar */
 .cta{position:sticky;bottom:0;background:var(--ground);border-top:1px solid var(--line);padding:10px 0 calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:8px;z-index:5}
 .cta a,.cta button{flex:1;max-width:none;text-align:center;text-decoration:none;font:700 .95rem var(--display);letter-spacing:.06em;text-transform:uppercase;padding:14px 10px;border:1px solid var(--paper);color:var(--paper);background:transparent;cursor:pointer}
 .cta a.primary{background:var(--blue);border-color:var(--blue);color:var(--blue-ink)}
 .contact{padding-block:28px;display:grid;gap:10px}
-.contact .line{display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:var(--mono);font-size:.9rem;border-bottom:1px solid var(--line);padding:8px 0}
-.contact .line span.k{color:var(--muted);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
-.contact button{font:600 .7rem var(--mono);letter-spacing:.08em;text-transform:uppercase;background:transparent;color:var(--blue);border:1px solid var(--line);padding:6px 10px;cursor:pointer}
-.foot{padding-block:18px 0;font-family:var(--mono);font-size:.66rem;color:var(--muted);letter-spacing:.04em;line-height:1.7}
+.contact .line{display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:var(--mono);font-size:.96rem;border-bottom:1px solid var(--line);padding:8px 0}
+.contact .line span.k{color:var(--muted);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
+.contact button{font:600 .8rem var(--mono);letter-spacing:.08em;text-transform:uppercase;background:transparent;color:var(--blue);border:1px solid var(--line);padding:6px 10px;cursor:pointer}
+.foot{padding-block:18px 0;font-family:var(--mono);font-size:.74rem;color:var(--muted);letter-spacing:.04em;line-height:1.7}
 
 /* ============ DESKTOP (>= 900px) ============
    Phone layout is the source of truth. Desktop widens the column, spreads the hero,
@@ -297,7 +298,7 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
   body{font-size:17px}
   .switch{padding:14px 0}
   .switch .brand{height:26px}
-  .switch button{font-size:.85rem;padding:10px 16px}
+  .switch button{font-size:.9rem;padding:10px 16px}
   /* hero: name left, athlete right, full height */
   .hero{display:grid;grid-template-columns:1fr 1fr;grid-template-areas:"title art" "video art" "pair art";column-gap:40px;align-items:center;min-height:calc(100vh - 70px);padding-block:40px 48px;border-bottom:1px solid var(--line)}
   .hero-art{grid-area:art;margin:0;height:min(88vh,860px);align-self:stretch}
@@ -325,7 +326,7 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
   .hero.bleed .title,.hero.bleed .video,.hero.bleed .hero-photo{z-index:2}
   .hero.bleed .hero-photo{max-width:440px}
   .hero h1{font-size:clamp(5rem,9vw,9rem)}
-  .hero .tag{font-size:.9rem;gap:10px 24px}
+  .hero .tag{font-size:.96rem;gap:10px 24px}
   #heroVideo{grid-area:video}
   .hero .video{margin-top:18px;max-width:560px}
   .hero-photo{grid-area:pair;max-width:560px}
@@ -340,13 +341,14 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
   section>.strip{grid-column:1 / -1;margin-top:40px}
   section>.strip-hint{grid-column:1 / -1}
   section>.marquee,section>.roster{grid-column:1 / -1}
-  .roster{columns:3;column-gap:40px;font-size:.84rem}
+  .roster{columns:3;column-gap:40px;font-size:.9rem}
+  .roster div{white-space:nowrap}
   section>.marquee{margin-top:28px}
   section>.stat{grid-column:2;margin-top:0;grid-template-columns:repeat(3,1fr)}
   section>.roster{columns:4}
   section>.brandstrip,section>.drafted,section>.moments,section>.quotes,section>.locked,section>.list{grid-column:2}
   .brandstrip{grid-template-columns:repeat(4,minmax(0,230px));gap:14px}
-  .brandstrip span{font-size:.7rem;margin-top:8px}
+  .brandstrip span{font-size:.76rem;margin-top:8px}
   section.ask{grid-template-columns:1fr;text-align:left}
   section.ask>h2{position:static;font-size:4rem}
   section>.plays{grid-column:1 / -1 !important;grid-template-columns:1fr 1fr;gap:28px 32px;margin-top:28px}
@@ -480,7 +482,7 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
   <section class="reveal">
     <span class="eyebrow">01 · Jack's favorite plays</span>
     <h2 id="playsH">Three plays I'd put in front of every TE coach</h2>
-    <p class="lede muted">Your film, cut by Jack, with his note on each one. These are the plays we'd be selling in the building, and they get updated as the season goes.</p>
+    <p class="lede muted">Updated as your season goes.</p>
     <div class="plays" id="plays"></div>
     <div class="strip" id="strip"></div>
   </section>
@@ -488,7 +490,7 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
   <section class="reveal">
     <span class="eyebrow">02 · Who we are</span>
     <h2 id="whoH">A former tight end, a contract lawyer, and thirty-five years</h2>
-    <p class="lede muted" id="whoLede">JB Sports is a mid-size agency by choice. There are no shareholders or quotas, and nobody ranks above you on a call sheet. Jack played the position and coached it. Ryan writes the contracts. The agency has set the market at more than one position.</p>
+    <p class="lede muted" id="whoLede">Mid-size by choice. No shareholders, no quotas, nobody above you on a call sheet. Jack played and coached the position. Ryan writes the contracts.</p>
     <div class="who">
       <div class="ph-frame real tall"><img src="/people/team.jpg" alt="The JB Sports team in Nashville"><div class="cap"><b>Nashville</b> <span>the team</span></div></div>
       <div class="whofacts">
@@ -503,7 +505,7 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
   <section class="reveal" data-mode="draft">
     <span class="eyebrow">03 · The money</span>
     <h2>What the slot is worth</h2>
-    <p class="lede muted">Drag to any pick. Figures are approximate, from the 2026 rookie scale. The 2027 numbers get set when the league announces next year's cap.</p>
+    <p class="lede muted">Drag to any pick. Approximate, from the 2026 rookie scale; 2027 figures come with next year's cap.</p>
     <div class="calc">
       <div class="row">
         <div class="pick"><span id="pickNum">90</span><small>overall</small></div>
@@ -525,7 +527,7 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
   <section class="reveal" data-mode="college hs">
     <span class="eyebrow" id="fitEyebrow">03 · The plan</span>
     <h2 id="fitH">What matters to you is what we build around</h2>
-    <p class="lede muted" id="fitLede">Slide each one. This is the first conversation we have, and everything we do for you comes back to it.</p>
+    <p class="lede muted" id="fitLede">Slide each one. Everything we do for you starts here.</p>
     <div class="calc" id="fit">
       <div class="fitrows" id="fitRows"></div>
       <div class="jb" id="fitOut"></div>
@@ -536,14 +538,14 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
   <section class="reveal">
     <span class="eyebrow">04 · The road</span>
     <h2>Now through your second contract</h2>
-    <p class="lede muted">Where you are, what's coming, and what JB handles at each stop.</p>
+    <p class="lede muted">Where you are, what's next, and what we handle at each stop.</p>
     <ol class="tl" id="timeline"></ol>
   </section>
 
   <section class="reveal">
     <span class="eyebrow">05 · Off your plate</span>
     <h2>You play. We handle the rest.</h2>
-    <p class="lede muted">Every one of these is a phone call you never have to make. How we do each one is what the meeting is for.</p>
+    <p class="lede muted">Calls you never have to make. How we handle each one is what the meeting is for.</p>
     <div class="handle" id="handle"></div>
   </section>
 
@@ -564,7 +566,7 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
     <span class="eyebrow">07 · ElevaTE · Nashville</span>
     <img class="elevate-logo" src="/elevate/logo.webp" alt="ElevaTE" width="120" height="62">
     <h2 id="trainH">Trained by the guy who trains Kittle</h2>
-    <p class="lede muted" id="trainLede">Combine and Pro Day prep with Jeremy Holt, TE-only. Kittle, Hockenson, LaPorta and Kraft all came through this room. The goal is to be the best-prepared tight end in the 2027 class and NFL-ready in year one.</p>
+    <p class="lede muted" id="trainLede">TE-only Combine and Pro Day prep with Jeremy Holt. Kittle, Hockenson, LaPorta and Kraft all trained here. The goal: best-prepared TE in the 2027 class, NFL-ready in year one.</p>
     <ul class="list" data-unlock="elevate">
       <li>Field sessions</li><li>Speed sessions</li><li>Lift sessions</li><li>Plyometrics</li><li>TE position work</li><li>Mental coaching</li><li>Regeneration · mobility, recovery</li><li>Massage</li><li>Nutrition plans</li><li>Yoga</li><li>Media and interview prep</li><li>Film sessions</li><li>Equipment</li>
     </ul>
@@ -593,7 +595,7 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
   <section class="reveal">
     <span class="eyebrow">08 · The brand side</span>
     <h2 id="brandH">Built as you go,<br>not after you blow up</h2>
-    <p class="lede muted" id="brandLede">Performance and management come first, but the brand work starts the day you sign, not the day you make a Pro Bowl. Right-sized deals early, a name people can find, a story that's yours. Kittle, LaPorta and Kraft all started small with us. Play well and get managed well, and the brand side grows with you instead of behind you.</p>
+    <p class="lede muted" id="brandLede">Performance comes first, but brand work starts the day you sign. Right-sized deals early, a name people can find, a story that's yours. Kittle, LaPorta and Kraft all started small with us.</p>
     <div class="brandstrip" aria-label="Client endorsement work">
       <div><img src="/brand/panda.webp" alt="George Kittle, Panda Express" loading="lazy"><span>Kittle · Panda Express</span></div>
       <div><img src="/brand/kraft.webp" alt="Tucker Kraft, Kraft Mac &amp; Cheese" loading="lazy"><span>Kraft · Kraft Mac &amp; Cheese</span></div>
@@ -608,11 +610,11 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
   <section class="reveal">
     <span class="eyebrow">For the Finleys</span>
     <h2>The questions parents ask us</h2>
-    <p class="lede muted">Straight answers. Ryan Hays is a licensed attorney and has been a certified NFL contract advisor since 2012; he handles the contract and the protection side for every client.</p>
+    <p class="lede muted">Straight answers. Ryan Hays, a licensed attorney and NFL contract advisor since 2012, handles the contract and protection side for every client.</p>
     <div class="reads" aria-label="Three things Ryan reads first">
-      <div><span class="n">01</span><h4>Guarantees</h4><p>Guaranteed for injury only, or for skill too? On a rookie deal the signing bonus is the money that's locked in from day one.</p></div>
-      <div><span class="n">02</span><h4>Offsets</h4><p>If he's released and signs somewhere else, can the old team subtract his new salary from what it still owes? We push for no offset.</p></div>
-      <div><span class="n">03</span><h4>When it's paid</h4><p>When the signing bonus actually lands is negotiable. Earlier is better for him, and we ask for it.</p></div>
+      <div><span class="n">01</span><h4>Guarantees</h4><p>Injury only, or skill too? On a rookie deal, the signing bonus is the money locked in from day one.</p></div>
+      <div><span class="n">02</span><h4>Offsets</h4><p>If he's cut and signs elsewhere, can the old team subtract his new salary? We push for no offset.</p></div>
+      <div><span class="n">03</span><h4>When it's paid</h4><p>Bonus timing is negotiable. Earlier is better, and we ask for it.</p></div>
     </div>
     <div class="qa" id="qa"></div>
   </section>
@@ -626,10 +628,10 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
     <div class="yr1" aria-label="Year one, in order">
       <span class="hdr">Year one, in order</span>
       <ol>
-        <li><b>Before the draft</b><span>Disability and loss-of-value coverage in place, so an injury in a workout doesn't cost the career.</span></li>
-        <li><b>Draft week</b><span>Ryan has already modeled the slot. The contract is reviewed line by line before anything is signed.</span></li>
-        <li><b>First check</b><span>A budget is set and any advisor is screened before the money arrives, not after.</span></li>
-        <li><b>First tax season</b><span>He's paid in several states. Those filings are coordinated so nothing gets missed.</span></li>
+        <li><b>Before the draft</b><span>Disability and loss-of-value coverage, so a workout injury doesn't cost the career.</span></li>
+        <li><b>Draft week</b><span>Slot already modeled. Contract reviewed line by line before signing.</span></li>
+        <li><b>First check</b><span>Budget set and advisors screened before the money arrives.</span></li>
+        <li><b>First tax season</b><span>Multi-state filings coordinated so nothing's missed.</span></li>
       </ol>
     </div>
   </section>
@@ -643,20 +645,20 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
       <div class="person">
         <div class="ph-frame real"><img src="/people/bechta.jpg" alt="Jack Bechta"></div>
         <div><h3>Jack Bechta</h3><div class="role">President &amp; founder · NFL contract advisor since 1986</div>
-        <p>Played football at Texas A&amp;M–Kingsville on a full scholarship and earned degrees in finance and real estate. Certified as an NFL contract advisor in 1986 and built JB Sports from there: more than 125 players represented and more than 300 contracts negotiated, for first-round picks, Pro Bowlers and the highest paid at their positions.</p>
-        <p>Jack only takes on high-character players. JB stays mid-size on purpose so nobody gets lost behind a bigger name.</p></div>
+        <p>Full-scholarship player at Texas A&amp;M–Kingsville, with degrees in finance and real estate. NFL contract advisor since 1986: 125+ players represented and 300+ contracts negotiated, including first-rounders, Pro Bowlers and the highest paid at their positions.</p>
+        <p>Takes on high-character players only. JB stays mid-size on purpose so nobody gets lost behind a bigger name.</p></div>
       </div>
       <div class="person">
         <div class="ph-frame real"><img src="/people/jack.jpg" alt="Jack Tabb III"></div>
         <div><h3>Jack Tabb III</h3><div class="role">Agent · former NFL tight end</div>
-        <p>Four-year letterman at North Carolina as a tight end and linebacker. Played for the New Orleans Saints, as a JB Sports client. Coached at Michigan State and holds two master's degrees, from North Texas and Michigan State. He has sat on both sides of the position meeting.</p>
-        <p>Jack is your day-to-day. He watched your tape, he'll be at your games, and he picks up. He also builds the tools the agency uses to run your career, including the page you're reading.</p></div>
+        <p>Four-year letterman at North Carolina, tight end and linebacker. Played for the New Orleans Saints as a JB client. Coached at Michigan State; master's degrees from North Texas and Michigan State.</p>
+        <p>Your day-to-day. He's watched your tape, he'll be at your games, and he picks up. He also builds the agency's tools, including this page.</p></div>
       </div>
       <div class="person">
         <div class="ph-frame real"><img src="/people/ryan.jpg" alt="Ryan Hays"></div>
         <div><h3>Ryan Hays, Esq.</h3><div class="role">Contracts · licensed attorney</div>
-        <p>University of Arizona. Thomas Jefferson School of Law, cum laude. Licensed in California and a certified NFL contract advisor since 2012. Led the contract language on George Kittle's 2020 deal, one of the most player-friendly contracts in 49ers history.</p>
-        <p>Ryan reads every clause that touches your money or your name: guarantees, offsets, injury language, endorsement terms. Branding and marketing are his second specialty. Clients have his number and use it.</p></div>
+        <p>University of Arizona; Thomas Jefferson School of Law, cum laude. Licensed in California, NFL contract advisor since 2012. Led the contract language on George Kittle's 2020 deal, one of the most player-friendly in 49ers history.</p>
+        <p>Reads every clause that touches your money or your name: guarantees, offsets, injury language, endorsements. Branding and marketing are his second specialty. Clients have his number and use it.</p></div>
       </div>
     </div>
   </section>
@@ -664,7 +666,7 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
   <section class="reveal ask">
     <span class="eyebrow">The ask</span>
     <h2 id="askH">Let's sit down and walk it through</h2>
-    <p class="lede muted" id="askLede">This page is the outline. In person, we'll go through how we'd guide you through every step: the plan, the numbers, who handles what, and what you should expect from us. Bring your parents and every question you've got.</p>
+    <p class="lede muted" id="askLede">This page is the outline. In person we'll walk through the plan, the numbers, who handles what, and what to expect from us at every step. Bring your parents and your questions.</p>
   </section>
   <div class="contact" id="contact">
     <div class="line"><span><span class="k" id="contactName">Jack · text or call</span><br><span id="phone">(732) 675-0705</span></span><button type="button" data-copy="phone">Copy</button></div>
@@ -754,7 +756,7 @@ if(RECRUIT.ask){ if(RECRUIT.ask.h)$('#askH').textContent=RECRUIT.ask.h; if(RECRU
 (RECRUIT.copy||[]).forEach(([sel,html])=>{const el=document.querySelector(sel);if(el)el.innerHTML=html});
 if(RECRUIT.mode==='college'||RECRUIT.mode==='hs'){
   const F=RECRUIT.fit||[["Playing time now","Early snaps vs. developing behind a vet"],["Development","Position coach, scheme, strength staff"],["NIL / compensation","What the collective and the market will do"],["Distance from home","Family in the stands"],["The degree","Program, support, finishing"]];
-  const rows=$('#fitRows'); rows.innerHTML=F.map((f,i)=>`<div><label for="fit${i}"><b>${f[0]}</b><span id="fitv${i}">3 / 5</span></label><input type="range" id="fit${i}" min="1" max="5" value="3"><div class="muted" style="font-size:.8rem">${f[1]}</div></div>`).join('');
+  const rows=$('#fitRows'); rows.innerHTML=F.map((f,i)=>`<div><label for="fit${i}"><b>${f[0]}</b><span id="fitv${i}">3 / 5</span></label><input type="range" id="fit${i}" min="1" max="5" value="3"><div class="muted" style="font-size:.86rem">${f[1]}</div></div>`).join('');
   const out=()=>{const v=F.map((f,i)=>+document.getElementById('fit'+i).value);F.forEach((f,i)=>document.getElementById('fitv'+i).textContent=v[i]+' / 5');
     const order=F.map((f,i)=>[f[0],v[i]]).sort((a,b)=>b[1]-a[1]);
     const tail=RECRUIT.fitTail||"Every conversation we have on your behalf starts from this list, and Ryan reads every agreement before you sign.";
