@@ -41,6 +41,14 @@
       "cap": "Eli Finley",
       "sub": "TE · Louisiana Tech",
       "wm": "84"
+    },
+    {
+      "src": "/recruits/eli-finley/mackey.webp",
+      "cap": "",
+      "sub": "",
+      "wm": "",
+      "graphic": true,
+      "focus": "50% 50%"
     }
   ],
   "plays": [
@@ -441,5 +449,8 @@
     "clip": null,
     "len": "0:48"
   },
-  "heroStyle": "mosaic"
+  "heroStyle": "mosaic",
+  "honors": [
+    "John Mackey Award watch list"
+  ]
 }

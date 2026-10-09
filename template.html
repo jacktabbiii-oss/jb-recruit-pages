@@ -57,6 +57,7 @@ p{margin:0}
 .hero-art.mosaic .m2{right:0;top:0;width:46%;aspect-ratio:3/4;transform:rotate(2.5deg);z-index:1}
 .hero-art.mosaic .m3{left:16%;bottom:0;width:46%;aspect-ratio:1;transform:rotate(-1deg);z-index:3}
 .hero-art.mosaic .m4{right:2%;bottom:4%;width:30%;aspect-ratio:3/5;transform:rotate(1.5deg);z-index:4}
+.hero-art.mosaic .m5{left:0;bottom:10%;width:34%;aspect-ratio:4/5;transform:rotate(-3deg);z-index:5}
 .hero-art.mosaic .ghost{right:-2%;top:-8%;z-index:0}
 .hero.mosaic .title{margin-top:28px}
 .hero-art.empty{display:grid;place-items:center;color:var(--muted);font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}
@@ -68,6 +69,7 @@ p{margin:0}
 .hero h1 .last{display:block;color:var(--blue)}
 .hero .tag{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--mono);font-size:.78rem;color:var(--muted)}
 .hero .tag b{color:var(--paper);font-weight:600}
+.hero .tag .honor{color:var(--blue);border:1px solid rgba(43,155,255,.4);padding:1px 8px;border-radius:2px}
 
 /* video slot */
 .video{margin-top:22px;aspect-ratio:16/9;max-width:100%;background:var(--panel);border:1px solid var(--line);position:relative;display:grid;place-items:center;overflow:hidden}
@@ -287,6 +289,7 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
   .hero.mosaic .hero-art .m2{top:0;width:44%}
   .hero.mosaic .hero-art .m3{bottom:2%;width:42%}
   .hero.mosaic .hero-art .m4{bottom:6%;width:28%}
+  .hero.mosaic .hero-art .m5{left:2%;bottom:12%;width:32%}
   .hero.mosaic .hero-art .ghost{font-size:min(24vw,360px);right:-4%;top:-6%}
   .hero.mosaic .hero-photo{display:none}
   /* full-bleed hero: photo behind the whole hero, name over a left-to-right fade */
@@ -641,7 +644,7 @@ const TRACK = __TRACK_JSON__;
 /* ============ RENDER ============ */
 const UNLOCKED=new Set(RECRUIT.unlocked||[]);
 const $=s=>document.querySelector(s);
-$('#heroTags').innerHTML=`<span><b>${RECRUIT.position}</b> · ${RECRUIT.school} · #${RECRUIT.number}</span><span>${RECRUIT.height} · ${RECRUIT.weight}</span><span><b>${RECRUIT.draftClass}</b> draft class</span>`;
+$('#heroTags').innerHTML=`<span><b>${RECRUIT.position}</b> · ${RECRUIT.school} · #${RECRUIT.number}</span><span>${RECRUIT.height} · ${RECRUIT.weight}</span><span><b>${RECRUIT.draftClass}</b> draft class</span>${(RECRUIT.honors||[]).map(h=>`<span class="honor">${h}</span>`).join('')}`;
 const mediaURL=id=>`/api/media?s=${encodeURIComponent(TRACK.slug)}&k=${encodeURIComponent(TRACK.token)}&id=${encodeURIComponent(id)}`;
 const vid=(id,label,len,cls='',slotNo='')=> id
   ? `<div class="video ${cls} has-media"><video playsinline controls controlsList="nodownload" preload="metadata" disablePictureInPicture data-track="${label}" src="${String(id).startsWith('/')?id:mediaURL(id)}"></video></div>`
@@ -654,7 +657,7 @@ if(RECRUIT.heroVideo===null){$('#heroVideo').remove()}else $('#heroVideo').inner
 /* Hero art: photos[0] is THE photo. cutout:true floats him over a glow; otherwise full-bleed color with a fade. */
 (function(){const h=RECRUIT.photos[0];const el=$('#heroArt');
   if(RECRUIT.heroStyle==='mosaic'&&h&&h.src){el.className='hero-art mosaic';el.closest('.hero').classList.add('mosaic');
-    el.innerHTML=`<div class="ghost" aria-hidden="true">${RECRUIT.number}</div>`+RECRUIT.photos.filter(p=>p.src).slice(0,4).map((p,i)=>`<div class="m m${i+1}${p.cutout?' cut':''}" style="${p.focus?`--focus:${p.focus}`:''}"><img src="${p.src.startsWith('/')?p.src:mediaURL(p.src)}" alt="${p.cap||''}">${p.cap&&!p.cutout?`<div class="cap">${p.cap}</div>`:''}</div>`).join('');return;}
+    el.innerHTML=`<div class="ghost" aria-hidden="true">${RECRUIT.number}</div>`+RECRUIT.photos.filter(p=>p.src).slice(0,5).map((p,i)=>`<div class="m m${i+1}${p.cutout?' cut':''}" style="${p.focus?`--focus:${p.focus}`:''}"><img src="${p.src.startsWith('/')?p.src:mediaURL(p.src)}" alt="${p.cap||''}">${p.cap&&!p.cutout?`<div class="cap">${p.cap}</div>`:''}</div>`).join('');return;}
   if(h&&h.src){el.className='hero-art'+(h.cutout?' cut':'');el.closest('.hero').classList.toggle('bleed',!h.cutout);if(h.focus)el.style.setProperty('--focus',h.focus);
     el.innerHTML=`<img src="${h.src.startsWith('/')?h.src:mediaURL(h.src)}" alt="${h.cap||''}"><div class="ghost" aria-hidden="true">${RECRUIT.number}</div>`;}
   else{el.className='hero-art empty';el.innerHTML=`<span>Hero photo</span><div class="ghost" aria-hidden="true">${RECRUIT.number}</div>`;}
