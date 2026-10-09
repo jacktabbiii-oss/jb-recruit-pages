@@ -556,7 +556,7 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
     <div class="stat">
       <div><div class="v">6</div><div class="k">clients who were the highest paid at their position</div></div>
       <div><div class="v">50<span style="font-size:.6em">%</span></div><div class="k">move in the TE market with the Kittle deal, 2020</div></div>
-      <div><div class="v">$1B</div><div class="k">in contracts negotiated, and closing in on a billion</div></div>
+      <div><div class="v">~$1B</div><div class="k">in contracts negotiated</div></div>
     </div>
     <div class="marquee" aria-label="JB Sports clients"><div class="row" data-dir="1"><div class="track" id="trackA"></div></div><div class="row" data-dir="-1"><div class="track" id="trackB"></div></div></div>
     <div class="roster" id="roster"></div>
@@ -813,7 +813,7 @@ if(!RM&&'IntersectionObserver' in window){const io=new IntersectionObserver(es=>
 function countUp(el,to,suffix,ms){if(RM){el.textContent=to+suffix;return}const t0=performance.now();(function f(t){const k=Math.min(1,(t-t0)/ms);const e=1-Math.pow(1-k,3);el.textContent=Math.round(to*e)+suffix;if(k<1)requestAnimationFrame(f)})(t0)}
 const stats=[...document.querySelectorAll('.stat .v')];
 const so=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;so.unobserve(e.target);const i=stats.indexOf(e.target);
-  if(i===0)countUp(e.target,6,'',900); if(i===1){const sp=e.target.querySelector('span');e.target.innerHTML='';const n=document.createElement('span');e.target.append(n,sp);countUp(n,50,'',1100)} if(i===2){e.target.textContent='$0';setTimeout(()=>{e.target.textContent='$1B'},RM?0:400)}
+  if(i===0)countUp(e.target,6,'',900); if(i===1){const sp=e.target.querySelector('span');e.target.innerHTML='';const n=document.createElement('span');e.target.append(n,sp);countUp(n,50,'',1100)} if(i===2){e.target.textContent='$0';setTimeout(()=>{e.target.textContent='~$1B'},RM?0:400)}
 }),{threshold:.6}); stats.forEach(s=>so.observe(s));
 
 /* ============ AUDIENCE SWITCH ============ */
