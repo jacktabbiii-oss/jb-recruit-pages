@@ -326,8 +326,12 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
   .play-card{grid-template-columns:200px 1fr}
   .handle{grid-template-columns:repeat(4,1fr)}
   .who{grid-template-columns:5fr 4fr}
-  section>.team{grid-column:1 / -1;grid-template-columns:1fr 1fr;gap:40px;margin-top:28px}
-  .person{grid-template-columns:200px 1fr;gap:24px}
+  section>.team{grid-column:1 / -1 !important;grid-template-columns:1fr 1fr;gap:48px;margin-top:32px}
+  .person{grid-template-columns:1fr;gap:18px}
+  .person .ph-frame{aspect-ratio:4/3;max-height:420px}
+  .person .ph-frame img{object-position:50% 12%}
+  .person h3{font-size:2rem}
+  .person p{font-size:1rem;max-width:none}
   .card{width:180px;flex:0 0 180px}
   .card .ph-frame{aspect-ratio:4/5}
   .track{animation-duration:60s}
