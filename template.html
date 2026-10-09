@@ -147,6 +147,10 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
 .card .ph-frame.cutout img{object-fit:contain;object-position:center bottom;padding:6px 6px 0}
 .card .nm{font-family:var(--display);font-size:1.15rem;font-weight:800;text-transform:uppercase;letter-spacing:.02em;line-height:1;padding:10px 10px 2px}
 .card .tm{font-family:var(--mono);font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:0 10px 10px}
+.card .deal{position:absolute;left:8px;right:8px;bottom:8px;z-index:3;background:rgba(10,17,32,.82);border-left:3px solid var(--blue);padding:6px 8px;backdrop-filter:blur(4px)}
+.card .deal b{display:block;font-family:var(--display);font-size:1.5rem;font-weight:900;line-height:1;color:var(--paper)}
+.card .deal span{display:block;font-family:var(--mono);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:3px;line-height:1.3}
+.card.new::before{content:"New deal";position:absolute;top:8px;left:8px;z-index:3;font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;background:var(--red);color:#fff;padding:2px 6px}
 .card.top::before{content:"Highest paid";position:absolute;top:8px;left:8px;z-index:3;font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;background:var(--blue);color:var(--blue-ink);padding:2px 6px}
 .card.pro::before{content:"Pro Bowl";position:absolute;top:8px;left:8px;z-index:3;font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;background:var(--paper);color:var(--ground);padding:2px 6px}
 /* draft-night moments */
@@ -480,7 +484,7 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
     <div class="stat">
       <div><div class="v">6</div><div class="k">clients who were the highest paid at their position</div></div>
       <div><div class="v">50<span style="font-size:.6em">%</span></div><div class="k">move in the TE market with the Kittle deal, 2020</div></div>
-      <div><div class="v">$1B</div><div class="k">closing in on, in contracts negotiated</div></div>
+      <div><div class="v">#1 · #3</div><div class="k">Kittle and Kraft, the two highest-paid TEs JB represents, Sept 2026</div></div>
     </div>
     <div class="marquee" aria-label="JB Sports clients"><div class="track" id="trackA"></div><div class="track rev" id="trackB"></div></div>
     <div class="roster" id="roster"></div>
@@ -613,7 +617,7 @@ $('#heroVideo').innerHTML=vid(RECRUIT.heroVideo&&RECRUIT.heroVideo.clip,`Jack Ta
 })();
 $('#heroPhotos').innerHTML=RECRUIT.photos[1]&&RECRUIT.photos[1].src?frame(RECRUIT.photos[1],'wide')+(RECRUIT.photos[2]&&RECRUIT.photos[2].src?frame(RECRUIT.photos[2]):''):'';
 $('#strip').innerHTML=RECRUIT.photos.slice(3).map(ph=>frame(ph)).join('');
-const cardHTML=w=>`<div class="card ${w[2]||''}"><div class="ph-frame${w[3]?' cutout':''}"><span class="wm">${w[0].split(' ').map(x=>x[0]).join('')}</span>${w[3]?`<img src="${w[3].startsWith('/')?w[3]:mediaURL(w[3])}" alt="${w[0]}" loading="lazy">`:''}</div><div class="nm">${w[0]}</div><div class="tm">${w[1]}</div></div>`;
+const cardHTML=w=>`<div class="card ${w[2]||''}"><div class="ph-frame${w[3]?' cutout':''}"><span class="wm">${w[0].split(' ').map(x=>x[0]).join('')}</span>${w[3]?`<img src="${w[3].startsWith('/')?w[3]:mediaURL(w[3])}" alt="${w[0]}" loading="lazy">`:''}${w[4]?`<div class="deal"><b>${w[4][0]}</b><span>${w[4][1]}</span></div>`:''}</div><div class="nm">${w[0]}</div><div class="tm">${w[1]}</div></div>`;
 const half=Math.ceil(RECRUIT.wall.length/2), A=RECRUIT.wall.slice(0,half), B=RECRUIT.wall.slice(half);
 $('#trackA').innerHTML=A.concat(A).map(cardHTML).join(''); $('#trackB').innerHTML=B.concat(B).map(cardHTML).join('');
 /* Draft-night moments: YouTube ids. Thumbnail + play; on tap an embed replaces it. */
