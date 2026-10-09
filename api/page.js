@@ -42,7 +42,16 @@ module.exports = async (req, res) => {
     .replace('__RECRUIT_JSON__', js(r))
     .replace('__TRACK_JSON__', js(track));
 
-  html = '<!doctype html><html lang="en"><head>' + html.replace('<meta charset="utf-8">', '<meta charset="utf-8">');
+  // Link preview (iMessage, email, Slack, socials): branded card per recruit
+  const esc = (v) => String(v == null ? '' : v).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const host = req.headers && (req.headers['x-forwarded-host'] || req.headers.host);
+  const origin = host ? `https://${host}` : 'https://jbsportsinc.com';
+  const shareTitle = `${r.first} ${r.last} × JB Sports`;
+  const shareDesc = r.shareText || `Made for ${r.first} and the ${r.last} family. Private link.`;
+  const shareImg = origin + (r.shareImage || '/share-default.jpg');
+  const og = `<meta property="og:type" content="website"><meta property="og:site_name" content="JB Sports"><meta property="og:title" content="${esc(shareTitle)}"><meta property="og:description" content="${esc(shareDesc)}"><meta property="og:image" content="${esc(shareImg)}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(shareTitle)}"><meta name="twitter:image" content="${esc(shareImg)}"><link rel="icon" href="/jb-logo.png">`;
+  html = '<!doctype html><html lang="en"><head>' + html.replace('<meta charset="utf-8">', '<meta charset="utf-8">' + og);
+  html = html.replace('<title>JB Sports</title>', `<title>${esc(shareTitle)}</title>`);
   // template starts with metas + <title> + <link> + <style>, then <div class="wrap">
   html = html.replace('<div class="wrap">', '</head><body><div class="wrap">') + '</body></html>';
   res.status(200).end(html);

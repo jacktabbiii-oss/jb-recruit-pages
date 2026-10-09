@@ -167,7 +167,7 @@
       "Tucker Kraft",
       "TE · Packers",
       "new",
-      "/clients/kraft.webp",
+      "/clients/card/kraft.webp",
       [
         "$75M",
         "4 yrs · $26.5M signing bonus · Sept 2026"
@@ -177,7 +177,7 @@
       "George Kittle",
       "TE · 49ers",
       "top",
-      "/clients/kittle.webp",
+      "/clients/card/kittle.webp",
       [
         "$76.4M",
         "4 yrs · $40M guaranteed · Apr 2025"
@@ -187,103 +187,103 @@
       "Sam LaPorta",
       "TE · Lions",
       "pro",
-      "/clients/laporta.webp"
+      "/clients/card/laporta.webp"
     ],
     [
       "Jake Ferguson",
       "TE · Cowboys",
       "pro",
-      "/clients/ferguson.webp"
+      "/clients/card/ferguson.webp"
     ],
     [
       "Gunnar Helm",
       "TE · Titans",
       "",
-      "/clients/helm.webp"
+      "/clients/card/helm.webp"
     ],
     [
       "Daniel Bellinger",
       "TE · Titans",
       "",
-      "/clients/bellinger.webp"
+      "/clients/card/bellinger.webp"
     ],
     [
       "Hayden Rucci",
       "TE · Jaguars",
       "",
-      "/clients/rucci.webp"
+      "/clients/card/rucci.webp"
     ],
     [
       "Riley Nowakowski",
       "TE · Steelers",
       "",
-      "/clients/nowakowski.webp"
+      "/clients/card/nowakowski.webp"
     ],
     [
       "Mitchell Evans",
       "TE · Panthers",
       "",
-      "/clients/evans.webp"
+      "/clients/card/evans.webp"
     ],
     [
       "Noah Gray",
       "TE · Chiefs",
       "",
-      "/clients/gray.webp"
+      "/clients/card/gray.webp"
     ],
     [
       "Rob Tonyan",
       "TE · Steelers",
       "",
-      "/clients/tonyan.webp"
+      "/clients/card/tonyan.webp"
     ],
     [
       "Anthony Nelson",
       "DE · Buccaneers",
       "",
-      "/clients/nelson.webp"
+      "/clients/card/nelson.webp"
     ],
     [
       "Kristian Welch",
       "LB · Packers",
       "",
-      "/clients/welch.webp"
+      "/clients/card/welch.webp"
     ],
     [
       "Hunter Wohler",
       "DB · Colts",
       "",
-      "/clients/wohler.webp"
+      "/clients/card/wohler.webp"
     ],
     [
       "Connor Colby",
       "OL · 49ers",
       "",
-      "/clients/colby.webp"
+      "/clients/card/colby.webp"
     ],
     [
       "Charlie Heck",
       "OL · Buccaneers",
       "",
-      "/clients/heck.webp"
+      "/clients/card/heck.webp"
     ],
     [
       "Jay Higgins",
       "LB · Ravens",
       "",
-      "/clients/higgins.webp"
+      "/clients/card/higgins.webp"
     ],
     [
       "Amani Hooker",
       "DB · Titans",
       "",
-      "/clients/hooker.webp"
+      "/clients/card/hooker.webp"
     ],
     [
       "Kaden Wetjen",
       "WR · Steelers",
       "",
-      "/clients/wetjen.webp"
+      "/clients/card/wetjen.webp"
     ]
   ],
   "rosterAll": [

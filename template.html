@@ -170,23 +170,20 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
 .yr1 b{display:block;font-family:var(--display);font-size:1.15rem;text-transform:uppercase;letter-spacing:.02em;line-height:1.1;margin-bottom:4px}
 .yr1 span{font-size:.9rem;color:var(--muted);line-height:1.45}
 /* client marquee: always moving; swipeable on touch; pauses on hover (mouse) or while a finger is on it */
-@media (hover:hover){.marquee:hover .track{animation-play-state:paused}}
+.track{display:flex;gap:10px;width:max-content}
 /* client marquee */
-.marquee{margin-top:18px;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;display:grid;gap:10px}
-.track{display:flex;gap:10px;width:max-content;animation:scroll 38s linear infinite}
-.track.rev{animation-direction:reverse;animation-duration:46s}
-.marquee::-webkit-scrollbar{display:none}
-.marquee.held .track{animation-play-state:paused}
-@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@media (prefers-reduced-motion:reduce){.track{animation-duration:110s}.track.rev{animation-duration:130s}}
+.marquee .row{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+.marquee .row::-webkit-scrollbar{display:none}
+.marquee{margin-top:18px;overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;display:grid;gap:10px}
+
 .card{width:190px;flex:0 0 190px;background:var(--panel);border:1px solid var(--line);padding:0;position:relative}
 .card .ph-frame{aspect-ratio:4/5;border:0;border-bottom:1px solid var(--line)}
 .card .ph-frame .wm{font-size:4.6rem;right:.02em;bottom:-.1em}
-.card .ph-frame.cutout img{object-fit:contain;object-position:center bottom;padding:6px 6px 0}
+.card .ph-frame.cutout img{object-fit:contain;object-position:center top;padding:8px 4px 0}
 .card .nm{font-family:var(--display);font-size:1.15rem;font-weight:800;text-transform:uppercase;letter-spacing:.02em;line-height:1;padding:10px 10px 2px}
 .card .tm{font-family:var(--mono);font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:0 10px 10px}
-.card .deal{position:absolute;left:8px;right:8px;bottom:8px;z-index:3;background:rgba(10,17,32,.82);border-left:3px solid var(--blue);padding:6px 8px;backdrop-filter:blur(4px)}
-.card .deal b{display:block;font-family:var(--display);font-size:1.5rem;font-weight:900;line-height:1;color:var(--paper)}
+.card .deal{margin:0 10px 10px;border-left:3px solid var(--blue);padding:2px 0 2px 8px}
+.card .deal b{display:block;font-family:var(--display);font-size:1.4rem;font-weight:900;line-height:1;color:var(--blue)}
 .card .deal span{display:block;font-family:var(--mono);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:3px;line-height:1.3}
 .card.new::before{content:"New deal";position:absolute;top:8px;left:8px;z-index:3;font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;background:var(--red);color:#fff;padding:2px 6px}
 .card.top::before{content:"Highest paid";position:absolute;top:8px;left:8px;z-index:3;font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;background:var(--blue);color:var(--blue-ink);padding:2px 6px}
@@ -372,8 +369,6 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
   .person p{font-size:1rem;max-width:none}
   .card{width:180px;flex:0 0 180px}
   .card .ph-frame{aspect-ratio:4/5}
-  .track{animation-duration:60s}
-  .track.rev{animation-duration:72s}
   .calc .pick{font-size:4.2rem}
   .figs .v{font-size:2.4rem}
   .fitrows{grid-template-columns:1fr 1fr;column-gap:28px}
@@ -562,7 +557,7 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
       <div><div class="v">50<span style="font-size:.6em">%</span></div><div class="k">move in the TE market with the Kittle deal, 2020</div></div>
       <div><div class="v">#1 · #3</div><div class="k">Kittle and Kraft, the two highest-paid TEs JB represents, Sept 2026</div></div>
     </div>
-    <div class="marquee" aria-label="JB Sports clients"><div class="track" id="trackA"></div><div class="track rev" id="trackB"></div></div>
+    <div class="marquee" aria-label="JB Sports clients"><div class="row" data-dir="1"><div class="track" id="trackA"></div></div><div class="row" data-dir="-1"><div class="track" id="trackB"></div></div></div>
     <div class="roster" id="roster"></div>
   </section>
 
@@ -705,10 +700,23 @@ if(RECRUIT.heroVideo===null){$('#heroVideo').remove()}else $('#heroVideo').inner
 })();
 $('#heroPhotos').innerHTML=RECRUIT.heroStyle==='mosaic'?'':RECRUIT.photos[1]&&RECRUIT.photos[1].src?frame(RECRUIT.photos[1],'wide')+(RECRUIT.photos[2]&&RECRUIT.photos[2].src?frame(RECRUIT.photos[2]):''):'';
 $('#strip').innerHTML=RECRUIT.photos.slice(3).map(ph=>frame(ph)).join('');
-const cardHTML=w=>`<div class="card ${w[2]||''}"><div class="ph-frame${w[3]?' cutout':''}"><span class="wm">${w[0].split(' ').map(x=>x[0]).join('')}</span>${w[3]?`<img src="${w[3].startsWith('/')?w[3]:mediaURL(w[3])}" alt="${w[0]}" loading="lazy">`:''}${w[4]?`<div class="deal"><b>${w[4][0]}</b><span>${w[4][1]}</span></div>`:''}</div><div class="nm">${w[0]}</div><div class="tm">${w[1]}</div></div>`;
+const cardHTML=w=>`<div class="card ${w[2]||''}"><div class="ph-frame${w[3]?' cutout':''}"><span class="wm">${w[0].split(' ').map(x=>x[0]).join('')}</span>${w[3]?`<img src="${w[3].startsWith('/')?w[3]:mediaURL(w[3])}" alt="${w[0]}" loading="lazy">`:''}</div><div class="nm">${w[0]}</div><div class="tm">${w[1]}</div>${w[4]?`<div class="deal"><b>${w[4][0]}</b><span>${w[4][1]}</span></div>`:''}</div>`;
 const half=Math.ceil(RECRUIT.wall.length/2), A=RECRUIT.wall.slice(0,half), B=RECRUIT.wall.slice(half);
 $('#trackA').innerHTML=A.concat(A).map(cardHTML).join(''); $('#trackB').innerHTML=B.concat(B).map(cardHTML).join('');
-{const m=$('.marquee');let t;m.addEventListener('touchstart',()=>{clearTimeout(t);m.classList.add('held')},{passive:true});m.addEventListener('touchend',()=>{clearTimeout(t);t=setTimeout(()=>m.classList.remove('held'),2500)},{passive:true});}
+/* client wall: scripted drift (works on every phone, incl. iOS Low Power / Reduce Motion); swipe or hover pauses it */
+{const rows=[...document.querySelectorAll('.marquee .row')];const slow=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const speed=(slow?14:34)*(innerWidth>=900?0.8:1);let vis=true,last=0;
+ rows.forEach(r=>{r.pos=0;r.hold=0;const h=()=>{r.hold=performance.now()+2500};
+   ['touchstart','touchmove','wheel','pointerdown'].forEach(ev=>r.addEventListener(ev,()=>{r.hold=Infinity},{passive:true}));
+   ['touchend','touchcancel','pointerup'].forEach(ev=>r.addEventListener(ev,h,{passive:true}));
+   r.addEventListener('scroll',()=>{if(r.hold>performance.now())r.pos=r.scrollLeft},{passive:true});
+   if(matchMedia('(hover:hover)').matches){r.addEventListener('mouseenter',()=>{r.hold=Infinity});r.addEventListener('mouseleave',h)}});
+ if('IntersectionObserver' in window)new IntersectionObserver(es=>{vis=es[0].isIntersecting},{rootMargin:'100px'}).observe($('.marquee'));
+ const tick=t=>{const dt=last?Math.min(.05,(t-last)/1000):0;last=t;
+   if(vis)rows.forEach(r=>{if(r.hold>t)return;const half=r.scrollWidth/2;if(!half)return;
+     if(r.dataset.dir==='-1'&&r.pos<=0)r.pos=half;
+     r.pos+=speed*dt*(+r.dataset.dir);if(r.pos>=half)r.pos-=half;if(r.pos<0)r.pos+=half;r.scrollLeft=r.pos});
+   requestAnimationFrame(tick)};requestAnimationFrame(tick);}
 /* Draft-night moments: YouTube ids. Thumbnail + play; on tap an embed replaces it. */
 const M=RECRUIT.draftMoments||[];
 $('#moments').innerHTML=M.length?`<span class="eyebrow">Draft night</span><div class="mrow">`+M.map((m,i)=>`<div class="moment" data-yt="${m.yt}" tabindex="0" role="button" aria-label="Play: ${m.who}, ${m.what}"><img src="https://i.ytimg.com/vi/${m.yt}/hqdefault.jpg" alt="" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/${m.yt}/mqdefault.jpg'"><div class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></div><div class="cap"><b>${m.who}</b><span>${m.what}</span></div></div>`).join('')+`</div><div class="strip-hint" style="margin-top:8px">${RECRUIT.draftMoments.map(m=>`<a href="https://www.youtube.com/watch?v=${m.yt}" target="_blank" rel="noopener" style="color:var(--muted)">Open on YouTube ↗</a>`).join(' · ')}</div>`:'';
