@@ -154,9 +154,31 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
 .strip .ph-frame:nth-child(even){aspect-ratio:3/4;flex-basis:62%}
 .strip:empty,.strip:empty+.strip-hint{display:none}
 .strip-hint{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+/* parents: what Ryan reads first + year-one stepper (replace the old video slots) */
+.reads{margin-top:20px;display:grid;gap:10px}
+.reads>div{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--blue);padding:14px 14px 14px 16px}
+.reads .n{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;color:var(--blue)}
+.reads h4{margin:4px 0 6px;font-family:var(--display);font-size:1.3rem;font-weight:800;text-transform:uppercase;letter-spacing:.02em;line-height:1}
+.reads p{margin:0;font-size:.9rem;color:var(--muted);line-height:1.45}
+.yr1{margin-top:24px}
+.yr1 .hdr{display:block;font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+.yr1 ol{list-style:none;margin:0;padding:0;counter-reset:y;display:grid;gap:0;position:relative}
+.yr1 li{counter-increment:y;position:relative;padding:0 0 18px 40px}
+.yr1 li::before{content:counter(y);position:absolute;left:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--blue);color:var(--blue-ink);font-family:var(--mono);font-size:.72rem;font-weight:600;display:grid;place-items:center}
+.yr1 li::after{content:"";position:absolute;left:12px;top:28px;bottom:2px;width:2px;background:linear-gradient(var(--blue),rgba(43,155,255,.15))}
+.yr1 li:last-child::after{display:none}
+.yr1 b{display:block;font-family:var(--display);font-size:1.15rem;text-transform:uppercase;letter-spacing:.02em;line-height:1.1;margin-bottom:4px}
+.yr1 span{font-size:.9rem;color:var(--muted);line-height:1.45}
+/* client marquee: always moving; swipeable on touch; pauses on hover (mouse) or while a finger is on it */
+@media (hover:hover){.marquee:hover .track{animation-play-state:paused}}
 /* client marquee */
-.marquee{margin-top:18px;overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;display:grid;gap:10px}
-.track{display:flex;gap:10px;width:max-content}
+.marquee{margin-top:18px;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;display:grid;gap:10px}
+.track{display:flex;gap:10px;width:max-content;animation:scroll 38s linear infinite}
+.track.rev{animation-direction:reverse;animation-duration:46s}
+.marquee::-webkit-scrollbar{display:none}
+.marquee.held .track{animation-play-state:paused}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.track{animation-duration:110s}.track.rev{animation-duration:130s}}
 .card{width:190px;flex:0 0 190px;background:var(--panel);border:1px solid var(--line);padding:0;position:relative}
 .card .ph-frame{aspect-ratio:4/5;border:0;border-bottom:1px solid var(--line)}
 .card .ph-frame .wm{font-size:4.6rem;right:.02em;bottom:-.1em}
@@ -337,6 +359,10 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
   .play-card .n{font-size:1rem}
   .play-card.noclip{grid-template-columns:1fr}
   .handle{grid-template-columns:repeat(4,1fr)}
+  .reads{grid-template-columns:repeat(3,1fr);gap:16px}
+  .yr1 ol{grid-template-columns:repeat(4,1fr);gap:20px}
+  .yr1 li{padding:40px 0 0 0}
+  .yr1 li::after{left:30px;right:-20px;top:12px;bottom:auto;width:auto;height:2px;background:linear-gradient(90deg,var(--blue),rgba(43,155,255,.15))}
   .who{grid-template-columns:5fr 4fr}
   section>.team{grid-column:1 / -1 !important;grid-template-columns:1fr 1fr;gap:48px;margin-top:32px}
   .person{grid-template-columns:1fr;gap:18px}
@@ -429,10 +455,6 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
   .switch button,.cta a,.cta button,.contact button{transition:background .15s,color .15s,transform .1s}
   .cta a:active,.cta button:active{transform:scale(.98)}
   .figs .v{transition:color .2s}
-  .track{animation:scroll 38s linear infinite}
-  .track.rev{animation-direction:reverse;animation-duration:46s}
-  .marquee:hover .track{animation-play-state:paused}
-  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
   .strip .ph-frame{transition:transform .5s cubic-bezier(.2,.8,.2,1)}
   .strip .ph-frame:nth-child(even){transform:translateY(10px)}
   .hero-photo .ph-frame{animation:fadeUp .9s .35s cubic-bezier(.2,.8,.2,1) both}
@@ -593,7 +615,11 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
     <span class="eyebrow">For the Finleys</span>
     <h2>The questions parents ask us</h2>
     <p class="lede muted">Straight answers. Ryan Hays is a licensed attorney and has been a certified NFL contract advisor since 2012; he handles the contract and the protection side for every client.</p>
-    <div class="video" tabindex="0" aria-label="Video from Ryan Hays for parents"><span class="slot">Video slot 04</span><div class="play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></div><div class="cap"><span><b>Ryan Hays, Esq.</b> · for Eli's parents</span><span class="num">1:45</span></div></div>
+    <div class="reads" aria-label="Three things Ryan reads first">
+      <div><span class="n">01</span><h4>Guarantees</h4><p>Guaranteed for injury only, or for skill too? On a rookie deal the signing bonus is the money that's locked in from day one.</p></div>
+      <div><span class="n">02</span><h4>Offsets</h4><p>If he's released and signs somewhere else, can the old team subtract his new salary from what it still owes? We push for no offset.</p></div>
+      <div><span class="n">03</span><h4>When it's paid</h4><p>When the signing bonus actually lands is negotiable. Earlier is better for him, and we ask for it.</p></div>
+    </div>
     <div class="qa" id="qa"></div>
   </section>
 
@@ -603,8 +629,14 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
     <ul class="list">
       <li>Contract negotiation and extensions</li><li>Guarantees and injury protection</li><li>Grievances, fine appeals, trade requests</li><li>Second medical opinions</li><li>Disability insurance</li><li>Free agency and promotion</li><li>Financial guidance and education</li><li>Screening of advisors and money managers</li><li>Tax filing coordination</li><li>Insurance counseling</li><li>Relocation and travel</li><li>Media relations</li><li>Post-career benefits and planning</li><li>Legal assistance</li>
     </ul>
-    <div class="quotes" id="parentQuotes">
-      <div class="quote"><div class="video" tabindex="0" aria-label="Parent testimonial"><span class="slot" style="font-size:.55rem">Slot 05</span><div class="play"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></div></div><div><div class="q">A client's parent on what the first year was actually like.</div><div class="who">Parent testimonial · to record</div></div></div>
+    <div class="yr1" aria-label="Year one, in order">
+      <span class="hdr">Year one, in order</span>
+      <ol>
+        <li><b>Before the draft</b><span>Disability and loss-of-value coverage in place, so an injury in a workout doesn't cost the career.</span></li>
+        <li><b>Draft week</b><span>Ryan has already modeled the slot. The contract is reviewed line by line before anything is signed.</span></li>
+        <li><b>First check</b><span>A budget is set and any advisor is screened before the money arrives, not after.</span></li>
+        <li><b>First tax season</b><span>He's paid in several states. Those filings are coordinated so nothing gets missed.</span></li>
+      </ol>
     </div>
   </section>
   </div>
@@ -676,6 +708,7 @@ $('#strip').innerHTML=RECRUIT.photos.slice(3).map(ph=>frame(ph)).join('');
 const cardHTML=w=>`<div class="card ${w[2]||''}"><div class="ph-frame${w[3]?' cutout':''}"><span class="wm">${w[0].split(' ').map(x=>x[0]).join('')}</span>${w[3]?`<img src="${w[3].startsWith('/')?w[3]:mediaURL(w[3])}" alt="${w[0]}" loading="lazy">`:''}${w[4]?`<div class="deal"><b>${w[4][0]}</b><span>${w[4][1]}</span></div>`:''}</div><div class="nm">${w[0]}</div><div class="tm">${w[1]}</div></div>`;
 const half=Math.ceil(RECRUIT.wall.length/2), A=RECRUIT.wall.slice(0,half), B=RECRUIT.wall.slice(half);
 $('#trackA').innerHTML=A.concat(A).map(cardHTML).join(''); $('#trackB').innerHTML=B.concat(B).map(cardHTML).join('');
+{const m=$('.marquee');let t;m.addEventListener('touchstart',()=>{clearTimeout(t);m.classList.add('held')},{passive:true});m.addEventListener('touchend',()=>{clearTimeout(t);t=setTimeout(()=>m.classList.remove('held'),2500)},{passive:true});}
 /* Draft-night moments: YouTube ids. Thumbnail + play; on tap an embed replaces it. */
 const M=RECRUIT.draftMoments||[];
 $('#moments').innerHTML=M.length?`<span class="eyebrow">Draft night</span><div class="mrow">`+M.map((m,i)=>`<div class="moment" data-yt="${m.yt}" tabindex="0" role="button" aria-label="Play: ${m.who}, ${m.what}"><img src="https://i.ytimg.com/vi/${m.yt}/hqdefault.jpg" alt="" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/${m.yt}/mqdefault.jpg'"><div class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></div><div class="cap"><b>${m.who}</b><span>${m.what}</span></div></div>`).join('')+`</div><div class="strip-hint" style="margin-top:8px">${RECRUIT.draftMoments.map(m=>`<a href="https://www.youtube.com/watch?v=${m.yt}" target="_blank" rel="noopener" style="color:var(--muted)">Open on YouTube ↗</a>`).join(' · ')}</div>`:'';
