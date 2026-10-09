@@ -283,7 +283,7 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
 /* CTA bar */
 .cta{position:sticky;bottom:0;background:var(--ground);border-top:1px solid var(--line);padding:10px 0 calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:8px;z-index:5}
 .cta a,.cta button{flex:1;max-width:none;text-align:center;text-decoration:none;font:700 .95rem var(--display);letter-spacing:.06em;text-transform:uppercase;padding:14px 10px;border:1px solid var(--paper);color:var(--paper);background:transparent;cursor:pointer}
-.cta a.primary{background:var(--blue);border-color:var(--blue);color:var(--blue-ink)}
+.cta a.primary,.cta button.primary{background:var(--blue);border-color:var(--blue);color:var(--blue-ink)}
 .contact{padding-block:28px;display:grid;gap:10px}
 .contact .line{display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:var(--mono);font-size:.96rem;border-bottom:1px solid var(--line);padding:8px 0}
 .contact .line span.k{color:var(--muted);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
@@ -549,14 +549,14 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
     <div class="handle" id="handle"></div>
   </section>
 
-  <section class="reveal">
+  <section class="reveal" id="proof">
     <span class="eyebrow">06 · Proof</span>
     <h2 id="proofH">The tight end room</h2>
     <p class="lede muted" id="proofLede">We set the TE market in 2020 and have kept the room full since. You'd be joining it.</p>
     <div class="stat">
       <div><div class="v">6</div><div class="k">clients who were the highest paid at their position</div></div>
       <div><div class="v">50<span style="font-size:.6em">%</span></div><div class="k">move in the TE market with the Kittle deal, 2020</div></div>
-      <div><div class="v">#1 · #3</div><div class="k">Kittle and Kraft, the two highest-paid TEs JB represents, Sept 2026</div></div>
+      <div><div class="v">$1B</div><div class="k">in contracts negotiated, and closing in on a billion</div></div>
     </div>
     <div class="marquee" aria-label="JB Sports clients"><div class="row" data-dir="1"><div class="track" id="trackA"></div></div><div class="row" data-dir="-1"><div class="track" id="trackB"></div></div></div>
     <div class="roster" id="roster"></div>
@@ -675,7 +675,7 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
   </div>
 
   <div class="cta">
-    <a class="primary" id="textJack" href="#contact">Set up a meeting</a>
+    <button type="button" class="primary" id="shareBtn">Share this page</button>
   </div>
 </div>
 
@@ -708,7 +708,11 @@ if(RECRUIT.heroVideo===null){$('#heroVideo').remove()}else $('#heroVideo').inner
 $('#heroPhotos').innerHTML=RECRUIT.heroStyle==='mosaic'?'':RECRUIT.photos[1]&&RECRUIT.photos[1].src?frame(RECRUIT.photos[1],'wide')+(RECRUIT.photos[2]&&RECRUIT.photos[2].src?frame(RECRUIT.photos[2]):''):'';
 $('#strip').innerHTML=RECRUIT.photos.slice(RECRUIT.heroStyle==='mosaic'?5:3).filter(ph=>ph.src).map(ph=>frame(ph)).join('');
 const cardHTML=w=>`<div class="card ${w[2]||''}"><div class="ph-frame${w[3]?' cutout':''}"><span class="wm">${w[0].split(' ').map(x=>x[0]).join('')}</span>${w[3]?`<img src="${w[3].startsWith('/')?w[3]:mediaURL(w[3])}" alt="${w[0]}" loading="lazy">`:''}</div><div class="nm">${w[0]}</div><div class="tm">${w[1]}</div>${w[4]?`<div class="deal"><b>${w[4][0]}</b><span>${w[4][1]}</span></div>`:''}</div>`;
-const half=Math.ceil(RECRUIT.wall.length/2), A=RECRUIT.wall.slice(0,half), B=RECRUIT.wall.slice(half);
+/* proof first: the client room is the first thing a recruit sees after his own name (proofFirst:false to turn off) */
+if(RECRUIT.proofFirst!==false){const pr=$('#proof'),ath=document.querySelector('[data-aud="athlete"]');if(pr&&ath)ath.insertBefore(pr,ath.firstElementChild)}
+/* non-TE recruits: their own position group leads the wall */
+const WALL=RECRUIT.positionGroup==='TE'?RECRUIT.wall:[...RECRUIT.wall].sort((a,b)=>(b[1].startsWith(RECRUIT.positionGroup)?1:0)-(a[1].startsWith(RECRUIT.positionGroup)?1:0));
+const half=Math.ceil(WALL.length/2), A=WALL.slice(0,half), B=WALL.slice(half);
 $('#trackA').innerHTML=A.concat(A).map(cardHTML).join(''); $('#trackB').innerHTML=B.concat(B).map(cardHTML).join('');
 /* client wall: scripted drift (works on every phone, incl. iOS Low Power / Reduce Motion); swipe or hover pauses it */
 {const rows=[...document.querySelectorAll('.marquee .row')];const slow=matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -754,6 +758,8 @@ document.querySelectorAll('[data-locked]').forEach(el=>{if(UNLOCKED.has(el.datas
 document.body.dataset.pagemode=RECRUIT.mode||'draft';
 if(RECRUIT.ask){ if(RECRUIT.ask.h)$('#askH').textContent=RECRUIT.ask.h; if(RECRUIT.ask.lede)$('#askLede').textContent=RECRUIT.ask.lede; }
 (RECRUIT.copy||[]).forEach(([sel,html])=>{const el=document.querySelector(sel);if(el)el.innerHTML=html});
+/* renumber the athlete-view eyebrows in on-page order, skipping sections hidden for this mode */
+{let n=0;document.querySelectorAll('[data-aud="athlete"]>section').forEach(sec=>{const m=sec.dataset.mode;if(m&&!m.split(' ').includes(RECRUIT.mode))return;const e=sec.querySelector(':scope>.eyebrow');if(e&&/^\d+\s·/.test(e.textContent)){n++;e.textContent=e.textContent.replace(/^\d+/,String(n).padStart(2,'0'))}})}
 if(RECRUIT.mode==='college'||RECRUIT.mode==='hs'){
   const F=RECRUIT.fit||[["Playing time now","Early snaps vs. developing behind a vet"],["Development","Position coach, scheme, strength staff"],["NIL / compensation","What the collective and the market will do"],["Distance from home","Family in the stands"],["The degree","Program, support, finishing"]];
   const rows=$('#fitRows'); rows.innerHTML=F.map((f,i)=>`<div><label for="fit${i}"><b>${f[0]}</b><span id="fitv${i}">3 / 5</span></label><input type="range" id="fit${i}" min="1" max="5" value="3"><div class="muted" style="font-size:.86rem">${f[1]}</div></div>`).join('');
@@ -820,7 +826,13 @@ let v='athlete'; try{v=localStorage.getItem('jb-view')||v}catch(e){} if(location
    <a href="sms:+17326750705?body=Hey Jack, it's Eli">, which opens Messages. */
 const C=RECRUIT.contact||{name:"Jack",phone:RECRUIT.phone,phoneE164:RECRUIT.phoneE164,email:RECRUIT.email};
 const CTA=RECRUIT.cta||{label:"Set up a meeting",sms:`Hey ${C.name}, it's ${RECRUIT.first}. I'd like to set up a time to meet.`};
-$('#textJack').textContent=CTA.label; $('#textJack').href=`sms:${C.phoneE164}?&body=${encodeURIComponent(CTA.sms)}`;
+/* Share: recruits forward this to parents, coaches, whoever. Native share sheet on phones, copy-link fallback.
+   Shared copies carry ?v=s so the alert says it came from a forwarded link. */
+{const btn=$('#shareBtn');const url=location.origin+location.pathname+'?v=s';
+ btn.addEventListener('click',async()=>{const data={title:`${RECRUIT.first} ${RECRUIT.last} × JB Sports`,text:`Take a look at what JB Sports put together for me.`,url};
+   try{window.__jbShare&&window.__jbShare();}catch(e){}
+   if(navigator.share){try{await navigator.share(data);return}catch(e){if(e&&e.name==='AbortError')return}}
+   try{await navigator.clipboard.writeText(url);btn.textContent='Link copied';setTimeout(()=>btn.textContent='Share this page',2200)}catch(e){prompt('Copy this link',url)}});}
 $('#contactName').textContent=`${C.name} · text or call`; $('#phone').textContent=C.phone; $('#email').textContent=C.email;
 
 /* ============ TRACKING ============
@@ -829,9 +841,11 @@ $('#contactName').textContent=`${C.name} · text or call`; $('#phone').textConte
   if(!TRACK||!TRACK.enabled)return;
   let sid; try{sid=sessionStorage.getItem('jb-sid');if(!sid){sid=Math.random().toString(36).slice(2)+Date.now().toString(36);sessionStorage.setItem('jb-sid',sid)}}catch(e){sid='s'+Date.now()}
   const t0=Date.now(), seen=new Set(), played=new Set();
-  const send=(ev,extra)=>{const body=JSON.stringify(Object.assign({slug:TRACK.slug,k:TRACK.token,sid,ev,view:document.body.dataset.view,ua:navigator.userAgent.slice(0,80)},extra||{}));
+  const via=/[?&]v=s\b/.test(location.search)?'share':'';
+  const send=(ev,extra)=>{const body=JSON.stringify(Object.assign({slug:TRACK.slug,k:TRACK.token,sid,ev,via,view:document.body.dataset.view,ua:navigator.userAgent.slice(0,80)},extra||{}));
     if(navigator.sendBeacon)navigator.sendBeacon('/api/track',new Blob([body],{type:'application/json'}));else fetch('/api/track',{method:'POST',body,keepalive:true,headers:{'content-type':'application/json'}}).catch(()=>{})};
   let sentOpen=false; try{sentOpen=sessionStorage.getItem('jb-open')==='1'}catch(e){}
+  window.__jbShare=()=>send('share');
   if(!sentOpen){send('open');try{sessionStorage.setItem('jb-open','1')}catch(e){}}
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const n=e.target.querySelector('.eyebrow');if(n)seen.add(n.textContent.trim())}}),{threshold:.4});
   document.querySelectorAll('section').forEach(x=>io.observe(x));

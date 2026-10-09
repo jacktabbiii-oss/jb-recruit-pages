@@ -26,7 +26,20 @@ module.exports = async (req, res) => {
   const when = new Date().toLocaleString('en-US', { timeZone: process.env.ALERT_TZ || 'America/New_York', hour: 'numeric', minute: '2-digit', weekday: 'short' });
 
   try {
-    if (b.ev === 'open') {
+    const shared = b.via === 'share';
+    if (b.ev === 'share') {
+      await sendAlert({
+        to: r.alertTo,
+        subject: `${who} just shared his page`,
+        text: `${who} tapped Share on ${device}, ${when}. When someone opens the forwarded link you'll get a separate alert marked "shared link".`
+      });
+    } else if (b.ev === 'open' && shared) {
+      await sendAlert({
+        to: r.alertTo,
+        subject: `Someone opened ${who}'s page from a shared link (${tab})`,
+        text: `A forwarded copy of ${who}'s page was opened ${when} on ${device}, starting on ${tab}. Likely a parent, coach or someone close to him.`
+      });
+    } else if (b.ev === 'open') {
       await sendAlert({
         to: r.alertTo,
         subject: `${who} just opened the page (${tab})`,
@@ -40,7 +53,7 @@ module.exports = async (req, res) => {
       if (secs < 5 && !played.length) return res.status(204).end(); // bounce; don't email
       await sendAlert({
         to: r.alertTo,
-        subject: `${who} · ${mins} on the page${played.length ? ` · watched ${played.length} video${played.length > 1 ? 's' : ''}` : ''}`,
+        subject: `${shared ? 'Shared link · ' : ''}${who} · ${mins} on the page${played.length ? ` · watched ${played.length} video${played.length > 1 ? 's' : ''}` : ''}`,
         text: [
           `${who} spent ${mins} on the page (${tab}, ${device}), ${when}.`,
           '',
