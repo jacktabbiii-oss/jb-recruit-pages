@@ -287,19 +287,22 @@
       "/clients/heck.webp"
     ],
     [
-      "Amani Hooker",
-      "DB · Titans",
-      ""
-    ],
-    [
       "Jay Higgins",
       "LB · Ravens",
-      ""
+      "",
+      "/clients/higgins.webp"
     ],
     [
       "Josh Butler",
       "CB · Cowboys",
-      ""
+      "",
+      "/clients/butler.webp"
+    ],
+    [
+      "Amani Hooker",
+      "DB · Titans",
+      "",
+      "/clients/hooker.webp"
     ]
   ],
   "rosterAll": [
