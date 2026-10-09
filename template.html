@@ -361,8 +361,8 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
   .yr1 li{padding:40px 0 0 0}
   .yr1 li::after{left:30px;right:-20px;top:12px;bottom:auto;width:auto;height:2px;background:linear-gradient(90deg,var(--blue),rgba(43,155,255,.15))}
   .who{grid-template-columns:5fr 4fr}
-  section>.team{grid-column:1 / -1 !important;grid-template-columns:1fr 1fr;gap:48px;margin-top:32px}
-  .person{grid-template-columns:1fr;gap:18px}
+  section>.team{grid-column:1 / -1 !important;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:32px}
+  .person{grid-template-columns:1fr;gap:18px;align-content:start}
   .person .ph-frame{aspect-ratio:4/3;max-height:420px}
   .person .ph-frame img{object-position:50% 12%}
   .person h3{font-size:2rem}
@@ -640,6 +640,12 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
     <span class="eyebrow">Your people</span>
     <h2>Who picks up the phone</h2>
     <div class="team">
+      <div class="person">
+        <div class="ph-frame real"><img src="/people/bechta.jpg" alt="Jack Bechta"></div>
+        <div><h3>Jack Bechta</h3><div class="role">President &amp; founder · NFL contract advisor since 1986</div>
+        <p>Played football at Texas A&amp;M–Kingsville on a full scholarship and earned degrees in finance and real estate. Certified as an NFL contract advisor in 1986 and built JB Sports from there: more than 125 players represented and more than 300 contracts negotiated, for first-round picks, Pro Bowlers and the highest paid at their positions.</p>
+        <p>Jack only takes on high-character players. JB stays mid-size on purpose so nobody gets lost behind a bigger name.</p></div>
+      </div>
       <div class="person">
         <div class="ph-frame real"><img src="/people/jack.jpg" alt="Jack Tabb III"></div>
         <div><h3>Jack Tabb III</h3><div class="role">Agent · former NFL tight end</div>
