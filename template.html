@@ -267,6 +267,16 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
   .hero-art::after{background:linear-gradient(90deg,var(--ground) 0%,rgba(10,17,32,0) 25%,rgba(10,17,32,0) 85%,rgba(10,17,32,.4) 100%)}
   .hero-art .ghost{font-size:min(28vw,420px);right:-6%;top:-4%}
   .hero .title{grid-area:title;margin-top:0;align-self:end}
+  /* full-bleed hero: photo behind the whole hero, name over a left-to-right fade */
+  .hero.bleed{grid-template-columns:minmax(0,600px) 1fr;grid-template-areas:"title ." "video ." "pair .";border-bottom:0}
+  html,body{overflow-x:clip}
+  .hero.bleed .hero-art{position:absolute;inset:0;grid-area:auto;height:auto;left:calc(50% - 50vw);width:100vw;z-index:0;background:var(--ground)}
+  .hero.bleed .hero-art img{left:auto;right:0;width:68%;object-position:var(--focus,50% 15%)}
+  .hero.bleed .hero-art::after{left:32%;background:linear-gradient(90deg,var(--ground) 0%,rgba(10,17,32,.92) 22%,rgba(10,17,32,.45) 48%,rgba(10,17,32,.08) 75%,rgba(10,17,32,.3) 100%),linear-gradient(180deg,rgba(10,17,32,.25) 0%,transparent 40%,var(--ground) 100%)}
+  .hero.bleed::after{display:none}
+  .hero.bleed .hero-art .ghost{right:3%;top:auto;bottom:-2%;-webkit-text-stroke:1px rgba(255,255,255,.18)}
+  .hero.bleed .title,.hero.bleed .video,.hero.bleed .hero-photo{z-index:2}
+  .hero.bleed .hero-photo{max-width:440px}
   .hero h1{font-size:clamp(5rem,9vw,9rem)}
   .hero .tag{font-size:.9rem;gap:10px 24px}
   #heroVideo{grid-area:video}
@@ -527,15 +537,15 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
   </section>
 
   <section class="reveal">
-    <span class="eyebrow">08 · Later</span>
-    <h2 id="brandH">Endorsements come after performance</h2>
+    <span class="eyebrow">08 · The brand side</span>
+    <h2 id="brandH">Built as you go,<br>not after you blow up</h2>
     <div class="brandstrip" aria-label="Client endorsement work">
       <div><img src="/brand/panda.webp" alt="George Kittle, Panda Express" loading="lazy"><span>Kittle · Panda Express</span></div>
       <div><img src="/brand/kraft.webp" alt="Tucker Kraft, Kraft Mac &amp; Cheese" loading="lazy"><span>Kraft · Kraft Mac &amp; Cheese</span></div>
       <div><img src="/brand/genisys.webp" alt="Sam LaPorta, Genisys" loading="lazy"><span>LaPorta · Genisys</span></div>
       <div><img src="/brand/bootbarn.webp" alt="Boot Barn" loading="lazy"><span>Boot Barn</span></div>
     </div>
-    <p class="lede muted" id="brandLede">We do this work, and have done it for Kittle, LaPorta and Kraft, but it comes second. Play well and get managed well, and the brand side follows once it has something to stand on. When it's time, it's built on who you are.</p>
+    <p class="lede muted" id="brandLede">Performance and management come first, but the brand work starts the day you sign, not the day you make a Pro Bowl. Right-sized deals early, a name people can find, a story that's yours. Kittle, LaPorta and Kraft all started small with us. Play well and get managed well, and the brand side grows with you instead of behind you.</p>
   </section>
   </div>
 
@@ -617,7 +627,7 @@ document.title=`${RECRUIT.first} ${RECRUIT.last} × JB Sports`;
 $('#heroVideo').innerHTML=vid(RECRUIT.heroVideo&&RECRUIT.heroVideo.clip,`Jack Tabb III · to ${RECRUIT.first}`,RECRUIT.heroVideo&&RECRUIT.heroVideo.len,'','01');
 /* Hero art: photos[0] is THE photo. cutout:true floats him over a glow; otherwise full-bleed color with a fade. */
 (function(){const h=RECRUIT.photos[0];const el=$('#heroArt');
-  if(h&&h.src){el.className='hero-art'+(h.cutout?' cut':'');if(h.focus)el.style.setProperty('--focus',h.focus);
+  if(h&&h.src){el.className='hero-art'+(h.cutout?' cut':'');el.closest('.hero').classList.toggle('bleed',!h.cutout);if(h.focus)el.style.setProperty('--focus',h.focus);
     el.innerHTML=`<img src="${h.src.startsWith('/')?h.src:mediaURL(h.src)}" alt="${h.cap||''}"><div class="ghost" aria-hidden="true">${RECRUIT.number}</div>`;}
   else{el.className='hero-art empty';el.innerHTML=`<span>Hero photo</span><div class="ghost" aria-hidden="true">${RECRUIT.number}</div>`;}
 })();
@@ -629,7 +639,7 @@ $('#trackA').innerHTML=A.concat(A).map(cardHTML).join(''); $('#trackB').innerHTM
 /* Draft-night moments: YouTube ids. Thumbnail + play; on tap an embed replaces it. */
 const M=RECRUIT.draftMoments||[];
 $('#moments').innerHTML=M.length?`<span class="eyebrow">Draft night</span><div class="mrow">`+M.map((m,i)=>`<div class="moment" data-yt="${m.yt}" tabindex="0" role="button" aria-label="Play: ${m.who}, ${m.what}"><img src="https://i.ytimg.com/vi/${m.yt}/hqdefault.jpg" alt="" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/${m.yt}/mqdefault.jpg'"><div class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></div><div class="cap"><b>${m.who}</b><span>${m.what}</span></div></div>`).join('')+`</div><div class="strip-hint" style="margin-top:8px">${RECRUIT.draftMoments.map(m=>`<a href="https://www.youtube.com/watch?v=${m.yt}" target="_blank" rel="noopener" style="color:var(--muted)">Open on YouTube ↗</a>`).join(' · ')}</div>`:'';
-document.querySelectorAll('.moment').forEach(el=>{const go=()=>{const id=el.dataset.yt;if(TRACK&&TRACK.embeds===false){window.open(`https://www.youtube.com/watch?v=${id}`,'_blank','noopener');return}el.classList.add('live');el.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&playsinline=1&rel=0&modestbranding=1" title="Draft night" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`};el.addEventListener('click',go);el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}})});
+document.querySelectorAll('.moment').forEach(el=>{const go=()=>{const id=el.dataset.yt;const mobile=matchMedia('(max-width:899px)').matches||/iPhone|iPad|Android/i.test(navigator.userAgent);if((TRACK&&TRACK.embeds===false)||mobile){window.open(`https://www.youtube.com/watch?v=${id}`,'_blank','noopener');return}el.classList.add('live');el.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&playsinline=1&rel=0&modestbranding=1" title="Draft night" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`};el.addEventListener('click',go);el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}})});
 const REEL=RECRUIT.reel&&RECRUIT.reel.clip;
 $('#plays').innerHTML=(REEL?`<div class="reel">${vid(REEL,'Favorite plays reel',RECRUIT.reel.len,'','')}</div>`:'')+RECRUIT.plays.map((c,i)=>`<div class="play-card${REEL?' noclip':''}">${REEL?'':vid(c.clip,c.k,c.len,'',`F${i+1}`)}<div><div class="k">${c.k}</div><div class="t">${c.t}</div><div class="n">${c.n}</div></div></div>`).join('');
 $('#timeline').innerHTML=RECRUIT.timeline.map(t=>`<li${t.now?' class="now"':''}><div class="when">${t.when}</div><div><div class="what">${t.what}</div><div class="jb">${t.jb}</div></div></li>`).join('');
