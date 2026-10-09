@@ -483,7 +483,6 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
     <p class="lede muted">Your film, cut by Jack, with his note on each one. These are the plays we'd be selling in the building, and they get updated as the season goes.</p>
     <div class="plays" id="plays"></div>
     <div class="strip" id="strip"></div>
-    <div class="strip-hint">Swipe · game photos, Nashville, draft night when it comes</div>
   </section>
 
   <section class="reveal">
@@ -699,7 +698,7 @@ if(RECRUIT.heroVideo===null){$('#heroVideo').remove()}else $('#heroVideo').inner
   else{el.className='hero-art empty';el.innerHTML=`<span>Hero photo</span><div class="ghost" aria-hidden="true">${RECRUIT.number}</div>`;}
 })();
 $('#heroPhotos').innerHTML=RECRUIT.heroStyle==='mosaic'?'':RECRUIT.photos[1]&&RECRUIT.photos[1].src?frame(RECRUIT.photos[1],'wide')+(RECRUIT.photos[2]&&RECRUIT.photos[2].src?frame(RECRUIT.photos[2]):''):'';
-$('#strip').innerHTML=RECRUIT.photos.slice(3).map(ph=>frame(ph)).join('');
+$('#strip').innerHTML=RECRUIT.photos.slice(RECRUIT.heroStyle==='mosaic'?5:3).filter(ph=>ph.src).map(ph=>frame(ph)).join('');
 const cardHTML=w=>`<div class="card ${w[2]||''}"><div class="ph-frame${w[3]?' cutout':''}"><span class="wm">${w[0].split(' ').map(x=>x[0]).join('')}</span>${w[3]?`<img src="${w[3].startsWith('/')?w[3]:mediaURL(w[3])}" alt="${w[0]}" loading="lazy">`:''}</div><div class="nm">${w[0]}</div><div class="tm">${w[1]}</div>${w[4]?`<div class="deal"><b>${w[4][0]}</b><span>${w[4][1]}</span></div>`:''}</div>`;
 const half=Math.ceil(RECRUIT.wall.length/2), A=RECRUIT.wall.slice(0,half), B=RECRUIT.wall.slice(half);
 $('#trackA').innerHTML=A.concat(A).map(cardHTML).join(''); $('#trackB').innerHTML=B.concat(B).map(cardHTML).join('');
