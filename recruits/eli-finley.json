@@ -18,6 +18,13 @@
   "draftClass": 2027,
   "photos": [
     {
+      "src": "/recruits/eli-finley/studio-cutout.webp",
+      "cutout": true,
+      "cap": "Eli Finley",
+      "sub": "TE · Louisiana Tech",
+      "wm": "84"
+    },
+    {
       "src": "/recruits/eli-finley/game-01.webp",
       "cap": "Game action",
       "sub": "Louisiana Tech · #84",
@@ -32,17 +39,11 @@
       "focus": "50% 20%"
     },
     {
-      "src": "/recruits/eli-finley/game-01-cutout.webp",
-      "cutout": true,
-      "cap": "In stride",
-      "sub": "",
-      "wm": "84"
-    },
-    {
-      "src": null,
-      "cap": "Red zone",
-      "sub": "[game]",
-      "wm": "6"
+      "src": "/recruits/eli-finley/studio.webp",
+      "cap": "Studio",
+      "sub": "Louisiana Tech",
+      "wm": "84",
+      "focus": "50% 10%"
     },
     {
       "src": null,
