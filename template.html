@@ -283,7 +283,9 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
   section>.strip{grid-column:1 / -1;margin-top:40px}
   section>.strip-hint{grid-column:1 / -1}
   section>.marquee,section>.roster{grid-column:1 / -1}
-  section>.stat{grid-column:2;margin-top:0}
+  section>.marquee{margin-top:28px}
+  section>.stat{grid-column:2;margin-top:0;grid-template-columns:repeat(3,1fr)}
+  section>.roster{columns:4}
   section>.brandstrip,section>.drafted,section>.moments,section>.quotes,section>.locked,section>.list{grid-column:2}
   section.ask{grid-template-columns:1fr;text-align:left}
   section.ask>h2{position:static;font-size:4rem}
@@ -293,7 +295,10 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
   .who{grid-template-columns:5fr 4fr}
   .team{grid-template-columns:1fr 1fr;gap:24px}
   .person{grid-template-columns:140px 1fr}
-  .card{width:220px;flex:0 0 220px}
+  .card{width:180px;flex:0 0 180px}
+  .card .ph-frame{aspect-ratio:4/5}
+  .track{animation-duration:60s}
+  .track.rev{animation-duration:72s}
   .calc .pick{font-size:4.2rem}
   .figs .v{font-size:2.4rem}
   .fitrows{grid-template-columns:1fr 1fr;column-gap:28px}
