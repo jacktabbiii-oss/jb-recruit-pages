@@ -46,25 +46,39 @@
   ],
   "plays": [
     {
-      "k": "Clip 01 · Run game",
+      "k": "Clip 01 · Route · separation",
       "t": "[Game · Qtr · Down]",
-      "n": "<b>Jack:</b> [what you do as an in-line blocker here that most college TEs can't]",
-      "clip": null,
-      "len": "0:12"
+      "n": "<b>Jack:</b> [what a TE coach should see on this one]",
+      "clip": "/recruits/eli-finley/film-k7q2x/clip1.mp4",
+      "len": "0:18"
     },
     {
-      "k": "Clip 02 · Routes",
+      "k": "Clip 02 · Route · catch",
       "t": "[Game · Qtr · Down]",
-      "n": "<b>Jack:</b> [the route where you separate, and why a TE coach stops the tape here]",
-      "clip": null,
-      "len": "0:10"
+      "n": "<b>Jack:</b> [what a TE coach should see on this one]",
+      "clip": "/recruits/eli-finley/film-k7q2x/clip2.mp4",
+      "len": "0:13"
     },
     {
-      "k": "Clip 03 · The ask",
+      "k": "Clip 03 · In-line · run game",
       "t": "[Game · Qtr · Down]",
-      "n": "<b>Jack:</b> [the one thing scouts will want answered at the Combine, and how ElevaTE answers it]",
-      "clip": null,
+      "n": "<b>Jack:</b> [what a TE coach should see on this one]",
+      "clip": "/recruits/eli-finley/film-k7q2x/clip3.mp4",
       "len": "0:14"
+    },
+    {
+      "k": "Clip 04 · E-hole",
+      "t": "[Game · Qtr · Down]",
+      "n": "<b>Jack:</b> [what a TE coach should see on this one]",
+      "clip": "/recruits/eli-finley/film-k7q2x/clip4.mp4",
+      "len": "0:17"
+    },
+    {
+      "k": "Clip 05 · Stiff arm",
+      "t": "[Game · Qtr · Down]",
+      "n": "<b>Jack:</b> [what a TE coach should see on this one]",
+      "clip": "/recruits/eli-finley/film-k7q2x/clip5.mp4",
+      "len": "0:15"
     }
   ],
   "defaultPick": 90,
