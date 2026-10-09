@@ -46,37 +46,37 @@
   ],
   "plays": [
     {
-      "k": "Clip 01 · Route · separation",
-      "t": "[Game · Qtr · Down]",
-      "n": "<b>Jack:</b> [what a TE coach should see on this one]",
+      "k": "Clip 01",
+      "t": "Seam route · separation",
+      "n": "",
       "clip": "/recruits/eli-finley/film-k7q2x/clip1.mp4",
       "len": "0:18"
     },
     {
-      "k": "Clip 02 · Route · catch",
-      "t": "[Game · Qtr · Down]",
-      "n": "<b>Jack:</b> [what a TE coach should see on this one]",
+      "k": "Clip 02",
+      "t": "Route · the catch",
+      "n": "",
       "clip": "/recruits/eli-finley/film-k7q2x/clip2.mp4",
       "len": "0:13"
     },
     {
-      "k": "Clip 03 · In-line · run game",
-      "t": "[Game · Qtr · Down]",
-      "n": "<b>Jack:</b> [what a TE coach should see on this one]",
+      "k": "Clip 03",
+      "t": "In-line · run game",
+      "n": "",
       "clip": "/recruits/eli-finley/film-k7q2x/clip3.mp4",
       "len": "0:14"
     },
     {
-      "k": "Clip 04 · E-hole",
-      "t": "[Game · Qtr · Down]",
-      "n": "<b>Jack:</b> [what a TE coach should see on this one]",
+      "k": "Clip 04",
+      "t": "E-hole",
+      "n": "",
       "clip": "/recruits/eli-finley/film-k7q2x/clip4.mp4",
       "len": "0:17"
     },
     {
-      "k": "Clip 05 · Stiff arm",
-      "t": "[Game · Qtr · Down]",
-      "n": "<b>Jack:</b> [what a TE coach should see on this one]",
+      "k": "Clip 05",
+      "t": "Stiff arm",
+      "n": "",
       "clip": "/recruits/eli-finley/film-k7q2x/clip5.mp4",
       "len": "0:15"
     }

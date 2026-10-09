@@ -272,7 +272,8 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
    Phone layout is the source of truth. Desktop widens the column, spreads the hero,
    and opens two-column grids where the content supports it. */
 @media (min-width:900px){
-  .wrap{max-width:1180px;padding-inline:40px}
+  .wrap{max-width:1560px;padding-inline:clamp(40px,4vw,72px)}
+  body{font-size:17px}
   .switch{padding:14px 0}
   .switch .brand{height:26px}
   .switch button{font-size:.85rem;padding:10px 16px}
@@ -309,7 +310,7 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
   .hero-photo{grid-area:pair;max-width:560px}
   .hero-photo::before{display:none}
   /* sections: two columns */
-  section{padding-block:56px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);column-gap:48px;align-items:start}
+  section{padding-block:64px;display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);column-gap:64px;align-items:start}
   section>.eyebrow,section>h2,section>.lede,section>.elevate-logo{grid-column:1}
   section>*:not(.eyebrow):not(h2):not(.lede):not(.elevate-logo){grid-column:2}
   section>h2{font-size:3.4rem;position:sticky;top:90px}
@@ -323,10 +324,16 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
   section>.stat{grid-column:2;margin-top:0;grid-template-columns:repeat(3,1fr)}
   section>.roster{columns:4}
   section>.brandstrip,section>.drafted,section>.moments,section>.quotes,section>.locked,section>.list{grid-column:2}
+  .brandstrip{grid-template-columns:repeat(2,1fr);gap:14px}
+  .brandstrip span{font-size:.7rem;margin-top:8px}
   section.ask{grid-template-columns:1fr;text-align:left}
   section.ask>h2{position:static;font-size:4rem}
-  .plays{gap:18px}
-  .play-card{grid-template-columns:200px 1fr}
+  section>.plays{grid-column:1 / -1 !important;grid-template-columns:1fr 1fr;gap:28px 32px;margin-top:28px}
+  .play-card{grid-template-columns:1fr;gap:12px}
+  .play-card .video{aspect-ratio:16/9}
+  .play-card .t{font-size:1.6rem}
+  .play-card .n{font-size:1rem}
+  .play-card.noclip{grid-template-columns:1fr}
   .handle{grid-template-columns:repeat(4,1fr)}
   .who{grid-template-columns:5fr 4fr}
   section>.team{grid-column:1 / -1 !important;grid-template-columns:1fr 1fr;gap:48px;margin-top:32px}
@@ -453,7 +460,7 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
   <div data-aud="athlete">
   <section class="reveal">
     <span class="eyebrow">01 · Jack's favorite plays</span>
-    <h2>Three plays I'd put in front of every TE coach</h2>
+    <h2 id="playsH">Three plays I'd put in front of every TE coach</h2>
     <p class="lede muted">Your film, cut by Jack, with his note on each one. These are the plays we'd be selling in the building, and they get updated as the season goes.</p>
     <div class="plays" id="plays"></div>
     <div class="strip" id="strip"></div>
@@ -568,13 +575,13 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
   <section class="reveal">
     <span class="eyebrow">08 · The brand side</span>
     <h2 id="brandH">Built as you go,<br>not after you blow up</h2>
+    <p class="lede muted" id="brandLede">Performance and management come first, but the brand work starts the day you sign, not the day you make a Pro Bowl. Right-sized deals early, a name people can find, a story that's yours. Kittle, LaPorta and Kraft all started small with us. Play well and get managed well, and the brand side grows with you instead of behind you.</p>
     <div class="brandstrip" aria-label="Client endorsement work">
       <div><img src="/brand/panda.webp" alt="George Kittle, Panda Express" loading="lazy"><span>Kittle · Panda Express</span></div>
       <div><img src="/brand/kraft.webp" alt="Tucker Kraft, Kraft Mac &amp; Cheese" loading="lazy"><span>Kraft · Kraft Mac &amp; Cheese</span></div>
       <div><img src="/brand/genisys.webp" alt="Sam LaPorta, Genisys" loading="lazy"><span>LaPorta · Genisys</span></div>
       <div><img src="/brand/bootbarn.webp" alt="Boot Barn" loading="lazy"><span>Boot Barn</span></div>
     </div>
-    <p class="lede muted" id="brandLede">Performance and management come first, but the brand work starts the day you sign, not the day you make a Pro Bowl. Right-sized deals early, a name people can find, a story that's yours. Kittle, LaPorta and Kraft all started small with us. Play well and get managed well, and the brand side grows with you instead of behind you.</p>
   </section>
   </div>
 
@@ -612,7 +619,7 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
         <p>Jack is your day-to-day. He watched your tape, he'll be at your games, and he picks up. He also builds the tools the agency uses to run your career, including the page you're reading.</p></div>
       </div>
       <div class="person">
-        <div class="ph-frame cutout"><img src="/people/ryan-cutout.webp" alt="Ryan Hays"></div>
+        <div class="ph-frame real"><img src="/people/ryan.jpg" alt="Ryan Hays"></div>
         <div><h3>Ryan Hays, Esq.</h3><div class="role">Contracts · licensed attorney</div>
         <p>University of Arizona. Thomas Jefferson School of Law, cum laude. Licensed in California and a certified NFL contract advisor since 2012. Led the contract language on George Kittle's 2020 deal, one of the most player-friendly contracts in 49ers history.</p>
         <p>Ryan reads every clause that touches your money or your name: guarantees, offsets, injury language, endorsement terms. Branding and marketing are his second specialty. Clients have his number and use it.</p></div>
@@ -672,7 +679,8 @@ const M=RECRUIT.draftMoments||[];
 $('#moments').innerHTML=M.length?`<span class="eyebrow">Draft night</span><div class="mrow">`+M.map((m,i)=>`<div class="moment" data-yt="${m.yt}" tabindex="0" role="button" aria-label="Play: ${m.who}, ${m.what}"><img src="https://i.ytimg.com/vi/${m.yt}/hqdefault.jpg" alt="" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/${m.yt}/mqdefault.jpg'"><div class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></div><div class="cap"><b>${m.who}</b><span>${m.what}</span></div></div>`).join('')+`</div><div class="strip-hint" style="margin-top:8px">${RECRUIT.draftMoments.map(m=>`<a href="https://www.youtube.com/watch?v=${m.yt}" target="_blank" rel="noopener" style="color:var(--muted)">Open on YouTube ↗</a>`).join(' · ')}</div>`:'';
 document.querySelectorAll('.moment').forEach(el=>{const go=()=>{const id=el.dataset.yt;const mobile=matchMedia('(max-width:899px)').matches||/iPhone|iPad|Android/i.test(navigator.userAgent);if((TRACK&&TRACK.embeds===false)||mobile){window.open(`https://www.youtube.com/watch?v=${id}`,'_blank','noopener');return}el.classList.add('live');el.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&playsinline=1&rel=0&modestbranding=1" title="Draft night" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`};el.addEventListener('click',go);el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}})});
 const REEL=RECRUIT.reel&&RECRUIT.reel.clip;
-$('#plays').innerHTML=(REEL?`<div class="reel">${vid(REEL,'Favorite plays reel',RECRUIT.reel.len,'','')}</div>`:'')+RECRUIT.plays.map((c,i)=>`<div class="play-card${REEL?' noclip':''}">${REEL?'':vid(c.clip,c.k,c.len,'',`F${i+1}`)}<div><div class="k">${c.k}</div><div class="t">${c.t}</div><div class="n">${c.n}</div></div></div>`).join('');
+{const W=['','One','Two','Three','Four','Five','Six','Seven','Eight'];const n=RECRUIT.plays.length;if(W[n])$('#playsH').innerHTML=$('#playsH').innerHTML.replace(/^Three/,W[n])}
+$('#plays').innerHTML=(REEL?`<div class="reel">${vid(REEL,'Favorite plays reel',RECRUIT.reel.len,'','')}</div>`:'')+RECRUIT.plays.map((c,i)=>`<div class="play-card${REEL?' noclip':''}">${REEL?'':vid(c.clip,c.k,c.len,'',`F${i+1}`)}<div><div class="k">${c.k}</div>${c.t?`<div class="t">${c.t}</div>`:''}${c.n?`<div class="n">${c.n}</div>`:''}</div></div>`).join('');
 $('#timeline').innerHTML=RECRUIT.timeline.map(t=>`<li${t.now?' class="now"':''}><div class="when">${t.when}</div><div><div class="what">${t.what}</div><div class="jb">${t.jb}</div></div></li>`).join('');
 const isTE=RECRUIT.positionGroup==="TE";
 $('#roster').innerHTML=(isTE
