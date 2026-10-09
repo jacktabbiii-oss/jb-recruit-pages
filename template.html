@@ -192,7 +192,9 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
 .drafted img{flex:0 0 150px;width:150px;aspect-ratio:1;object-fit:cover;border:1px solid var(--line)}
 /* off your plate */
 .handle{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
-.handle div{background:var(--panel);padding:14px 12px;min-width:0}
+.handle div{background:var(--panel);padding:16px 14px;min-width:0}
+.handle div .i,.handle div .k,.handle div .d{background:none;padding:0}
+.handle .i{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;color:var(--blue);margin-bottom:8px}
 .handle .k{font-family:var(--display);font-size:1.25rem;font-weight:700;text-transform:uppercase;letter-spacing:.02em;line-height:1}
 .handle .d{font-size:.82rem;color:var(--muted);margin-top:6px;line-height:1.4}
 @media (max-width:380px){.handle{grid-template-columns:1fr}}
@@ -695,7 +697,7 @@ if(!isTE){
 }
 $('#quotes').innerHTML=RECRUIT.quotes.map(q=>`<div class="quote">${q.clip?vid(q.clip,q.who,'','',''):q.img?`<div class="ph-frame qimg"><img src="${q.img}" alt="${q.who}" loading="lazy"></div>`:`<div class="ph-frame qimg"><span class="wm">${q.who.split(' ').map(x=>x[0]).join('').slice(0,2)}</span></div>`}<div><div class="q">"${q.q}"</div><div class="who">${q.who} · ElevaTE alum</div></div></div>`).join('');
 $('#qa').innerHTML=RECRUIT.parentQA.map((x,i)=>`<details${i===0?' open':''}><summary>${x.q}</summary><div class="a">${x.a}</div></details>`).join('');
-$('#handle').innerHTML=RECRUIT.handle.map(h=>`<div><div class="k">${h[0]}</div><div class="d">${UNLOCKED.has('handle')?h[1]:'Ask us how.'}</div></div>`).join('');
+$('#handle').innerHTML=RECRUIT.handle.map((h,i)=>{const full=h[1]||'';const tease=h[2]||(full.split(/(?<=\.)\s/)[0]||'');return `<div><div class="i">${String(i+1).padStart(2,'0')}</div><div class="k">${h[0]}</div><div class="d">${UNLOCKED.has('handle')?full:tease}</div></div>`}).join('');
 document.querySelectorAll('[data-unlock]').forEach(el=>{if(!UNLOCKED.has(el.dataset.unlock))el.hidden=true});
 document.querySelectorAll('[data-locked]').forEach(el=>{if(UNLOCKED.has(el.dataset.locked))el.hidden=true});
 
