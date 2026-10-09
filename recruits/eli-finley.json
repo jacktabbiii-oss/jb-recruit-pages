@@ -4,10 +4,7 @@
   "active": true,
   "mode": "draft",
   "familyLabel": "For the Finleys",
-  "heroVideo": {
-    "clip": null,
-    "len": "1:20"
-  },
+  "heroVideo": null,
   "first": "Eli",
   "last": "Finley",
   "position": "TE",
@@ -18,18 +15,25 @@
   "draftClass": 2027,
   "photos": [
     {
-      "src": "/recruits/eli-finley/game-01.webp",
-      "cap": "Game action",
-      "sub": "Louisiana Tech · #84",
-      "wm": "84",
-      "focus": "40% 10%"
-    },
-    {
       "src": "/recruits/eli-finley/game-02.webp",
       "cap": "Pregame",
       "sub": "Louisiana Tech · #84",
       "wm": "TE",
       "focus": "50% 20%"
+    },
+    {
+      "src": "/recruits/eli-finley/game-01.webp",
+      "cap": "Game action",
+      "sub": "Louisiana Tech · #84",
+      "wm": "84",
+      "focus": "40% 0%"
+    },
+    {
+      "src": "/recruits/eli-finley/studio.webp",
+      "cap": "Media day",
+      "sub": "Louisiana Tech",
+      "wm": "84",
+      "focus": "50% 8%"
     },
     {
       "src": "/recruits/eli-finley/studio-cutout.webp",
@@ -436,5 +440,6 @@
   "reel": {
     "clip": null,
     "len": "0:48"
-  }
+  },
+  "heroStyle": "mosaic"
 }
