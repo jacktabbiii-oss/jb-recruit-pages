@@ -134,6 +134,10 @@
       "Chiefs"
     ],
     [
+      "Rob Tonyan",
+      "Steelers"
+    ],
+    [
       "Daniel Bellinger",
       "Titans"
     ],
@@ -143,7 +147,7 @@
     ],
     [
       "Hayden Rucci",
-      "49ers"
+      "Jaguars"
     ],
     [
       "Riley Nowakowski",
@@ -156,14 +160,6 @@
     [
       "Carson Towt",
       "Colts"
-    ],
-    [
-      "Tanner McLachlan",
-      "FA"
-    ],
-    [
-      "Caden Prieskorn",
-      "FA"
     ]
   ],
   "wall": [
@@ -181,7 +177,11 @@
       "George Kittle",
       "TE · 49ers",
       "top",
-      "/clients/kittle.webp"
+      "/clients/kittle.webp",
+      [
+        "$76.4M",
+        "4 yrs · $40M guaranteed · Apr 2025"
+      ]
     ],
     [
       "Sam LaPorta",
@@ -202,12 +202,6 @@
       "/clients/helm.webp"
     ],
     [
-      "Anthony Nelson",
-      "DE · Buccaneers",
-      "",
-      "/clients/nelson.webp"
-    ],
-    [
       "Daniel Bellinger",
       "TE · Titans",
       "",
@@ -215,7 +209,7 @@
     ],
     [
       "Hayden Rucci",
-      "TE · 49ers",
+      "TE · Jaguars",
       "",
       "/clients/rucci.webp"
     ],
@@ -238,6 +232,12 @@
       "/clients/gray.webp"
     ],
     [
+      "Anthony Nelson",
+      "DE · Buccaneers",
+      "",
+      "/clients/nelson.webp"
+    ],
+    [
       "Kristian Welch",
       "LB · Packers",
       "",
@@ -250,12 +250,6 @@
       "/clients/wohler.webp"
     ],
     [
-      "Geno Stone",
-      "DB · Bengals",
-      "",
-      "/clients/stone.webp"
-    ],
-    [
       "Connor Colby",
       "OL · 49ers",
       "",
@@ -263,7 +257,7 @@
     ],
     [
       "Charlie Heck",
-      "OL · Cardinals",
+      "OL · Buccaneers",
       "",
       "/clients/heck.webp"
     ],
@@ -274,23 +268,25 @@
       "/clients/higgins.webp"
     ],
     [
-      "Josh Butler",
-      "CB · Cowboys",
-      "",
-      "/clients/butler.webp"
-    ],
-    [
       "Amani Hooker",
       "DB · Titans",
       "",
       "/clients/hooker.webp"
+    ],
+    [
+      "Kaden Wetjen",
+      "WR · Steelers",
+      "",
+      "/clients/wetjen.webp"
+    ],
+    [
+      "Rob Tonyan",
+      "TE · Steelers",
+      "",
+      null
     ]
   ],
   "rosterAll": [
-    [
-      "Josh Butler",
-      "CB · Cowboys"
-    ],
     [
       "Sebastian Castro",
       "DB · Steelers"
@@ -301,7 +297,7 @@
     ],
     [
       "Charlie Heck",
-      "OL · Cardinals"
+      "OL · Buccaneers"
     ],
     [
       "Jay Higgins",
@@ -316,10 +312,6 @@
       "DE · Buccaneers"
     ],
     [
-      "Geno Stone",
-      "DB · Bengals"
-    ],
-    [
       "Kristian Welch",
       "LB · Packers"
     ],
@@ -330,6 +322,10 @@
     [
       "Hunter Wohler",
       "DB · Colts"
+    ],
+    [
+      "Rob Tonyan",
+      "TE · Steelers"
     ]
   ],
   "quotes": [

@@ -186,7 +186,7 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
 .stat .v{font-family:var(--display);font-size:2.4rem;font-weight:900;line-height:1}
 .stat .k{font-size:.74rem;color:var(--muted);margin-top:4px;line-height:1.3}
 .roster{margin-top:18px;columns:2;column-gap:20px;font-family:var(--mono);font-size:.78rem;line-height:1.9}
-.roster div{break-inside:avoid;display:flex;justify-content:space-between;gap:8px;border-bottom:1px dotted var(--line)}
+.roster div{break-inside:avoid;display:flex;justify-content:space-between;gap:8px;border-bottom:1px dotted var(--line);white-space:nowrap}
 .roster .t{color:var(--muted)}
 .roster .hdr{font-weight:600;color:var(--blue);letter-spacing:.1em;text-transform:uppercase;font-size:.66rem;border:0;column-span:all;margin-bottom:6px;display:block}
 
@@ -283,6 +283,7 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
   section>.strip{grid-column:1 / -1;margin-top:40px}
   section>.strip-hint{grid-column:1 / -1}
   section>.marquee,section>.roster{grid-column:1 / -1}
+  .roster{columns:3;column-gap:40px;font-size:.84rem}
   section>.marquee{margin-top:28px}
   section>.stat{grid-column:2;margin-top:0;grid-template-columns:repeat(3,1fr)}
   section>.roster{columns:4}
@@ -293,8 +294,8 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
   .play-card{grid-template-columns:200px 1fr}
   .handle{grid-template-columns:repeat(4,1fr)}
   .who{grid-template-columns:5fr 4fr}
-  .team{grid-template-columns:1fr 1fr;gap:24px}
-  .person{grid-template-columns:140px 1fr}
+  section>.team{grid-column:1 / -1;grid-template-columns:1fr 1fr;gap:40px;margin-top:28px}
+  .person{grid-template-columns:200px 1fr;gap:24px}
   .card{width:180px;flex:0 0 180px}
   .card .ph-frame{aspect-ratio:4/5}
   .track{animation-duration:60s}
@@ -627,8 +628,8 @@ const half=Math.ceil(RECRUIT.wall.length/2), A=RECRUIT.wall.slice(0,half), B=REC
 $('#trackA').innerHTML=A.concat(A).map(cardHTML).join(''); $('#trackB').innerHTML=B.concat(B).map(cardHTML).join('');
 /* Draft-night moments: YouTube ids. Thumbnail + play; on tap an embed replaces it. */
 const M=RECRUIT.draftMoments||[];
-$('#moments').innerHTML=M.length?`<span class="eyebrow">Draft night</span><div class="mrow">`+M.map((m,i)=>`<div class="moment" data-yt="${m.yt}" tabindex="0" role="button" aria-label="Play: ${m.who}, ${m.what}"><img src="https://i.ytimg.com/vi/${m.yt}/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><div class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></div><div class="cap"><b>${m.who}</b><span>${m.what}</span></div></div>`).join('')+`</div>`:'';
-document.querySelectorAll('.moment').forEach(el=>{const go=()=>{const id=el.dataset.yt;if(TRACK&&TRACK.embeds===false){window.open(`https://www.youtube.com/watch?v=${id}`,'_blank','noopener');return}el.classList.add('live');el.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1" title="Draft night" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`};el.addEventListener('click',go);el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}})});
+$('#moments').innerHTML=M.length?`<span class="eyebrow">Draft night</span><div class="mrow">`+M.map((m,i)=>`<div class="moment" data-yt="${m.yt}" tabindex="0" role="button" aria-label="Play: ${m.who}, ${m.what}"><img src="https://i.ytimg.com/vi/${m.yt}/hqdefault.jpg" alt="" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/${m.yt}/mqdefault.jpg'"><div class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></div><div class="cap"><b>${m.who}</b><span>${m.what}</span></div></div>`).join('')+`</div><div class="strip-hint" style="margin-top:8px">${RECRUIT.draftMoments.map(m=>`<a href="https://www.youtube.com/watch?v=${m.yt}" target="_blank" rel="noopener" style="color:var(--muted)">Open on YouTube ↗</a>`).join(' · ')}</div>`:'';
+document.querySelectorAll('.moment').forEach(el=>{const go=()=>{const id=el.dataset.yt;if(TRACK&&TRACK.embeds===false){window.open(`https://www.youtube.com/watch?v=${id}`,'_blank','noopener');return}el.classList.add('live');el.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&playsinline=1&rel=0&modestbranding=1" title="Draft night" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`};el.addEventListener('click',go);el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}})});
 const REEL=RECRUIT.reel&&RECRUIT.reel.clip;
 $('#plays').innerHTML=(REEL?`<div class="reel">${vid(REEL,'Favorite plays reel',RECRUIT.reel.len,'','')}</div>`:'')+RECRUIT.plays.map((c,i)=>`<div class="play-card${REEL?' noclip':''}">${REEL?'':vid(c.clip,c.k,c.len,'',`F${i+1}`)}<div><div class="k">${c.k}</div><div class="t">${c.t}</div><div class="n">${c.n}</div></div></div>`).join('');
 $('#timeline').innerHTML=RECRUIT.timeline.map(t=>`<li${t.now?' class="now"':''}><div class="when">${t.when}</div><div><div class="what">${t.what}</div><div class="jb">${t.jb}</div></div></li>`).join('');
