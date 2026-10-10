@@ -463,33 +463,33 @@
   "shareImage": "/recruits/eli-finley/share-k7q2x.jpg",
   "comp": {
     "eyebrow": "Who we see",
-    "h": "We see Tucker Kraft",
-    "lede": "Same frame, same road: a tight end from outside the Power Five who has to make the league notice. Kraft did it with us.",
+    "h": "We see Gunnar Helm",
+    "lede": "Long, lean, and a receiver first: a tight end who wins with his hands and after the catch. Helm is that player, and he's ours.",
     "me": "/recruits/eli-finley/comp-cut.webp",
-    "them": "/clients/kraft.webp",
-    "themName": "Tucker Kraft",
+    "them": "/clients/card/helm.webp",
+    "themName": "Gunnar Helm",
     "rows": [
       [
         "School",
         "Louisiana Tech · Sun Belt",
-        "South Dakota State · FCS"
+        "Texas · SEC"
       ],
       [
         "Size",
         "6-6 · 246",
-        "6-4¾ · 254 at the Combine"
+        "6-5 · 241 at the Combine"
       ],
       [
         "Draft",
         "2027 class",
-        "Rd 3 · Pick 78 · 2023"
+        "Rd 4 · Pick 120 · 2025"
       ],
       [
-        "Today",
-        "Senior season",
-        "$75M extension · Sept 2026"
+        "Production",
+        "38 rec · 444 yds in 2025",
+        "44 rec as a rookie, a Titans TE record"
       ]
     ],
-    "foot": "Kraft's road: a Round 3 pick, a starter, then one of the biggest TE deals in the league. That's the path we'd map for you."
+    "foot": "Same mold as Tyler Higbee and Isaiah Likely, two mid-major receiving TEs who turned Round 4 into $30M+ deals."
   }
 }
