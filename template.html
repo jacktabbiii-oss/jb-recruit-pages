@@ -55,7 +55,6 @@ p{margin:0}
 .hero-art.mosaic .m.cut img{object-fit:contain;object-position:center bottom;padding:10px 6px 0;filter:drop-shadow(0 14px 20px rgba(0,0,0,.55))}
 .hero-art.mosaic .m.gfx{background:#0d1526}
 .hero-art.mosaic .m.gfx img{object-fit:contain;padding:6px}
-.hero-art.mosaic .m::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,transparent 62%,rgba(10,17,32,.55))}
 .hero-art.mosaic .m.cut::after,.hero-art.mosaic .m.gfx::after{display:none}
 .hero-art.mosaic .m .cap{position:absolute;left:10px;bottom:8px;z-index:1;font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--paper);text-shadow:0 1px 3px rgba(0,0,0,.8)}
 .hero-art.mosaic .m1{grid-column:1;grid-row:1 / 3}
@@ -698,14 +697,14 @@ if(RECRUIT.heroVideo===null){$('#heroVideo').remove()}else $('#heroVideo').inner
 /* Hero art: photos[0] is THE photo. cutout:true floats him over a glow; otherwise full-bleed color with a fade. */
 (function(){const h=RECRUIT.photos[0];const el=$('#heroArt');
   if(RECRUIT.heroStyle==='mosaic'&&h&&h.src){el.className='hero-art mosaic';el.closest('.hero').classList.add('mosaic');
-    el.innerHTML=`<div class="ghost" aria-hidden="true">${RECRUIT.number}</div>`+RECRUIT.photos.filter(p=>p.src).slice(0,5).map((p,i)=>`<div class="m m${i+1}${p.cutout?' cut':''}${p.graphic?' gfx':''}" style="${p.focus?`--focus:${p.focus}`:''}"><img src="${p.src.startsWith('/')?p.src:mediaURL(p.src)}" alt="${p.cap||''}">${p.cap&&!p.cutout?`<div class="cap">${p.cap}</div>`:''}</div>`).join('');return;}
+    el.innerHTML=`<div class="ghost" aria-hidden="true">${RECRUIT.number}</div>`+RECRUIT.photos.filter(p=>p.src).slice(0,5).map((p,i)=>`<div class="m m${i+1}${p.cutout?' cut':''}${p.graphic?' gfx':''}" style="${p.focus?`--focus:${p.focus}`:''}"><img src="${p.src.startsWith('/')?p.src:mediaURL(p.src)}" alt="${p.cap||''}"></div>`).join('');return;}
   if(h&&h.src){el.className='hero-art'+(h.cutout?' cut':'');el.closest('.hero').classList.toggle('bleed',!h.cutout);if(h.focus)el.style.setProperty('--focus',h.focus);
     el.innerHTML=`<img src="${h.src.startsWith('/')?h.src:mediaURL(h.src)}" alt="${h.cap||''}"><div class="ghost" aria-hidden="true">${RECRUIT.number}</div>`;}
   else{el.className='hero-art empty';el.innerHTML=`<span>Hero photo</span><div class="ghost" aria-hidden="true">${RECRUIT.number}</div>`;}
 })();
 $('#heroPhotos').innerHTML=RECRUIT.heroStyle==='mosaic'?'':RECRUIT.photos[1]&&RECRUIT.photos[1].src?frame(RECRUIT.photos[1],'wide')+(RECRUIT.photos[2]&&RECRUIT.photos[2].src?frame(RECRUIT.photos[2]):''):'';
 $('#strip').innerHTML=RECRUIT.photos.slice(RECRUIT.heroStyle==='mosaic'?5:3).filter(ph=>ph.src).map(ph=>frame(ph)).join('');
-const cardHTML=w=>`<div class="card ${w[2]||''}"><div class="ph-frame${w[3]?' cutout':''}"><span class="wm">${w[0].split(' ').map(x=>x[0]).join('')}</span>${w[3]?`<img src="${w[3].startsWith('/')?w[3]:mediaURL(w[3])}" alt="${w[0]}" loading="lazy">`:''}</div><div class="nm">${w[0]}</div><div class="tm">${w[1]}</div>${w[4]?`<div class="deal"><b>${w[4][0]}</b><span>${w[4][1]}</span></div>`:''}</div>`;
+const cardHTML=w=>`<div class="card ${w[2]||''}"><div class="ph-frame${w[3]?' cutout':''}">${w[3]?`<img src="${w[3].startsWith('/')?w[3]:mediaURL(w[3])}" alt="${w[0]}" loading="lazy">`:''}</div><div class="nm">${w[0]}</div><div class="tm">${w[1]}</div>${w[4]?`<div class="deal"><b>${w[4][0]}</b><span>${w[4][1]}</span></div>`:''}</div>`;
 /* proof first: the client room is the first thing a recruit sees after his own name (proofFirst:false to turn off) */
 if(RECRUIT.proofFirst!==false){const pr=$('#proof'),ath=document.querySelector('[data-aud="athlete"]');if(pr&&ath)ath.insertBefore(pr,ath.firstElementChild)}
 /* non-TE recruits: their own position group leads the wall */
