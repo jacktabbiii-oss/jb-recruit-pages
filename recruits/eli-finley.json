@@ -460,5 +460,36 @@
   "honors": [
     "John Mackey Award watch list"
   ],
-  "shareImage": "/recruits/eli-finley/share-k7q2x.jpg"
+  "shareImage": "/recruits/eli-finley/share-k7q2x.jpg",
+  "comp": {
+    "eyebrow": "Who we see",
+    "h": "We see Tucker Kraft",
+    "lede": "Same frame, same road: a tight end from outside the Power Five who has to make the league notice. Kraft did it with us.",
+    "me": "/recruits/eli-finley/comp-cut.webp",
+    "them": "/clients/kraft.webp",
+    "themName": "Tucker Kraft",
+    "rows": [
+      [
+        "School",
+        "Louisiana Tech · FBS",
+        "South Dakota State · FCS"
+      ],
+      [
+        "Size",
+        "6-4 · 250",
+        "6-4¾ · 254 at the Combine"
+      ],
+      [
+        "Draft",
+        "2027 class",
+        "Rd 3 · Pick 78 · 2023"
+      ],
+      [
+        "Today",
+        "Senior season",
+        "$75M extension · Sept 2026"
+      ]
+    ],
+    "foot": "Kraft's road: a Round 3 pick, a starter, then one of the biggest TE deals in the league. That's the path we'd map for you."
+  }
 }

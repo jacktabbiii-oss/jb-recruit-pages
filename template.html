@@ -158,6 +158,20 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
 .strip .ph-frame:nth-child(even){aspect-ratio:3/4;flex-basis:62%}
 .strip:empty,.strip:empty+.strip-hint{display:none}
 .strip-hint{font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+/* player comp: recruit vs the JB client we see him as */
+.vs{margin-top:20px;border:1px solid var(--line);background:var(--panel)}
+.vs .heads{display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;padding:14px 14px 0;background:radial-gradient(60% 80% at 25% 100%,rgba(43,155,255,.22),transparent 70%),radial-gradient(60% 80% at 75% 100%,rgba(43,155,255,.22),transparent 70%)}
+.vs .heads figure{margin:0;text-align:center;display:flex;flex-direction:column;justify-content:flex-end;height:100%;min-width:0}
+.vs .heads img{display:block;margin:0 auto;height:min(40vw,260px);width:auto;max-width:100%;object-fit:contain;filter:drop-shadow(0 14px 18px rgba(0,0,0,.6))}
+.vs .heads figcaption{margin-top:8px;font-family:var(--display);font-weight:800;font-size:clamp(.95rem,4.4vw,1.35rem);white-space:nowrap;text-transform:uppercase;letter-spacing:.02em;padding-bottom:12px}
+.vs .heads figcaption.them{color:var(--blue)}
+.vs .x{font-family:var(--display);font-weight:900;font-size:2.2rem;color:var(--muted);align-self:center;padding:0 6px}
+.vs table{width:100%;border-collapse:collapse;font-size:.96rem}
+.vs td{padding:11px 10px;border-top:1px solid var(--line);vertical-align:middle;width:40%}
+.vs td.k{width:20%;text-align:center;font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.vs td.a{text-align:right}
+.vs td.b{color:var(--paper)}
+.comp-foot{margin-top:14px;color:var(--muted);font-size:.96rem;max-width:40em}
 /* parents: what Ryan reads first + year-one stepper (replace the old video slots) */
 .reads{margin-top:20px;display:grid;gap:10px}
 .reads>div{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--blue);padding:14px 14px 14px 16px}
@@ -355,6 +369,9 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
   .play-card .n{font-size:1rem}
   .play-card.noclip{grid-template-columns:1fr}
   .handle{grid-template-columns:repeat(4,1fr)}
+  section>.vs{margin-top:0}
+  .vs .heads img{height:300px}
+  .vs table{font-size:1.02rem}
   .reads{grid-template-columns:repeat(3,1fr);gap:16px}
   .yr1 ol{grid-template-columns:repeat(4,1fr);gap:20px}
   .yr1 li{padding:40px 0 0 0}
@@ -546,6 +563,14 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
     <div class="handle" id="handle"></div>
   </section>
 
+  <section class="reveal comp" id="comp">
+    <span class="eyebrow" id="compEy">00 · Who we see</span>
+    <h2 id="compH"></h2>
+    <p class="lede muted" id="compLede"></p>
+    <div class="vs" id="compVs"></div>
+    <p class="comp-foot" id="compFoot"></p>
+  </section>
+
   <section class="reveal" id="proof">
     <span class="eyebrow">06 · Proof</span>
     <h2 id="proofH">The tight end room</h2>
@@ -705,8 +730,12 @@ if(RECRUIT.heroVideo===null){$('#heroVideo').remove()}else $('#heroVideo').inner
 $('#heroPhotos').innerHTML=RECRUIT.heroStyle==='mosaic'?'':RECRUIT.photos[1]&&RECRUIT.photos[1].src?frame(RECRUIT.photos[1],'wide')+(RECRUIT.photos[2]&&RECRUIT.photos[2].src?frame(RECRUIT.photos[2]):''):'';
 $('#strip').innerHTML=RECRUIT.photos.slice(RECRUIT.heroStyle==='mosaic'?5:3).filter(ph=>ph.src).map(ph=>frame(ph)).join('');
 const cardHTML=w=>`<div class="card ${w[2]||''}"><div class="ph-frame${w[3]?' cutout':''}">${w[3]?`<img src="${w[3].startsWith('/')?w[3]:mediaURL(w[3])}" alt="${w[0]}" loading="lazy">`:''}</div><div class="nm">${w[0]}</div><div class="tm">${w[1]}</div>${w[4]?`<div class="deal"><b>${w[4][0]}</b><span>${w[4][1]}</span></div>`:''}</div>`;
+/* player comp */
+{const cp=RECRUIT.comp,sec=$('#comp');if(!cp){sec.remove()}else{
+  $('#compEy').textContent='00 · '+(cp.eyebrow||'Who we see');$('#compH').textContent=cp.h;$('#compLede').textContent=cp.lede||'';$('#compFoot').textContent=cp.foot||'';
+  $('#compVs').innerHTML=`<div class="heads"><figure><img src="${cp.me}" alt="${RECRUIT.first} ${RECRUIT.last}"><figcaption>${RECRUIT.first} ${RECRUIT.last}</figcaption></figure><div class="x">×</div><figure><img src="${cp.them}" alt="${cp.themName}"><figcaption class="them">${cp.themName}</figcaption></figure></div><table>${(cp.rows||[]).map(r=>`<tr><td class="a">${r[1]}</td><td class="k">${r[0]}</td><td class="b">${r[2]}</td></tr>`).join('')}</table>`;}}
 /* proof first: the client room is the first thing a recruit sees after his own name (proofFirst:false to turn off) */
-if(RECRUIT.proofFirst!==false){const pr=$('#proof'),ath=document.querySelector('[data-aud="athlete"]');if(pr&&ath)ath.insertBefore(pr,ath.firstElementChild)}
+if(RECRUIT.proofFirst!==false){const pr=$('#proof'),ath=document.querySelector('[data-aud="athlete"]');if(pr&&ath){ath.insertBefore(pr,ath.firstElementChild);const cs=$('#comp');if(cs)pr.after(cs)}}
 /* non-TE recruits: their own position group leads the wall */
 const WALL=RECRUIT.positionGroup==='TE'?RECRUIT.wall:[...RECRUIT.wall].sort((a,b)=>(b[1].startsWith(RECRUIT.positionGroup)?1:0)-(a[1].startsWith(RECRUIT.positionGroup)?1:0));
 const half=Math.ceil(WALL.length/2), A=WALL.slice(0,half), B=WALL.slice(half);
