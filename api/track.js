@@ -26,17 +26,18 @@ module.exports = async (req, res) => {
   const when = new Date().toLocaleString('en-US', { timeZone: process.env.ALERT_TZ || 'America/New_York', hour: 'numeric', minute: '2-digit', weekday: 'short' });
 
   try {
-    const shared = b.via === 'share';
+    const shared = b.via === 'share' || b.via === 'parents';
+    const fam = b.via === 'parents';
     if (b.ev === 'share') {
       await sendAlert({
         to: r.alertTo,
-        subject: `${who} just shared his page`,
-        text: `${who} tapped Share on ${device}, ${when}. When someone opens the forwarded link you'll get a separate alert marked "shared link".`
+        subject: b.to === 'parents' ? `${who} just sent his page to his family` : `${who} just shared his page`,
+        text: b.to === 'parents' ? `${who} tapped "Send to my family" on ${device}, ${when}. You'll get an alert when they open it.` : `${who} tapped Share on ${device}, ${when}. When someone opens the forwarded link you'll get a separate alert marked "shared link".`
       });
     } else if (b.ev === 'open' && shared) {
       await sendAlert({
         to: r.alertTo,
-        subject: `Someone opened ${who}'s page from a shared link (${tab})`,
+        subject: fam ? `${who}'s family just opened their section` : `Someone opened ${who}'s page from a shared link (${tab})`,
         text: `A forwarded copy of ${who}'s page was opened ${when} on ${device}, starting on ${tab}. Likely a parent, coach or someone close to him.`
       });
     } else if (b.ev === 'open') {
