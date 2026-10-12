@@ -710,7 +710,7 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
   <!-- ===================== PARENTS VIEW ===================== -->
   <div data-aud="parents">
   <section class="reveal">
-    <span class="eyebrow">For the Finleys</span>
+    <span class="eyebrow" id="famEyebrow"></span>
     <h2>The questions families ask us</h2>
     <p class="lede muted" id="parentsLede">Straight answers. Ryan Hays, a licensed attorney and NFL contract advisor since 2012, handles the contract and protection side for every client.</p>
     <div class="reads" aria-label="Three things Ryan reads first">
@@ -796,7 +796,7 @@ const vid=(id,label,len,cls='',slotNo='',poster='')=> id
   ? `<div class="video ${cls} has-media"><video playsinline controls controlsList="nodownload" preload="metadata" disablePictureInPicture${poster?` poster="${poster}"`:''} data-track="${label}" src="${String(id).startsWith('/')?id:mediaURL(id)}"></video></div>`
   : `<div class="video ${cls}" tabindex="0" aria-label="${label}">${slotNo?`<span class="slot">Video slot ${slotNo}</span>`:''}<div class="play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></div><div class="cap"><span><b>${label}</b></span><span class="num">${len||''}</span></div></div>`;
 const frame=(ph,extra='')=>`<div class="ph-frame ${extra}${ph.cutout?' cutout':''}${ph.tone?' tone':''}${ph.graphic?' gfx':''}"${ph.focus?` style="--focus:${ph.focus}"`:''}>${ph.src?`<img src="${ph.src.startsWith('/')?ph.src:mediaURL(ph.src)}" alt="${ph.cap}">`:`<span class="lbl">Photo</span>`}<span class="wm">${ph.wm||''}</span><div class="cap"><b>${ph.cap}</b> <span>${ph.sub||''}</span></div></div>`;
-$('#tabAthlete').textContent=`For ${RECRUIT.first}`; $('#tabParents').textContent=RECRUIT.familyLabel||`For the ${RECRUIT.last}s`;
+$('#tabAthlete').textContent=`For ${RECRUIT.first}`;$('#famEyebrow').textContent=RECRUIT.familyLabel||`For the ${RECRUIT.last} family`; $('#tabParents').textContent=RECRUIT.familyLabel||`For the ${RECRUIT.last}s`;
 $('#heroName').innerHTML=`<span class="first">${RECRUIT.first}</span><span class="last">${RECRUIT.last}</span>`;
 /* long names: shrink the hero name until both lines fit the column */
 {const h=$('#heroName');const fit=()=>{h.style.fontSize='';const w=h.clientWidth;if(!w)return;const m=Math.max(...[...h.children].map(c=>{c.style.display='inline-block';const x=c.getBoundingClientRect().width;c.style.display='';return x}));if(m>w){const fs=parseFloat(getComputedStyle(h).fontSize);h.style.fontSize=(fs*w/m*0.98)+'px'}};fit();if(document.fonts)document.fonts.ready.then(fit);addEventListener('resize',fit)}
@@ -859,6 +859,7 @@ $('#roster').classList.toggle('all',!isTE);$('#roster').innerHTML=(isTE
   : `<span class="hdr">JB clients · ${RECRUIT.positionGroup} and the room</span>`+RECRUIT.rosterAll.filter(r=>r[1].startsWith(RECRUIT.positionGroup)).concat(RECRUIT.rosterAll.filter(r=>!r[1].startsWith(RECRUIT.positionGroup))).map(r=>`<div><span>${r[0]}</span><span class="t">${r[1]}</span></div>`).join('')
    +`<span class="hdr" style="margin-top:14px">Plus the tight end room</span>`+RECRUIT.roster.slice(0,6).map(r=>`<div><span>${r[0]}</span><span class="t">${r[1]}</span></div>`).join(''));
 if(!isTE){
+  document.querySelectorAll('[data-unlock="elevate"] li').forEach(li=>{if(li.textContent==='TE position work')li.textContent='Position work'});
   $('#whoH').textContent="A former NFL player, a contract lawyer, and forty years";
   $('#whoLede').textContent="Mid-size by choice. No shareholders, no quotas, nobody above you on a call sheet. Jack played in the league and coached. Ryan negotiates the contracts.";
   $('#proofH').textContent="A roster that gets paid";
