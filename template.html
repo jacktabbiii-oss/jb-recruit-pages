@@ -99,6 +99,7 @@ p{margin:0}
 .hero h1 .last{display:block;color:var(--blue)}
 .hero .tag{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--mono);font-size:.86rem;color:var(--muted)}
 .hero .tag b{color:var(--paper);font-weight:600}
+.hero .tag .honor.status{background:var(--blue);color:var(--blue-ink);border-color:var(--blue);font-weight:600}
 .hero .tag .honor{color:var(--blue);border:1px solid rgba(43,155,255,.4);padding:1px 8px;border-radius:2px}
 
 /* video slot */
@@ -277,6 +278,10 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
 .nums .v small{font-size:.5em;color:var(--blue);margin-left:2px}
 .nums .k{font-size:.86rem;color:var(--muted);margin-top:6px;line-height:1.35}
 .nilcards{margin-top:0}
+.saywall{margin-top:18px;display:grid;gap:12px}
+.saywall blockquote{margin:0;background:var(--panel);border:1px solid var(--line);padding:16px 16px 14px}
+.saywall p{margin:0;font-size:1.02rem;line-height:1.5;color:var(--paper)}
+.saywall cite{display:block;margin-top:10px;font-style:normal;font-family:var(--mono);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
 .nums-src{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--muted);margin-top:8px;text-transform:uppercase}
 .elevate-logo{display:block;height:48px;width:auto;margin-bottom:10px;opacity:.9}
 .drafted{margin-top:18px}
@@ -454,6 +459,7 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
   .vs .heads img{height:300px}
   .vs table{font-size:1.02rem}
   .reads{grid-template-columns:repeat(3,1fr);gap:16px}
+  section>.saywall{grid-template-columns:repeat(3,1fr);gap:16px;margin-top:0}
   .yr1 ol{grid-template-columns:repeat(4,1fr);gap:20px}
   .yr1 li{padding:40px 0 0 0}
   .yr1 li::after{left:30px;right:-20px;top:12px;bottom:auto;width:auto;height:2px;background:linear-gradient(90deg,var(--blue),rgba(43,155,255,.15))}
@@ -738,6 +744,16 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
   </section>
 
   <section class="reveal">
+    <span class="eyebrow">In their words</span>
+    <h2>What our clients say</h2>
+    <div class="saywall">
+      <blockquote><p>"Jack Bechta and Ryan Hays prepared me and my family for my contract negotiations for well over a year in advance. We felt well informed and confident throughout the entire process. They helped secure a contract that protects me and my family."</p><cite>George Kittle · TE, 49ers</cite></blockquote>
+      <blockquote><p>"JB Sports has had an immeasurable impact on my success throughout my young career. They catered to my every need, provided me guidance, and allowed me to focus solely on my priorities."</p><cite>Sam LaPorta · TE, Lions</cite></blockquote>
+      <blockquote><p>"The thing that stands out the most about Jack is his hard work and diligence when no one is looking. I still consider him my closest confidant and he is like family now."</p><cite>Al Harris · Packers Hall of Fame DB</cite></blockquote>
+    </div>
+  </section>
+
+  <section class="reveal">
     <span class="eyebrow">What's included</span>
     <h2>Everything we handle</h2>
     <ul class="list" id="included">
@@ -806,7 +822,48 @@ const TRACK = __TRACK_JSON__;
 /* ============ RENDER ============ */
 const UNLOCKED=new Set(RECRUIT.unlocked||[]);
 const $=s=>document.querySelector(s);
-$('#heroTags').innerHTML=`<span><b>${RECRUIT.position}</b> · ${RECRUIT.school}${RECRUIT.number?` · #${RECRUIT.number}`:''}</span>${RECRUIT.height?`<span>${RECRUIT.height}${RECRUIT.weight?' · '+RECRUIT.weight:''}</span>`:''}<span>${/^\d{4}$/.test(String(RECRUIT.draftClass))?`<b>${RECRUIT.draftClass}</b> draft class`:RECRUIT.draftClass}</span>${(RECRUIT.honors||[]).map(h=>`<span class="honor">${h}</span>`).join('')}`;
+/* ============ STATUS (college / high school pages) ============
+   One word in the player's JSON ("status") swaps the headline promise, the first money-now card,
+   the plan heading, the ask and the family's first question. Anything set in the JSON still wins. */
+{const S=RECRUIT.status,CS=RECRUIT.commitSchool||'',SC=RECRUIT.school;
+ const P={
+  staying:{badge:`Staying at ${SC}`,nilH:'Get paid right where you are',nilLede:"You don't have to leave to get paid what you're worth. We negotiate your revenue share and NIL with your school and keep the relationship with your staff intact.",
+    card:['JB is the go-between',"We negotiate with your school for you, so you never have to negotiate with your own coaches. No drama, and the relationship stays strong."],
+    fitH:'What staying should deliver',fitLede:"Slide each one. Staying is a real choice when the school delivers on what matters to you. This is what we hold them to.",
+    askH:"Let's talk about your number",askLede:"This page is the outline. In person we'll walk through what your market really is, what your school should be paying, and how we'd negotiate it without straining a single relationship.",
+    qa:{q:"He's staying. Why does he need an agent?",a:"Because the school negotiates with every player on the roster. We make sure his revenue share and NIL reflect what he's worth, in writing, and we're the go-between so he never has to negotiate with his own coaches."}},
+  undecided:{nilH:'College football pays now. Read the fine print.',nilLede:"The rules changed fast. Here's what's true for 2026-27, and where an agent and a lawyer earn their keep.",
+    card:null,fitH:'The right fit, not just the biggest number',fitLede:"Slide each one. Jack has coached and recruited in these rooms. He knows which staffs actually develop players and which offers come with strings. Every option gets measured against this list first, then the money.",
+    askH:"Let's sit down and talk it through",askLede:"This page is the outline. In person we'll go through your options, what your market really looks like, and how we'd guide you through the portal window and beyond. Bring your family and every question you've got.",
+    qa:{q:'Should he transfer?',a:"Only if it's better for him, not just bigger. Jack has coached and recruited at this level, so he knows which staffs develop players and which offers come with strings. Sometimes the best move is staying and getting paid right where he is."}},
+  portal:{badge:'In the transfer portal',nilH:'Every offer, read before you commit',nilLede:"The portal moves in days and schools will push for fast answers. We compare every offer on fit first, then the money, and Ryan reads the terms before anything is signed.",
+    card:['Fit first, then the money',"The biggest number isn't always the best offer. We weigh each school against what matters to you, and we know which staffs actually develop players."],
+    fitH:'Weigh every offer on fit, then the money',fitLede:"Slide each one. Every school in your inbox gets measured against this list before we talk numbers.",
+    askH:"Let's talk today",askLede:"The window is short. Call or text and we'll start comparing offers the same day: fit, money, and the fine print. Bring your family into it.",
+    qa:{q:"He's in the portal. How fast can you help?",a:"Right away. We compare each offer against what matters to him, call the staffs we know, and Ryan reads the agreement terms before he commits. Nothing gets signed in a hurry."}},
+  hs_undecided:{badge:'Uncommitted',nilH:'Pick a school on purpose',nilLede:"Every program will tell you what you want to hear. Here's what's actually true for recruits this year.",
+    card:['Read the offers',"Some offers are real, some are conditional, some are a number for the news. We help you ask the questions programs don't volunteer answers to."],
+    fitH:'How to pick a school on purpose',fitLede:"Slide each one. This is how you and your family decide what matters, before any school decides it for you.",
+    askH:"Let's sit down, family included",askLede:"This page is the outline. In person we'll walk through your offers, what each one really means, and how to choose on purpose. Bring your family and every question you've got.",
+    qa:{q:'How do we read all these offers?',a:"Some are real, some are conditional, some are a number for the news. We help you ask the questions programs don't volunteer answers to, and we know what's allowed in your state."}},
+  hs_committed:{badge:CS?`Committed to ${CS}`:'Committed',nilH:"Committed isn't signed",nilLede:"The rules changed fast, and they now cover recruits too. Here's what's true for you this year.",
+    card:['Your first deal is still open',`You're committed, not signed. Until signing day in December, the terms of your first college agreement are still on the table.`],
+    fitH:'The right fit, not just the biggest number',fitLede:`Slide each one. Jack has coached and recruited at this level and knows what a staff should deliver. You picked ${CS||'your school'}; this is how we make sure it delivers.`,
+    askH:"Let's sit down, family included",askLede:`This page is the outline. In person we'll walk through your first agreement with ${CS||'your school'}, the high school NIL rules, and the plan from senior season to draft night. Bring your family and every question you've got.`,
+    qa:{q:"He's already committed. Why does he need anyone?",a:`Committed isn't signed. The terms of his first agreement with ${CS||'his school'} are negotiated, and starting this year NCAA rules let recruits have an agent for that. We make sure the deal matches the commitment. We have no interest in changing his school.`}},
+  hs_signed:{badge:CS?`Signed with ${CS}`:'Signed',nilH:'Signed. Now arrive ready.',nilLede:"The first agreement is done. Now it's the money, the eligibility paperwork and the development plan before you get to campus.",
+    card:['What comes after signing',"Revenue share and NIL terms after enrollment, a first budget, taxes on NIL income, and a plan with the staff. We handle the business."],
+    fitH:'What your school should deliver',fitLede:"Slide each one. You signed for reasons. This is how we hold the school to them.",
+    askH:"Let's sit down, family included",askLede:"This page is the outline. In person we'll walk through the money, the paperwork and the plan from signing to campus to draft night. Bring your family.",
+    qa:{q:"He's already signed. What's left?",a:"Plenty: revenue share and NIL terms after enrollment, a first budget, taxes on NIL income, and a development plan with the staff. We handle the business so he can focus on football."}}};
+ const key=RECRUIT.mode==='hs'?(S?'hs_'+S:null):S;const p=key&&P[key];
+ if(p){RECRUIT._badge=p.badge;
+  if(RECRUIT.nil){RECRUIT.nil.h=RECRUIT.nil.h||p.nilH;RECRUIT.nil.lede=RECRUIT.nil.lede||p.nilLede;if(p.card)RECRUIT.nil.cards=[p.card,...(RECRUIT.nil.cards||[])]}
+  RECRUIT.copy=[['#fitH',p.fitH],['#fitLede',p.fitLede],...(RECRUIT.copy||[])];
+  RECRUIT.ask=Object.assign({h:p.askH,lede:p.askLede},RECRUIT.ask||{});
+  if(!(RECRUIT.parentQA||[]).some(x=>x.q===p.qa.q))RECRUIT.parentQA=[p.qa,...(RECRUIT.parentQA||[])];
+  if(key==='portal'&&RECRUIT.portalClose){const d=Math.ceil((new Date(RECRUIT.portalClose+'T23:59:59')-new Date())/864e5);if(d>=0)RECRUIT._badge+=` · window closes in ${d} day${d===1?'':'s'}`}}}
+$('#heroTags').innerHTML=`<span><b>${RECRUIT.position}</b> · ${RECRUIT.school}${RECRUIT.number?` · #${RECRUIT.number}`:''}</span>${RECRUIT.height?`<span>${RECRUIT.height}${RECRUIT.weight?' · '+RECRUIT.weight:''}</span>`:''}<span>${/^\d{4}$/.test(String(RECRUIT.draftClass))?`<b>${RECRUIT.draftClass}</b> draft class`:RECRUIT.draftClass}</span>${RECRUIT._badge?`<span class="honor status">${RECRUIT._badge}</span>`:''}${(RECRUIT.honors||[]).map(h=>`<span class="honor">${h}</span>`).join('')}`;
 if(RECRUIT.proofLine){const P=RECRUIT.proofLine;const d=document.createElement('div');d.className='proofline';d.innerHTML=`<div class="faces">${(P.faces||[]).map(f=>`<img src="${f}" alt="">`).join('')}</div><p>${P.text}</p>`;$('#heroTags').after(d)}
 const mediaURL=id=>`/api/media?s=${encodeURIComponent(TRACK.slug)}&k=${encodeURIComponent(TRACK.token)}&id=${encodeURIComponent(id)}`;
 const vid=(id,label,len,cls='',slotNo='',poster='')=> id

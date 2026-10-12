@@ -96,8 +96,6 @@
   "fitTail": "Whether you stay at Eastern Michigan or test the portal, this is the list we'd weigh every option against. Ryan reads every agreement before you sign.",
   "nil": {
     "eyebrow": "The money now",
-    "h": "College football pays now. Read the fine print.",
-    "lede": "The rules changed fast. Here's what's true for 2026-27, and where an agent and a lawyer earn their keep.",
     "cards": [
       [
         "Revenue share",
@@ -114,6 +112,10 @@
       [
         "The portal is two weeks",
         "One window: Jan. 2–16, 2027, plus a separate window if a head coach changes. The homework happens now, not in January."
+      ],
+      [
+        "Local and national deals",
+        "We look for marketing deals at home and nationally, sized right for now and built to carry into the NFL."
       ],
       [
         "The fine print",
@@ -163,7 +165,7 @@
   "handle": [
     [
       "Revenue share",
-      "Your number negotiated with the school, in writing, with no surprises if you transfer."
+      "JB is the go-between with your school: no drama, the relationship with your staff stays intact, and we push to get you above your market."
     ],
     [
       "NIL deals",
@@ -225,10 +227,6 @@
       "a": "Ryan Hays, a licensed attorney and NFL contract advisor since 2012. Every agreement, every time, before Amareon signs."
     },
     {
-      "q": "Should he transfer?",
-      "a": "Only if it's better for him, not just bigger. Jack has coached and recruited at this level, so he knows which staffs develop players and which offers come with strings. Sometimes the best move is staying and getting paid right where he is."
-    },
-    {
       "q": "Who are you, really?",
       "a": "Jack Tabb played with A.J. at North Carolina. JB Sports has represented NFL players since 1986, and six clients have become the highest paid at their position. We stay mid-size so every client gets the founders, not an assistant."
     }
@@ -272,22 +270,10 @@
       "03 · The plan"
     ],
     [
-      "#fitH",
-      "The right fit, not just the biggest number"
-    ],
-    [
-      "#fitLede",
-      "Slide each one. Jack has coached and recruited in these rooms. He knows which staffs actually develop backs and which offers come with strings. Every option gets measured against this list first, then the money."
-    ],
-    [
       "#roadH",
       "Now through draft night"
     ]
   ],
-  "ask": {
-    "h": "Let's sit down and talk it through",
-    "lede": "This page is the outline. In person we'll go through your options, what your market really looks like, and how we'd guide you through the portal window and beyond. Bring your family and every question you've got."
-  },
   "cta": {
     "label": "Set up a meeting",
     "sms": "Hey Jack, it's Amareon. I'd like to set up a time to meet."
@@ -522,5 +508,7 @@
     "Jay Higgins",
     "George Kittle",
     "Riley Nowakowski"
-  ]
+  ],
+  "status": "undecided",
+  "portalClose": "2027-01-16"
 }

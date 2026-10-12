@@ -26,7 +26,7 @@
   ],
   "honors": [
     "IFCA All-State, 2025",
-    "Indiana commit · first OL in IU's 2027 class"
+    "First OL in IU's 2027 class"
   ],
   "proofLine": {
     "faces": [
@@ -96,13 +96,7 @@
   "fitTail": "You picked Indiana. This is what we'd make sure your agreement and your plan actually deliver. Ryan reads every agreement before you sign.",
   "nil": {
     "eyebrow": "Before you sign",
-    "h": "Committed isn't signed",
-    "lede": "The rules changed fast, and they now cover recruits too. Here's what's true for you this year.",
     "cards": [
-      [
-        "Your first deal is still open",
-        "You're committed, not signed. Until signing day in December, the terms of your first college agreement are still on the table."
-      ],
       [
         "You can have an agent now",
         "Starting in 2026-27, NCAA rules let recruits hire agents before they enroll and keep their eligibility, for every part of the deal, including revenue share with the school."
@@ -114,6 +108,10 @@
       [
         "High school NIL in Indiana",
         "The IHSAA now allows NIL deals, but no school name, logo or uniform, and your school must be told within 48 hours. Break those and you can lose eligibility."
+      ],
+      [
+        "Local and national deals",
+        "We look for marketing deals at home and nationally, inside the rules, sized right for now and built to carry into college and the NFL."
       ],
       [
         "The fine print",
@@ -163,7 +161,7 @@
   "handle": [
     [
       "Signing",
-      "Your agreement with Indiana read and negotiated before you sign."
+      "JB is the go-between with Indiana: your first agreement negotiated before you sign, and the relationship with the staff stays intact."
     ],
     [
       "Revenue share",
@@ -212,10 +210,6 @@
     ]
   ],
   "parentQA": [
-    {
-      "q": "He's already committed. Why does he need anyone?",
-      "a": "Committed isn't signed. The terms of his first agreement with Indiana are negotiated, and starting this year NCAA rules let recruits have an agent for that. We make sure the deal matches the commitment. We have no interest in changing his school."
-    },
     {
       "q": "Is this allowed for a high schooler?",
       "a": "Yes. Starting in 2026-27, NCAA rules let recruits hire agents before they enroll and keep their eligibility. In Indiana, the IHSAA allows NIL deals as long as there's no school name, logo or uniform, and the school is told within 48 hours."
@@ -272,22 +266,10 @@
       "03 · The plan"
     ],
     [
-      "#fitH",
-      "The right fit, not just the biggest number"
-    ],
-    [
-      "#fitLede",
-      "Slide each one. Jack has coached and recruited at this level and knows what a staff should deliver for a lineman. You picked Indiana; this is how we make sure it delivers."
-    ],
-    [
       "#roadH",
       "Now through draft night"
     ]
   ],
-  "ask": {
-    "h": "Let's sit down, family included",
-    "lede": "This page is the outline. In person we'll walk through your first agreement with Indiana, the high school NIL rules, and the plan from senior season to draft night. Bring your family and every question you've got."
-  },
   "cta": {
     "label": "Set up a meeting",
     "sms": "Hey Jack, it's Jeremiah. I'd like to set up a time to meet."
@@ -524,5 +506,7 @@
     "Jay Higgins",
     "George Kittle",
     "Riley Nowakowski"
-  ]
+  ],
+  "status": "committed",
+  "commitSchool": "Indiana"
 }
