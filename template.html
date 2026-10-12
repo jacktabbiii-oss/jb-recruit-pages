@@ -698,7 +698,7 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
   </section>
   <section class="reveal handoff">
     <span class="eyebrow">For your family</span>
-    <h2 id="handH">Send this to your parents</h2>
+    <h2 id="handH">Send this to your family</h2>
     <p class="lede muted" id="handLede">There's a section built for them: the money, the protection, and who we are. Send it over, then let's all get on one call.</p>
     <button type="button" class="handbtn" id="shareParents">Send to my family</button>
   </section>
@@ -949,7 +949,7 @@ const C=RECRUIT.contact||{name:"Jack",phone:RECRUIT.phone,phoneE164:RECRUIT.phon
 const CTA=RECRUIT.cta||{label:"Set up a meeting",sms:`Hey ${C.name}, it's ${RECRUIT.first}. I'd like to set up a time to meet.`};
 /* handoff to the family: parents link opens on their tab and is tagged so the alert says so */
 {const b=$('#shareParents');const url=location.origin+location.pathname+'?v=p#parents';
- $('#handH').textContent=`Send this to your ${RECRUIT.familyWord||'parents'}`;
+ $('#handH').textContent=`Send this to your ${RECRUIT.familyWord||'family'}`;
  b.addEventListener('click',async()=>{try{window.__jbShare&&window.__jbShare('parents')}catch(e){}
    const data={title:`For the ${RECRUIT.last} family · JB Sports`,text:`Take a look at the section JB Sports put together for our family.`,url};
    if(navigator.share){try{await navigator.share(data);return}catch(e){if(e&&e.name==='AbortError')return}}
