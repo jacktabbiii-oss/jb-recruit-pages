@@ -681,7 +681,7 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
     </div>
     <div class="locked" data-locked="plan">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="10" width="16" height="11"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
-      <div><h3>Your ElevaTE plan</h3><p>Your personal program for Nashville: dates, trainers, the numbers we're targeting.</p><div class="when">Unlocks after your visit</div></div>
+      <div><h3>Your ElevaTE plan</h3><p>Your personal program for Nashville: dates, trainers, the numbers we're targeting.</p><div class="when">We unlock it when we meet</div></div>
     </div>
   </section>
 
@@ -864,7 +864,7 @@ if(!isTE){
 $('#quotes').innerHTML=RECRUIT.quotes.map(q=>`<div class="quote">${q.clip?vid(q.clip,q.who,'','',''):q.img?`<div class="ph-frame qimg"><img src="${q.img}" alt="${q.who}" loading="lazy"></div>`:`<div class="ph-frame qimg"><span class="wm">${q.who.split(' ').map(x=>x[0]).join('').slice(0,2)}</span></div>`}<div><div class="q">"${q.q}"</div><div class="who">${q.who} · ElevaTE alum</div></div></div>`).join('');
 /* training options (non-TE): replaces the ElevaTE block with a choice of rooms */
 {const T=RECRUIT.training,sec=$('#train');if(T&&sec){const lock='<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="10" width="16" height="11"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>';
-  sec.innerHTML=`<span class="eyebrow">07 · ${T.eyebrow||'Combine prep'}</span><h2>${T.h}</h2><p class="lede muted">${T.lede||''}</p><div class="gyms">${T.options.map(o=>`<div class="gym"><div class="plate"><img src="${o.logo}" alt="${o.name}" loading="lazy"></div><div><h3>${o.name}</h3><div class="where">${o.where}</div><p>${o.line}</p>${o.tag?`<span class="chip">${o.tag}</span>`:''}</div></div>`).join('')}${T.yours?`<div class="gym yours"><div><h3>${T.yours.h}</h3><p>${T.yours.p}</p></div></div>`:''}</div>`+(T.locked?`<div class="locked">${lock}<div><h3>${T.locked.h}</h3><p>${T.locked.p}</p><div class="when">${T.locked.when||'Unlocks after your visit'}</div></div></div>`:'');}}
+  sec.innerHTML=`<span class="eyebrow">07 · ${T.eyebrow||'Combine prep'}</span><h2>${T.h}</h2><p class="lede muted">${T.lede||''}</p><div class="gyms">${T.options.map(o=>`<div class="gym"><div class="plate"><img src="${o.logo}" alt="${o.name}" loading="lazy"></div><div><h3>${o.name}</h3><div class="where">${o.where}</div><p>${o.line}</p>${o.tag?`<span class="chip">${o.tag}</span>`:''}</div></div>`).join('')}${T.yours?`<div class="gym yours"><div><h3>${T.yours.h}</h3><p>${T.yours.p}</p></div></div>`:''}</div>`+(T.locked?`<div class="locked">${lock}<div><h3>${T.locked.h}</h3><p>${T.locked.p}</p><div class="when">${T.locked.when||'We unlock it when we meet'}</div></div></div>`:'');}}
 $('#qa').innerHTML=RECRUIT.parentQA.map((x,i)=>`<details${i===0?' open':''}><summary>${x.q}</summary><div class="a">${x.a}</div></details>`).join('');
 $('#handle').innerHTML=RECRUIT.handle.map((h,i)=>{const full=h[1]||'';const tease=h[2]||(full.split(/(?<=\.)\s/)[0]||'');return `<div><div class="i">${String(i+1).padStart(2,'0')}</div><div class="k">${h[0]}</div><div class="d">${UNLOCKED.has('handle')?full:tease}</div></div>`}).join('');
 document.querySelectorAll('[data-unlock]').forEach(el=>{if(!UNLOCKED.has(el.dataset.unlock))el.hidden=true});
