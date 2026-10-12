@@ -66,7 +66,88 @@
     ],
     "text": "<b>The JB room.</b> Kaden Wetjen: receiver and returner, Round 4 to the Steelers this spring. Kittle and Kraft: #1 and #3 in TE pay. Six clients have been the highest paid at their position."
   },
-  "plays": [],
+  "plays": [
+    {
+      "k": "Clip 01",
+      "t": "Slot fade · touchdown",
+      "n": "",
+      "clip": "/recruits/carlos-hernandez/film-r4w8n/clip1.mp4",
+      "len": "0:14",
+      "poster": "/recruits/carlos-hernandez/film-r4w8n/clip1.jpg"
+    },
+    {
+      "k": "Clip 02",
+      "t": "YAC",
+      "n": "",
+      "clip": "/recruits/carlos-hernandez/film-r4w8n/clip2.mp4",
+      "len": "0:25",
+      "poster": "/recruits/carlos-hernandez/film-r4w8n/clip2.jpg"
+    },
+    {
+      "k": "Clip 03",
+      "t": "Big return vs. UM",
+      "n": "",
+      "clip": "/recruits/carlos-hernandez/film-r4w8n/clip3.mp4",
+      "len": "0:30",
+      "poster": "/recruits/carlos-hernandez/film-r4w8n/clip3.jpg"
+    },
+    {
+      "k": "Clip 04",
+      "t": "Sideline tightrope",
+      "n": "",
+      "clip": "/recruits/carlos-hernandez/film-r4w8n/clip4.mp4",
+      "len": "0:20",
+      "poster": "/recruits/carlos-hernandez/film-r4w8n/clip4.jpg"
+    },
+    {
+      "k": "Clip 05",
+      "t": "Toe tap",
+      "n": "",
+      "clip": "/recruits/carlos-hernandez/film-r4w8n/clip5.mp4",
+      "len": "0:21",
+      "poster": "/recruits/carlos-hernandez/film-r4w8n/clip5.jpg"
+    },
+    {
+      "k": "Clip 06",
+      "t": "One hand, in the rain",
+      "n": "",
+      "clip": "/recruits/carlos-hernandez/film-r4w8n/clip6.mp4",
+      "len": "0:08",
+      "poster": "/recruits/carlos-hernandez/film-r4w8n/clip6.jpg"
+    },
+    {
+      "k": "Clip 07",
+      "t": "Re-route and catch",
+      "n": "",
+      "clip": "/recruits/carlos-hernandez/film-r4w8n/clip7.mp4",
+      "len": "0:16",
+      "poster": "/recruits/carlos-hernandez/film-r4w8n/clip7.jpg"
+    },
+    {
+      "k": "Clip 08",
+      "t": "4th-quarter fight",
+      "n": "",
+      "clip": "/recruits/carlos-hernandez/film-r4w8n/clip8.mp4",
+      "len": "0:16",
+      "poster": "/recruits/carlos-hernandez/film-r4w8n/clip8.jpg"
+    },
+    {
+      "k": "Clip 09",
+      "t": "Championship effort",
+      "n": "",
+      "clip": "/recruits/carlos-hernandez/film-r4w8n/clip9.mp4",
+      "len": "0:24",
+      "poster": "/recruits/carlos-hernandez/film-r4w8n/clip9.jpg"
+    },
+    {
+      "k": "Clip 10",
+      "t": "Block on the DE",
+      "n": "",
+      "clip": "/recruits/carlos-hernandez/film-r4w8n/clip10.mp4",
+      "len": "0:10",
+      "poster": "/recruits/carlos-hernandez/film-r4w8n/clip10.jpg"
+    }
+  ],
   "reel": {
     "clip": null,
     "len": ""

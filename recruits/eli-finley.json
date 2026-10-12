@@ -63,35 +63,40 @@
       "t": "Seam route · separation",
       "n": "",
       "clip": "/recruits/eli-finley/film-k7q2x/clip1.mp4",
-      "len": "0:18"
+      "len": "0:18",
+      "poster": "/recruits/eli-finley/film-k7q2x/clip1.jpg"
     },
     {
       "k": "Clip 02",
       "t": "Route · the catch",
       "n": "",
       "clip": "/recruits/eli-finley/film-k7q2x/clip2.mp4",
-      "len": "0:13"
+      "len": "0:13",
+      "poster": "/recruits/eli-finley/film-k7q2x/clip2.jpg"
     },
     {
       "k": "Clip 03",
       "t": "In-line · run game",
       "n": "",
       "clip": "/recruits/eli-finley/film-k7q2x/clip3.mp4",
-      "len": "0:14"
+      "len": "0:14",
+      "poster": "/recruits/eli-finley/film-k7q2x/clip3.jpg"
     },
     {
       "k": "Clip 04",
       "t": "E-hole",
       "n": "",
       "clip": "/recruits/eli-finley/film-k7q2x/clip4.mp4",
-      "len": "0:17"
+      "len": "0:17",
+      "poster": "/recruits/eli-finley/film-k7q2x/clip4.jpg"
     },
     {
       "k": "Clip 05",
       "t": "Stiff arm",
       "n": "",
       "clip": "/recruits/eli-finley/film-k7q2x/clip5.mp4",
-      "len": "0:15"
+      "len": "0:15",
+      "poster": "/recruits/eli-finley/film-k7q2x/clip5.jpg"
     }
   ],
   "defaultPick": 90,
