@@ -180,8 +180,12 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
 /* film strip */
 .strip{margin-top:18px;display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 .strip::-webkit-scrollbar{display:none}
-.strip .ph-frame{flex:0 0 86%;max-width:420px;aspect-ratio:4/5;scroll-snap-align:start}
-.strip .ph-frame:nth-child(even){aspect-ratio:3/4;flex-basis:62%}
+.strip .ph-frame{flex:0 0 82%;max-width:520px;aspect-ratio:3/2;scroll-snap-align:start}
+.strip .ph-frame:nth-child(even){aspect-ratio:3/2;flex-basis:82%}
+.strip{align-items:flex-start}
+.strip .ph-frame.gfx{flex:0 0 43.7%;max-width:277px;aspect-ratio:4/5;background:#0d1526}
+.strip .ph-frame.gfx img{object-fit:contain;filter:none}
+.strip .ph-frame .wm,.strip .ph-frame .cap{display:none}
 .strip:empty,.strip:empty+.strip-hint{display:none}
 .strip-hint{font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:6px}
 /* player comp: recruit vs the JB client we see him as */
@@ -503,7 +507,6 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
   .cta a:active,.cta button:active{transform:scale(.98)}
   .figs .v{transition:color .2s}
   .strip .ph-frame{transition:transform .5s cubic-bezier(.2,.8,.2,1)}
-  .strip .ph-frame:nth-child(even){transform:translateY(10px)}
   .hero-photo .ph-frame{animation:fadeUp .9s .35s cubic-bezier(.2,.8,.2,1) both}
   .hero-photo .ph-frame.wide{animation-delay:.5s}
   .figs .v.bump{color:var(--blue)}
@@ -751,7 +754,7 @@ const mediaURL=id=>`/api/media?s=${encodeURIComponent(TRACK.slug)}&k=${encodeURI
 const vid=(id,label,len,cls='',slotNo='')=> id
   ? `<div class="video ${cls} has-media"><video playsinline controls controlsList="nodownload" preload="metadata" disablePictureInPicture data-track="${label}" src="${String(id).startsWith('/')?id:mediaURL(id)}"></video></div>`
   : `<div class="video ${cls}" tabindex="0" aria-label="${label}">${slotNo?`<span class="slot">Video slot ${slotNo}</span>`:''}<div class="play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></div><div class="cap"><span><b>${label}</b></span><span class="num">${len||''}</span></div></div>`;
-const frame=(ph,extra='')=>`<div class="ph-frame ${extra}${ph.cutout?' cutout':''}${ph.tone?' tone':''}"${ph.focus?` style="--focus:${ph.focus}"`:''}>${ph.src?`<img src="${ph.src.startsWith('/')?ph.src:mediaURL(ph.src)}" alt="${ph.cap}">`:`<span class="lbl">Photo</span>`}<span class="wm">${ph.wm||''}</span><div class="cap"><b>${ph.cap}</b> <span>${ph.sub||''}</span></div></div>`;
+const frame=(ph,extra='')=>`<div class="ph-frame ${extra}${ph.cutout?' cutout':''}${ph.tone?' tone':''}${ph.graphic?' gfx':''}"${ph.focus?` style="--focus:${ph.focus}"`:''}>${ph.src?`<img src="${ph.src.startsWith('/')?ph.src:mediaURL(ph.src)}" alt="${ph.cap}">`:`<span class="lbl">Photo</span>`}<span class="wm">${ph.wm||''}</span><div class="cap"><b>${ph.cap}</b> <span>${ph.sub||''}</span></div></div>`;
 $('#tabAthlete').textContent=`For ${RECRUIT.first}`; $('#tabParents').textContent=RECRUIT.familyLabel||`For the ${RECRUIT.last}s`;
 $('#heroName').innerHTML=`<span class="first">${RECRUIT.first}</span><span class="last">${RECRUIT.last}</span>`;
 document.title=`${RECRUIT.first} ${RECRUIT.last} × JB Sports`;

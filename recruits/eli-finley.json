@@ -15,33 +15,53 @@
   "draftClass": 2027,
   "photos": [
     {
-      "src": "/recruits/eli-finley/game-02.webp",
-      "cap": "Pregame",
-      "sub": "Louisiana Tech · #84",
-      "wm": "TE",
-      "focus": "50% 28%"
+      "src": "/recruits/eli-finley/g-stiff.webp",
+      "cap": "",
+      "sub": "",
+      "wm": "",
+      "focus": "55% 30%"
     },
     {
-      "src": "/recruits/eli-finley/game-01.webp",
-      "cap": "Game action",
-      "sub": "Louisiana Tech · #84",
-      "wm": "84",
-      "focus": "38% 22%"
+      "src": "/recruits/eli-finley/g-point.webp",
+      "cap": "",
+      "sub": "",
+      "wm": "",
+      "focus": "40% 30%"
     },
     {
-      "src": "/recruits/eli-finley/studio-cutout.webp",
-      "cutout": true,
-      "cap": "Eli Finley",
-      "sub": "TE · Louisiana Tech",
-      "wm": "84"
+      "src": "/recruits/eli-finley/g-white.webp",
+      "cap": "",
+      "sub": "",
+      "wm": "",
+      "focus": "45% 30%"
+    },
+    {
+      "src": "/recruits/eli-finley/g-blue.webp",
+      "cap": "",
+      "sub": "",
+      "wm": "",
+      "focus": "55% 30%"
+    },
+    {
+      "src": "/recruits/eli-finley/g-red2.webp",
+      "cap": "",
+      "sub": "",
+      "wm": "",
+      "focus": "50% 30%"
+    },
+    {
+      "src": "/recruits/eli-finley/g-red.webp",
+      "cap": "",
+      "sub": "",
+      "wm": "",
+      "focus": "55% 30%"
     },
     {
       "src": "/recruits/eli-finley/mackey.webp",
       "cap": "",
       "sub": "",
       "wm": "",
-      "graphic": true,
-      "focus": "50% 50%"
+      "graphic": true
     }
   ],
   "plays": [
