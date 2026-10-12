@@ -46,6 +46,32 @@ p{margin:0}
 .hero-art.cut{background:radial-gradient(70% 55% at 50% 85%,rgba(43,155,255,.45),transparent 70%),linear-gradient(180deg,var(--panel),var(--ground))}
 .hero-art::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,17,32,.15) 0%,rgba(10,17,32,0) 35%,rgba(10,17,32,.55) 70%,var(--ground) 100%)}
 .hero-art .ghost{position:absolute;right:-4%;top:2%;font-family:var(--display);font-weight:900;font-size:min(50vw,320px);line-height:.8;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.25);z-index:1;pointer-events:none}
+/* room hero: the recruit in front of the JB players at his position */
+.hero-art.room{height:auto;aspect-ratio:1.3/1;background:radial-gradient(45% 50% at 50% 80%,rgba(43,155,255,.38),transparent 72%);overflow:hidden;margin:0 -16px;-webkit-mask-image:linear-gradient(180deg,#000 82%,transparent);mask-image:linear-gradient(180deg,#000 82%,transparent)}
+.hero-art.room::after{display:none;content:"";position:absolute;inset:auto 0 0 0;top:auto;left:0;right:0;bottom:0;height:18%;background:linear-gradient(180deg,transparent,var(--ground));z-index:6}
+.hero-art.room .ghost{display:none}
+.hero-art.room img.f{position:absolute;inset:auto;top:auto;right:auto;bottom:0;height:auto;max-height:none;display:block;object-fit:contain;object-position:bottom}
+.hero-art.room img.b,.hero-art.room img.mid,.hero-art.room img.f3{-webkit-mask-image:linear-gradient(180deg,#000 62%,transparent 96%);mask-image:linear-gradient(180deg,#000 62%,transparent 96%)}
+.hero-art.room img.b{filter:brightness(.5) saturate(.8);z-index:1}
+.hero-art.room img.mid{filter:brightness(.72) saturate(.9);z-index:2}
+.hero-art.room img.me{z-index:4;filter:drop-shadow(0 20px 30px rgba(0,0,0,.75))}
+.hero-art.room img.f1{left:0;width:27%;bottom:14%}
+.hero-art.room img.f2{left:auto;right:0;width:27%;bottom:14%}
+.hero-art.room img.f3{display:none}
+.hero-art.room img.f4{left:13%;width:30%;bottom:3%}
+.hero-art.room img.f5{left:auto;right:13%;width:30%;bottom:3%}
+.hero-art.room img.me{left:33%;width:34%}
+.hero.room .title{margin-top:-30px}
+.hero.room h1{font-size:clamp(3.2rem,15vw,6.4rem)}
+.hero.room .tag{margin-top:10px}
+.hero.room .proofline{margin-top:12px}
+.hero-art.room{aspect-ratio:1.45/1}
+.proofline{margin-top:16px;display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.proofline .faces{display:flex;flex:0 0 auto}
+.proofline .faces img{width:30px;height:30px;border-radius:50%;object-fit:cover;object-position:50% 8%;background:var(--panel-2);border:2px solid var(--ground);margin-left:-9px}
+.proofline .faces img:first-child{margin-left:0}
+.proofline p{margin:0;font-size:.86rem;line-height:1.35;color:var(--muted)}
+.proofline p b{color:var(--paper);font-weight:600}
 /* mosaic hero: several photos at native size, layered, nothing upscaled */
 .hero-art.mosaic{height:auto;aspect-ratio:1.2/1;background:none;overflow:visible;margin:0 0 4px;display:grid;grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:10px}
 .hero-art.mosaic::after,.hero-art.mosaic .ghost{display:none}
@@ -326,6 +352,16 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
   .hero.mosaic{grid-template-areas:"title art" "video art" "pair art";align-items:center}
   .hero.mosaic .hero-art{height:min(74vh,680px);aspect-ratio:auto;align-self:center;gap:14px}
   .hero.mosaic .hero-photo{display:none}
+  .hero.room .hero-art{height:auto;aspect-ratio:1.15/1;align-self:end;margin:0}
+  .hero.room .hero-art::after{display:none}
+  .hero.room .hero-photo{display:none}
+  .hero.room .title{margin-top:0}
+  .hero.room h1{font-size:clamp(5rem,9vw,9rem)}
+  .hero-art.room{aspect-ratio:1.15/1}
+  .hero-art.room img.me{left:30%;width:40%}
+  .proofline{margin-top:22px;flex-direction:row;align-items:center;gap:14px}
+  .proofline .faces img{width:42px;height:42px}
+  .proofline p{font-size:.96rem}
   /* full-bleed hero: photo behind the whole hero, name over a left-to-right fade */
   .hero.bleed{grid-template-columns:minmax(0,600px) 1fr;grid-template-areas:"title ." "video ." "pair .";border-bottom:0}
   html,body{overflow-x:clip}
@@ -710,6 +746,7 @@ const TRACK = __TRACK_JSON__;
 const UNLOCKED=new Set(RECRUIT.unlocked||[]);
 const $=s=>document.querySelector(s);
 $('#heroTags').innerHTML=`<span><b>${RECRUIT.position}</b> · ${RECRUIT.school} · #${RECRUIT.number}</span><span>${RECRUIT.height} · ${RECRUIT.weight}</span><span><b>${RECRUIT.draftClass}</b> draft class</span>${(RECRUIT.honors||[]).map(h=>`<span class="honor">${h}</span>`).join('')}`;
+if(RECRUIT.proofLine){const P=RECRUIT.proofLine;const d=document.createElement('div');d.className='proofline';d.innerHTML=`<div class="faces">${(P.faces||[]).map(f=>`<img src="${f}" alt="">`).join('')}</div><p>${P.text}</p>`;$('#heroTags').after(d)}
 const mediaURL=id=>`/api/media?s=${encodeURIComponent(TRACK.slug)}&k=${encodeURIComponent(TRACK.token)}&id=${encodeURIComponent(id)}`;
 const vid=(id,label,len,cls='',slotNo='')=> id
   ? `<div class="video ${cls} has-media"><video playsinline controls controlsList="nodownload" preload="metadata" disablePictureInPicture data-track="${label}" src="${String(id).startsWith('/')?id:mediaURL(id)}"></video></div>`
@@ -721,14 +758,17 @@ document.title=`${RECRUIT.first} ${RECRUIT.last} × JB Sports`;
 if(RECRUIT.heroVideo===null){$('#heroVideo').remove()}else $('#heroVideo').innerHTML=vid(RECRUIT.heroVideo&&RECRUIT.heroVideo.clip,`Jack Tabb III · to ${RECRUIT.first}`,RECRUIT.heroVideo&&RECRUIT.heroVideo.len,'','01');
 /* Hero art: photos[0] is THE photo. cutout:true floats him over a glow; otherwise full-bleed color with a fade. */
 (function(){const h=RECRUIT.photos[0];const el=$('#heroArt');
+  if(RECRUIT.heroStyle==='room'&&RECRUIT.room){const R=RECRUIT.room;el.className='hero-art room';el.closest('.hero').classList.add('room');
+    const cls=['f1 b','f2 b','f3','f4 mid','f5 mid'];
+    el.innerHTML=(R.behind||[]).slice(0,5).map((src,i)=>`<img class="f ${cls[i]}" src="${src}" alt="" aria-hidden="true">`).join('')+`<img class="f me" src="${R.front}" alt="${RECRUIT.first} ${RECRUIT.last}">`;return;}
   if(RECRUIT.heroStyle==='mosaic'&&h&&h.src){el.className='hero-art mosaic';el.closest('.hero').classList.add('mosaic');
     el.innerHTML=`<div class="ghost" aria-hidden="true">${RECRUIT.number}</div>`+RECRUIT.photos.filter(p=>p.src).slice(0,5).map((p,i)=>`<div class="m m${i+1}${p.cutout?' cut':''}${p.graphic?' gfx':''}" style="${p.focus?`--focus:${p.focus}`:''}"><img src="${p.src.startsWith('/')?p.src:mediaURL(p.src)}" alt="${p.cap||''}"></div>`).join('');return;}
   if(h&&h.src){el.className='hero-art'+(h.cutout?' cut':'');el.closest('.hero').classList.toggle('bleed',!h.cutout);if(h.focus)el.style.setProperty('--focus',h.focus);
     el.innerHTML=`<img src="${h.src.startsWith('/')?h.src:mediaURL(h.src)}" alt="${h.cap||''}"><div class="ghost" aria-hidden="true">${RECRUIT.number}</div>`;}
   else{el.className='hero-art empty';el.innerHTML=`<span>Hero photo</span><div class="ghost" aria-hidden="true">${RECRUIT.number}</div>`;}
 })();
-$('#heroPhotos').innerHTML=RECRUIT.heroStyle==='mosaic'?'':RECRUIT.photos[1]&&RECRUIT.photos[1].src?frame(RECRUIT.photos[1],'wide')+(RECRUIT.photos[2]&&RECRUIT.photos[2].src?frame(RECRUIT.photos[2]):''):'';
-$('#strip').innerHTML=RECRUIT.photos.slice(RECRUIT.heroStyle==='mosaic'?5:3).filter(ph=>ph.src).map(ph=>frame(ph)).join('');
+$('#heroPhotos').innerHTML=(RECRUIT.heroStyle==='mosaic'||RECRUIT.heroStyle==='room')?'':RECRUIT.photos[1]&&RECRUIT.photos[1].src?frame(RECRUIT.photos[1],'wide')+(RECRUIT.photos[2]&&RECRUIT.photos[2].src?frame(RECRUIT.photos[2]):''):'';
+$('#strip').innerHTML=RECRUIT.photos.slice(RECRUIT.heroStyle==='mosaic'?5:RECRUIT.heroStyle==='room'?0:3).filter(ph=>ph.src).map(ph=>frame(ph)).join('');
 const cardHTML=w=>`<div class="card ${w[2]||''}"><div class="ph-frame${w[3]?' cutout':''}">${w[3]?`<img src="${w[3].startsWith('/')?w[3]:mediaURL(w[3])}" alt="${w[0]}" loading="lazy">`:''}</div><div class="nm">${w[0]}</div><div class="tm">${w[1]}</div>${w[4]?`<div class="deal"><b>${w[4][0]}</b><span>${w[4][1]}</span></div>`:''}</div>`;
 /* player comp */
 {const cp=RECRUIT.comp,sec=$('#comp');if(!cp){sec.remove()}else{

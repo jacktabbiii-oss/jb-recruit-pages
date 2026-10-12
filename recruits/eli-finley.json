@@ -456,7 +456,7 @@
     "clip": null,
     "len": "0:48"
   },
-  "heroStyle": "mosaic",
+  "heroStyle": "room",
   "honors": [
     "John Mackey Award watch list"
   ],
@@ -491,5 +491,25 @@
       ]
     ],
     "foot": "Same mold as Tyler Higbee and Isaiah Likely, two mid-major receiving TEs who turned Round 4 into $30M+ deals."
+  },
+  "room": {
+    "front": "/recruits/eli-finley/room-eli.webp",
+    "behind": [
+      "/clients/card/kittle.webp",
+      "/clients/card/ferguson.webp",
+      "/clients/card/laporta.webp",
+      "/clients/card/kraft.webp",
+      "/clients/card/helm.webp"
+    ]
+  },
+  "proofLine": {
+    "faces": [
+      "/clients/card/kittle.webp",
+      "/clients/card/kraft.webp",
+      "/clients/card/laporta.webp",
+      "/clients/card/ferguson.webp",
+      "/clients/card/helm.webp"
+    ],
+    "text": "<b>The JB tight end room.</b> Kittle and Kraft: #1 and #3 in TE pay. LaPorta and Ferguson: Pro Bowlers. Helm: Titans rookie TE record."
   }
 }
