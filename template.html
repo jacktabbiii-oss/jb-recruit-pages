@@ -270,6 +270,7 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
 .nums .v{font-family:var(--display);font-size:2.6rem;font-weight:900;line-height:1;color:var(--paper)}
 .nums .v small{font-size:.5em;color:var(--blue);margin-left:2px}
 .nums .k{font-size:.86rem;color:var(--muted);margin-top:6px;line-height:1.35}
+.nilcards{margin-top:0}
 .nums-src{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--muted);margin-top:8px;text-transform:uppercase}
 .elevate-logo{display:block;height:48px;width:auto;margin-bottom:10px;opacity:.9}
 .drafted{margin-top:18px}
@@ -623,9 +624,17 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
     </div>
   </section>
 
+  <section class="reveal" id="nil" hidden>
+    <span class="eyebrow" id="nilEy">00 · The money now</span>
+    <h2 id="nilH"></h2>
+    <p class="lede muted" id="nilLede"></p>
+    <div class="reads nilcards" id="nilCards"></div>
+    <p class="nums-src" id="nilSrc"></p>
+  </section>
+
   <section class="reveal">
     <span class="eyebrow">04 · The road</span>
-    <h2>Now through your second contract</h2>
+    <h2 id="roadH">Now through your second contract</h2>
     <p class="lede muted">Where you are, what's next, and what we handle at each stop.</p>
     <ol class="tl" id="timeline"></ol>
   </section>
@@ -713,7 +722,7 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
     <span class="eyebrow" id="famEyebrow"></span>
     <h2>The questions families ask us</h2>
     <p class="lede muted" id="parentsLede">Straight answers. Ryan Hays, a licensed attorney and NFL contract advisor since 2012, handles the contract and protection side for every client.</p>
-    <div class="reads" aria-label="Three things Ryan reads first">
+    <div class="reads" id="reads" aria-label="Three things Ryan reads first">
       <div><span class="n">01</span><h4>Guarantees</h4><p>On a mid-round deal the signing bonus is the locked-in money. Near the top of a round, part of the early salary can be guaranteed too, and we push for it.</p></div>
       <div><span class="n">02</span><h4>The year-four raise</h4><p>Players drafted in rounds 3 to 7 can earn a raise in the last year of their rookie deal based on playing time. Getting on the field early pays twice.</p></div>
       <div><span class="n">03</span><h4>Injury language</h4><p>What happens to the money if he's hurt in camp or in a game. Ryan reads that language line by line before anything is signed.</p></div>
@@ -724,12 +733,12 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
   <section class="reveal">
     <span class="eyebrow">What's included</span>
     <h2>Everything we handle</h2>
-    <ul class="list">
+    <ul class="list" id="included">
       <li>Contract negotiation and extensions</li><li>Guarantees and injury protection</li><li>Grievances, fine appeals, trade requests</li><li>Second medical opinions</li><li>Disability insurance</li><li>Free agency and promotion</li><li>Financial guidance and education</li><li>Screening of advisors and money managers</li><li>Tax filing coordination</li><li>Insurance counseling</li><li>Relocation and travel</li><li>Media relations</li><li>Post-career benefits and planning</li><li>Legal assistance</li>
     </ul>
     <div class="yr1" aria-label="Year one, in order">
-      <span class="hdr">Year one, in order</span>
-      <ol>
+      <span class="hdr" id="yr1H">Year one, in order</span>
+      <ol id="yr1">
         <li><b>Before the draft</b><span>Disability and loss-of-value coverage, so a workout injury doesn't cost the career.</span></li>
         <li><b>Draft week</b><span>Slot already modeled. Contract reviewed line by line before signing.</span></li>
         <li><b>First check</b><span>Budget set and advisors screened before the money arrives.</span></li>
@@ -790,7 +799,7 @@ const TRACK = __TRACK_JSON__;
 /* ============ RENDER ============ */
 const UNLOCKED=new Set(RECRUIT.unlocked||[]);
 const $=s=>document.querySelector(s);
-$('#heroTags').innerHTML=`<span><b>${RECRUIT.position}</b> · ${RECRUIT.school} · #${RECRUIT.number}</span><span>${RECRUIT.height} · ${RECRUIT.weight}</span><span><b>${RECRUIT.draftClass}</b> draft class</span>${(RECRUIT.honors||[]).map(h=>`<span class="honor">${h}</span>`).join('')}`;
+$('#heroTags').innerHTML=`<span><b>${RECRUIT.position}</b> · ${RECRUIT.school}${RECRUIT.number?` · #${RECRUIT.number}`:''}</span>${RECRUIT.height?`<span>${RECRUIT.height}${RECRUIT.weight?' · '+RECRUIT.weight:''}</span>`:''}<span>${/^\d{4}$/.test(String(RECRUIT.draftClass))?`<b>${RECRUIT.draftClass}</b> draft class`:RECRUIT.draftClass}</span>${(RECRUIT.honors||[]).map(h=>`<span class="honor">${h}</span>`).join('')}`;
 if(RECRUIT.proofLine){const P=RECRUIT.proofLine;const d=document.createElement('div');d.className='proofline';d.innerHTML=`<div class="faces">${(P.faces||[]).map(f=>`<img src="${f}" alt="">`).join('')}</div><p>${P.text}</p>`;$('#heroTags').after(d)}
 const mediaURL=id=>`/api/media?s=${encodeURIComponent(TRACK.slug)}&k=${encodeURIComponent(TRACK.token)}&id=${encodeURIComponent(id)}`;
 const vid=(id,label,len,cls='',slotNo='',poster='')=> id
@@ -857,7 +866,7 @@ $('#timeline').innerHTML=RECRUIT.timeline.map(t=>`<li${t.now?' class="now"':''}>
 const isTE=RECRUIT.positionGroup==="TE";
 $('#roster').classList.toggle('all',!isTE);$('#roster').innerHTML=(isTE
   ? `<span class="hdr">JB tight ends · current</span>`+RECRUIT.roster.map(r=>`<div><span>${r[0]}</span><span class="t">${r[1]}</span></div>`).join('')
-  : `<span class="hdr">JB clients · ${RECRUIT.positionGroup} and the room</span>`+RECRUIT.rosterAll.filter(r=>r[1].startsWith(RECRUIT.positionGroup)).concat(RECRUIT.rosterAll.filter(r=>!r[1].startsWith(RECRUIT.positionGroup))).map(r=>`<div><span>${r[0]}</span><span class="t">${r[1]}</span></div>`).join('')
+  : `<span class="hdr">${RECRUIT.rosterAll.some(r=>r[1].startsWith(RECRUIT.positionGroup))?`JB clients · ${RECRUIT.positionGroup} and the room`:'JB clients'}</span>`+RECRUIT.rosterAll.filter(r=>r[1].startsWith(RECRUIT.positionGroup)).concat(RECRUIT.rosterAll.filter(r=>!r[1].startsWith(RECRUIT.positionGroup))).map(r=>`<div><span>${r[0]}</span><span class="t">${r[1]}</span></div>`).join('')
    +`<span class="hdr" style="margin-top:14px">Plus the tight end room</span>`+RECRUIT.roster.slice(0,6).map(r=>`<div><span>${r[0]}</span><span class="t">${r[1]}</span></div>`).join(''));
 if(!isTE){
   document.querySelectorAll('[data-unlock="elevate"] li').forEach(li=>{if(li.textContent==='TE position work')li.textContent='Position work'});
@@ -879,6 +888,14 @@ $('#handle').innerHTML=RECRUIT.handle.map((h,i)=>{const full=h[1]||'';const teas
 document.querySelectorAll('[data-unlock]').forEach(el=>{if(!UNLOCKED.has(el.dataset.unlock))el.hidden=true});
 document.querySelectorAll('[data-locked]').forEach(el=>{if(UNLOCKED.has(el.dataset.locked))el.hidden=true});
 
+
+/* ============ PER-PLAYER OVERRIDES (college / NIL / recruit pages) ============ */
+{const N=RECRUIT.nil,sec=$('#nil');if(N&&sec){sec.hidden=false;$('#nilEy').textContent='00 · '+(N.eyebrow||'The money now');$('#nilH').textContent=N.h||'';$('#nilLede').textContent=N.lede||'';
+  $('#nilCards').innerHTML=(N.cards||[]).map((c,i)=>`<div><span class="n">${String(i+1).padStart(2,'0')}</span><h4>${c[0]}</h4><p>${c[1]}</p></div>`).join('');$('#nilSrc').textContent=N.src||''}else if(sec)sec.remove()}
+if(RECRUIT.reads)$('#reads').innerHTML=RECRUIT.reads.map((c,i)=>`<div><span class="n">${String(i+1).padStart(2,'0')}</span><h4>${c[0]}</h4><p>${c[1]}</p></div>`).join('');
+if(RECRUIT.included)$('#included').innerHTML=RECRUIT.included.map(x=>`<li>${x}</li>`).join('');
+if(RECRUIT.yr1){$('#yr1H').textContent=RECRUIT.yr1.h||'Year one, in order';$('#yr1').innerHTML=RECRUIT.yr1.steps.map(x=>`<li><b>${x[0]}</b><span>${x[1]}</span></li>`).join('')}
+(RECRUIT.hide||[]).forEach(sel=>{const el=document.querySelector(sel);if(el)(el.closest('section')||el).remove()});
 
 /* ============ PAGE MODE ============ */
 document.body.dataset.pagemode=RECRUIT.mode||'draft';

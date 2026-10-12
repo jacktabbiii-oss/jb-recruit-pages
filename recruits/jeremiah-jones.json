@@ -1,0 +1,519 @@
+{
+  "slug": "jeremiah-jones",
+  "token": "qFJV3dossgGs",
+  "active": true,
+  "mode": "hs",
+  "familyLabel": "For the Jones family",
+  "heroVideo": null,
+  "first": "Jeremiah",
+  "last": "Jones",
+  "position": "OL",
+  "school": "Michigan City HS",
+  "number": "",
+  "height": "6-6",
+  "weight": "284",
+  "draftClass": "Class of 2027",
+  "positionGroup": "OL",
+  "heroStyle": "bleed",
+  "photos": [
+    {
+      "src": "/recruits/jeremiah-jones/g-car.webp",
+      "cap": "",
+      "sub": "",
+      "wm": "",
+      "focus": "0% 30%"
+    }
+  ],
+  "honors": [
+    "IFCA All-State, 2025",
+    "Indiana commit · first OL in IU's 2027 class"
+  ],
+  "proofLine": {
+    "faces": [
+      "/clients/card/colby.webp",
+      "/clients/card/heck.webp",
+      "/clients/card/kittle.webp",
+      "/clients/card/kraft.webp",
+      "/clients/card/laporta.webp"
+    ],
+    "text": "<b>JB's offensive linemen:</b> Connor Colby (49ers) and Charlie Heck (Buccaneers). Six JB clients have been the highest paid at their position."
+  },
+  "plays": [],
+  "reel": {
+    "clip": null,
+    "len": ""
+  },
+  "draftMoments": [],
+  "quotes": [],
+  "filmSoon": "Where you stand today",
+  "fieldLede": "Film cut by Jack is on the way. Until then, the short version.",
+  "numbers": [
+    [
+      "6-6",
+      "and 284 lbs, projected at offensive tackle"
+    ],
+    [
+      "All-State",
+      "Indiana Football Coaches Association, junior year"
+    ],
+    [
+      "1st",
+      "offensive lineman in Indiana's 2027 class"
+    ],
+    [
+      "4",
+      "schools that offered: Indiana, Western Michigan, Toledo, Miami (OH)"
+    ]
+  ],
+  "numbersSrc": "The Daily Hoosier, Hoosier Huddle · Feb. 2026",
+  "defaultPick": 150,
+  "fit": [
+    [
+      "Development",
+      "The O-line room, the strength staff, who they've sent to the NFL"
+    ],
+    [
+      "Playing time",
+      "A real path to the field at tackle, not a promise"
+    ],
+    [
+      "Revenue share and NIL",
+      "What's real, what's guaranteed, what happens if the staff changes"
+    ],
+    [
+      "The degree",
+      "Your major, academic support, finishing"
+    ],
+    [
+      "Distance from home",
+      "Michigan City to Bloomington, family in the stands"
+    ],
+    [
+      "The NFL path",
+      "Your tape, your conference, and who's watching"
+    ]
+  ],
+  "fitTail": "You picked Indiana. This is what we'd make sure your agreement and your plan actually deliver. Ryan reads every agreement before you sign.",
+  "nil": {
+    "eyebrow": "Before you sign",
+    "h": "Committed isn't signed",
+    "lede": "The rules changed fast, and they now cover recruits too. Here's what's true for you this year.",
+    "cards": [
+      [
+        "Your first deal is still open",
+        "You're committed, not signed. Until signing day in December, the terms of your first college agreement are still on the table."
+      ],
+      [
+        "You can have an agent now",
+        "Starting in 2026-27, NCAA rules let recruits hire agents before they enroll and keep their eligibility, for every part of the deal, including revenue share with the school."
+      ],
+      [
+        "Revenue share",
+        "Schools can pay players directly, up to $21.3 million per school this year. What a freshman lineman gets, and on what terms, is negotiated."
+      ],
+      [
+        "High school NIL in Indiana",
+        "The IHSAA now allows NIL deals, but no school name, logo or uniform, and your school must be told within 48 hours. Break those and you can lose eligibility."
+      ],
+      [
+        "The fine print",
+        "Buyouts, transfer clauses, what happens if you get hurt or the staff changes. Ryan reads every line before anything is signed."
+      ]
+    ],
+    "src": "As of Oct. 2026 · NCAA, IHSAA, Footballscoop, Indiana Public Media"
+  },
+  "timeline": [
+    {
+      "when": "Now",
+      "what": "Senior season",
+      "jb": "Jack at games. Film notes. Any NIL deal read first and reported to your school within 48 hours.",
+      "now": true
+    },
+    {
+      "when": "December",
+      "what": "Signing day",
+      "jb": "<b>Decision point.</b> Your agreement with Indiana read and negotiated before you sign."
+    },
+    {
+      "when": "Winter to spring",
+      "what": "Get ready",
+      "jb": "Strength plan, the move to Bloomington, eligibility paperwork done right."
+    },
+    {
+      "when": "Summer 2027",
+      "what": "Arrive at Indiana",
+      "jb": "Revenue share and NIL in place, budget set, nothing left to chase."
+    },
+    {
+      "when": "2027 season",
+      "what": "Freshman year",
+      "jb": "Develop in the O-line room. We handle the business so you can."
+    },
+    {
+      "when": "2029 to 2030",
+      "what": "Draft-eligible",
+      "jb": "Eligible after your third college season. We tell you straight whether to go or stay."
+    },
+    {
+      "when": "Draft night",
+      "what": "The NFL",
+      "jb": "Same team from here to draft night. No handoff."
+    }
+  ],
+  "handle": [
+    [
+      "Signing",
+      "Your agreement with Indiana read and negotiated before you sign."
+    ],
+    [
+      "Revenue share",
+      "Your number, in writing, with no surprises if the staff changes."
+    ],
+    [
+      "High school NIL",
+      "Deals that follow IHSAA rules, reported to your school on time."
+    ],
+    [
+      "Compliance",
+      "Eligibility paperwork, disclosures, done right and on time."
+    ],
+    [
+      "Money",
+      "A first budget, taxes on NIL income, advisors screened."
+    ],
+    [
+      "Brand",
+      "Built as you go. The right partners once performance earns them."
+    ],
+    [
+      "Family",
+      "Your family knows what's going on before they have to ask."
+    ],
+    [
+      "The league",
+      "Same team from here to draft night. No handoff."
+    ]
+  ],
+  "hide": [
+    "#train"
+  ],
+  "reads": [
+    [
+      "The first agreement",
+      "What Indiana's revenue share and NIL terms actually say: the amount, the timing, and what happens if he's hurt or the staff changes."
+    ],
+    [
+      "High school NIL rules",
+      "No school name, logo or uniform, and the school told within 48 hours. One mistake can cost eligibility; we handle it."
+    ],
+    [
+      "The next four years",
+      "Development, the degree and the money planned together, not one at a time."
+    ]
+  ],
+  "parentQA": [
+    {
+      "q": "He's already committed. Why does he need anyone?",
+      "a": "Committed isn't signed. The terms of his first agreement with Indiana are negotiated, and starting this year NCAA rules let recruits have an agent for that. We make sure the deal matches the commitment. We have no interest in changing his school."
+    },
+    {
+      "q": "Is this allowed for a high schooler?",
+      "a": "Yes. Starting in 2026-27, NCAA rules let recruits hire agents before they enroll and keep their eligibility. In Indiana, the IHSAA allows NIL deals as long as there's no school name, logo or uniform, and the school is told within 48 hours."
+    },
+    {
+      "q": "What does it cost?",
+      "a": "Nothing up front. The fee is written into the agreement before anything is signed, and we walk you through it in person."
+    },
+    {
+      "q": "Who reads the contracts?",
+      "a": "Ryan Hays, a licensed attorney and NFL contract advisor since 2012. Every agreement, every time, before Jeremiah signs."
+    },
+    {
+      "q": "Who are you, really?",
+      "a": "JB Sports has represented NFL players since 1986, including offensive linemen Connor Colby (49ers) and Charlie Heck (Buccaneers). Six clients have become the highest paid at their position. Jack Tabb played at North Carolina and coached at Michigan State, so he knows how a college staff develops a lineman."
+    }
+  ],
+  "included": [
+    "Signing-day agreement review and negotiation",
+    "Revenue-share negotiation with the school",
+    "High school NIL under IHSAA rules",
+    "NIL deal review and NIL Go submissions",
+    "Eligibility and compliance",
+    "Taxes on NIL income",
+    "A first budget, advisors screened",
+    "Brand and social media",
+    "The move to campus",
+    "Draft preparation when it's time"
+  ],
+  "yr1": {
+    "h": "The next 12 months, in order",
+    "steps": [
+      [
+        "Senior season",
+        "Any NIL deal read first, reported to his school within 48 hours."
+      ],
+      [
+        "December",
+        "Signing day. His agreement with Indiana negotiated before he signs."
+      ],
+      [
+        "Spring",
+        "Eligibility paperwork, strength plan, the move planned."
+      ],
+      [
+        "Summer",
+        "Arrives in Bloomington with the money and the plan in place."
+      ]
+    ]
+  },
+  "copy": [
+    [
+      "#fitEyebrow",
+      "03 · The plan"
+    ],
+    [
+      "#fitH",
+      "The right fit, not just the biggest number"
+    ],
+    [
+      "#fitLede",
+      "Slide each one. Jack has coached and recruited at this level and knows what a staff should deliver for a lineman. You picked Indiana; this is how we make sure it delivers."
+    ],
+    [
+      "#roadH",
+      "Now through draft night"
+    ]
+  ],
+  "ask": {
+    "h": "Let's sit down, family included",
+    "lede": "This page is the outline. In person we'll walk through your first agreement with Indiana, the high school NIL rules, and the plan from senior season to draft night. Bring your family and every question you've got."
+  },
+  "cta": {
+    "label": "Set up a meeting",
+    "sms": "Hey Jack, it's Jeremiah. I'd like to set up a time to meet."
+  },
+  "unlocked": [],
+  "shareImage": "/recruits/jeremiah-jones/share-1.jpg",
+  "ogFor": "Prepared for Jeremiah and the Jones family",
+  "wall": [
+    [
+      "Connor Colby",
+      "OL · 49ers",
+      "",
+      "/clients/card/colby.webp"
+    ],
+    [
+      "Charlie Heck",
+      "OL · Buccaneers",
+      "",
+      "/clients/card/heck.webp"
+    ],
+    [
+      "Tucker Kraft",
+      "TE · Packers",
+      "new",
+      "/clients/card/kraft.webp",
+      [
+        "$75M",
+        "4 yrs · $26.5M signing bonus · Sept 2026"
+      ]
+    ],
+    [
+      "George Kittle",
+      "TE · 49ers",
+      "top",
+      "/clients/card/kittle.webp",
+      [
+        "$76.4M",
+        "4 yrs · $40M guaranteed · Apr 2025"
+      ]
+    ],
+    [
+      "Sam LaPorta",
+      "TE · Lions",
+      "pro",
+      "/clients/card/laporta.webp"
+    ],
+    [
+      "Jake Ferguson",
+      "TE · Cowboys",
+      "pro",
+      "/clients/card/ferguson.webp"
+    ],
+    [
+      "Gunnar Helm",
+      "TE · Titans",
+      "",
+      "/clients/card/helm.webp"
+    ],
+    [
+      "Daniel Bellinger",
+      "TE · Titans",
+      "",
+      "/clients/card/bellinger.webp"
+    ],
+    [
+      "Hayden Rucci",
+      "TE · Chargers",
+      "",
+      "/clients/card/rucci.webp"
+    ],
+    [
+      "Riley Nowakowski",
+      "TE · Steelers",
+      "",
+      "/clients/card/nowakowski.webp"
+    ],
+    [
+      "Mitchell Evans",
+      "TE · Panthers",
+      "",
+      "/clients/card/evans.webp"
+    ],
+    [
+      "Noah Gray",
+      "TE · Chiefs",
+      "",
+      "/clients/card/gray.webp"
+    ],
+    [
+      "Rob Tonyan",
+      "TE · Steelers",
+      "",
+      "/clients/card/tonyan.webp"
+    ],
+    [
+      "Anthony Nelson",
+      "DE · Buccaneers",
+      "",
+      "/clients/card/nelson.webp"
+    ],
+    [
+      "Kristian Welch",
+      "LB · Packers",
+      "",
+      "/clients/card/welch.webp"
+    ],
+    [
+      "Hunter Wohler",
+      "DB · Colts",
+      "",
+      "/clients/card/wohler.webp"
+    ],
+    [
+      "Jay Higgins",
+      "LB · Ravens",
+      "",
+      "/clients/card/higgins.webp"
+    ],
+    [
+      "Amani Hooker",
+      "DB · Titans",
+      "",
+      "/clients/card/hooker.webp"
+    ],
+    [
+      "Kaden Wetjen",
+      "WR · Steelers",
+      "",
+      "/clients/card/wetjen.webp"
+    ]
+  ],
+  "roster": [
+    [
+      "George Kittle",
+      "49ers"
+    ],
+    [
+      "Sam LaPorta",
+      "Lions"
+    ],
+    [
+      "Tucker Kraft",
+      "Packers"
+    ],
+    [
+      "Jake Ferguson",
+      "Cowboys"
+    ],
+    [
+      "Noah Gray",
+      "Chiefs"
+    ],
+    [
+      "Rob Tonyan",
+      "Steelers"
+    ],
+    [
+      "Daniel Bellinger",
+      "Titans"
+    ],
+    [
+      "Gunnar Helm",
+      "Titans"
+    ],
+    [
+      "Hayden Rucci",
+      "Chargers"
+    ],
+    [
+      "Riley Nowakowski",
+      "Steelers"
+    ],
+    [
+      "Mitchell Evans",
+      "Panthers"
+    ],
+    [
+      "Carson Towt",
+      "Colts"
+    ]
+  ],
+  "rosterAll": [
+    [
+      "Sebastian Castro",
+      "DB · Steelers"
+    ],
+    [
+      "Connor Colby",
+      "OL · 49ers"
+    ],
+    [
+      "Charlie Heck",
+      "OL · Buccaneers"
+    ],
+    [
+      "Jay Higgins",
+      "LB · Ravens"
+    ],
+    [
+      "Amani Hooker",
+      "DB · Titans"
+    ],
+    [
+      "Anthony Nelson",
+      "DE · Buccaneers"
+    ],
+    [
+      "Kristian Welch",
+      "LB · Packers"
+    ],
+    [
+      "Kaden Wetjen",
+      "WR · Steelers"
+    ],
+    [
+      "Hunter Wohler",
+      "DB · Colts"
+    ]
+  ],
+  "contact": {
+    "name": "Jack",
+    "phone": "(732) 675-0705",
+    "phoneE164": "+17326750705",
+    "email": "jacktabb@nfladvisor.com"
+  },
+  "alertTo": [
+    "jacktabb@nfladvisor.com"
+  ]
+}
