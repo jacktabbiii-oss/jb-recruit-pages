@@ -225,6 +225,12 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
 /* client marquee */
 .marquee .row{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
 .marquee .row::-webkit-scrollbar{display:none}
+.marquee .row{cursor:grab}.marquee .row.dragging{cursor:grabbing}
+.marquee img{-webkit-user-drag:none;user-select:none;pointer-events:none}
+.wallnav{display:flex;align-items:center;gap:8px;margin-top:10px}
+.wallnav button{width:40px;height:40px;border:1px solid var(--line);background:var(--panel);color:var(--paper);font:700 1.5rem/1 var(--body);cursor:pointer;display:grid;place-items:center}
+.wallnav button:hover{border-color:var(--blue);color:var(--blue)}
+.wallnav span{font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-left:6px}
 .marquee{margin-top:18px;overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;display:grid;gap:10px}
 
 .card{width:190px;flex:0 0 190px;background:var(--panel);border:1px solid var(--line);padding:0;position:relative}
@@ -413,7 +419,7 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
   section>.plays,section>.calc,section>.tl,section>.handle,section>.who,section>.team,section>.qa{margin-top:0}
   section>.strip{grid-column:1 / -1;margin-top:40px}
   section>.strip-hint{grid-column:1 / -1}
-  section>.marquee,section>.roster{grid-column:1 / -1}
+  section>.marquee,section>.roster,section>.wallnav{grid-column:1 / -1}
   .roster{columns:3;column-gap:40px;font-size:.9rem}
   .roster div{white-space:nowrap}
   section>.marquee{margin-top:28px}
@@ -664,6 +670,7 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
       <div><div class="v">~$1B</div><div class="k">in contracts negotiated</div></div>
     </div>
     <div class="marquee" aria-label="JB Sports clients"><div class="row" data-dir="1"><div class="track" id="trackA"></div></div><div class="row" data-dir="-1"><div class="track" id="trackB"></div></div></div>
+    <div class="wallnav"><button type="button" data-d="-1" aria-label="Scroll clients back">&#8249;</button><button type="button" data-d="1" aria-label="Scroll clients forward">&#8250;</button><span>Swipe, drag or tap the arrows to browse</span></div>
     <div class="roster" id="roster"></div>
   </section>
 
@@ -836,6 +843,8 @@ if(RECRUIT.proofFirst!==false){const pr=$('#proof'),ath=document.querySelector('
 /* non-TE recruits: their own position group leads the wall */
 /* non-TE: his position first, then the big contracts, then the other positions, then the rest of the TE room, so it doesn't read as a TE-only shop */
 const WALL=RECRUIT.positionGroup==='TE'?RECRUIT.wall:[...RECRUIT.wall].map((w,i)=>[w,(w[1].startsWith(RECRUIT.positionGroup)?0:w[4]?1:!w[1].startsWith('TE')?2:3)*100+i]).sort((a,b)=>a[1]-b[1]).map(x=>x[0]);
+/* wallFirst: names to lead the wall on this page, in order (e.g. the clients this recruit will relate to most, next to the big names) */
+if(RECRUIT.wallFirst){const F=RECRUIT.wallFirst.map(n=>WALL.find(w=>w[0]===n)).filter(Boolean);const rest=WALL.filter(w=>!F.includes(w));WALL.length=0;WALL.push(...F,...rest)}
 const half=Math.ceil(WALL.length/2), A=WALL.slice(0,half), B=WALL.slice(half);
 $('#trackA').innerHTML=A.concat(A).map(cardHTML).join(''); $('#trackB').innerHTML=B.concat(B).map(cardHTML).join('');
 /* client wall: scripted drift (works on every phone, incl. iOS Low Power / Reduce Motion); swipe or hover pauses it */
@@ -846,6 +855,13 @@ $('#trackA').innerHTML=A.concat(A).map(cardHTML).join(''); $('#trackB').innerHTM
    ['touchend','touchcancel','pointerup'].forEach(ev=>r.addEventListener(ev,h,{passive:true}));
    r.addEventListener('scroll',()=>{if(r.hold>performance.now())r.pos=r.scrollLeft},{passive:true});
    if(matchMedia('(hover:hover)').matches){r.addEventListener('mouseenter',()=>{r.hold=Infinity});r.addEventListener('mouseleave',h)}});
+ /* manual browsing: arrows (both rows) and mouse drag; auto-drift resumes a few seconds after */
+ document.querySelectorAll('.wallnav button').forEach(b=>b.addEventListener('click',()=>{const d=+b.dataset.d;rows.forEach(r=>{r.hold=performance.now()+8000;r.scrollBy({left:d*Math.max(200,r.clientWidth*0.75),behavior:'smooth'})})}));
+ rows.forEach(r=>{let x0=0,s0=0,down=false;
+   r.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse')return;down=true;x0=e.clientX;s0=r.scrollLeft;r.hold=Infinity;r.classList.add('dragging');r.setPointerCapture(e.pointerId)});
+   r.addEventListener('pointermove',e=>{if(!down)return;r.scrollLeft=s0-(e.clientX-x0);r.pos=r.scrollLeft});
+   const up=()=>{if(!down)return;down=false;r.classList.remove('dragging');r.hold=performance.now()+5000};
+   r.addEventListener('pointerup',up);r.addEventListener('pointercancel',up)});
  if('IntersectionObserver' in window)new IntersectionObserver(es=>{vis=es[0].isIntersecting},{rootMargin:'100px'}).observe($('.marquee'));
  const tick=t=>{const dt=last?Math.min(.05,(t-last)/1000):0;last=t;
    if(vis)rows.forEach(r=>{if(r.hold>t)return;const half=r.scrollWidth/2;if(!half)return;
