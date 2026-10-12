@@ -901,9 +901,9 @@ const ASK0={h:null,l:null};
 function setView(v){document.body.dataset.view=v;
   {const h=$('#askH'),l=$('#askLede');if(h&&l){if(ASK0.h===null){ASK0.h=h.textContent;ASK0.l=l.textContent}
     if(v==='parents'){h.textContent="Let's all get on a call";l.textContent=`${RECRUIT.first}, your family, and our team: thirty minutes to walk through the plan, the numbers, and every question you have.`}else{h.textContent=ASK0.h;l.textContent=ASK0.l}}}
-  document.querySelectorAll('.switch button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===v)));try{localStorage.setItem('jb-view',v)}catch(e){}}
+  document.querySelectorAll('.switch button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===v)));}
 document.querySelectorAll('.switch button').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.view)));
-let v='athlete'; try{v=localStorage.getItem('jb-view')||v}catch(e){} if(location.hash==='#parents'||new URLSearchParams(location.search).get('view')==='parents')v='parents'; setView(v);
+let v='athlete'; if(location.hash==='#parents'||new URLSearchParams(location.search).get('view')==='parents')v='parents'; setView(v);
 
 /* ============ TEXT JACK ============
    In the preview this scrolls to the number. On the live site, swap for
