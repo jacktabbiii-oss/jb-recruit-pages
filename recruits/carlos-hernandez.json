@@ -1,0 +1,525 @@
+{
+  "slug": "carlos-hernandez",
+  "token": "zhDJimwexJ7b",
+  "active": true,
+  "mode": "draft",
+  "familyLabel": "For the Hernandez family",
+  "heroVideo": null,
+  "first": "Carlos",
+  "last": "Hernandez",
+  "position": "WR",
+  "school": "Wake Forest",
+  "number": 8,
+  "height": "6-0",
+  "weight": "190",
+  "draftClass": 2027,
+  "positionGroup": "WR",
+  "heroStyle": "bleed",
+  "photos": [
+    {
+      "src": "/recruits/carlos-hernandez/g-cel.webp",
+      "cap": "",
+      "sub": "",
+      "wm": "",
+      "focus": "40% 30%"
+    },
+    {
+      "src": "/recruits/carlos-hernandez/g-juke.webp",
+      "cap": "",
+      "sub": "",
+      "wm": "",
+      "focus": "60% 35%"
+    },
+    {
+      "src": "/recruits/carlos-hernandez/g-bowl.webp",
+      "cap": "",
+      "sub": "",
+      "wm": "",
+      "focus": "45% 30%"
+    },
+    {
+      "src": "/recruits/carlos-hernandez/g-vt.webp",
+      "cap": "",
+      "sub": "",
+      "wm": "",
+      "focus": "65% 35%"
+    },
+    {
+      "src": "/recruits/carlos-hernandez/g-lou.webp",
+      "cap": "",
+      "sub": "",
+      "wm": "",
+      "focus": "45% 30%"
+    }
+  ],
+  "honors": [
+    "Biletnikoff Award watch list",
+    "Preseason 3rd-team All-American · returner (Phil Steele)"
+  ],
+  "proofLine": {
+    "faces": [
+      "/clients/card/wetjen.webp",
+      "/clients/card/kittle.webp",
+      "/clients/card/kraft.webp",
+      "/clients/card/hooker.webp",
+      "/clients/card/laporta.webp"
+    ],
+    "text": "<b>The JB room.</b> Kaden Wetjen: receiver and returner, Round 4 to the Steelers this spring. Kittle and Kraft: #1 and #3 in TE pay. Six clients have been the highest paid at their position."
+  },
+  "plays": [],
+  "reel": {
+    "clip": null,
+    "len": ""
+  },
+  "filmSoon": "The numbers scouts are already reading",
+  "fieldLede": "Film cut by Jack is on the way. Until then, here's what your season says.",
+  "numbers": [
+    [
+      "312",
+      "yards after catch, No. 1 in the country"
+    ],
+    [
+      "603",
+      "receiving yards through five games, No. 5 nationally"
+    ],
+    [
+      "1,066",
+      "yards on 60 catches since Nov. 15, 2025"
+    ],
+    [
+      "194",
+      "yards in the upset at No. 16 Louisville"
+    ]
+  ],
+  "numbersSrc": "2026 through five games · Wake Forest Athletics, Oct. 7",
+  "defaultPick": 110,
+  "timeline": [
+    {
+      "when": "Oct 2026",
+      "what": "Senior season",
+      "jb": "Jack at games. Weekly film notes. We start the scout conversations now.",
+      "now": true
+    },
+    {
+      "when": "Dec 2026",
+      "what": "Season ends",
+      "jb": "<b>Decision point.</b> Sign with JB, then pick where you train."
+    },
+    {
+      "when": "Jan 2027",
+      "what": "All-star games",
+      "jb": "We push for the Senior Bowl invite and manage every team meeting that week."
+    },
+    {
+      "when": "Jan to Feb",
+      "what": "Combine prep · your pick",
+      "jb": "XPE, Bommarito, AthElite, Spellman or EXOS. Speed, routes, returns, interviews."
+    },
+    {
+      "when": "Feb to Mar",
+      "what": "NFL Combine",
+      "jb": "Interview prep, medical strategy, and the 40 and 10-yard split we're chasing."
+    },
+    {
+      "when": "Mar 2027",
+      "what": "Pro Day",
+      "jb": "We decide what you run again and what you stand on. Returns get their own drill tape."
+    },
+    {
+      "when": "Apr 29 to May 1",
+      "what": "2027 Draft · Washington, D.C.",
+      "jb": "On the National Mall. Ryan negotiates the rookie deal."
+    },
+    {
+      "when": "2027",
+      "what": "Rookie year",
+      "jb": "Relocation, budget, insurance, advisors screened. Returns are your fastest way onto the field."
+    },
+    {
+      "when": "2030",
+      "what": "Second contract",
+      "jb": "The one that sets you up. Six JB clients have been the highest paid at their position."
+    }
+  ],
+  "roster": [
+    [
+      "George Kittle",
+      "49ers"
+    ],
+    [
+      "Sam LaPorta",
+      "Lions"
+    ],
+    [
+      "Tucker Kraft",
+      "Packers"
+    ],
+    [
+      "Jake Ferguson",
+      "Cowboys"
+    ],
+    [
+      "Noah Gray",
+      "Chiefs"
+    ],
+    [
+      "Rob Tonyan",
+      "Steelers"
+    ],
+    [
+      "Daniel Bellinger",
+      "Titans"
+    ],
+    [
+      "Gunnar Helm",
+      "Titans"
+    ],
+    [
+      "Hayden Rucci",
+      "Jaguars"
+    ],
+    [
+      "Riley Nowakowski",
+      "Steelers"
+    ],
+    [
+      "Mitchell Evans",
+      "Panthers"
+    ],
+    [
+      "Carson Towt",
+      "Colts"
+    ]
+  ],
+  "wall": [
+    [
+      "Tucker Kraft",
+      "TE · Packers",
+      "new",
+      "/clients/card/kraft.webp",
+      [
+        "$75M",
+        "4 yrs · $26.5M signing bonus · Sept 2026"
+      ]
+    ],
+    [
+      "George Kittle",
+      "TE · 49ers",
+      "top",
+      "/clients/card/kittle.webp",
+      [
+        "$76.4M",
+        "4 yrs · $40M guaranteed · Apr 2025"
+      ]
+    ],
+    [
+      "Sam LaPorta",
+      "TE · Lions",
+      "pro",
+      "/clients/card/laporta.webp"
+    ],
+    [
+      "Jake Ferguson",
+      "TE · Cowboys",
+      "pro",
+      "/clients/card/ferguson.webp"
+    ],
+    [
+      "Gunnar Helm",
+      "TE · Titans",
+      "",
+      "/clients/card/helm.webp"
+    ],
+    [
+      "Daniel Bellinger",
+      "TE · Titans",
+      "",
+      "/clients/card/bellinger.webp"
+    ],
+    [
+      "Hayden Rucci",
+      "TE · Jaguars",
+      "",
+      "/clients/card/rucci.webp"
+    ],
+    [
+      "Riley Nowakowski",
+      "TE · Steelers",
+      "",
+      "/clients/card/nowakowski.webp"
+    ],
+    [
+      "Mitchell Evans",
+      "TE · Panthers",
+      "",
+      "/clients/card/evans.webp"
+    ],
+    [
+      "Noah Gray",
+      "TE · Chiefs",
+      "",
+      "/clients/card/gray.webp"
+    ],
+    [
+      "Rob Tonyan",
+      "TE · Steelers",
+      "",
+      "/clients/card/tonyan.webp"
+    ],
+    [
+      "Anthony Nelson",
+      "DE · Buccaneers",
+      "",
+      "/clients/card/nelson.webp"
+    ],
+    [
+      "Kristian Welch",
+      "LB · Packers",
+      "",
+      "/clients/card/welch.webp"
+    ],
+    [
+      "Hunter Wohler",
+      "DB · Colts",
+      "",
+      "/clients/card/wohler.webp"
+    ],
+    [
+      "Connor Colby",
+      "OL · 49ers",
+      "",
+      "/clients/card/colby.webp"
+    ],
+    [
+      "Charlie Heck",
+      "OL · Buccaneers",
+      "",
+      "/clients/card/heck.webp"
+    ],
+    [
+      "Jay Higgins",
+      "LB · Ravens",
+      "",
+      "/clients/card/higgins.webp"
+    ],
+    [
+      "Amani Hooker",
+      "DB · Titans",
+      "",
+      "/clients/card/hooker.webp"
+    ],
+    [
+      "Kaden Wetjen",
+      "WR · Steelers",
+      "",
+      "/clients/card/wetjen.webp"
+    ]
+  ],
+  "rosterAll": [
+    [
+      "Sebastian Castro",
+      "DB · Steelers"
+    ],
+    [
+      "Connor Colby",
+      "OL · 49ers"
+    ],
+    [
+      "Charlie Heck",
+      "OL · Buccaneers"
+    ],
+    [
+      "Jay Higgins",
+      "LB · Ravens"
+    ],
+    [
+      "Amani Hooker",
+      "DB · Titans"
+    ],
+    [
+      "Anthony Nelson",
+      "DE · Buccaneers"
+    ],
+    [
+      "Kristian Welch",
+      "LB · Packers"
+    ],
+    [
+      "Kaden Wetjen",
+      "WR · Steelers"
+    ],
+    [
+      "Hunter Wohler",
+      "DB · Colts"
+    ]
+  ],
+  "contact": {
+    "name": "Jack",
+    "phone": "(732) 675-0705",
+    "phoneE164": "+17326750705",
+    "email": "jacktabb@nfladvisor.com"
+  },
+  "alertTo": [
+    "jacktabb@nfladvisor.com"
+  ],
+  "quotes": [],
+  "draftMoments": [],
+  "parentQA": [
+    {
+      "q": "Who answers at 2 a.m.?",
+      "a": "Jack, then Ryan. Both have Carlos's number. No account manager, no call center. We stay mid-size so he's never in a bigger client's shadow."
+    },
+    {
+      "q": "How do fees work?",
+      "a": "The NFLPA caps agent fees at 3% of the playing contract, and ours go in writing before anything is signed. Nothing is paid up front, and fees are only owed on money he actually receives."
+    },
+    {
+      "q": "How do you protect what he earns?",
+      "a": "Ryan writes the guarantee and injury language. We screen every advisor before he meets them, coordinate taxes, set up disability insurance and build a year-one budget. A good first contract is only the start."
+    },
+    {
+      "q": "What happens if he gets hurt?",
+      "a": "Injury settlements, grievances and second opinions are ours to handle. Disability coverage is in place before the first snap."
+    },
+    {
+      "q": "What if he's not drafted where we hope?",
+      "a": "It happens, and it isn't the end. Kristian Welch signed with us as an undrafted free agent in 2020 and has played six NFL seasons. The slot decides the first contract; preparation decides the second."
+    },
+    {
+      "q": "Who are you, really?",
+      "a": "In business since 1986, with six clients who became the highest paid at their position. Jack Tabb played in the NFL, and Ryan Hays is a licensed attorney. We're happy to connect you with current client families."
+    }
+  ],
+  "handle": [
+    [
+      "Contract",
+      "Rookie deal, extensions, guarantees, fine appeals, grievances. Ryan writes the language."
+    ],
+    [
+      "Money",
+      "Budget in year one. Every advisor and money manager screened before you meet them."
+    ],
+    [
+      "Taxes",
+      "Multi-state filings coordinated. You sign; you don't chase."
+    ],
+    [
+      "Insurance",
+      "Disability policy in place before the first snap. Second medical opinions on us to arrange."
+    ],
+    [
+      "The move",
+      "Relocation, housing, car, travel. You land in a city with a place to live."
+    ],
+    [
+      "Media",
+      "Interview prep, press, social. Nothing you say gets you in trouble."
+    ],
+    [
+      "Training",
+      "Off-season plans, trainer access, recovery. Every year, not just the draft."
+    ],
+    [
+      "After",
+      "Post-career benefits filed, planning done. The career ends; the security doesn't."
+    ]
+  ],
+  "cta": {
+    "label": "Set up a meeting",
+    "sms": "Hey Jack, it's Carlos. I'd like to set up a time to meet."
+  },
+  "unlocked": [],
+  "ask": {
+    "h": "Let's sit down and walk it through",
+    "lede": "This page is the outline. In person we'll walk you from senior season to draft night and into your second contract: where you train, what your slot could be worth, who handles what. Bring your family and your questions."
+  },
+  "comp": {
+    "eyebrow": "Who we see",
+    "h": "We see Kaden Wetjen, with size",
+    "lede": "Teams keep the receiver who can also flip the field. Wetjen's returns took him to Round 4 this spring, and he did it with us. You bring the same second way onto a roster in a 6-0 frame that already leads the country after the catch.",
+    "me": "/recruits/carlos-hernandez/comp-cut.webp",
+    "them": "/clients/card/wetjen.webp",
+    "themName": "Kaden Wetjen",
+    "rows": [
+      [
+        "School",
+        "Wake Forest · ACC",
+        "Iowa · Big Ten"
+      ],
+      [
+        "Size",
+        "6-0 · 190",
+        "5-9 · 196"
+      ],
+      [
+        "Returns",
+        "88-yd punt return TD in 2025",
+        "4 return TDs in 2025, most in the country"
+      ],
+      [
+        "Honors",
+        "Preseason All-American returner",
+        "Consensus All-American · 2× Jet Award"
+      ],
+      [
+        "Draft",
+        "2027 class",
+        "Round 4, Pick 121 · Steelers"
+      ]
+    ],
+    "foot": "Wetjen's returns made him a fourth-round pick. That's the floor we'd build from for you, and the receiving tape is what raises it."
+  },
+  "training": {
+    "eyebrow": "Combine prep · your call",
+    "h": "Pick the room that fits you",
+    "lede": "Speed, routes, group size, distance from home. We'll walk you through each one, set up the visits, and build the plan around wherever you land.",
+    "options": [
+      {
+        "name": "XPE Sports",
+        "where": "South Florida",
+        "logo": "/training/xpe.webp",
+        "line": "The speed lab. The three fastest 40s at the 2022 Combine came out of here, and CeeDee Lamb and Courtland Sutton have trained here in the offseason.",
+        "tag": "Speed · the 40"
+      },
+      {
+        "name": "Bommarito Performance",
+        "where": "Miami · Davie and Aventura",
+        "logo": "/training/bommarito.webp",
+        "line": "One of the biggest Combine operations in the country. Stefon Diggs and DeVante Parker prepped here before their drafts.",
+        "tag": "Full Combine prep"
+      },
+      {
+        "name": "AthElite Performance",
+        "where": "Nashville",
+        "logo": "/training/athelite.webp",
+        "line": "Jeremy Holt's facility, in JB's home city. The same staff behind the ElevaTE program that prepped Kittle, LaPorta and Kraft.",
+        "tag": "Where our tight ends train"
+      },
+      {
+        "name": "Spellman Performance",
+        "where": "San Diego · Orange County",
+        "logo": "/training/spellman.webp",
+        "line": "Les Spellman coaches speed and acceleration, with 20+ athletes drafted into the NFL. The closest of these to home in Alhambra.",
+        "tag": "Acceleration · close to home"
+      },
+      {
+        "name": "EXOS",
+        "where": "Frisco, Texas",
+        "logo": "/training/exos.webp",
+        "line": "The Athletes' Performance Institute at Fieldhouse USA. Three of the top four picks in 2022 prepped here, and so did receivers Garrett Wilson and Treylon Burks.",
+        "tag": "First-round factory"
+      }
+    ],
+    "yours": {
+      "h": "Someone else in mind?",
+      "p": "If there's a trainer you already trust, we build around him."
+    },
+    "locked": {
+      "h": "Your prep plan",
+      "p": "Where you train, who runs each piece, and the numbers we'd be chasing for you: the 40, the 10-yard split, the shuttle.",
+      "when": "Unlocks after your visit"
+    }
+  },
+  "shareImage": "/recruits/carlos-hernandez/share-1.jpg",
+  "ogFor": "Prepared for Carlos and the Hernandez family"
+}

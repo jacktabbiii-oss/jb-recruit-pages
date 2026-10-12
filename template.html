@@ -255,6 +255,22 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
 .brandstrip img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border:1px solid var(--line);filter:saturate(.85)}
 .brandstrip span{display:block;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:4px;line-height:1.3}
 @media (max-width:420px){.brandstrip{grid-template-columns:repeat(2,1fr)}}
+.gyms{margin-top:18px;display:grid;grid-template-columns:1fr;gap:10px}
+.gym{display:grid;grid-template-columns:128px 1fr;gap:14px;background:var(--panel);border:1px solid var(--line);padding:12px;align-items:start;min-width:0}
+.gym .plate{background:#fff;height:84px;display:grid;place-items:center;padding:10px 12px}
+.gym .plate img{max-width:100%;max-height:64px;width:auto;height:auto;object-fit:contain}
+.gym h3{font-family:var(--display);font-weight:800;font-size:1.45rem;text-transform:uppercase;line-height:1;margin:0;letter-spacing:.01em}
+.gym .where{font-family:var(--mono);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-top:5px}
+.gym p{margin:7px 0 0;color:var(--muted);font-size:.96rem;line-height:1.45}
+.gym .chip{display:inline-block;margin-top:9px;font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--paper);border:1px solid var(--line);padding:4px 8px}
+.gym.yours{grid-template-columns:1fr;border-style:dashed;background:transparent}
+.gym.yours h3{color:var(--paper)}
+.nums{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:18px}
+.nums>div{background:var(--panel);padding:16px 14px;min-width:0}
+.nums .v{font-family:var(--display);font-size:2.6rem;font-weight:900;line-height:1;color:var(--paper)}
+.nums .v small{font-size:.5em;color:var(--blue);margin-left:2px}
+.nums .k{font-size:.86rem;color:var(--muted);margin-top:6px;line-height:1.35}
+.nums-src{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--muted);margin-top:8px;text-transform:uppercase}
 .elevate-logo{display:block;height:48px;width:auto;margin-bottom:10px;opacity:.9}
 .drafted{margin-top:18px}
 .drafted .cards{margin-top:8px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:6px}
@@ -400,6 +416,18 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
   section>.marquee{margin-top:28px}
   section>.stat{grid-column:2;margin-top:0;grid-template-columns:repeat(3,1fr)}
   section>.roster{columns:4}
+  section>.roster.all{columns:3}
+  .roster.all{font-size:.8rem}
+  .roster.all div{white-space:normal;gap:10px}
+  .roster.all div span:first-child{white-space:nowrap}
+  section>.nums,section>.nums-src{grid-column:2}
+  section>.nums{margin-top:0;grid-template-columns:repeat(4,1fr)}
+  .nums .v{font-size:3.2rem}
+  section>.gyms{grid-column:2;margin-top:0;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+  .gym{grid-template-columns:1fr;padding:14px}
+  .gym .plate{height:120px;padding:16px 22px}
+  .gym .plate img{max-height:86px}
+  .gym.yours{align-content:center}
   section>.brandstrip,section>.drafted,section>.moments,section>.quotes,section>.locked,section>.list{grid-column:2}
   .brandstrip{grid-template-columns:repeat(4,minmax(0,230px));gap:14px}
   .brandstrip span{font-size:.76rem;margin-top:8px}
@@ -551,7 +579,7 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
     <div class="who">
       <div class="ph-frame real tall"><img src="/people/team.jpg" alt="The JB Sports team in Nashville"><div class="cap"><b>Nashville</b> <span>the team</span></div></div>
       <div class="whofacts">
-        <div><div class="v">35</div><div class="k">years representing NFL players</div></div>
+        <div><div class="v">40</div><div class="k">years representing NFL players</div></div>
         <div><div class="v">6</div><div class="k">clients who were the highest paid at their position</div></div>
         <div><div class="v">6</div><div class="k">more in the top five</div></div>
         <div><div class="v">50<span style="font-size:.6em">%</span></div><div class="k">the move in the TE market with the Kittle deal</div></div>
@@ -627,7 +655,7 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
     <div class="roster" id="roster"></div>
   </section>
 
-  <section class="reveal">
+  <section class="reveal" id="train">
     <span class="eyebrow">07 · ElevaTE · Nashville</span>
     <img class="elevate-logo" src="/elevate/logo.webp" alt="ElevaTE" width="120" height="62">
     <h2 id="trainH">Trained by the guy who trains Kittle</h2>
@@ -767,6 +795,8 @@ const vid=(id,label,len,cls='',slotNo='')=> id
 const frame=(ph,extra='')=>`<div class="ph-frame ${extra}${ph.cutout?' cutout':''}${ph.tone?' tone':''}${ph.graphic?' gfx':''}"${ph.focus?` style="--focus:${ph.focus}"`:''}>${ph.src?`<img src="${ph.src.startsWith('/')?ph.src:mediaURL(ph.src)}" alt="${ph.cap}">`:`<span class="lbl">Photo</span>`}<span class="wm">${ph.wm||''}</span><div class="cap"><b>${ph.cap}</b> <span>${ph.sub||''}</span></div></div>`;
 $('#tabAthlete').textContent=`For ${RECRUIT.first}`; $('#tabParents').textContent=RECRUIT.familyLabel||`For the ${RECRUIT.last}s`;
 $('#heroName').innerHTML=`<span class="first">${RECRUIT.first}</span><span class="last">${RECRUIT.last}</span>`;
+/* long names: shrink the hero name until both lines fit the column */
+{const h=$('#heroName');const fit=()=>{h.style.fontSize='';const w=h.clientWidth;if(!w)return;const m=Math.max(...[...h.children].map(c=>{c.style.display='inline-block';const x=c.getBoundingClientRect().width;c.style.display='';return x}));if(m>w){const fs=parseFloat(getComputedStyle(h).fontSize);h.style.fontSize=(fs*w/m*0.98)+'px'}};fit();if(document.fonts)document.fonts.ready.then(fit);addEventListener('resize',fit)}
 document.title=`${RECRUIT.first} ${RECRUIT.last} × JB Sports`;
 if(RECRUIT.heroVideo===null){$('#heroVideo').remove()}else $('#heroVideo').innerHTML=vid(RECRUIT.heroVideo&&RECRUIT.heroVideo.clip,`Jack Tabb III · to ${RECRUIT.first}`,RECRUIT.heroVideo&&RECRUIT.heroVideo.len,'','01');
 /* Hero art: photos[0] is THE photo. cutout:true floats him over a glow; otherwise full-bleed color with a fade. */
@@ -812,22 +842,29 @@ const M=RECRUIT.draftMoments||[];
 $('#moments').innerHTML=M.length?`<span class="eyebrow">Draft night</span><div class="mrow">`+M.map((m,i)=>`<div class="moment" data-yt="${m.yt}" tabindex="0" role="button" aria-label="Play: ${m.who}, ${m.what}"><img src="https://i.ytimg.com/vi/${m.yt}/hqdefault.jpg" alt="" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/${m.yt}/mqdefault.jpg'"><div class="play"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></div><div class="cap"><b>${m.who}</b><span>${m.what}</span></div></div>`).join('')+`</div><div class="strip-hint" style="margin-top:8px">${RECRUIT.draftMoments.map(m=>`<a href="https://www.youtube.com/watch?v=${m.yt}" target="_blank" rel="noopener" style="color:var(--muted)">Open on YouTube ↗</a>`).join(' · ')}</div>`:'';
 document.querySelectorAll('.moment').forEach(el=>{const go=()=>{const id=el.dataset.yt;const mobile=matchMedia('(max-width:899px)').matches||/iPhone|iPad|Android/i.test(navigator.userAgent);if((TRACK&&TRACK.embeds===false)||mobile){window.open(`https://www.youtube.com/watch?v=${id}`,'_blank','noopener');return}el.classList.add('live');el.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&playsinline=1&rel=0&modestbranding=1" title="Draft night" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`};el.addEventListener('click',go);el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}})});
 const REEL=RECRUIT.reel&&RECRUIT.reel.clip;
+if(RECRUIT.positionGroup&&RECRUIT.positionGroup!=='TE')$('#playsH').textContent=$('#playsH').textContent.replace('TE coach',RECRUIT.positionGroup+' coach');
 {const W=['','One','Two','Three','Four','Five','Six','Seven','Eight'];const n=RECRUIT.plays.length;if(W[n])$('#playsH').innerHTML=$('#playsH').innerHTML.replace(/^Three/,W[n])}
-if(!RECRUIT.plays.length&&!(RECRUIT.reel&&RECRUIT.reel.clip)){const sec=$('#plays').closest('section');const ey=sec.querySelector('.eyebrow');if(ey)ey.textContent=ey.textContent.replace(/·.*/,'· On the field');$('#playsH').textContent=RECRUIT.filmSoon||'Film cut by Jack, coming soon';const ld=sec.querySelector('.lede');if(ld)ld.textContent='Game shots from this season while we cut the plays we\'d put in front of every TE coach.';}
+if(!RECRUIT.plays.length&&!(RECRUIT.reel&&RECRUIT.reel.clip)){const sec=$('#plays').closest('section');const ey=sec.querySelector('.eyebrow');if(ey)ey.textContent=ey.textContent.replace(/·.*/,'· On the field');$('#playsH').textContent=RECRUIT.filmSoon||'Film cut by Jack, coming soon';const ld=sec.querySelector('.lede');if(ld)ld.textContent=RECRUIT.fieldLede||`Game shots from this season while we cut the plays we'd put in front of every ${RECRUIT.positionGroup||'TE'} coach.`;}
+if(RECRUIT.numbers&&RECRUIT.numbers.length){const d=document.createElement('div');d.className='nums';d.innerHTML=RECRUIT.numbers.map(n=>`<div><div class="v">${n[0]}</div><div class="k">${n[1]}</div></div>`).join('');$('#plays').before(d);if(RECRUIT.numbersSrc){const s=document.createElement('div');s.className='nums-src';s.textContent=RECRUIT.numbersSrc;d.after(s)}}
 $('#plays').innerHTML=(REEL?`<div class="reel">${vid(REEL,'Favorite plays reel',RECRUIT.reel.len,'','')}</div>`:'')+RECRUIT.plays.map((c,i)=>`<div class="play-card${REEL?' noclip':''}">${REEL?'':vid(c.clip,c.k,c.len,'',`F${i+1}`)}<div><div class="k">${c.k}</div>${c.t?`<div class="t">${c.t}</div>`:''}${c.n?`<div class="n">${c.n}</div>`:''}</div></div>`).join('');
 $('#timeline').innerHTML=RECRUIT.timeline.map(t=>`<li${t.now?' class="now"':''}><div class="when">${t.when}</div><div><div class="what">${t.what}</div><div class="jb">${t.jb}</div></div></li>`).join('');
 const isTE=RECRUIT.positionGroup==="TE";
-$('#roster').innerHTML=(isTE
+$('#roster').classList.toggle('all',!isTE);$('#roster').innerHTML=(isTE
   ? `<span class="hdr">JB tight ends · current</span>`+RECRUIT.roster.map(r=>`<div><span>${r[0]}</span><span class="t">${r[1]}</span></div>`).join('')
   : `<span class="hdr">JB clients · ${RECRUIT.positionGroup} and the room</span>`+RECRUIT.rosterAll.filter(r=>r[1].startsWith(RECRUIT.positionGroup)).concat(RECRUIT.rosterAll.filter(r=>!r[1].startsWith(RECRUIT.positionGroup))).map(r=>`<div><span>${r[0]}</span><span class="t">${r[1]}</span></div>`).join('')
    +`<span class="hdr" style="margin-top:14px">Plus the tight end room</span>`+RECRUIT.roster.slice(0,6).map(r=>`<div><span>${r[0]}</span><span class="t">${r[1]}</span></div>`).join(''));
 if(!isTE){
+  $('#whoH').textContent="A former NFL player, a contract lawyer, and forty years";
+  $('#whoLede').textContent="Mid-size by choice. No shareholders, no quotas, nobody above you on a call sheet. Jack played in the league and coached. Ryan writes the contracts.";
   $('#proofH').textContent="JB at your position, and the rooms around it";
   $('#proofLede').textContent="Six clients have been the highest paid at their position. The room isn't one position; it's a roster that gets paid.";
   $('#trainH').textContent="Prepared the way Kittle, LaPorta and Kraft were";
   $('#trainLede').textContent="The same Nashville prep model, built for your position: Combine and Pro Day training, position coaching, film, media and interview work. Below is what that preparation looks like for the guys who came through it.";
 }
 $('#quotes').innerHTML=RECRUIT.quotes.map(q=>`<div class="quote">${q.clip?vid(q.clip,q.who,'','',''):q.img?`<div class="ph-frame qimg"><img src="${q.img}" alt="${q.who}" loading="lazy"></div>`:`<div class="ph-frame qimg"><span class="wm">${q.who.split(' ').map(x=>x[0]).join('').slice(0,2)}</span></div>`}<div><div class="q">"${q.q}"</div><div class="who">${q.who} · ElevaTE alum</div></div></div>`).join('');
+/* training options (non-TE): replaces the ElevaTE block with a choice of rooms */
+{const T=RECRUIT.training,sec=$('#train');if(T&&sec){const lock='<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="10" width="16" height="11"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>';
+  sec.innerHTML=`<span class="eyebrow">07 · ${T.eyebrow||'Combine prep'}</span><h2>${T.h}</h2><p class="lede muted">${T.lede||''}</p><div class="gyms">${T.options.map(o=>`<div class="gym"><div class="plate"><img src="${o.logo}" alt="${o.name}" loading="lazy"></div><div><h3>${o.name}</h3><div class="where">${o.where}</div><p>${o.line}</p>${o.tag?`<span class="chip">${o.tag}</span>`:''}</div></div>`).join('')}${T.yours?`<div class="gym yours"><div><h3>${T.yours.h}</h3><p>${T.yours.p}</p></div></div>`:''}</div>`+(T.locked?`<div class="locked">${lock}<div><h3>${T.locked.h}</h3><p>${T.locked.p}</p><div class="when">${T.locked.when||'Unlocks after your visit'}</div></div></div>`:'');}}
 $('#qa').innerHTML=RECRUIT.parentQA.map((x,i)=>`<details${i===0?' open':''}><summary>${x.q}</summary><div class="a">${x.a}</div></details>`).join('');
 $('#handle').innerHTML=RECRUIT.handle.map((h,i)=>{const full=h[1]||'';const tease=h[2]||(full.split(/(?<=\.)\s/)[0]||'');return `<div><div class="i">${String(i+1).padStart(2,'0')}</div><div class="k">${h[0]}</div><div class="d">${UNLOCKED.has('handle')?full:tease}</div></div>`}).join('');
 document.querySelectorAll('[data-unlock]').forEach(el=>{if(!UNLOCKED.has(el.dataset.unlock))el.hidden=true});
