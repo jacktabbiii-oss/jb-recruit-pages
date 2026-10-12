@@ -1,0 +1,466 @@
+{
+  "slug": "jeremiah-hasley",
+  "token": "Fj_wb3ZDNDYw",
+  "active": true,
+  "mode": "draft",
+  "familyLabel": "For the Hasleys",
+  "heroVideo": null,
+  "first": "Jeremiah",
+  "last": "Hasley",
+  "position": "TE",
+  "school": "Duke",
+  "number": 85,
+  "height": "6-3",
+  "weight": "250",
+  "draftClass": 2027,
+  "photos": [
+    {
+      "src": "/recruits/jeremiah-hasley/g-run.webp",
+      "cap": "",
+      "sub": "",
+      "wm": "",
+      "focus": "55% 30%"
+    },
+    {
+      "src": "/recruits/jeremiah-hasley/g-white.webp",
+      "cap": "",
+      "sub": "",
+      "wm": "",
+      "focus": "55% 30%"
+    }
+  ],
+  "plays": [],
+  "defaultPick": 80,
+  "timeline": [
+    {
+      "when": "Oct 2026",
+      "what": "Senior season",
+      "jb": "Jack at games. Weekly film notes. We start the scout conversations now.",
+      "now": true
+    },
+    {
+      "when": "Dec 2026",
+      "what": "Season ends",
+      "jb": "<b>Decision point.</b> Sign with JB, then straight to Nashville."
+    },
+    {
+      "when": "Jan and Feb 2027",
+      "what": "Senior Bowl",
+      "jb": "We push for the invite and manage every team meeting that week."
+    },
+    {
+      "when": "Jan to Feb",
+      "what": "ElevaTE · Nashville",
+      "jb": "TE-only Combine prep with Jeremy Holt. Your personal plan unlocks here."
+    },
+    {
+      "when": "Feb to Mar",
+      "what": "NFL Combine",
+      "jb": "Interview prep, medical strategy, the 40 and the 3-cone numbers we're targeting."
+    },
+    {
+      "when": "Mar 2027",
+      "what": "Pro Day",
+      "jb": "We decide what you run again and what you stand on."
+    },
+    {
+      "when": "Apr 29 to May 1",
+      "what": "2027 Draft · Washington, D.C.",
+      "jb": "On the National Mall. Ryan negotiates the rookie deal."
+    },
+    {
+      "when": "2027",
+      "what": "Rookie year",
+      "jb": "Relocation, budget, insurance, advisors screened. NFL-ready in year one."
+    },
+    {
+      "when": "2030",
+      "what": "Second contract",
+      "jb": "The one that sets you up. Where JB set the TE market in 2020."
+    }
+  ],
+  "positionGroup": "TE",
+  "roster": [
+    [
+      "George Kittle",
+      "49ers"
+    ],
+    [
+      "Sam LaPorta",
+      "Lions"
+    ],
+    [
+      "Tucker Kraft",
+      "Packers"
+    ],
+    [
+      "Jake Ferguson",
+      "Cowboys"
+    ],
+    [
+      "Noah Gray",
+      "Chiefs"
+    ],
+    [
+      "Rob Tonyan",
+      "Steelers"
+    ],
+    [
+      "Daniel Bellinger",
+      "Titans"
+    ],
+    [
+      "Gunnar Helm",
+      "Titans"
+    ],
+    [
+      "Hayden Rucci",
+      "Jaguars"
+    ],
+    [
+      "Riley Nowakowski",
+      "Steelers"
+    ],
+    [
+      "Mitchell Evans",
+      "Panthers"
+    ],
+    [
+      "Carson Towt",
+      "Colts"
+    ]
+  ],
+  "wall": [
+    [
+      "Tucker Kraft",
+      "TE · Packers",
+      "new",
+      "/clients/card/kraft.webp",
+      [
+        "$75M",
+        "4 yrs · $26.5M signing bonus · Sept 2026"
+      ]
+    ],
+    [
+      "George Kittle",
+      "TE · 49ers",
+      "top",
+      "/clients/card/kittle.webp",
+      [
+        "$76.4M",
+        "4 yrs · $40M guaranteed · Apr 2025"
+      ]
+    ],
+    [
+      "Sam LaPorta",
+      "TE · Lions",
+      "pro",
+      "/clients/card/laporta.webp"
+    ],
+    [
+      "Jake Ferguson",
+      "TE · Cowboys",
+      "pro",
+      "/clients/card/ferguson.webp"
+    ],
+    [
+      "Gunnar Helm",
+      "TE · Titans",
+      "",
+      "/clients/card/helm.webp"
+    ],
+    [
+      "Daniel Bellinger",
+      "TE · Titans",
+      "",
+      "/clients/card/bellinger.webp"
+    ],
+    [
+      "Hayden Rucci",
+      "TE · Jaguars",
+      "",
+      "/clients/card/rucci.webp"
+    ],
+    [
+      "Riley Nowakowski",
+      "TE · Steelers",
+      "",
+      "/clients/card/nowakowski.webp"
+    ],
+    [
+      "Mitchell Evans",
+      "TE · Panthers",
+      "",
+      "/clients/card/evans.webp"
+    ],
+    [
+      "Noah Gray",
+      "TE · Chiefs",
+      "",
+      "/clients/card/gray.webp"
+    ],
+    [
+      "Rob Tonyan",
+      "TE · Steelers",
+      "",
+      "/clients/card/tonyan.webp"
+    ],
+    [
+      "Anthony Nelson",
+      "DE · Buccaneers",
+      "",
+      "/clients/card/nelson.webp"
+    ],
+    [
+      "Kristian Welch",
+      "LB · Packers",
+      "",
+      "/clients/card/welch.webp"
+    ],
+    [
+      "Hunter Wohler",
+      "DB · Colts",
+      "",
+      "/clients/card/wohler.webp"
+    ],
+    [
+      "Connor Colby",
+      "OL · 49ers",
+      "",
+      "/clients/card/colby.webp"
+    ],
+    [
+      "Charlie Heck",
+      "OL · Buccaneers",
+      "",
+      "/clients/card/heck.webp"
+    ],
+    [
+      "Jay Higgins",
+      "LB · Ravens",
+      "",
+      "/clients/card/higgins.webp"
+    ],
+    [
+      "Amani Hooker",
+      "DB · Titans",
+      "",
+      "/clients/card/hooker.webp"
+    ],
+    [
+      "Kaden Wetjen",
+      "WR · Steelers",
+      "",
+      "/clients/card/wetjen.webp"
+    ]
+  ],
+  "rosterAll": [
+    [
+      "Sebastian Castro",
+      "DB · Steelers"
+    ],
+    [
+      "Connor Colby",
+      "OL · 49ers"
+    ],
+    [
+      "Charlie Heck",
+      "OL · Buccaneers"
+    ],
+    [
+      "Jay Higgins",
+      "LB · Ravens"
+    ],
+    [
+      "Amani Hooker",
+      "DB · Titans"
+    ],
+    [
+      "Anthony Nelson",
+      "DE · Buccaneers"
+    ],
+    [
+      "Kristian Welch",
+      "LB · Packers"
+    ],
+    [
+      "Kaden Wetjen",
+      "WR · Steelers"
+    ],
+    [
+      "Hunter Wohler",
+      "DB · Colts"
+    ],
+    [
+      "Rob Tonyan",
+      "TE · Steelers"
+    ]
+  ],
+  "quotes": [
+    {
+      "q": "Amazing experience. Grew mentally, physically, and positionally.",
+      "who": "Daniel Bellinger · 4th round",
+      "clip": null,
+      "img": "/elevate/bellinger.webp"
+    },
+    {
+      "q": "In-depth program, no shortage of reps, unreal learning curve.",
+      "who": "Sam LaPorta · 2nd round",
+      "clip": null,
+      "img": "/elevate/laporta.webp"
+    },
+    {
+      "q": "Personal, powerful, bottom line... prepared.",
+      "who": "Jake Ferguson · 4th round",
+      "clip": null,
+      "img": "/elevate/ferguson.webp"
+    }
+  ],
+  "parentQA": [
+    {
+      "q": "Who answers at 2 a.m.?",
+      "a": "Jack, then Ryan. Both have Jeremiah's number. No account manager, no call center. We stay mid-size so he's never in a bigger client's shadow."
+    },
+    {
+      "q": "How do fees work?",
+      "a": "The NFLPA caps agent fees at 3% of the playing contract, and ours go in writing before anything is signed. Nothing is paid up front, and fees are only owed on money he actually receives."
+    },
+    {
+      "q": "How do you protect what he earns?",
+      "a": "Ryan writes the guarantee and injury language. We screen every advisor before he meets them, coordinate taxes, set up disability insurance and build a year-one budget. A good first contract is only the start."
+    },
+    {
+      "q": "What happens if he gets hurt?",
+      "a": "Injury settlements, grievances and second opinions are ours to handle. Disability coverage is in place before the first snap."
+    },
+    {
+      "q": "What if he's not drafted where we hope?",
+      "a": "It happens, and it isn't the end. Kristian Welch signed with us as an undrafted free agent in 2020 and has played six NFL seasons. The slot decides the first contract; preparation decides the second."
+    },
+    {
+      "q": "Who are you, really?",
+      "a": "In business since 1986, with six clients who became the highest paid at their position. Jack Tabb played the position, and Ryan Hays is a licensed attorney. We're happy to connect you with current client families."
+    }
+  ],
+  "handle": [
+    [
+      "Contract",
+      "Rookie deal, extensions, guarantees, fine appeals, grievances. Ryan writes the language."
+    ],
+    [
+      "Money",
+      "Budget in year one. Every advisor and money manager screened before you meet them."
+    ],
+    [
+      "Taxes",
+      "Multi-state filings coordinated. You sign; you don't chase."
+    ],
+    [
+      "Insurance",
+      "Disability policy in place before the first snap. Second medical opinions on us to arrange."
+    ],
+    [
+      "The move",
+      "Relocation, housing, car, travel. You land in a city with a place to live."
+    ],
+    [
+      "Media",
+      "Interview prep, press, social. Nothing you say gets you in trouble."
+    ],
+    [
+      "Training",
+      "Off-season plans, Nashville access, recovery. Every year, not just the draft."
+    ],
+    [
+      "After",
+      "Post-career benefits filed, planning done. The career ends; the security doesn't."
+    ]
+  ],
+  "contact": {
+    "name": "Jack",
+    "phone": "(732) 675-0705",
+    "phoneE164": "+17326750705",
+    "email": "jacktabb@nfladvisor.com"
+  },
+  "cta": {
+    "label": "Set up a meeting",
+    "sms": "Hey Jack, it's Jeremiah. I'd like to set up a time to meet."
+  },
+  "alertTo": [
+    "jacktabb@nfladvisor.com"
+  ],
+  "unlocked": [],
+  "ask": {
+    "h": "Let's sit down and walk it through",
+    "lede": "This page is the outline. In person we'll walk you from senior season to draft night and into your second contract: the Nashville plan, what your slot could be worth, who handles what. Bring your family and your questions."
+  },
+  "draftMoments": [
+    {
+      "yt": "QAdPpzFOJQo",
+      "who": "Tucker Kraft",
+      "what": "Draft night · Rd 3, Pk 78 · Packers"
+    }
+  ],
+  "reel": {
+    "clip": null,
+    "len": ""
+  },
+  "heroStyle": "room",
+  "honors": [
+    "Preseason first-team All-America (SIS)",
+    "Feldman's Freaks list · No. 55"
+  ],
+  "comp": {
+    "eyebrow": "Who we see",
+    "h": "We see Tucker Kraft",
+    "lede": "A tight end who blocks like the linebacker he used to be and breaks tackles after the catch. Kraft built his career on exactly that, and he did it with us.",
+    "me": "/recruits/jeremiah-hasley/comp-cut.webp",
+    "them": "/clients/card/kraft.webp",
+    "themName": "Tucker Kraft",
+    "rows": [
+      [
+        "School",
+        "Duke · ACC",
+        "South Dakota State · FCS"
+      ],
+      [
+        "Size",
+        "6-3 · 250",
+        "6-4¾ · 254 at the Combine"
+      ],
+      [
+        "Path",
+        "Linebacker turned TE",
+        "FCS starter to Round 3"
+      ],
+      [
+        "Production",
+        "40 rec · 454 yds · 6 TD in 2025",
+        "5M extension · Sept 2026"
+      ]
+    ],
+    "foot": "Kraft went from a Round 3 pick to one of the top-paid tight ends in the league. That's the road we'd map for you."
+  },
+  "room": {
+    "front": "/recruits/jeremiah-hasley/room.webp",
+    "behind": [
+      "/clients/card/kittle.webp",
+      "/clients/card/ferguson.webp",
+      "/clients/card/laporta.webp",
+      "/clients/card/kraft.webp",
+      "/clients/card/helm.webp"
+    ],
+    "frontWidth": 50
+  },
+  "proofLine": {
+    "faces": [
+      "/clients/card/kittle.webp",
+      "/clients/card/kraft.webp",
+      "/clients/card/laporta.webp",
+      "/clients/card/ferguson.webp",
+      "/clients/card/helm.webp"
+    ],
+    "text": "<b>The JB tight end room.</b> Kittle and Kraft: #1 and #3 in TE pay. LaPorta and Ferguson: Pro Bowlers. Helm: Titans rookie TE record."
+  },
+  "shareImage": "/recruits/jeremiah-hasley/share-1.jpg"
+}
