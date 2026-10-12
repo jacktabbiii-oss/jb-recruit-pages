@@ -280,8 +280,10 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
 .nilcards{margin-top:0}
 .saywall{margin-top:18px;display:grid;gap:12px}
 .saywall blockquote{margin:0;background:var(--panel);border:1px solid var(--line);padding:16px 16px 14px}
+.saywall cite img{width:44px;height:44px;border-radius:50%;object-fit:cover;flex:0 0 44px;border:1px solid var(--line)}
+.saywall blockquote{display:flex;flex-direction:column;justify-content:space-between}
 .saywall p{margin:0;font-size:1.02rem;line-height:1.5;color:var(--paper)}
-.saywall cite{display:block;margin-top:10px;font-style:normal;font-family:var(--mono);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+.saywall cite{display:flex;align-items:center;gap:10px;margin-top:10px;font-style:normal;font-family:var(--mono);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
 .nums-src{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--muted);margin-top:8px;text-transform:uppercase}
 .elevate-logo{display:block;height:48px;width:auto;margin-bottom:10px;opacity:.9}
 .drafted{margin-top:18px}
@@ -747,9 +749,9 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
     <span class="eyebrow">In their words</span>
     <h2>What our clients say</h2>
     <div class="saywall">
-      <blockquote><p>"Jack Bechta and Ryan Hays prepared me and my family for my contract negotiations for well over a year in advance. We felt well informed and confident throughout the entire process. They helped secure a contract that protects me and my family."</p><cite>George Kittle · TE, 49ers</cite></blockquote>
-      <blockquote><p>"JB Sports has had an immeasurable impact on my success throughout my young career. They catered to my every need, provided me guidance, and allowed me to focus solely on my priorities."</p><cite>Sam LaPorta · TE, Lions</cite></blockquote>
-      <blockquote><p>"The thing that stands out the most about Jack is his hard work and diligence when no one is looking. I still consider him my closest confidant and he is like family now."</p><cite>Al Harris · Packers Hall of Fame DB</cite></blockquote>
+      <blockquote><p>"Jack Bechta and Ryan Hays prepared me and my family for my contract negotiations for well over a year in advance. We felt well informed and confident throughout the entire process. They helped secure a contract that protects me and my family."</p><cite><img src="/people/quotes/kittle.webp" alt="" loading="lazy">George Kittle · TE, 49ers</cite></blockquote>
+      <blockquote><p>"JB Sports has had an immeasurable impact on my success throughout my young career. They catered to my every need, provided me guidance, and allowed me to focus solely on my priorities."</p><cite><img src="/people/quotes/laporta.webp" alt="" loading="lazy">Sam LaPorta · TE, Lions</cite></blockquote>
+      <blockquote><p>"The thing that stands out the most about Jack is his hard work and diligence when no one is looking. I still consider him my closest confidant and he is like family now."</p><cite><img src="/people/quotes/harris.webp" alt="" loading="lazy">Al Harris · Packers Hall of Fame DB</cite></blockquote>
     </div>
   </section>
 
