@@ -354,6 +354,8 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
 .contact .line{display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:var(--mono);font-size:.96rem;border-bottom:1px solid var(--line);padding:8px 0}
 .contact .line span.k{color:var(--muted);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
 .contact button{font:600 .8rem var(--mono);letter-spacing:.08em;text-transform:uppercase;background:transparent;color:var(--blue);border:1px solid var(--line);padding:6px 10px;cursor:pointer}
+.tagline{margin-top:14px;font-family:var(--display);font-weight:800;font-size:clamp(1.15rem,5.4vw,1.6rem);letter-spacing:.06em;text-transform:uppercase;color:var(--paper);line-height:1.15}
+.tagline span{white-space:nowrap}
 .foot{padding-block:18px 0;font-family:var(--mono);font-size:.74rem;color:var(--muted);letter-spacing:.04em;line-height:1.7}
 
 /* ============ DESKTOP (>= 900px) ============
@@ -462,7 +464,8 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
   .fitrows{grid-template-columns:1fr 1fr;column-gap:28px}
   .contact{display:grid;grid-template-columns:1fr 1fr;gap:12px 40px;padding-block:40px;align-items:center}
   .contact img{grid-column:1 / -1}
-  .contact .foot{grid-column:1 / -1}
+  .contact .foot,.contact .tagline{grid-column:1 / -1}
+  .tagline{font-size:2.2rem}
   .cta{position:static;border:0;padding:0 0 48px;max-width:420px}
   .cta a,.cta button{padding:16px 18px;font-size:1.05rem}
 }
@@ -770,7 +773,7 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
   <div class="contact" id="contact">
     <div class="line"><span><span class="k" id="contactName">Jack · text or call</span><br><span id="phone">(732) 675-0705</span></span><button type="button" data-copy="phone">Copy</button></div>
     <div class="line"><span><span class="k">Email</span><br><span id="email">jacktabb@nfladvisor.com</span></span><button type="button" data-copy="email">Copy</button></div>
-    <img src="/jb-logo.png" alt="JB Sports Inc" width="150" height="26" style="margin-top:6px"><div class="foot"> Powerful · Personal · Professional<br>This page was made for Eli Finley and his family. Contract figures are approximate and based on the 2026 rookie scale; 2027 values are set by the league after the cap is announced. Past results are at the time of each contract and are not a guarantee of future outcomes.</div>
+    <img src="/jb-logo.png" alt="JB Sports Inc" width="150" height="26" style="margin-top:6px"><div class="tagline"><span>Powerful ·</span> <span>Personal ·</span> <span>Professional</span></div><div class="foot">This page was made for <span id="footName"></span> and his family. Contract figures are approximate and based on the 2026 rookie scale; 2027 values are set by the league after the cap is announced. Past results are at the time of each contract and are not a guarantee of future outcomes.</div>
   </div>
 
   <div class="cta">
@@ -966,7 +969,7 @@ const CTA=RECRUIT.cta||{label:"Set up a meeting",sms:`Hey ${C.name}, it's ${RECR
    try{window.__jbShare&&window.__jbShare();}catch(e){}
    if(navigator.share){try{await navigator.share(data);return}catch(e){if(e&&e.name==='AbortError')return}}
    try{await navigator.clipboard.writeText(url);btn.textContent='Link copied';setTimeout(()=>btn.textContent='Share this page',2200)}catch(e){prompt('Copy this link',url)}});}
-$('#contactName').textContent=`${C.name} · text or call`; $('#phone').textContent=C.phone; $('#email').textContent=C.email;
+$('#footName').textContent=`${RECRUIT.first} ${RECRUIT.last}`;$('#contactName').textContent=`${C.name} · text or call`; $('#phone').textContent=C.phone; $('#email').textContent=C.email;
 
 /* ============ TRACKING ============
    One "open" alert per session, one summary when they leave. No cookies, no third parties. */

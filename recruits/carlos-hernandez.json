@@ -54,6 +54,7 @@
   ],
   "honors": [
     "Biletnikoff Award watch list",
+    "Hispanic Player of the Year watch list",
     "Preseason 3rd-team All-American · returner (Phil Steele)"
   ],
   "proofLine": {
@@ -88,7 +89,7 @@
       "t": "Big return vs. UM",
       "n": "",
       "clip": "/recruits/carlos-hernandez/film-r4w8n/clip3.mp4",
-      "len": "0:30",
+      "len": "0:28",
       "poster": "/recruits/carlos-hernandez/film-r4w8n/clip3.jpg"
     },
     {
@@ -156,23 +157,23 @@
   "fieldLede": "Film cut by Jack is on the way. Until then, here's what your season says.",
   "numbers": [
     [
+      "720",
+      "receiving yards through six games · 49 catches, 4 TD"
+    ],
+    [
+      "12",
+      "catches at NC State on Oct. 10, a career high"
+    ],
+    [
+      "1,183",
+      "yards on 72 catches since Nov. 15, 2025"
+    ],
+    [
       "312",
-      "yards after catch, No. 1 in the country"
-    ],
-    [
-      "603",
-      "receiving yards through five games, No. 5 nationally"
-    ],
-    [
-      "1,066",
-      "yards on 60 catches since Nov. 15, 2025"
-    ],
-    [
-      "194",
-      "yards in the upset at No. 16 Louisville"
+      "yards after catch through five games, No. 1 in the country"
     ]
   ],
-  "numbersSrc": "2026 through five games · Wake Forest Athletics, Oct. 7",
+  "numbersSrc": "Through Oct. 10 · Wake Forest Athletics, CBS Sports",
   "defaultPick": 110,
   "timeline": [
     {
@@ -517,7 +518,7 @@
   "comp": {
     "eyebrow": "The path we just ran",
     "h": "A receiver who returns, drafted with us this spring",
-    "lede": "Kaden Wetjen came into the 2026 draft as a receiver and returner and went in Round 4 to the Steelers. You bring the same second way onto a roster, plus receiving tape that already leads the country after the catch.",
+    "lede": "Kaden Wetjen came into the 2026 draft as a receiver and returner and went in Round 4 to the Steelers. You bring the same second way onto a roster, plus receiving tape that led the country in yards after catch through five games.",
     "me": "/recruits/carlos-hernandez/comp-cut.webp",
     "them": "/clients/card/wetjen.webp",
     "themName": "Kaden Wetjen",
@@ -539,7 +540,7 @@
       ],
       [
         "Honors",
-        "Preseason All-American returner",
+        "Biletnikoff watch list · preseason All-American returner",
         "Consensus All-American · 2× Jet Award"
       ],
       [
@@ -573,14 +574,14 @@
         "name": "AthElite Performance",
         "where": "Nashville",
         "logo": "/training/athelite.webp",
-        "line": "Jeremy Holt's facility, in JB's home city. The same staff behind the ElevaTE program that prepped Kittle, LaPorta and Kraft.",
+        "line": "Jeremy Holt's facility. The same staff behind the ElevaTE program that prepped Kittle, LaPorta and Kraft.",
         "tag": "Where our tight ends train"
       },
       {
         "name": "Spellman Performance",
         "where": "San Diego · Orange County",
         "logo": "/training/spellman.webp",
-        "line": "Les Spellman coaches speed and acceleration, with 20+ athletes drafted into the NFL. The closest of these to home in Alhambra.",
+        "line": "Les Spellman coaches speed and acceleration, with 20+ athletes drafted into the NFL. The closest of these to home in Alhambra, and near JB's San Diego office.",
         "tag": "Acceleration · close to home"
       },
       {
@@ -602,5 +603,15 @@
     }
   },
   "shareImage": "/recruits/carlos-hernandez/share-1.jpg",
-  "ogFor": "Prepared for Carlos and the Hernandez family"
+  "ogFor": "Prepared for Carlos and the Hernandez family",
+  "copy": [
+    [
+      "#brandH",
+      "Built for the market<br>you come from"
+    ],
+    [
+      "#brandLede",
+      "From Alhambra, on the Hispanic Player of the Year watch list, producing in the ACC: that's a story with a built-in audience in Southern California and well beyond it. We start building it now, not after the draft. Local partners at home first, national names as your profile grows. JB works out of San Diego, so home is a drive for us, not a flight."
+    ]
+  ]
 }
