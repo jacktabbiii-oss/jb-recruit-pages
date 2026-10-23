@@ -946,6 +946,7 @@ $('#roster').classList.toggle('all',!isTE);$('#roster').innerHTML=(isTE
 if(!isTE){
   document.querySelectorAll('[data-unlock="elevate"] li').forEach(li=>{if(li.textContent==='TE position work')li.textContent='Position work'});
   $('#whoH').textContent="A former NFL player, a contract lawyer, and forty years";
+  {const f=document.querySelectorAll('.whofacts>div');if(f[3]){f[3].querySelector('.v').textContent='300+';f[3].querySelector('.k').textContent='contracts negotiated'}}
   $('#whoLede').textContent="Mid-size by choice. No shareholders, no quotas, nobody above you on a call sheet. Jack played in the league and coached. Ryan negotiates the contracts.";
   $('#proofH').textContent="A roster that gets paid";
   $('#proofLede').textContent=RECRUIT.proofLede||"Six clients have been the highest paid at their position, and Tucker Kraft's $75M extension this September is the latest. The same two people negotiate every deal, at every position.";
