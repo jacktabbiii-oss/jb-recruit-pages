@@ -20,11 +20,18 @@
   "heroStyle": "bleed",
   "photos": [
     {
-      "src": "/recruits/marshall-pritchett/g-run.webp",
+      "src": "/recruits/marshall-pritchett/g-catch.webp",
       "cap": "",
       "sub": "",
       "wm": "",
-      "focus": "50% 25%"
+      "focus": "52% 5%"
+    },
+    {
+      "src": "/recruits/marshall-pritchett/g-sideline.webp",
+      "cap": "",
+      "sub": "",
+      "wm": "",
+      "focus": "55% 40%"
     },
     {
       "src": "/recruits/marshall-pritchett/g-td.webp",
@@ -41,18 +48,11 @@
       "focus": "30% 40%"
     },
     {
-      "src": "/recruits/marshall-pritchett/g-rain.webp",
+      "src": "/recruits/marshall-pritchett/g-run.webp",
       "cap": "",
       "sub": "",
       "wm": "",
-      "focus": "50% 20%"
-    },
-    {
-      "src": "/recruits/marshall-pritchett/g-hurdle.webp",
-      "cap": "",
-      "sub": "",
-      "wm": "",
-      "focus": "50% 20%"
+      "focus": "50% 25%"
     }
   ],
   "honors": [
@@ -545,7 +545,7 @@
     "eyebrow": "Who we see",
     "h": "We see Sam LaPorta",
     "lede": "A tight end who gets open and finishes. LaPorta went Round 2, caught 86 passes as a rookie, and did it with us.",
-    "me": "/recruits/marshall-pritchett/g-rain.webp",
+    "me": "/recruits/marshall-pritchett/g-run.webp",
     "them": "/clients/card/laporta.webp",
     "themName": "Sam LaPorta",
     "rows": [

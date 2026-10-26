@@ -57,8 +57,8 @@
     "clip": null,
     "len": ""
   },
-  "filmSoon": null,
-  "fieldLede": null,
+  "filmSoon": "Where you stand today",
+  "fieldLede": "The numbers through this week, from the official stats.",
   "numbers": [
     [
       "26",
@@ -458,6 +458,7 @@
     "George Kittle"
   ],
   "introKeep": [
+    "field",
     "road"
   ]
 }

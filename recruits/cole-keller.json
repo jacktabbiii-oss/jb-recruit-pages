@@ -489,8 +489,8 @@
   },
   "shareImage": "/recruits/cole-keller/share-1.jpg",
   "intro": true,
-  "filmSoon": null,
-  "fieldLede": null,
+  "filmSoon": "Where you stand today",
+  "fieldLede": "The numbers through this week, from the official stats.",
   "ogFor": "Prepared for Cole and his family",
   "wallFirst": null,
   "numbers": [
@@ -513,6 +513,7 @@
   ],
   "numbersSrc": "Through Oct. 22 · JMU Athletics",
   "introKeep": [
+    "field",
     "road"
   ],
   "copy": [
