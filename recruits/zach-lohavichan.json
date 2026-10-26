@@ -81,50 +81,50 @@
   "defaultPick": 200,
   "timeline": [
     {
-      "when": "Oct 2026",
+      "when": "Now",
       "what": "Senior season",
-      "jb": "Jack at games. Weekly film notes. We start the scout conversations now.",
+      "jb": "Scouts are grading the tape now, and interior linemen get graded on every snap, not the stat line. The agent's work this fall is quiet: film notes, area-scout conversations, nothing that gets in the way of Saturdays.",
       "now": true
     },
     {
       "when": "Dec 2026",
       "what": "Season ends",
-      "jb": "<b>Decision point.</b> Sign with JB, then pick where you train."
+      "jb": "<b>Your decision.</b> Who represents you, and where you train. Both are your call, and both get made in December."
     },
     {
       "when": "Jan 2027",
       "what": "All-star games",
-      "jb": "We push for the Senior Bowl invite and manage every team meeting that week."
+      "jb": "Senior Bowl and Shrine Bowl invites come through the school and the agent. One week of practices and team meetings, all of it scouted."
     },
     {
       "when": "Jan to Feb",
-      "what": "Combine prep · your pick",
-      "jb": "Where you train is your call. We help you pick the room, then build the Combine and Pro Day plan around it."
+      "what": "Combine prep",
+      "jb": "Six to eight weeks at a training facility: the 40, the drills, the interviews. The agent sets it up and pays attention; the player does the work."
     },
     {
       "when": "Feb to Mar",
       "what": "NFL Combine",
-      "jb": "Interview prep, medical strategy, and the 40 and 10-yard split we're chasing."
+      "jb": "A few hundred invites. Medicals, interviews, testing. Players who aren't invited run the same numbers at Pro Day."
     },
     {
       "when": "Mar 2027",
       "what": "Pro Day",
-      "jb": "We decide what you run again and what you stand on."
+      "jb": "Your school's day for scouts. You decide what to run again and what to stand on."
     },
     {
       "when": "Apr 29 to May 1",
       "what": "2027 Draft · Washington, D.C.",
-      "jb": "On the National Mall. Ryan negotiates the rookie deal."
+      "jb": "Seven rounds. Drafted or signed after, the rookie contract gets negotiated that week."
     },
     {
       "when": "2027",
       "what": "Rookie year",
-      "jb": "Relocation, budget, insurance, advisors screened. Special teams and the rotation are the fastest way onto the field."
+      "jb": "Relocation, a first budget, insurance, taxes in a new state. The things an agent handles so the player can play."
     },
     {
       "when": "2030",
       "what": "Second contract",
-      "jb": "The one that sets you up. Six JB clients have been the highest paid at their position."
+      "jb": "The one that's actually negotiated. It's where the first four years get paid for."
     }
   ],
   "roster": [
@@ -437,7 +437,16 @@
   "training": null,
   "shareImage": "/recruits/zach-lohavichan/share-1.jpg",
   "ogFor": "Prepared for Zach and his family",
-  "copy": [],
+  "copy": [
+    [
+      "#roadH",
+      "How the next six months work"
+    ],
+    [
+      "#roadH + .lede",
+      "No promises on this page, just the map: what happens at each stop, and what an agent handles there."
+    ]
+  ],
   "intro": true,
   "hide": [
     "#train"
@@ -447,5 +456,8 @@
     "Amani Hooker",
     "Tucker Kraft",
     "George Kittle"
+  ],
+  "introKeep": [
+    "road"
   ]
 }

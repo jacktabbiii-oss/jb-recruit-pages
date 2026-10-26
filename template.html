@@ -662,7 +662,7 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
     <p class="nums-src" id="nilSrc"></p>
   </section>
 
-  <section class="reveal">
+  <section class="reveal" id="road">
     <span class="eyebrow">04 · The road</span>
     <h2 id="roadH">Now through your second contract</h2>
     <p class="lede muted">Where you are, what's next, and what we handle at each stop.</p>
@@ -1023,13 +1023,13 @@ if(RECRUIT.ask){ if(RECRUIT.ask.h)$('#askH').textContent=RECRUIT.ask.h; if(RECRU
    "intro": true in the JSON. The first look, before a meeting: who we are, the room, the record, the people, the quotes.
    No numbers, no calculator or sliders, no timeline, no family tab, no ask, no film. A comp stays if the JSON has one.
    Same link, same tracking. Set "intro": false (or remove it) after the meeting and the full page shows in its mode.
-   Optional: "introAsk": {"h": "...", "lede": "..."} for the closing lines. */
+   Optional: "introAsk": {"h": "...", "lede": "..."} for the closing lines; "introKeep": ["road"] keeps extra sections by id. */
 if(RECRUIT.intro){document.body.dataset.intro='1';
-  const ath=document.querySelector('[data-aud="athlete"]');const keep=new Set(['proof','record','who']);if(RECRUIT.comp)keep.add('comp');
+  const ath=document.querySelector('[data-aud="athlete"]');const keep=new Set(['proof','record','who',...(RECRUIT.introKeep||[])]);if(RECRUIT.comp)keep.add('comp');
   ath.querySelectorAll(':scope>section').forEach(sec=>{if(!keep.has(sec.id))sec.hidden=true});
   /* no film yet on a first look: no video slot, no plays section, no "hero photo" placeholder (the number stays) */
   {const hv=$('#heroVideo');if(hv&&!hv.querySelector('.has-media'))hv.remove();const e=document.querySelector('.hero-art.empty>span');if(e)e.remove()}
-  const say=document.querySelector('.saywall');if(say){const s=say.closest('section');if(s)$('#who').after(s)}
+  const say=document.querySelector('.saywall');if(say){const s=say.closest('section');const last=[...ath.querySelectorAll(':scope>section')].filter(x=>!x.hidden).pop();if(s&&last)last.after(s)}
   const A=RECRUIT.introAsk||{},who=(RECRUIT.contact&&RECRUIT.contact.name)||'Jack';
   document.querySelector('.ask .eyebrow').textContent='Where this goes';
   $('#askH').textContent=A.h||"That's who we are. Let's meet.";
