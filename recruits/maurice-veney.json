@@ -38,33 +38,33 @@
     {
       "when": "Now",
       "what": "This season",
-      "jb": "Jack at games. Weekly film notes. NIL deals reviewed by Ryan before you sign.",
+      "jb": "The tape is the whole case right now. What you put on film against SEC defenses is what scouts grade and what NIL partners look at.",
       "now": true
     },
     {
       "when": "Winter",
       "what": "Off-season",
-      "jb": "Nashville access. A position-specific plan with the coaches and trainers the NFL guys use."
+      "jb": "Position work and strength. Where that happens is the player's call; an agent helps pick the room and keeps the eligibility paperwork clean."
     },
     {
-      "when": "Spring",
-      "what": "Name",
-      "jb": "A clean social presence, and the right partners once performance earns them. Ryan reads anything with a signature line."
+      "when": "Spring 2027",
+      "what": "Revenue share and NIL",
+      "jb": "Schools can pay players directly now, and outside deals over $600 get reviewed by the College Sports Commission. An agent's job here is reading the terms before anything gets signed."
     },
     {
-      "when": "Year 2 to 3",
+      "when": "2027 season",
       "what": "Produce",
-      "jb": "Film, growth, the right conversations with scouts at the right time. We are quiet until it counts."
+      "jb": "Another year of SEC tape. Scouts start the conversations; the agent handles them so they don't get in the way of Saturdays."
     },
     {
-      "when": "Senior fall",
-      "what": "Draft year",
-      "jb": "The draft version of this page, with your tape in it. Same team, no handoff."
+      "when": "After the last season",
+      "what": "Draft decision",
+      "jb": "Eligibility and the market set the timing. An honest read on both is the job, whichever way it points."
     },
     {
-      "when": "April",
+      "when": "Then",
       "what": "The league",
-      "jb": "Combine, Pro Day, draft night. Ryan on the rookie deal."
+      "jb": "Combine or Pro Day, then draft weekend. The rookie contract is the first thing negotiated, drafted or signed after."
     }
   ],
   "positionGroup": "TE",
@@ -408,6 +408,14 @@
     [
       "#fitLede",
       "Slide each one. This is what we build your college years around, so the draft conversation starts now instead of your senior fall."
+    ],
+    [
+      "#roadH",
+      "How the next two years work"
+    ],
+    [
+      "#roadH + .lede",
+      "No promises on this page, just the map: what happens at each stop, and what an agent handles there."
     ]
   ],
   "fit": [
@@ -471,15 +479,21 @@
       "catches for 381 yards and 3 TD at Morehouse in 2025"
     ],
     [
-      "8",
-      "games for Vanderbilt this season"
+      "11",
+      "catches for 113 yards and a TD as a Morehouse freshman in 2024"
     ],
     [
-      "6-4",
-      "and 270 pounds"
+      "8",
+      "games for Vanderbilt this season, his first in the SEC"
     ]
   ],
   "numbersSrc": "Through Oct. 24 · Vanderbilt Athletics, Morehouse Athletics",
   "shareImage": "/recruits/maurice-veney/share-1.jpg",
-  "ogFor": "Prepared for Maurice and his family"
+  "ogFor": "Prepared for Maurice and his family",
+  "introKeep": [
+    "field",
+    "road"
+  ],
+  "filmSoon": "Where you stand today",
+  "fieldLede": "The numbers through this week, from the official stats."
 }
