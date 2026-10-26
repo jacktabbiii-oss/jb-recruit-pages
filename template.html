@@ -1025,14 +1025,14 @@ if(RECRUIT.ask){ if(RECRUIT.ask.h)$('#askH').textContent=RECRUIT.ask.h; if(RECRU
    Optional: "introAsk": {"h": "...", "lede": "..."} for the closing lines. */
 if(RECRUIT.intro){document.body.dataset.intro='1';
   const ath=document.querySelector('[data-aud="athlete"]');const keep=new Set(['proof','record','who']);
-  ath.querySelectorAll(':scope>section').forEach(sec=>{if(keep.has(sec.id))return;
-    if(sec.contains($('#plays'))){if(RECRUIT.plays.length||REEL){sec.querySelectorAll('.nums,.nums-src').forEach(x=>x.remove());return}}
-    sec.hidden=true});
+  ath.querySelectorAll(':scope>section').forEach(sec=>{if(!keep.has(sec.id))sec.hidden=true});
+  /* no film yet on a first look: no video slot, no plays section, no "hero photo" placeholder (the number stays) */
+  {const hv=$('#heroVideo');if(hv&&!hv.querySelector('.has-media'))hv.remove();const e=document.querySelector('.hero-art.empty>span');if(e)e.remove()}
   const say=document.querySelector('.saywall');if(say){const s=say.closest('section');if(s)$('#who').after(s)}
   const A=RECRUIT.introAsk||{},who=(RECRUIT.contact&&RECRUIT.contact.name)||'Jack';
   document.querySelector('.ask .eyebrow').textContent='Where this goes';
-  $('#askH').textContent=A.h||"That's who we are";
-  $('#askLede').textContent=A.lede||`No pitch on this page. What we'd build for you, the plan, the numbers and who handles what, is a conversation, and ${who} is one text away whenever you want to have it.`;}
+  $('#askH').textContent=A.h||"That's who we are. Let's meet.";
+  $('#askLede').textContent=A.lede||`No pitch on this page. The plan for you, the numbers, who handles what: that's a conversation, and it's the one we'd like to have with you and your family. ${who} is one text away.`;}
 (RECRUIT.copy||[]).forEach(([sel,html])=>{const el=document.querySelector(sel);if(el)el.innerHTML=html});
 /* renumber the athlete-view eyebrows in on-page order, skipping sections hidden for this mode or for the intro */
 {let n=0;document.querySelectorAll('[data-aud="athlete"]>section').forEach(sec=>{if(sec.hidden)return;const m=sec.dataset.mode;if(m&&!m.split(' ').includes(RECRUIT.mode))return;const e=sec.querySelector(':scope>.eyebrow');if(e&&/^\d+\s·/.test(e.textContent)){n++;e.textContent=e.textContent.replace(/^\d+/,String(n).padStart(2,'0'))}})}

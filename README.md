@@ -33,7 +33,7 @@ No cookies, no analytics vendors, nothing shared with third parties.
 - `hs` — high school. "The decision" sliders, recruiting timeline (camps, offers, visits, signing), parents-heavy. Start from `hs-example.json`. HS NIL rules vary by state; Ryan confirms before any send.
 
 ## The intro (`"intro": true`)
-Every page can start as an intro: the first look before a meeting, same link, same tracking. It shows the room, the record, who we are, the people and the client quotes, plus film if there is any. It hides the numbers, the calculator or sliders, the timeline, the comp, the family tab and the ask; the close says the plan is a conversation. After the meeting, remove `"intro"` (or set it `false`) and the full page in its mode shows at the same link. `"introAsk": {"h","lede"}` overrides the closing lines. See `intro-example.json`.
+Every page can start as an intro: the first look before a meeting, same link, same tracking. It shows the room, the record, who we are, the people and the client quotes. No video slot, no film section, no numbers, no calculator or sliders, no timeline, no comp, no family tab, no ask; the close says the plan is a conversation. After the meeting, remove `"intro"` (or set it `false`) and the full page in its mode shows at the same link. `"introAsk": {"h","lede"}` overrides the closing lines. See `intro-example.json`.
 
 ## The record
 `#record` (template) is the position-agnostic sell on every page: three deals that set a market (Kittle, Kraft, Hooker) and four careers that lasted (Nelson, Welch, Higgins, Colby). The facts live in one place in `template.html` (`RECORD`); update there when a deal changes. A page can override with `"record": {top, long}` or hide it with `"record": false`.
