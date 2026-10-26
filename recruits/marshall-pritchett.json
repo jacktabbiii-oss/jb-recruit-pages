@@ -1,0 +1,575 @@
+{
+  "slug": "marshall-pritchett",
+  "token": "hWUN-8XnuFz9",
+  "active": true,
+  "mode": "college",
+  "familyLabel": "For the Pritchetts",
+  "heroVideo": {
+    "clip": null,
+    "len": ""
+  },
+  "first": "Marshall",
+  "last": "Pritchett",
+  "position": "TE",
+  "school": "Alabama",
+  "number": 9,
+  "height": "6-5",
+  "weight": "246",
+  "draftClass": "Sophomore · draft-eligible 2028",
+  "positionGroup": "TE",
+  "heroStyle": "bleed",
+  "photos": [
+    {
+      "src": "/recruits/marshall-pritchett/g-run.webp",
+      "cap": "",
+      "sub": "",
+      "wm": "",
+      "focus": "50% 25%"
+    },
+    {
+      "src": "/recruits/marshall-pritchett/g-td.webp",
+      "cap": "",
+      "sub": "",
+      "wm": "",
+      "focus": "40% 30%"
+    },
+    {
+      "src": "/recruits/marshall-pritchett/g-endzone.webp",
+      "cap": "",
+      "sub": "",
+      "wm": "",
+      "focus": "30% 40%"
+    },
+    {
+      "src": "/recruits/marshall-pritchett/g-rain.webp",
+      "cap": "",
+      "sub": "",
+      "wm": "",
+      "focus": "50% 20%"
+    },
+    {
+      "src": "/recruits/marshall-pritchett/g-hurdle.webp",
+      "cap": "",
+      "sub": "",
+      "wm": "",
+      "focus": "50% 20%"
+    }
+  ],
+  "honors": [
+    "Four-star recruit · 247Sports No. 15 TE, 2025 class",
+    "NCISAA All-State · 2024"
+  ],
+  "proofLine": {
+    "faces": [
+      "/clients/card/kittle.webp",
+      "/clients/card/kraft.webp",
+      "/clients/card/laporta.webp",
+      "/clients/card/ferguson.webp",
+      "/clients/card/helm.webp"
+    ],
+    "text": "<b>The JB tight end room.</b> Kittle and Kraft: #1 and #3 in TE pay. LaPorta and Ferguson: Pro Bowlers. Helm: Titans rookie TE record."
+  },
+  "plays": [],
+  "reel": {
+    "clip": null,
+    "len": ""
+  },
+  "draftMoments": [],
+  "quotes": [],
+  "filmSoon": "Where you stand today",
+  "fieldLede": "Film cut by Jack is on the way. Until then, the numbers.",
+  "numbers": [
+    [
+      "237",
+      "receiving yards through Oct. 24 · 18 catches, 2 TD"
+    ],
+    [
+      "6",
+      "catches vs. Tennessee on Oct. 17, a team high"
+    ],
+    [
+      "38",
+      "yards on his longest catch this season · vs. South Carolina"
+    ],
+    [
+      "15",
+      "games as a true freshman in 2025"
+    ]
+  ],
+  "numbersSrc": "Through Oct. 24 · Alabama Athletics",
+  "defaultPick": 120,
+  "fit": [
+    [
+      "Targets",
+      "Snaps and targets now vs. growing behind a vet"
+    ],
+    [
+      "Development",
+      "Position coach, scheme, strength staff, tight ends they've sent to the NFL"
+    ],
+    [
+      "Revenue share and NIL",
+      "What's real, what's guaranteed, what the fine print says"
+    ],
+    [
+      "The degree",
+      "Your major, academic support, finishing"
+    ],
+    [
+      "Distance from home",
+      "Family in the stands from Charleston, S.C."
+    ],
+    [
+      "The NFL path",
+      "Your tape, your conference, and who's watching"
+    ]
+  ],
+  "fitTail": "This is the list we'd weigh every decision against at Alabama. Ryan reads every agreement before you sign.",
+  "nil": {
+    "eyebrow": "The money now",
+    "cards": [
+      [
+        "Revenue share",
+        "Schools can pay players directly, up to $21.3 million per school this year. How a school splits it is up to the school, and the terms vary a lot."
+      ],
+      [
+        "An agent at the table",
+        "New NCAA rules for 2026-27 let college athletes hire agents for every part of their deals, including negotiating revenue share with the school."
+      ],
+      [
+        "NIL deals get reviewed",
+        "Outside NIL deals over $600 go through the College Sports Commission's NIL Go. Deals without a real business purpose get rejected. We structure them to clear."
+      ],
+      [
+        "Local and national deals",
+        "We look for marketing deals at home and nationally, sized right for now and built to carry into the NFL."
+      ],
+      [
+        "The fine print",
+        "Buyouts, exclusivity, social-media clauses, what happens if you transfer or get hurt. Ryan reads every line before you sign."
+      ]
+    ],
+    "src": "As of Oct. 2026 · NCAA, College Sports Commission, On3, Footballscoop",
+    "h": "College football pays now. Read the fine print.",
+    "lede": "The rules changed fast. Here's what's true for 2026-27, and where an agent and a lawyer earn their keep."
+  },
+  "timeline": [
+    {
+      "when": "Now",
+      "what": "2026 season",
+      "jb": "Jack at games. Weekly film notes. Every NIL deal read by Ryan before you sign.",
+      "now": true
+    },
+    {
+      "when": "Winter",
+      "what": "Off-season",
+      "jb": "Nashville access. The same prep room Kittle, LaPorta and Kraft used, built around your position."
+    },
+    {
+      "when": "Spring 2027",
+      "what": "Agreements in writing",
+      "jb": "Revenue share and NIL for 2027, read line by line. Nothing that costs you eligibility."
+    },
+    {
+      "when": "2027 season",
+      "what": "Produce",
+      "jb": "Film, growth, the right conversations with scouts at the right time."
+    },
+    {
+      "when": "Jan. 2028",
+      "what": "Draft decision",
+      "jb": "Draft-eligible after your third year. We tell you straight whether to go or stay."
+    },
+    {
+      "when": "Apr. 2028",
+      "what": "NFL Draft",
+      "jb": "Same team from here to draft night. No handoff."
+    }
+  ],
+  "handle": [
+    [
+      "Revenue share",
+      "JB is the go-between with your school: no drama, the relationship with your staff stays intact, and we push to get you above your market."
+    ],
+    [
+      "NIL deals",
+      "Every agreement read by Ryan. Nothing exclusive you didn't mean to sign. Structured to clear NIL Go."
+    ],
+    [
+      "Compliance",
+      "Disclosures, school paperwork, eligibility. Done right, filed on time."
+    ],
+    [
+      "Money",
+      "Budget, taxes on NIL income, advisors screened."
+    ],
+    [
+      "Brand",
+      "Built as you go. The right partners once performance earns them."
+    ],
+    [
+      "Family",
+      "Your family knows what's going on before they have to ask."
+    ],
+    [
+      "The league",
+      "Same team from here to draft night. No handoff."
+    ]
+  ],
+  "hide": [],
+  "reads": [
+    [
+      "Revenue-share terms",
+      "How much, when it's paid, and what happens to it if he transfers or gets hurt. The details vary a lot school to school."
+    ],
+    [
+      "Exclusivity and buyouts",
+      "Some NIL and school agreements lock in brands or charge to leave early. Ryan finds those lines before he signs."
+    ],
+    [
+      "Eligibility",
+      "Nothing signed that costs him a season. New NCAA rules let him have an agent; we keep every deal inside them."
+    ]
+  ],
+  "parentQA": [
+    {
+      "q": "Is this allowed?",
+      "a": "Yes. Starting with the 2026-27 school year, NCAA rules let college athletes hire agents for every part of their deals, including revenue share with the school. Outside NIL deals over $600 are reviewed by the College Sports Commission. Everything we do is in writing and inside the rules."
+    },
+    {
+      "q": "What does it cost?",
+      "a": "Nothing up front. The fee is written into the agreement before anything is signed, and we walk you through it in person."
+    },
+    {
+      "q": "Who reads the contracts?",
+      "a": "Ryan Hays, a licensed attorney and NFL contract advisor since 2012. Every agreement, every time, before Marshall signs."
+    },
+    {
+      "q": "Who are you, really?",
+      "a": "JB Sports has represented NFL players since 1986. Six clients have become the highest paid at their position, and the tight end room includes George Kittle, Sam LaPorta and Tucker Kraft. We stay mid-size so every client gets the founders, not an assistant."
+    }
+  ],
+  "included": [
+    "Revenue-share negotiation with the school",
+    "NIL deal sourcing and review",
+    "NIL Go submissions",
+    "Eligibility and compliance",
+    "Taxes on NIL income",
+    "Budgeting, advisors screened",
+    "Brand and social media",
+    "Academic support contacts",
+    "Draft preparation when it's time"
+  ],
+  "yr1": {
+    "h": "The next 12 months, in order",
+    "steps": [
+      [
+        "This season",
+        "Every NIL deal read before he signs. We start mapping his market."
+      ],
+      [
+        "December",
+        "Revenue-share and NIL terms for 2027 reviewed with real numbers."
+      ],
+      [
+        "Spring",
+        "Agreements signed, in writing, inside the rules."
+      ],
+      [
+        "Off-season",
+        "Nashville: the room Kittle, LaPorta and Kraft prepared in."
+      ]
+    ]
+  },
+  "copy": [
+    [
+      "#fitEyebrow",
+      "03 · The plan"
+    ],
+    [
+      "#roadH",
+      "Now through draft night"
+    ]
+  ],
+  "cta": {
+    "label": "Set up a meeting",
+    "sms": "Hey Jack, it's Marshall. I'd like to set up a time to meet."
+  },
+  "unlocked": [],
+  "shareImage": "/recruits/marshall-pritchett/share-1.jpg",
+  "ogFor": "Prepared for Marshall and his family",
+  "wall": [
+    [
+      "Tucker Kraft",
+      "TE · Packers",
+      "new",
+      "/clients/card/kraft.webp",
+      [
+        "$75M",
+        "4 yrs · $26.5M signing bonus · Sept 2026"
+      ]
+    ],
+    [
+      "George Kittle",
+      "TE · 49ers",
+      "top",
+      "/clients/card/kittle.webp",
+      [
+        "$76.4M",
+        "4 yrs · $40M guaranteed · Apr 2025"
+      ]
+    ],
+    [
+      "Amani Hooker",
+      "DB · Titans",
+      "",
+      "/clients/card/hooker.webp",
+      [
+        "$48.6M",
+        "3 yrs · $29M guaranteed · Sept 2025"
+      ]
+    ],
+    [
+      "Sam LaPorta",
+      "TE · Lions",
+      "pro",
+      "/clients/card/laporta.webp"
+    ],
+    [
+      "Jake Ferguson",
+      "TE · Cowboys",
+      "pro",
+      "/clients/card/ferguson.webp"
+    ],
+    [
+      "Gunnar Helm",
+      "TE · Titans",
+      "",
+      "/clients/card/helm.webp"
+    ],
+    [
+      "Daniel Bellinger",
+      "TE · Titans",
+      "",
+      "/clients/card/bellinger.webp"
+    ],
+    [
+      "Hayden Rucci",
+      "TE · Chargers",
+      "",
+      "/clients/card/rucci.webp"
+    ],
+    [
+      "Riley Nowakowski",
+      "TE · Steelers",
+      "",
+      "/clients/card/nowakowski.webp"
+    ],
+    [
+      "Mitchell Evans",
+      "TE · Panthers",
+      "",
+      "/clients/card/evans.webp"
+    ],
+    [
+      "Bryce Pierre",
+      "TE · Panthers",
+      "",
+      "/clients/card/pierre.webp"
+    ],
+    [
+      "Noah Gray",
+      "TE · Chiefs",
+      "",
+      "/clients/card/gray.webp"
+    ],
+    [
+      "Rob Tonyan",
+      "TE · Steelers",
+      "",
+      "/clients/card/tonyan.webp"
+    ],
+    [
+      "Anthony Nelson",
+      "DE · Buccaneers",
+      "",
+      "/clients/card/nelson.webp"
+    ],
+    [
+      "Kristian Welch",
+      "LB · Packers",
+      "",
+      "/clients/card/welch.webp"
+    ],
+    [
+      "Hunter Wohler",
+      "DB · Colts",
+      "",
+      "/clients/card/wohler.webp"
+    ],
+    [
+      "Connor Colby",
+      "OL · 49ers",
+      "",
+      "/clients/card/colby.webp"
+    ],
+    [
+      "Charlie Heck",
+      "OL · Dolphins",
+      "",
+      "/clients/card/heck.webp"
+    ],
+    [
+      "Jay Higgins",
+      "LB · Ravens",
+      "",
+      "/clients/card/higgins.webp"
+    ],
+    [
+      "Kaden Wetjen",
+      "WR · Steelers",
+      "",
+      "/clients/card/wetjen.webp"
+    ]
+  ],
+  "roster": [
+    [
+      "George Kittle",
+      "49ers"
+    ],
+    [
+      "Sam LaPorta",
+      "Lions"
+    ],
+    [
+      "Tucker Kraft",
+      "Packers"
+    ],
+    [
+      "Jake Ferguson",
+      "Cowboys"
+    ],
+    [
+      "Noah Gray",
+      "Chiefs"
+    ],
+    [
+      "Rob Tonyan",
+      "Steelers"
+    ],
+    [
+      "Daniel Bellinger",
+      "Titans"
+    ],
+    [
+      "Gunnar Helm",
+      "Titans"
+    ],
+    [
+      "Hayden Rucci",
+      "Chargers"
+    ],
+    [
+      "Riley Nowakowski",
+      "Steelers"
+    ],
+    [
+      "Mitchell Evans",
+      "Panthers"
+    ],
+    [
+      "Carson Towt",
+      "Colts"
+    ],
+    [
+      "Bryce Pierre",
+      "Panthers"
+    ]
+  ],
+  "rosterAll": [
+    [
+      "Sebastian Castro",
+      "DB · Steelers"
+    ],
+    [
+      "Connor Colby",
+      "OL · 49ers"
+    ],
+    [
+      "Charlie Heck",
+      "OL · Dolphins"
+    ],
+    [
+      "Jay Higgins",
+      "LB · Ravens"
+    ],
+    [
+      "Amani Hooker",
+      "DB · Titans"
+    ],
+    [
+      "Anthony Nelson",
+      "DE · Buccaneers"
+    ],
+    [
+      "Kristian Welch",
+      "LB · Packers"
+    ],
+    [
+      "Kaden Wetjen",
+      "WR · Steelers"
+    ],
+    [
+      "Hunter Wohler",
+      "DB · Colts"
+    ]
+  ],
+  "contact": {
+    "name": "Jack",
+    "phone": "(732) 675-0705",
+    "phoneE164": "+17326750705",
+    "email": "jacktabb@nfladvisor.com"
+  },
+  "alertTo": [
+    "jacktabb@nfladvisor.com"
+  ],
+  "wallFirst": [
+    "Amani Hooker",
+    "Tucker Kraft",
+    "Jay Higgins",
+    "George Kittle",
+    "Riley Nowakowski"
+  ],
+  "training": null,
+  "comp": {
+    "eyebrow": "Who we see",
+    "h": "We see Sam LaPorta",
+    "lede": "A tight end who gets open and finishes. LaPorta went Round 2, caught 86 passes as a rookie, and did it with us.",
+    "me": "/recruits/marshall-pritchett/g-rain.webp",
+    "them": "/clients/card/laporta.webp",
+    "themName": "Sam LaPorta",
+    "rows": [
+      [
+        "School",
+        "Alabama · SEC",
+        "Iowa · Big Ten"
+      ],
+      [
+        "Size",
+        "6-5 · 246",
+        "6-3 · 245"
+      ],
+      [
+        "Draft",
+        "2028 class",
+        "Rd 2 · Pick 34 · 2023"
+      ],
+      [
+        "Production",
+        "18 rec · 237 yds · 2 TD through 8 games, 2026",
+        "86 rec as a rookie, an NFL rookie TE record at the time"
+      ]
+    ],
+    "foot": "LaPorta was a Pro Bowler in year one. The two years between now and your draft are where that gets built, and that's what this page is about."
+  }
+}

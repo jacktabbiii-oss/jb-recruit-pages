@@ -1,0 +1,451 @@
+{
+  "slug": "zach-lohavichan",
+  "token": "Rlm3stegl5kb",
+  "active": true,
+  "mode": "draft",
+  "familyLabel": "For the Lohavichans",
+  "heroVideo": {
+    "clip": null,
+    "len": ""
+  },
+  "first": "Zach",
+  "last": "Lohavichan",
+  "position": "DL",
+  "school": "Wake Forest",
+  "number": 94,
+  "height": "6-3",
+  "weight": "290",
+  "draftClass": 2027,
+  "positionGroup": "DL",
+  "heroStyle": "bleed",
+  "photos": [
+    {
+      "src": "/recruits/zach-lohavichan/g-walkout.webp",
+      "cap": "",
+      "sub": "",
+      "wm": "",
+      "focus": "50% 18%"
+    },
+    {
+      "src": "/recruits/zach-lohavichan/g-rush.webp",
+      "cap": "",
+      "sub": "",
+      "wm": "",
+      "focus": "50% 30%"
+    },
+    {
+      "src": "/recruits/zach-lohavichan/g-ncstate.webp",
+      "cap": "",
+      "sub": "",
+      "wm": "",
+      "focus": "50% 40%"
+    }
+  ],
+  "honors": [],
+  "proofLine": {
+    "faces": [
+      "/clients/card/nelson.webp",
+      "/clients/card/hooker.webp",
+      "/clients/card/kittle.webp",
+      "/clients/card/kraft.webp",
+      "/clients/card/higgins.webp"
+    ],
+    "text": "<b>The JB room.</b> Anthony Nelson: Round 4 pick, three contracts with the Buccaneers. Amani Hooker: $48.6M extension. Six clients have been the highest paid at their position."
+  },
+  "plays": [],
+  "reel": {
+    "clip": null,
+    "len": ""
+  },
+  "filmSoon": null,
+  "fieldLede": null,
+  "numbers": [
+    [
+      "26",
+      "tackles through Oct. 17 · 7.5 for loss, 2.5 sacks"
+    ],
+    [
+      "7.5",
+      "tackles for loss, a career high with five games left"
+    ],
+    [
+      "1",
+      "field goal blocked · vs. Miami, Sept. 18"
+    ],
+    [
+      "4",
+      "quarterback hurries this season"
+    ]
+  ],
+  "numbersSrc": "Through Oct. 17 · Wake Forest Athletics",
+  "defaultPick": 200,
+  "timeline": [
+    {
+      "when": "Oct 2026",
+      "what": "Senior season",
+      "jb": "Jack at games. Weekly film notes. We start the scout conversations now.",
+      "now": true
+    },
+    {
+      "when": "Dec 2026",
+      "what": "Season ends",
+      "jb": "<b>Decision point.</b> Sign with JB, then pick where you train."
+    },
+    {
+      "when": "Jan 2027",
+      "what": "All-star games",
+      "jb": "We push for the Senior Bowl invite and manage every team meeting that week."
+    },
+    {
+      "when": "Jan to Feb",
+      "what": "Combine prep · your pick",
+      "jb": "Where you train is your call. We help you pick the room, then build the Combine and Pro Day plan around it."
+    },
+    {
+      "when": "Feb to Mar",
+      "what": "NFL Combine",
+      "jb": "Interview prep, medical strategy, and the 40 and 10-yard split we're chasing."
+    },
+    {
+      "when": "Mar 2027",
+      "what": "Pro Day",
+      "jb": "We decide what you run again and what you stand on."
+    },
+    {
+      "when": "Apr 29 to May 1",
+      "what": "2027 Draft · Washington, D.C.",
+      "jb": "On the National Mall. Ryan negotiates the rookie deal."
+    },
+    {
+      "when": "2027",
+      "what": "Rookie year",
+      "jb": "Relocation, budget, insurance, advisors screened. Special teams and the rotation are the fastest way onto the field."
+    },
+    {
+      "when": "2030",
+      "what": "Second contract",
+      "jb": "The one that sets you up. Six JB clients have been the highest paid at their position."
+    }
+  ],
+  "roster": [
+    [
+      "George Kittle",
+      "49ers"
+    ],
+    [
+      "Sam LaPorta",
+      "Lions"
+    ],
+    [
+      "Tucker Kraft",
+      "Packers"
+    ],
+    [
+      "Jake Ferguson",
+      "Cowboys"
+    ],
+    [
+      "Noah Gray",
+      "Chiefs"
+    ],
+    [
+      "Rob Tonyan",
+      "Steelers"
+    ],
+    [
+      "Daniel Bellinger",
+      "Titans"
+    ],
+    [
+      "Gunnar Helm",
+      "Titans"
+    ],
+    [
+      "Hayden Rucci",
+      "Chargers"
+    ],
+    [
+      "Riley Nowakowski",
+      "Steelers"
+    ],
+    [
+      "Mitchell Evans",
+      "Panthers"
+    ],
+    [
+      "Carson Towt",
+      "Colts"
+    ],
+    [
+      "Bryce Pierre",
+      "Panthers"
+    ]
+  ],
+  "wall": [
+    [
+      "Tucker Kraft",
+      "TE · Packers",
+      "new",
+      "/clients/card/kraft.webp",
+      [
+        "$75M",
+        "4 yrs · $26.5M signing bonus · Sept 2026"
+      ]
+    ],
+    [
+      "George Kittle",
+      "TE · 49ers",
+      "top",
+      "/clients/card/kittle.webp",
+      [
+        "$76.4M",
+        "4 yrs · $40M guaranteed · Apr 2025"
+      ]
+    ],
+    [
+      "Amani Hooker",
+      "DB · Titans",
+      "",
+      "/clients/card/hooker.webp",
+      [
+        "$48.6M",
+        "3 yrs · $29M guaranteed · Sept 2025"
+      ]
+    ],
+    [
+      "Sam LaPorta",
+      "TE · Lions",
+      "pro",
+      "/clients/card/laporta.webp"
+    ],
+    [
+      "Jake Ferguson",
+      "TE · Cowboys",
+      "pro",
+      "/clients/card/ferguson.webp"
+    ],
+    [
+      "Gunnar Helm",
+      "TE · Titans",
+      "",
+      "/clients/card/helm.webp"
+    ],
+    [
+      "Daniel Bellinger",
+      "TE · Titans",
+      "",
+      "/clients/card/bellinger.webp"
+    ],
+    [
+      "Hayden Rucci",
+      "TE · Chargers",
+      "",
+      "/clients/card/rucci.webp"
+    ],
+    [
+      "Riley Nowakowski",
+      "TE · Steelers",
+      "",
+      "/clients/card/nowakowski.webp"
+    ],
+    [
+      "Mitchell Evans",
+      "TE · Panthers",
+      "",
+      "/clients/card/evans.webp"
+    ],
+    [
+      "Bryce Pierre",
+      "TE · Panthers",
+      "",
+      "/clients/card/pierre.webp"
+    ],
+    [
+      "Noah Gray",
+      "TE · Chiefs",
+      "",
+      "/clients/card/gray.webp"
+    ],
+    [
+      "Rob Tonyan",
+      "TE · Steelers",
+      "",
+      "/clients/card/tonyan.webp"
+    ],
+    [
+      "Anthony Nelson",
+      "DE · Buccaneers",
+      "",
+      "/clients/card/nelson.webp"
+    ],
+    [
+      "Kristian Welch",
+      "LB · Packers",
+      "",
+      "/clients/card/welch.webp"
+    ],
+    [
+      "Hunter Wohler",
+      "DB · Colts",
+      "",
+      "/clients/card/wohler.webp"
+    ],
+    [
+      "Connor Colby",
+      "OL · 49ers",
+      "",
+      "/clients/card/colby.webp"
+    ],
+    [
+      "Charlie Heck",
+      "OL · Dolphins",
+      "",
+      "/clients/card/heck.webp"
+    ],
+    [
+      "Jay Higgins",
+      "LB · Ravens",
+      "",
+      "/clients/card/higgins.webp"
+    ],
+    [
+      "Kaden Wetjen",
+      "WR · Steelers",
+      "",
+      "/clients/card/wetjen.webp"
+    ]
+  ],
+  "rosterAll": [
+    [
+      "Sebastian Castro",
+      "DB · Steelers"
+    ],
+    [
+      "Connor Colby",
+      "OL · 49ers"
+    ],
+    [
+      "Charlie Heck",
+      "OL · Dolphins"
+    ],
+    [
+      "Jay Higgins",
+      "LB · Ravens"
+    ],
+    [
+      "Amani Hooker",
+      "DB · Titans"
+    ],
+    [
+      "Anthony Nelson",
+      "DE · Buccaneers"
+    ],
+    [
+      "Kristian Welch",
+      "LB · Packers"
+    ],
+    [
+      "Kaden Wetjen",
+      "WR · Steelers"
+    ],
+    [
+      "Hunter Wohler",
+      "DB · Colts"
+    ]
+  ],
+  "contact": {
+    "name": "Jack",
+    "phone": "(732) 675-0705",
+    "phoneE164": "+17326750705",
+    "email": "jacktabb@nfladvisor.com"
+  },
+  "alertTo": [
+    "jacktabb@nfladvisor.com"
+  ],
+  "quotes": [],
+  "draftMoments": [],
+  "parentQA": [
+    {
+      "q": "Who answers at 2 a.m.?",
+      "a": "Jack, then Ryan. Both have Zach's number. No account manager, no call center. We stay mid-size so he's never in a bigger client's shadow."
+    },
+    {
+      "q": "How do fees work?",
+      "a": "The NFLPA caps agent fees at 3% of the playing contract, and ours go in writing before anything is signed. Nothing is paid up front, and fees are only owed on money he actually receives."
+    },
+    {
+      "q": "How do you protect what he earns?",
+      "a": "Ryan negotiates the guarantees and injury language. We screen every advisor before he meets them, coordinate taxes, set up disability insurance and build a year-one budget. A good first contract is only the start."
+    },
+    {
+      "q": "What happens if he gets hurt?",
+      "a": "Injury settlements, grievances and second opinions are ours to handle. Disability coverage is in place before the first snap."
+    },
+    {
+      "q": "What if he's not drafted where we hope?",
+      "a": "It happens, and it isn't the end. Kristian Welch signed with us as an undrafted free agent in 2020 and has played six NFL seasons. The slot decides the first contract; preparation decides the second."
+    },
+    {
+      "q": "Who are you, really?",
+      "a": "In business since 1986, with six clients who became the highest paid at their position. Jack Tabb played in the NFL, and Ryan Hays is a licensed attorney. We're happy to connect you with current client families."
+    }
+  ],
+  "handle": [
+    [
+      "Contract",
+      "Rookie deal, extensions, guarantees, fine appeals, grievances. Ryan negotiates the language and guarantees."
+    ],
+    [
+      "Money",
+      "Budget in year one. Every advisor and money manager screened before you meet them."
+    ],
+    [
+      "Taxes",
+      "Multi-state filings coordinated. You sign; you don't chase."
+    ],
+    [
+      "Insurance",
+      "Disability policy in place before the first snap. Second medical opinions on us to arrange."
+    ],
+    [
+      "The move",
+      "Relocation, housing, car, travel. You land in a city with a place to live."
+    ],
+    [
+      "Media",
+      "Interview prep, press, social. Nothing you say gets you in trouble."
+    ],
+    [
+      "Training",
+      "Off-season plans, trainer access, recovery. Every year, not just the draft."
+    ],
+    [
+      "After",
+      "Post-career benefits filed, planning done. The career ends; the security doesn't."
+    ]
+  ],
+  "cta": {
+    "label": "Set up a meeting",
+    "sms": "Hey Jack, it's Zach. I'd like to set up a time to meet."
+  },
+  "unlocked": [],
+  "ask": {
+    "h": "Let's sit down and walk it through",
+    "lede": "This page is the outline. In person we'll walk you from senior season to draft night and into your second contract: where you train, what your slot could be worth, who handles what. Bring your family and your questions."
+  },
+  "comp": null,
+  "training": null,
+  "shareImage": "/recruits/zach-lohavichan/share-1.jpg",
+  "ogFor": "Prepared for Zach and his family",
+  "copy": [],
+  "intro": true,
+  "hide": [
+    "#train"
+  ],
+  "wallFirst": [
+    "Anthony Nelson",
+    "Amani Hooker",
+    "Tucker Kraft",
+    "George Kittle"
+  ]
+}
