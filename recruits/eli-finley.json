@@ -543,5 +543,24 @@
       "/clients/card/helm.webp"
     ],
     "text": "<b>The JB tight end room.</b> Kittle and Kraft: #1 and #3 in TE pay. LaPorta and Ferguson: Pro Bowlers. Helm: Titans rookie TE record."
-  }
+  },
+  "numbers": [
+    [
+      "462",
+      "receiving yards through Oct. 24 · 39 catches, 5 TD"
+    ],
+    [
+      "No. 1",
+      "among Sun Belt tight ends in catches, yards and TD catches"
+    ],
+    [
+      "3rd",
+      "among all FBS tight ends in receiving yards"
+    ],
+    [
+      "10",
+      "catches vs. Old Dominion on Oct. 24, a career high · 128 yards"
+    ]
+  ],
+  "numbersSrc": "Through Oct. 24 · Louisiana Tech Athletics, cfbstats (NCAA stats)"
 }
