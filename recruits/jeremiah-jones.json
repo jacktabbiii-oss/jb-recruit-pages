@@ -99,15 +99,15 @@
     "cards": [
       [
         "You can have an agent now",
-        "Starting in 2026-27, NCAA rules let recruits hire agents before they enroll and keep their eligibility, for every part of the deal, including revenue share with the school."
+        "Since April 2026, NCAA rules let recruits sign with an agent before they enroll and keep their eligibility, for NIL deals and, as reported, for negotiating revenue share with the school."
       ],
       [
         "Revenue share",
-        "Schools can pay players directly, up to $21.3 million per school this year. What a freshman lineman gets, and on what terms, is negotiated."
+        "Schools can pay players directly, up to $21.58 million per school in 2026-27. What a freshman lineman gets, and on what terms, is negotiated."
       ],
       [
         "High school NIL in Indiana",
-        "The IHSAA now allows NIL deals, but no school name, logo or uniform, and your school must be told within 48 hours. Break those and you can lose eligibility."
+        "Since May 2026 the IHSAA allows \"personal branding\" deals. No school name, logo, uniform or facilities, no gambling, alcohol, tobacco, cannabis or weapons, and your athletic director told in writing within 48 hours. A violation can mean up to 365 days ineligible."
       ],
       [
         "Local and national deals",
@@ -118,19 +118,19 @@
         "Buyouts, transfer clauses, what happens if you get hurt or the staff changes. Ryan reads every line before anything is signed."
       ]
     ],
-    "src": "As of Oct. 2026 · NCAA, IHSAA, Footballscoop, Indiana Public Media"
+    "src": "As of Oct. 2026 · NCAA, IHSAA Rule 5-7, College Sports Commission, Indiana Public Media"
   },
   "timeline": [
     {
       "when": "Now",
       "what": "Senior season",
-      "jb": "Jack at games. Film notes. Any NIL deal read first and reported to your school within 48 hours.",
+      "jb": "Jack at games. Film notes. Any deal read first and reported to your athletic director in writing within 48 hours.",
       "now": true
     },
     {
-      "when": "Dec. 3",
+      "when": "Dec. 2–4",
       "what": "Early signing period",
-      "jb": "<b>Decision point.</b> Your agreement with Indiana read and negotiated before you sign."
+      "jb": "<b>Decision point.</b> Indiana's written offer negotiated before, signed in this window. The NLI no longer exists; this is the agreement that counts."
     },
     {
       "when": "Winter to spring",
@@ -202,7 +202,7 @@
     ],
     [
       "High school NIL rules",
-      "No school name, logo or uniform, and the school told within 48 hours. One mistake can cost eligibility; we handle it."
+      "IHSAA Rule 5-7: no school name, logo, uniform or facilities, restricted categories, and the athletic director told in writing within 48 hours. A violation can mean up to 365 days ineligible; we handle it."
     ],
     [
       "The next four years",
@@ -212,7 +212,7 @@
   "parentQA": [
     {
       "q": "Is this allowed for a high schooler?",
-      "a": "Yes. Starting in 2026-27, NCAA rules let recruits hire agents before they enroll and keep their eligibility. In Indiana, the IHSAA allows NIL deals as long as there's no school name, logo or uniform, and the school is told within 48 hours."
+      "a": "Yes. Since April 2026, NCAA rules let recruits sign with an agent before they enroll and keep their eligibility. In Indiana, the IHSAA has allowed \"personal branding\" deals since May 2026: no school name, logo, uniform or facilities, nothing in gambling, alcohol, tobacco, cannabis or weapons, and the athletic director told in writing within 48 hours. Indiana has no state NIL law for high schoolers; it does require any agent he signs with to be registered with the Attorney General, and gives him 14 days to cancel that agreement."
     },
     {
       "q": "What does it cost?",
@@ -244,11 +244,11 @@
     "steps": [
       [
         "Senior season",
-        "Any NIL deal read first, reported to his school within 48 hours."
+        "Any deal read first, reported to his athletic director in writing within 48 hours."
       ],
       [
-        "Dec. 3",
-        "Early signing period opens. His agreement with Indiana negotiated before he signs."
+        "Dec. 2–4",
+        "Early signing period. Indiana's written offer negotiated before, signed in this window."
       ],
       [
         "Spring",
