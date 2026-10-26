@@ -32,6 +32,12 @@ No cookies, no analytics vendors, nothing shared with third parties.
 - `college` — freshly in college. "The plan" sliders, three-year timeline, NIL/brand. Transfer is never the frame; it appears once, in the parents' Q&A, as a protocol if needed. Start from `college-example.json`.
 - `hs` — high school. "The decision" sliders, recruiting timeline (camps, offers, visits, signing), parents-heavy. Start from `hs-example.json`. HS NIL rules vary by state; Ryan confirms before any send.
 
+## The intro (`"intro": true`)
+Every page can start as an intro: the first look before a meeting, same link, same tracking. It shows the room, the record, who we are, the people and the client quotes, plus film if there is any. It hides the numbers, the calculator or sliders, the timeline, the comp, the family tab and the ask; the close says the plan is a conversation. After the meeting, remove `"intro"` (or set it `false`) and the full page in its mode shows at the same link. `"introAsk": {"h","lede"}` overrides the closing lines. See `intro-example.json`.
+
+## The record
+`#record` (template) is the position-agnostic sell on every page: three deals that set a market (Kittle, Kraft, Hooker) and four careers that lasted (Nelson, Welch, Higgins, Colby). The facts live in one place in `template.html` (`RECORD`); update there when a deal changes. A page can override with `"record": {top, long}` or hide it with `"record": false`.
+
 Per-player knobs in every JSON: `contact` (Jack or Ryan: name, phone, email; drives the button, the contact block and the pre-filled text), `cta`, `ask` (the closing headline and line), `alertTo` (who gets the open/summary emails), `unlocked` (add `elevate`, `handle`, `money`, `brand`, `plan` after the meeting to open the held-back parts), and `copy` (`[[selector, html], …]` to override any heading or lede).
 
 ## Before the first send

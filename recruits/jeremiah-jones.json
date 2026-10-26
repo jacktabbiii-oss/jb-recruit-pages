@@ -36,7 +36,7 @@
       "/clients/card/kraft.webp",
       "/clients/card/laporta.webp"
     ],
-    "text": "<b>JB's offensive linemen:</b> Connor Colby (49ers) and Charlie Heck (Buccaneers). Six JB clients have been the highest paid at their position."
+    "text": "<b>JB's offensive linemen:</b> Connor Colby (49ers) and Charlie Heck (Dolphins). Six JB clients have been the highest paid at their position."
   },
   "plays": [],
   "reel": {
@@ -224,7 +224,7 @@
     },
     {
       "q": "Who are you, really?",
-      "a": "JB Sports has represented NFL players since 1986, including offensive linemen Connor Colby (49ers) and Charlie Heck (Buccaneers). Six clients have become the highest paid at their position. Jack Tabb played at North Carolina and coached at Michigan State, so he knows how a college staff develops a lineman."
+      "a": "JB Sports has represented NFL players since 1986, including offensive linemen Connor Colby (49ers) and Charlie Heck (Dolphins). Six clients have become the highest paid at their position. Jack Tabb played at North Carolina and coached at Michigan State, so he knows how a college staff develops a lineman."
     }
   ],
   "included": [
@@ -286,9 +286,19 @@
     ],
     [
       "Charlie Heck",
-      "OL · Buccaneers",
+      "OL · Dolphins",
       "",
       "/clients/card/heck.webp"
+    ],
+    [
+      "Amani Hooker",
+      "DB · Titans",
+      "",
+      "/clients/card/hooker.webp",
+      [
+        "$48.6M",
+        "3 yrs · $29M guaranteed · Sept 2025"
+      ]
     ],
     [
       "Tucker Kraft",
@@ -395,12 +405,6 @@
       "/clients/card/higgins.webp"
     ],
     [
-      "Amani Hooker",
-      "DB · Titans",
-      "",
-      "/clients/card/hooker.webp"
-    ],
-    [
       "Kaden Wetjen",
       "WR · Steelers",
       "",
@@ -472,7 +476,7 @@
     ],
     [
       "Charlie Heck",
-      "OL · Buccaneers"
+      "OL · Dolphins"
     ],
     [
       "Jay Higgins",

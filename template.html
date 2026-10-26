@@ -356,6 +356,21 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
 .whofacts .v{font-family:var(--display);font-size:2rem;font-weight:900;line-height:1}
 .whofacts .k{font-size:.8rem;color:var(--muted);line-height:1.3;margin-top:2px}
 @media (max-width:380px){.who{grid-template-columns:1fr}.who .ph-frame.tall{aspect-ratio:4/3}}
+/* the record: three deals that set a market, four careers that lasted (same facts on every page, any position) */
+.record{margin-top:18px}
+.record .hdr{display:block;font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin:16px 0 8px}
+.record .hdr:first-child{margin-top:0}
+.record .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.record .grid.four{grid-template-columns:repeat(2,1fr)}
+.record .grid>div{background:var(--panel);padding:14px 12px;min-width:0;display:flex;gap:10px;align-items:flex-start}
+.record .grid img{width:44px;height:44px;border-radius:50%;object-fit:cover;object-position:top;flex:0 0 44px;border:1px solid var(--line)}
+.record .nm{font-family:var(--display);font-size:1.15rem;font-weight:800;text-transform:uppercase;letter-spacing:.02em;line-height:1.05}
+.record .tm{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+.record .v{font-family:var(--display);font-size:1.9rem;font-weight:900;line-height:1;color:var(--blue);margin-top:8px}
+.record .k{font-size:.84rem;color:var(--muted);line-height:1.35;margin-top:5px}
+@media (max-width:640px){.record .grid{grid-template-columns:1fr}.record .grid.four{grid-template-columns:1fr}}
+body[data-intro] .switch #tabParents,body[data-intro] [data-aud="parents"],body[data-intro] .handoff{display:none}
+section[hidden]{display:none!important}
 .person h3{margin-bottom:2px}
 .person .role{font-family:var(--mono);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
 .person p{font-size:.96rem;color:var(--muted);margin-top:6px;max-width:36em}
@@ -590,7 +605,7 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
     <div class="strip" id="strip"></div>
   </section>
 
-  <section class="reveal">
+  <section class="reveal" id="who">
     <span class="eyebrow">02 · Who we are</span>
     <h2 id="whoH">A former tight end, a contract lawyer, and forty years</h2>
     <p class="lede muted" id="whoLede">Mid-size by choice. No shareholders, no quotas, nobody above you on a call sheet. Jack played and coached the position. Ryan negotiates the contracts.</p>
@@ -680,6 +695,18 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
     <div class="marquee" aria-label="JB Sports clients"><div class="row" data-dir="1"><div class="track" id="trackA"></div></div><div class="row" data-dir="-1"><div class="track" id="trackB"></div></div></div>
     <div class="wallnav"><button type="button" data-d="-1" aria-label="Scroll clients back">&#8249;</button><button type="button" data-d="1" aria-label="Scroll clients forward">&#8250;</button><span>Swipe, drag or tap the arrows to browse</span></div>
     <div class="roster" id="roster"></div>
+  </section>
+
+  <section class="reveal" id="record">
+    <span class="eyebrow">00 · The record</span>
+    <h2 id="recordH">Three deals.<br>Four careers.</h2>
+    <p class="lede muted" id="recordLede">Three that set a market, four that lasted. The position doesn't decide which one you are; the work does, and the same two people do it at every position.</p>
+    <div class="record">
+      <span class="hdr">The ceiling</span>
+      <div class="grid" id="recordTop"></div>
+      <span class="hdr">The long haul</span>
+      <div class="grid four" id="recordLong"></div>
+    </div>
   </section>
 
   <section class="reveal" id="train">
@@ -899,6 +926,21 @@ const cardHTML=w=>`<div class="card ${w[2]||''}"><div class="ph-frame${w[3]?' cu
 /* proof first: the client room is the first thing a recruit sees after his own name (proofFirst:false to turn off) */
 /* TE: the room first, then the comp. Other positions: the comp (a JB client at his position) leads, then the roster that gets paid */
 if(RECRUIT.proofFirst!==false){const pr=$('#proof'),ath=document.querySelector('[data-aud="athlete"]');if(pr&&ath){ath.insertBefore(pr,ath.firstElementChild);const cs=$('#comp');const compFirst=RECRUIT.compFirst!=null?RECRUIT.compFirst:RECRUIT.positionGroup!=='TE';if(cs){if(compFirst)pr.before(cs);else pr.after(cs)}}}
+/* the record: the client facts that hold at any position. Deals and paths are public record; update here when one changes. */
+{const RECORD=RECRUIT.record||{top:[
+   ['George Kittle','TE · 49ers','/clients/card/kittle.webp','$76.4M','4 yrs · $40M guaranteed · Apr 2025. Set the TE market in 2020; highest paid at the position again in 2025.'],
+   ['Tucker Kraft','TE · Packers','/clients/card/kraft.webp','$75M','4 yrs · $26.5M signing bonus · Sept 2026. Round 3 pick in 2023, extended before his rookie deal ran out.'],
+   ['Amani Hooker','S · Titans','/clients/card/hooker.webp','$48.6M','3 yrs · $29M guaranteed · Sept 2025. His second extension in Tennessee, after a career-high five interceptions in 2024.']],
+  long:[
+   ['Anthony Nelson','DE · Buccaneers','/clients/card/nelson.webp','Round 4 in 2019. Three contracts with the same team since, the latest two years, up to $12M, in 2025.'],
+   ['Kristian Welch','LB · Packers','/clients/card/welch.webp','Six seasons in the league, most of them on special teams. Re-signed with Green Bay in March 2026.'],
+   ['Jay Higgins','LB · Ravens','/clients/card/higgins.webp','Unanimous All-American, undrafted in 2025. Signed with Baltimore and made the 53 as a rookie.'],
+   ['Connor Colby','OL · 49ers','/clients/card/colby.webp','Pick 249 of 257 in 2025. A seventh-round pick still gets a four-year deal and a bonus. The first contract is the floor.']]};
+ const sec=$('#record');if(RECORD===false||!sec){if(sec)sec.remove()}else{
+  if(RECORD.h)$('#recordH').innerHTML=RECORD.h;if(RECORD.lede)$('#recordLede').textContent=RECORD.lede;
+  $('#recordTop').innerHTML=RECORD.top.map(r=>`<div><img src="${r[2]}" alt="" loading="lazy"><div><div class="nm">${r[0]}</div><div class="tm">${r[1]}</div><div class="v">${r[3]}</div><div class="k">${r[4]}</div></div></div>`).join('');
+  $('#recordLong').innerHTML=RECORD.long.map(r=>`<div><img src="${r[2]}" alt="" loading="lazy"><div><div class="nm">${r[0]}</div><div class="tm">${r[1]}</div><div class="k">${r[3]}</div></div></div>`).join('');
+  const pr=$('#proof');if(pr)pr.after(sec)}}
 /* non-TE recruits: their own position group leads the wall */
 /* non-TE: his position first, then the big contracts, then the other positions, then the rest of the TE room, so it doesn't read as a TE-only shop */
 const WALL=RECRUIT.positionGroup==='TE'?RECRUIT.wall:[...RECRUIT.wall].map((w,i)=>[w,(w[1].startsWith(RECRUIT.positionGroup)?0:w[4]?1:!w[1].startsWith('TE')?2:3)*100+i]).sort((a,b)=>a[1]-b[1]).map(x=>x[0]);
@@ -976,9 +1018,24 @@ if(RECRUIT.yr1){$('#yr1H').textContent=RECRUIT.yr1.h||'Year one, in order';$('#y
 /* ============ PAGE MODE ============ */
 document.body.dataset.pagemode=RECRUIT.mode||'draft';
 if(RECRUIT.ask){ if(RECRUIT.ask.h)$('#askH').textContent=RECRUIT.ask.h; if(RECRUIT.ask.lede)$('#askLede').textContent=RECRUIT.ask.lede; }
+/* ============ INTRO ============
+   "intro": true in the JSON. The first look, before a meeting: who we are, the room, the record, the people, the quotes.
+   No numbers, no calculator or sliders, no timeline, no comp, no family tab, no ask. Film stays if there is any.
+   Same link, same tracking. Set "intro": false (or remove it) after the meeting and the full page shows in its mode.
+   Optional: "introAsk": {"h": "...", "lede": "..."} for the closing lines. */
+if(RECRUIT.intro){document.body.dataset.intro='1';
+  const ath=document.querySelector('[data-aud="athlete"]');const keep=new Set(['proof','record','who']);
+  ath.querySelectorAll(':scope>section').forEach(sec=>{if(keep.has(sec.id))return;
+    if(sec.contains($('#plays'))){if(RECRUIT.plays.length||REEL){sec.querySelectorAll('.nums,.nums-src').forEach(x=>x.remove());return}}
+    sec.hidden=true});
+  const say=document.querySelector('.saywall');if(say){const s=say.closest('section');if(s)$('#who').after(s)}
+  const A=RECRUIT.introAsk||{},who=(RECRUIT.contact&&RECRUIT.contact.name)||'Jack';
+  document.querySelector('.ask .eyebrow').textContent='Where this goes';
+  $('#askH').textContent=A.h||"That's who we are";
+  $('#askLede').textContent=A.lede||`No pitch on this page. What we'd build for you, the plan, the numbers and who handles what, is a conversation, and ${who} is one text away whenever you want to have it.`;}
 (RECRUIT.copy||[]).forEach(([sel,html])=>{const el=document.querySelector(sel);if(el)el.innerHTML=html});
-/* renumber the athlete-view eyebrows in on-page order, skipping sections hidden for this mode */
-{let n=0;document.querySelectorAll('[data-aud="athlete"]>section').forEach(sec=>{const m=sec.dataset.mode;if(m&&!m.split(' ').includes(RECRUIT.mode))return;const e=sec.querySelector(':scope>.eyebrow');if(e&&/^\d+\s·/.test(e.textContent)){n++;e.textContent=e.textContent.replace(/^\d+/,String(n).padStart(2,'0'))}})}
+/* renumber the athlete-view eyebrows in on-page order, skipping sections hidden for this mode or for the intro */
+{let n=0;document.querySelectorAll('[data-aud="athlete"]>section').forEach(sec=>{if(sec.hidden)return;const m=sec.dataset.mode;if(m&&!m.split(' ').includes(RECRUIT.mode))return;const e=sec.querySelector(':scope>.eyebrow');if(e&&/^\d+\s·/.test(e.textContent)){n++;e.textContent=e.textContent.replace(/^\d+/,String(n).padStart(2,'0'))}})}
 if(RECRUIT.mode==='college'||RECRUIT.mode==='hs'){
   const F=RECRUIT.fit||[["Playing time now","Early snaps vs. developing behind a vet"],["Development","Position coach, scheme, strength staff"],["NIL / compensation","What the collective and the market will do"],["Distance from home","Family in the stands"],["The degree","Program, support, finishing"]];
   const rows=$('#fitRows'); rows.innerHTML=F.map((f,i)=>`<div><label for="fit${i}"><b>${f[0]}</b><span id="fitv${i}">3 / 5</span></label><input type="range" id="fit${i}" min="1" max="5" value="3"><div class="muted" style="font-size:.86rem">${f[1]}</div></div>`).join('');
@@ -1042,7 +1099,7 @@ function setView(v){document.body.dataset.view=v;
     if(v==='parents'){h.textContent="Let's all get on a call";l.textContent=`${RECRUIT.first}, your family, and our team: thirty minutes to walk through the plan, the numbers, and every question you have.`}else{h.textContent=ASK0.h;l.textContent=ASK0.l}}}
   document.querySelectorAll('.switch button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===v)));}
 document.querySelectorAll('.switch button').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.view)));
-let v='athlete'; if(location.hash==='#parents'||new URLSearchParams(location.search).get('view')==='parents')v='parents'; setView(v);
+let v='athlete'; if(!RECRUIT.intro&&(location.hash==='#parents'||new URLSearchParams(location.search).get('view')==='parents'))v='parents'; setView(v);
 
 /* ============ TEXT JACK ============
    In the preview this scrolls to the number. On the live site, swap for
