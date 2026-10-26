@@ -66,15 +66,96 @@
     ],
     "text": "<b>The JB tight end room.</b> Kittle and Kraft: #1 and #3 in TE pay. LaPorta and Ferguson: Pro Bowlers. Helm: Titans rookie TE record."
   },
-  "plays": [],
+  "plays": [
+    {
+      "k": "Clip 01 · Sideline catch",
+      "t": "",
+      "n": "",
+      "clip": "/recruits/marshall-pritchett/film-ck6q/clip1.mp4",
+      "poster": "/recruits/marshall-pritchett/film-ck6q/clip1.jpg",
+      "len": "0:25"
+    },
+    {
+      "k": "Clip 02 · Back shoulder",
+      "t": "",
+      "n": "",
+      "clip": "/recruits/marshall-pritchett/film-ck6q/clip2.mp4",
+      "poster": "/recruits/marshall-pritchett/film-ck6q/clip2.jpg",
+      "len": "0:20"
+    },
+    {
+      "k": "Clip 03 · Too big",
+      "t": "",
+      "n": "",
+      "clip": "/recruits/marshall-pritchett/film-ck6q/clip3.mp4",
+      "poster": "/recruits/marshall-pritchett/film-ck6q/clip3.jpg",
+      "len": "0:14"
+    },
+    {
+      "k": "Clip 04 · Y pop, then the celly",
+      "t": "",
+      "n": "",
+      "clip": "/recruits/marshall-pritchett/film-ck6q/clip4.mp4",
+      "poster": "/recruits/marshall-pritchett/film-ck6q/clip4.jpg",
+      "len": "0:16"
+    },
+    {
+      "k": "Clip 05 · Two-read",
+      "t": "",
+      "n": "",
+      "clip": "/recruits/marshall-pritchett/film-ck6q/clip5.mp4",
+      "poster": "/recruits/marshall-pritchett/film-ck6q/clip5.jpg",
+      "len": "0:15"
+    },
+    {
+      "k": "Clip 06 · Seal the edge",
+      "t": "",
+      "n": "",
+      "clip": "/recruits/marshall-pritchett/film-ck6q/clip6.mp4",
+      "poster": "/recruits/marshall-pritchett/film-ck6q/clip6.jpg",
+      "len": "0:09"
+    },
+    {
+      "k": "Clip 07 · Backside cutoff",
+      "t": "",
+      "n": "",
+      "clip": "/recruits/marshall-pritchett/film-ck6q/clip7.mp4",
+      "poster": "/recruits/marshall-pritchett/film-ck6q/clip7.jpg",
+      "len": "0:07"
+    },
+    {
+      "k": "Clip 08 · Slide block",
+      "t": "",
+      "n": "",
+      "clip": "/recruits/marshall-pritchett/film-ck6q/clip8.mp4",
+      "poster": "/recruits/marshall-pritchett/film-ck6q/clip8.jpg",
+      "len": "0:10"
+    },
+    {
+      "k": "Clip 09 · Split two",
+      "t": "",
+      "n": "",
+      "clip": "/recruits/marshall-pritchett/film-ck6q/clip9.mp4",
+      "poster": "/recruits/marshall-pritchett/film-ck6q/clip9.jpg",
+      "len": "0:13"
+    },
+    {
+      "k": "Clip 10 · Kick return · the shot",
+      "t": "",
+      "n": "",
+      "clip": "/recruits/marshall-pritchett/film-ck6q/clip10.mp4",
+      "poster": "/recruits/marshall-pritchett/film-ck6q/clip10.jpg",
+      "len": "0:18"
+    }
+  ],
   "reel": {
     "clip": null,
     "len": ""
   },
   "draftMoments": [],
   "quotes": [],
-  "filmSoon": "Where you stand today",
-  "fieldLede": "Film cut by Jack is on the way. Until then, the numbers.",
+  "filmSoon": null,
+  "fieldLede": null,
   "numbers": [
     [
       "237",
@@ -568,87 +649,5 @@
       ]
     ],
     "foot": "LaPorta was a Pro Bowler in year one. The two years between now and your draft are where that gets built, and that's what this page is about."
-  },
-  "pendingPlays": [
-    {
-      "k": "Clip 01 · Sideline catch",
-      "t": "",
-      "n": "",
-      "clip": null,
-      "len": "0:35",
-      "_file": "sideline-catch.mp4"
-    },
-    {
-      "k": "Clip 02 · Back shoulder",
-      "t": "",
-      "n": "",
-      "clip": null,
-      "len": "0:25",
-      "_file": "back-shoulder.mp4"
-    },
-    {
-      "k": "Clip 03 · Big body",
-      "t": "",
-      "n": "",
-      "clip": null,
-      "len": "0:21",
-      "_file": "big-body.mp4"
-    },
-    {
-      "k": "Clip 04 · Finish, then the celly",
-      "t": "",
-      "n": "",
-      "clip": null,
-      "len": "0:25",
-      "_file": "elite-celly.mp4"
-    },
-    {
-      "k": "Clip 05 · Seal the edge",
-      "t": "",
-      "n": "",
-      "clip": null,
-      "len": "0:20",
-      "_file": "seal-the-edge.mp4"
-    },
-    {
-      "k": "Clip 06 · Cut off the 7-tech",
-      "t": "",
-      "n": "",
-      "clip": null,
-      "len": "0:12",
-      "_file": "cut-off-7-tech.mp4"
-    },
-    {
-      "k": "Clip 07 · Cross block",
-      "t": "",
-      "n": "",
-      "clip": null,
-      "len": "0:16",
-      "_file": "cross-block.mp4"
-    },
-    {
-      "k": "Clip 08 · Split zone",
-      "t": "",
-      "n": "",
-      "clip": null,
-      "len": "0:22",
-      "_file": "split-2.mp4"
-    },
-    {
-      "k": "Clip 09 · Snap down",
-      "t": "",
-      "n": "",
-      "clip": null,
-      "len": "0:27",
-      "_file": "snap-down.mp4"
-    },
-    {
-      "k": "Clip 10 · Kick return · the shot",
-      "t": "",
-      "n": "",
-      "clip": null,
-      "len": "0:25",
-      "_file": "kor-shot.mp4"
-    }
-  ]
+  }
 }
