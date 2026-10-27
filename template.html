@@ -356,6 +356,17 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
 .whofacts div{background:var(--panel);padding:10px 12px;min-width:0}
 .whofacts .v{font-family:var(--display);font-size:2rem;font-weight:900;line-height:1}
 .whofacts .k{font-size:.8rem;color:var(--muted);line-height:1.3;margin-top:2px}
+/* creed: the agency's stance, in its own words */
+.creed{margin-top:18px;border-left:3px solid var(--blue);padding:4px 0 4px 16px}
+.creed b{display:block;font-family:var(--display);font-size:1.6rem;font-weight:900;text-transform:uppercase;letter-spacing:.01em;line-height:1.05;color:var(--paper)}
+.creed p{margin:8px 0 0;color:var(--muted);font-size:1rem;line-height:1.5;max-width:36em}
+.calm{margin:18px 0 0;font-family:var(--display);font-size:1.35rem;font-weight:800;line-height:1.2;color:var(--paper);max-width:28em}
+.calm span{color:var(--blue)}
+.pillars{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pillars>div{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--blue);padding:14px 14px 14px 16px}
+.pillars h4{margin:0 0 6px;font-family:var(--display);font-size:1.15rem;font-weight:800;text-transform:uppercase;letter-spacing:.02em;line-height:1}
+.pillars p{margin:0;font-size:.94rem;color:var(--muted);line-height:1.45}
+@media (max-width:640px){.pillars{grid-template-columns:1fr}}
 @media (max-width:380px){.who{grid-template-columns:1fr}.who .ph-frame.tall{aspect-ratio:4/3}}
 /* the record: three deals that set a market, four careers that lasted (same facts on every page, any position) */
 .record{margin-top:18px}
@@ -619,6 +630,7 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
         <div><div class="v">50<span style="font-size:.6em">%</span></div><div class="k">the move in the TE market with the Kittle deal</div></div>
       </div>
     </div>
+    <div class="creed"><b>Protect first. Promote always.</b><p>We help football families slow the game down. We don't chase quick deals. The best decisions come from patience and information, not panic, pressure or ego.</p></div>
   </section>
 
   <section class="reveal" data-mode="draft">
@@ -744,6 +756,12 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
     <span class="eyebrow">08 · The brand side</span>
     <h2 id="brandH">Built as you go,<br>not after you blow up</h2>
     <p class="lede muted" id="brandLede">Performance comes first, but brand work starts the day you sign. Right-sized deals early, a name people can find, a story that's yours. Kittle, LaPorta and Kraft all started small with us.</p>
+    <div class="pillars" id="pillars">
+      <div><h4>Your story</h4><p>The values, voice and vision that make you worth following, found and told in your words.</p></div>
+      <div><h4>Performance and academics</h4><p>Your stats and your GPA are selling points. We package the whole profile for the partners worth having.</p></div>
+      <div><h4>Audience and reach</h4><p>Your social following and fan base, turned into negotiating power instead of a number on a screen.</p></div>
+      <div><h4>Brand alignment</h4><p>Only brands that reflect your values. Your reputation is protected first; the deal value follows.</p></div>
+    </div>
     <div class="brandstrip" aria-label="Client endorsement work">
       <div><img src="/brand/panda.webp" alt="George Kittle, Panda Express" loading="lazy"><span>Kittle · Panda Express</span></div>
       <div><img src="/brand/kraft.webp" alt="Tucker Kraft, Kraft Mac &amp; Cheese" loading="lazy"><span>Kraft · Kraft Mac &amp; Cheese</span></div>
@@ -765,6 +783,7 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
     <span class="eyebrow" id="famEyebrow"></span>
     <h2>The questions families ask us</h2>
     <p class="lede muted" id="parentsLede">Straight answers. Ryan Hays, a licensed attorney and NFL contract advisor since 2012, handles the contract and protection side for every client.</p>
+    <p class="calm">Families don't need another loud voice. <span>They need a calm one.</span></p>
     <div class="reads" id="reads" aria-label="Three things Ryan reads first">
       <div><span class="n">01</span><h4>Guarantees</h4><p>On a mid-round deal the signing bonus is the locked-in money. Near the top of a round, part of the early salary can be guaranteed too, and we push for it.</p></div>
       <div><span class="n">02</span><h4>The year-four raise</h4><p>Players drafted in rounds 3 to 7 can earn a raise in the last year of their rookie deal based on playing time. Getting on the field early pays twice.</p></div>
@@ -788,7 +807,7 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
     <span class="eyebrow">What's included</span>
     <h2>Everything we handle</h2>
     <ul class="list" id="included">
-      <li>Contract negotiation and extensions</li><li>Guarantees and injury protection</li><li>Grievances, fine appeals, trade requests</li><li>Second medical opinions</li><li>Disability insurance</li><li>Free agency and promotion</li><li>Financial guidance and education</li><li>Screening of advisors and money managers</li><li>Tax filing coordination</li><li>Insurance counseling</li><li>Relocation and travel</li><li>Media relations</li><li>Post-career benefits and planning</li><li>Legal assistance</li>
+      <li>Contract negotiation and extensions</li><li>Guarantees and injury protection</li><li>Grievances, fine appeals, trade requests</li><li>Second medical opinions</li><li>Disability insurance</li><li>Free agency and promotion</li><li>Financial guidance and education</li><li>Screening of advisors and money managers</li><li>Tax filing coordination</li><li>Insurance counseling</li><li>Relocation and travel</li><li>Media relations and media training</li><li>Introductions to trusted football media</li><li>Public announcement planning</li><li>Post-career transition and benefits planning</li><li>Trusted ancillary partners, vetted</li><li>Legal assistance</li>
     </ul>
     <div class="yr1" aria-label="Year one, in order">
       <span class="hdr" id="yr1H">Year one, in order</span>
@@ -930,7 +949,7 @@ if(RECRUIT.proofFirst!==false){const pr=$('#proof'),ath=document.querySelector('
 /* the record: the client facts that hold at any position. Deals and paths are public record; update here when one changes. */
 {const RECORD=RECRUIT.record||{top:[
    ['George Kittle','TE · 49ers','/clients/card/kittle.webp','$76.4M','4 yrs · $40M guaranteed · Apr 2025. Set the TE market in 2020; highest paid at the position again in 2025.'],
-   ['Tucker Kraft','TE · Packers','/clients/card/kraft.webp','$75M','4 yrs · $26.5M signing bonus · Sept 2026. Round 3 pick in 2023, extended before his rookie deal ran out.'],
+   ['Tucker Kraft','TE · Packers','/clients/card/kraft.webp','$75M','Up to $92M, the most ever for a TE · $26.5M signing bonus · Sept 2026. Round 3 pick in 2023, extended before his rookie deal ran out.'],
    ['Amani Hooker','S · Titans','/clients/card/hooker.webp','$48.6M','3 yrs · $29M guaranteed · Sept 2025. His second extension in Tennessee, after a career-high five interceptions in 2024.']],
   long:[
    ['Anthony Nelson','DE · Buccaneers','/clients/card/nelson.webp','Round 4 in 2019. Three contracts with the same team since, the latest two years, up to $12M, in 2025.'],
@@ -992,7 +1011,7 @@ if(!isTE){
   {const f=document.querySelectorAll('.whofacts>div');if(f[3]){f[3].querySelector('.v').textContent='300+';f[3].querySelector('.k').textContent='contracts negotiated'}}
   $('#whoLede').textContent="Mid-size by choice. No shareholders, no quotas, nobody above you on a call sheet. Jack played in the league and coached. Ryan negotiates the contracts.";
   $('#proofH').textContent="A roster that gets paid";
-  $('#proofLede').textContent=RECRUIT.proofLede||"Six clients have been the highest paid at their position, and Tucker Kraft's $75M extension this September is the latest. The same two people negotiate every deal, at every position.";
+  $('#proofLede').textContent=RECRUIT.proofLede||"Six clients have been the highest paid at their position, and Tucker Kraft's extension this September, worth up to $92M, is the latest. The same two people negotiate every deal, at every position.";
   if(RECRUIT.proofH)$('#proofH').textContent=RECRUIT.proofH;
   {const st=document.querySelectorAll('#proof .stat>div');if(st[1]){st[1].querySelector('.v').innerHTML='40<span></span>';st[1].querySelector('.v').dataset.to='40';st[1].querySelector('.k').textContent='years representing NFL players'}}
   $('#trainH').textContent="Prepared the way Kittle, LaPorta and Kraft were";
@@ -1018,6 +1037,8 @@ if(RECRUIT.yr1){$('#yr1H').textContent=RECRUIT.yr1.h||'Year one, in order';$('#y
 
 /* ============ PAGE MODE ============ */
 document.body.dataset.pagemode=RECRUIT.mode||'draft';
+/* NIL brand pillars belong on college and high school pages; draft pages keep the short brand pitch */
+if(!['college','hs'].includes(RECRUIT.mode)){const pl=$('#pillars');if(pl)pl.remove()}
 if(RECRUIT.ask){ if(RECRUIT.ask.h)$('#askH').textContent=RECRUIT.ask.h; if(RECRUIT.ask.lede)$('#askLede').textContent=RECRUIT.ask.lede; }
 /* ============ INTRO ============
    "intro": true in the JSON. The first look, before a meeting: who we are, the room, the record, the people, the quotes.
@@ -1033,7 +1054,7 @@ if(RECRUIT.intro){document.body.dataset.intro='1';
   const A=RECRUIT.introAsk||{},who=(RECRUIT.contact&&RECRUIT.contact.name)||'Jack';
   document.querySelector('.ask .eyebrow').textContent='Where this goes';
   $('#askH').textContent=A.h||"That's who we are. Let's meet.";
-  $('#askLede').textContent=A.lede||`No pitch on this page. The plan for you, the numbers, who handles what: that's a conversation, and it's the one we'd like to have with you and your family. ${who} is one text away.`;}
+  $('#askLede').textContent=A.lede||`No pitch on this page. The plan for you, the numbers, who handles what: that's a conversation, and it's the one we'd like to have with you and your family. ${who} is one text away. Families don't need another loud voice. They need a calm one.`;}
 (RECRUIT.copy||[]).forEach(([sel,html])=>{const el=document.querySelector(sel);if(el)el.innerHTML=html});
 /* renumber the athlete-view eyebrows in on-page order, skipping sections hidden for this mode or for the intro */
 {let n=0;document.querySelectorAll('[data-aud="athlete"]>section').forEach(sec=>{if(sec.hidden)return;const m=sec.dataset.mode;if(m&&!m.split(' ').includes(RECRUIT.mode))return;const e=sec.querySelector(':scope>.eyebrow');if(e&&/^\d+\s·/.test(e.textContent)){n++;e.textContent=e.textContent.replace(/^\d+/,String(n).padStart(2,'0'))}})}
