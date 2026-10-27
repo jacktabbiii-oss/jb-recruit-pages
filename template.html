@@ -1111,9 +1111,9 @@ const CTA=RECRUIT.cta||{label:"Set up a meeting",sms:`Hey ${C.name}, it's ${RECR
 {const b=$('#shareParents');const url=location.origin+location.pathname+'?v=p#parents';
  $('#handH').textContent=`Send this to your ${RECRUIT.familyWord||'family'}`;
  b.addEventListener('click',async()=>{try{window.__jbShare&&window.__jbShare('parents')}catch(e){}
-   const data={title:`For the ${RECRUIT.last} family · JB Sports`,text:`Take a look at the section JB Sports put together for our family.`,url};
+   const data={title:`For the ${RECRUIT.last} family · JB Sports`,text:`Take a look at the section JB Sports put together for our family.${TRACK&&TRACK.role?` The code is ${String(RECRUIT.last).toUpperCase()}.`:''}`,url};
    if(navigator.share){try{await navigator.share(data);return}catch(e){if(e&&e.name==='AbortError')return}}
-   try{await navigator.clipboard.writeText(url);b.textContent='Link copied';setTimeout(()=>b.textContent='Send to my family',2200)}catch(e){prompt('Copy this link',url)}});
+   try{await navigator.clipboard.writeText(TRACK&&TRACK.role?`${url}  (code: ${String(RECRUIT.last).toUpperCase()})`:url);b.textContent='Link copied';setTimeout(()=>b.textContent='Send to my family',2200)}catch(e){prompt('Copy this link',url)}});
  const pl=$('#parentsLede');if(pl)pl.textContent=`${RECRUIT.first} shared this so you could see it too. `+pl.textContent;}
 /* Share: recruits forward this to parents, coaches, whoever. Native share sheet on phones, copy-link fallback.
    Shared copies carry ?v=s so the alert says it came from a forwarded link. */

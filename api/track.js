@@ -3,6 +3,7 @@
 // Only accepts events that carry a valid slug + token, so random hits do nothing.
 const { check } = require('../lib/recruits');
 const { sendAlert } = require('../lib/alerts');
+const gate = require('../lib/gate');
 
 function readBody(req) {
   return new Promise((resolve) => {
@@ -20,6 +21,10 @@ module.exports = async (req, res) => {
   const result = check(b.slug, b.k);
   if (!result.ok) return res.status(204).end();   // silently ignore
   const r = result.recruit;
+  // Gate role from the signed cookie: admin opens never alert; family opens say so.
+  let role = null;
+  if (gate.enabled(r)) { role = gate.roleFromReq(req, r); if (!role || role === 'admin') return res.status(204).end(); }
+  if (role === 'family') b.via = 'parents';
   const who = `${r.first} ${r.last}`;
   const tab = b.view === 'parents' ? (r.familyLabel || 'parents tab') : `${r.first}'s tab`;
   const device = /iPhone|iPad/.test(b.ua || '') ? 'iPhone' : /Android/.test(b.ua || '') ? 'Android' : 'desktop';

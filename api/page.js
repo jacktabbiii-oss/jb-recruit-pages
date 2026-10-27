@@ -4,6 +4,8 @@ const fs = require('fs');
 const path = require('path');
 const zlib = require('zlib');
 const { check } = require('../lib/recruits');
+const gate = require('../lib/gate');
+const { sendAlert } = require('../lib/alerts');
 
 let TEMPLATE;
 function template() {
@@ -31,9 +33,33 @@ module.exports = async (req, res) => {
     return res.status(404).end(OFF_PAGE(false));
   }
 
+  // Code gate: the page only renders for a valid player / family / admin cookie.
+  let role = null;
+  if (gate.enabled(result.recruit)) {
+    const rec = result.recruit;
+    if (req.method === 'POST') {
+      const f = await gate.readForm(req);
+      const got = gate.roleFor(rec, f.code);
+      if (!got) {
+        if (gate.norm(f.code) && process.env.ALERTS_ENABLED !== '0') {
+          try { await sendAlert({ to: rec.alertTo, subject: `Wrong code on ${rec.first} ${rec.last}'s page`, text: `Someone opened ${rec.first} ${rec.last}'s link and entered "${String(f.code).slice(0, 40)}", which isn't one of the codes. The link may have been passed on.` }); } catch (e) {}
+        }
+        return res.status(401).end(gate.gatePage(rec, { wrong: true }));
+      }
+      res.setHeader('Set-Cookie', gate.cookieFor(rec, got));
+      let back = typeof f.back === 'string' && /^[?#][\w=&#.-]*$/.test(f.back) ? f.back : '';
+      if (got === 'family' && !rec.intro && !/#parents/.test(back)) back = '?v=p#parents';
+      res.setHeader('Location', `/r/${slug}/${token}${back}`);
+      return res.status(303).end();
+    }
+    role = gate.roleFromReq(req, rec);
+    if (!role) return res.status(200).end(gate.gatePage(rec));
+  }
+
   const r = { ...result.recruit };
   delete r.token;                      // never ship the token inside the HTML
-  const track = { enabled: process.env.ALERTS_ENABLED !== '0', slug, token };
+  delete r.gateCodes;
+  const track = { enabled: process.env.ALERTS_ENABLED !== '0' && role !== 'admin', slug, token, role };
 
   // JSON into a <script>: escape </script> and U+2028/2029
   const js = (o) => JSON.stringify(o).replace(/</g, '\\u003c').replace(/[\u2028\u2029]/g, (c) => '\\u' + c.charCodeAt(0).toString(16));

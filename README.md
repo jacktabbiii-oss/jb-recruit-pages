@@ -32,6 +32,9 @@ No cookies, no analytics vendors, nothing shared with third parties.
 - `college` — freshly in college. "The plan" sliders, three-year timeline, NIL/brand. Transfer is never the frame; it appears once, in the parents' Q&A, as a protocol if needed. Start from `college-example.json`.
 - `hs` — high school. "The decision" sliders, recruiting timeline (camps, offers, visits, signing), parents-heavy. Start from `hs-example.json`. HS NIL rules vary by state; Ryan confirms before any send.
 
+## The code gate
+Every page asks for a code before anything loads. The player's code is his first name (or full name), the family's is the last name (it lands them on the family tab), and Jack's is the private `ADMIN_CODE` in Vercel. Admin opens send no alerts; a wrong code sends one. Codes ignore case and spaces. The browser remembers a correct code for 60 days. Env: `GATE_SECRET` (signs the cookie; the gate is off when it's unset) and `ADMIN_CODE`. Per page: `"gate": false` turns it off, `"gateCodes": {"player": [...], "family": [...]}` adds alternates (a nickname, a different last name for a parent). "Send to my family" includes the family code in its message.
+
 ## The intro (`"intro": true`)
 Every page can start as an intro: the first look before a meeting, same link, same tracking. It shows the room, the record, who we are, the people and the client quotes. No video slot, no film section, no numbers, no calculator or sliders, no timeline, no comp, no family tab, no ask; the close says the plan is a conversation. After the meeting, remove `"intro"` (or set it `false`) and the full page in its mode shows at the same link. `"introAsk": {"h","lede"}` overrides the closing lines. See `intro-example.json`.
 
