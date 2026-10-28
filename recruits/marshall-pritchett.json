@@ -674,5 +674,22 @@
       ]
     ],
     "foot": "LaPorta was a Pro Bowler in year one. The two years between now and your draft are where that gets built, and that's what this page is about."
-  }
+  },
+  "people": [
+    {
+      "key": "P_Yd_UNFl3zE",
+      "name": "Marshall",
+      "role": "player"
+    },
+    {
+      "key": "vW4PW91KCINz",
+      "name": "Mom",
+      "role": "family"
+    },
+    {
+      "key": "HdYLKmXac6nS",
+      "name": "Dad",
+      "role": "family"
+    }
+  ]
 }

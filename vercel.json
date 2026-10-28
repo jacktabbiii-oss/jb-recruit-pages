@@ -1,5 +1,6 @@
 {
   "rewrites": [
+    { "source": "/r/:slug/:token/:key", "destination": "/api/page?slug=:slug&token=:token&key=:key" },
     { "source": "/r/:slug/:token", "destination": "/api/page?slug=:slug&token=:token" },
     { "source": "/r/:slug", "destination": "/api/page?slug=:slug" }
   ],

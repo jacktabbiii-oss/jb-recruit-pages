@@ -540,5 +540,22 @@
     "Riley Nowakowski"
   ],
   "status": "undecided",
-  "portalClose": "2027-01-16"
+  "portalClose": "2027-01-16",
+  "people": [
+    {
+      "key": "16q1bsRkF5ts",
+      "name": "Amareon",
+      "role": "player"
+    },
+    {
+      "key": "BMn9-C9N_ubT",
+      "name": "Mom",
+      "role": "family"
+    },
+    {
+      "key": "QxmEL763eAF0",
+      "name": "Dad",
+      "role": "family"
+    }
+  ]
 }

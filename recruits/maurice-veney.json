@@ -495,5 +495,22 @@
     "road"
   ],
   "filmSoon": "Where you stand today",
-  "fieldLede": "The numbers through this week, from the official stats."
+  "fieldLede": "The numbers through this week, from the official stats.",
+  "people": [
+    {
+      "key": "XD2xnpIPa-_h",
+      "name": "Maurice",
+      "role": "player"
+    },
+    {
+      "key": "A4ywvy-Xur5O",
+      "name": "Mom",
+      "role": "family"
+    },
+    {
+      "key": "Hzuc_8ufbfDX",
+      "name": "Dad",
+      "role": "family"
+    }
+  ]
 }

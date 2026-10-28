@@ -4,6 +4,7 @@
 const { check } = require('../lib/recruits');
 const { sendAlert } = require('../lib/alerts');
 const gate = require('../lib/gate');
+const people = require('../lib/people');
 
 function readBody(req) {
   return new Promise((resolve) => {
@@ -22,10 +23,15 @@ module.exports = async (req, res) => {
   if (!result.ok) return res.status(204).end();   // silently ignore
   const r = result.recruit;
   // Gate role from the signed cookie: admin opens never alert; family opens say so.
-  let role = null;
-  if (gate.enabled(r)) { role = gate.roleFromReq(req, r); if (!role || role === 'admin') return res.status(204).end(); }
-  if (role === 'family') b.via = 'parents';
-  const who = `${r.first} ${r.last}`;
+  let role = null, person = null;
+  if (gate.enabled(r)) {
+    const w = gate.whoFromReq(req, r);
+    if (!w || w.role === 'admin') return res.status(204).end();
+    role = w.role; person = people.findById(r, w.pid);
+  }
+  if (role === 'family' && !person) b.via = 'parents';
+  const name = `${r.first} ${r.last}`;
+  const who = person ? people.label(r, person) : name;
   const tab = b.view === 'parents' ? (r.familyLabel || 'parents tab') : `${r.first}'s tab`;
   const device = /iPhone|iPad/.test(b.ua || '') ? 'iPhone' : /Android/.test(b.ua || '') ? 'Android' : 'desktop';
   const when = new Date().toLocaleString('en-US', { timeZone: process.env.ALERT_TZ || 'America/New_York', hour: 'numeric', minute: '2-digit', weekday: 'short' });
@@ -36,14 +42,14 @@ module.exports = async (req, res) => {
     if (b.ev === 'share') {
       await sendAlert({
         to: r.alertTo,
-        subject: b.to === 'parents' ? `${who} just sent his page to his family` : `${who} just shared his page`,
+        subject: b.to === 'parents' ? `${who} just sent the page to the family` : `${who} just shared the page`,
         text: b.to === 'parents' ? `${who} tapped "Send to my family" on ${device}, ${when}. You'll get an alert when they open it.` : `${who} tapped Share on ${device}, ${when}. When someone opens the forwarded link you'll get a separate alert marked "shared link".`
       });
     } else if (b.ev === 'open' && shared) {
       await sendAlert({
         to: r.alertTo,
-        subject: fam ? `${who}'s family just opened their section` : `Someone opened ${who}'s page from a shared link (${tab})`,
-        text: `A forwarded copy of ${who}'s page was opened ${when} on ${device}, starting on ${tab}. Likely a parent, coach or someone close to him.`
+        subject: fam ? `${name}'s family just opened their section` : `Someone opened ${name}'s page from a shared link (${tab})`,
+        text: `A forwarded copy of ${name}'s page was opened ${when} on ${device}, starting on ${tab}. Likely a parent, coach or someone close to him.`
       });
     } else if (b.ev === 'open') {
       await sendAlert({

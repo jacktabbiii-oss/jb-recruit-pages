@@ -525,5 +525,22 @@
       "#roadH + .lede",
       "No promises on this page, just the map: what happens at each stop, and what an agent handles there."
     ]
+  ],
+  "people": [
+    {
+      "key": "_sG-IKRVzJmf",
+      "name": "Cole",
+      "role": "player"
+    },
+    {
+      "key": "UF3Ifo1yfN84",
+      "name": "Mom",
+      "role": "family"
+    },
+    {
+      "key": "uJGj3U7hYNhT",
+      "name": "Dad",
+      "role": "family"
+    }
   ]
 }

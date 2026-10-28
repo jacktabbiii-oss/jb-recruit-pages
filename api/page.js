@@ -5,6 +5,7 @@ const path = require('path');
 const zlib = require('zlib');
 const { check } = require('../lib/recruits');
 const gate = require('../lib/gate');
+const people = require('../lib/people');
 const { sendAlert } = require('../lib/alerts');
 
 let TEMPLATE;
@@ -33,32 +34,57 @@ module.exports = async (req, res) => {
     return res.status(404).end(OFF_PAGE(false));
   }
 
-  // Code gate: the page only renders for a valid player / family / admin cookie.
-  let role = null;
+  // Gate: the page only renders for a valid player / family / admin cookie.
+  // Ways in: the person's own link (/r/<slug>/<token>/<key>), or a code on the shared link.
+  let who = null;
   if (gate.enabled(result.recruit)) {
     const rec = result.recruit;
+    const alertsOn = process.env.ALERTS_ENABLED !== '0';
+    const base = `/r/${slug}/${token}`;
+    const person = people.findPerson(rec, req.query.key);
     if (req.method === 'POST') {
       const f = await gate.readForm(req);
       const got = gate.roleFor(rec, f.code);
+      const fwd = people.findPerson(rec, f.key);
       if (!got) {
-        if (gate.norm(f.code) && process.env.ALERTS_ENABLED !== '0') {
-          try { await sendAlert({ to: rec.alertTo, subject: `Wrong code on ${rec.first} ${rec.last}'s page`, text: `Someone opened ${rec.first} ${rec.last}'s link and entered "${String(f.code).slice(0, 40)}", which isn't one of the codes. The link may have been passed on.` }); } catch (e) {}
+        if (gate.norm(f.code) && alertsOn) {
+          try { await sendAlert({ to: rec.alertTo, subject: `Wrong code on ${rec.first} ${rec.last}'s page`, text: `Someone ${fwd ? `opened ${people.label(rec, fwd)}'s link on a new phone and` : `opened ${rec.first} ${rec.last}'s link and`} entered "${String(f.code).slice(0, 40)}", which isn't one of the codes. The link may have been passed on.` }); } catch (e) {}
         }
-        return res.status(401).end(gate.gatePage(rec, { wrong: true }));
+        return res.status(401).end(gate.gatePage(rec, { wrong: true, forwarded: !!fwd }).replace('<input type="hidden" name="back" id="back">', `<input type="hidden" name="back" id="back">${fwd ? `<input type="hidden" name="key" value="${fwd.key}">` : ''}`));
+      }
+      if (fwd && got !== 'admin' && alertsOn) {
+        try { await sendAlert({ to: rec.alertTo, subject: `${people.label(rec, fwd)}'s link opened on a second phone`, text: `${people.label(rec, fwd)}'s link for ${rec.first} ${rec.last} was opened on a phone it wasn't first opened on. They got in with the ${got} code, so alerts from that phone will say "${got}".` }); } catch (e) {}
       }
       res.setHeader('Set-Cookie', gate.cookieFor(rec, got));
       let back = typeof f.back === 'string' && /^[?#][\w=&#.-]*$/.test(f.back) ? f.back : '';
       if (got === 'family' && !rec.intro && !/#parents/.test(back)) back = '?v=p#parents';
-      res.setHeader('Location', `/r/${slug}/${token}${back}`);
+      res.setHeader('Location', `${base}${back}`);
       return res.status(303).end();
     }
-    role = gate.roleFromReq(req, rec);
-    if (!role) return res.status(200).end(gate.gatePage(rec));
+    if (person) {
+      const dev = gate.deviceId(req);
+      const c = await people.claim(rec, person, dev.id);
+      if (!c.ok) {
+        if (alertsOn && !gate.whoFromReq(req, rec)) {
+          try { await sendAlert({ to: rec.alertTo, subject: `${people.label(rec, person)}'s link was forwarded`, text: `${people.label(rec, person)}'s personal link for ${rec.first} ${rec.last} was just opened on a different phone than the one that first opened it. They were asked for a code.` }); } catch (e) {}
+        }
+        if (dev.isNew) res.setHeader('Set-Cookie', gate.deviceCookie(dev.id));
+        return res.status(200).end(gate.gatePage(rec, { forwarded: true }).replace('<input type="hidden" name="back" id="back">', `<input type="hidden" name="back" id="back"><input type="hidden" name="key" value="${person.key}">`));
+      }
+      res.setHeader('Set-Cookie', [gate.cookieFor(rec, person.role, person.role === 'admin' ? '' : person.key), gate.deviceCookie(dev.id)]);
+      const back = person.role === 'family' && !rec.intro ? '?v=p#parents' : '';
+      res.setHeader('Location', `${base}${back}`);
+      return res.status(303).end();
+    }
+    who = gate.whoFromReq(req, rec);
+    if (!who) return res.status(200).end(gate.gatePage(rec));
   }
+  const role = who ? who.role : null;
 
   const r = { ...result.recruit };
   delete r.token;                      // never ship the token inside the HTML
   delete r.gateCodes;
+  delete r.people;                     // link keys never ship in the HTML
   const track = { enabled: process.env.ALERTS_ENABLED !== '0' && role !== 'admin', slug, token, role };
 
   // JSON into a <script>: escape </script> and U+2028/2029

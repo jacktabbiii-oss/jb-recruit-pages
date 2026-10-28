@@ -32,6 +32,10 @@ No cookies, no analytics vendors, nothing shared with third parties.
 - `college` — freshly in college. "The plan" sliders, three-year timeline, NIL/brand. The portal is on the page as "only if it's right": we never push a player to leave; NIL negotiation leads. Start from `college-example.json`.
 - `hs` — high school. "The decision" sliders, recruiting timeline (camps, offers, visits, signing), parents-heavy. Start from `hs-example.json`. HS NIL rules vary by state; Ryan confirms before any send.
 
+## Personal links (one per person)
+Each person gets their own link: `/r/<slug>/<token>/<key>`. No code to type, and every alert names who it was ("Jeremiah's mom · 3m 20s on the page"). `npm run people -- jeremiah-jones` lists a page's links; `npm run people -- jeremiah-jones Grandma "Coach Lee"` adds people (the player is added automatically, everyone else is family); `--remove Dad` turns one off. People live in the JSON under `"people"`; their keys never ship in the page HTML.
+The first phone that opens a personal link claims it. The same link on another phone shows the code screen, and Jack gets a "link was forwarded" alert. The lock needs a Vercel Blob store connected to the project (`BLOB_READ_WRITE_TOKEN`); without one, personal links still work and still name the person, they just aren't locked to a phone. The shared link plus codes keeps working as the fallback.
+
 ## The code gate
 Every page asks for a code before anything loads. The player's code is his first name (or full name), the family's is the last name (it lands them on the family tab), and Jack's is the private `ADMIN_CODE` in Vercel. Admin opens send no alerts; a wrong code sends one. Codes ignore case and spaces. The browser remembers a correct code for 60 days. Env: `GATE_SECRET` (signs the cookie; the gate is off when it's unset) and `ADMIN_CODE`. Per page: `"gate": false` turns it off, `"gateCodes": {"player": [...], "family": [...]}` adds alternates (a nickname, a different last name for a parent). "Send to my family" includes the family code in its message.
 

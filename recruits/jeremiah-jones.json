@@ -533,5 +533,22 @@
     "Riley Nowakowski"
   ],
   "status": "committed",
-  "commitSchool": "Indiana"
+  "commitSchool": "Indiana",
+  "people": [
+    {
+      "key": "vRonEwqGms1S",
+      "name": "Jeremiah",
+      "role": "player"
+    },
+    {
+      "key": "GqZj-ZlKAZQy",
+      "name": "Mom",
+      "role": "family"
+    },
+    {
+      "key": "B2k9j5gDBV4m",
+      "name": "Dad",
+      "role": "family"
+    }
+  ]
 }

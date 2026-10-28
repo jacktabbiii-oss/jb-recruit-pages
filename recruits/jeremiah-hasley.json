@@ -498,5 +498,22 @@
   ],
   "numbersSrc": "Through Oct. 23 · Duke Athletics",
   "filmSoon": "Where you stand today",
-  "fieldLede": "Film cut by Jack is on the way. Until then, the numbers."
+  "fieldLede": "Film cut by Jack is on the way. Until then, the numbers.",
+  "people": [
+    {
+      "key": "pJb5BTcAg3Zo",
+      "name": "Jeremiah",
+      "role": "player"
+    },
+    {
+      "key": "ErHAuW6VAoc-",
+      "name": "Mom",
+      "role": "family"
+    },
+    {
+      "key": "ZCjz3pWpWwBe",
+      "name": "Dad",
+      "role": "family"
+    }
+  ]
 }

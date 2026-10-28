@@ -460,5 +460,22 @@
   "introKeep": [
     "field",
     "road"
+  ],
+  "people": [
+    {
+      "key": "EkSP54k1dNUn",
+      "name": "Zach",
+      "role": "player"
+    },
+    {
+      "key": "56ukAtC6NmnW",
+      "name": "Mom",
+      "role": "family"
+    },
+    {
+      "key": "_accvDRDAGC-",
+      "name": "Dad",
+      "role": "family"
+    }
   ]
 }
