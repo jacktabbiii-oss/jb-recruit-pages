@@ -207,6 +207,10 @@
     "eyebrow": "The money now",
     "cards": [
       [
+        "We negotiate your NIL",
+        "Revenue share with your school, outside NIL deals, local and national partners: we negotiate every one, and Ryan reads every line. You never have to negotiate with your own coaches."
+      ],
+      [
         "Revenue share",
         "Schools can pay players directly, up to $21.58 million per school in 2026-27. How a school splits it is up to the school, and the terms vary a lot."
       ],
@@ -221,6 +225,10 @@
       [
         "Your eligibility clock",
         "The NCAA's new age-based model (five years, no redshirts) applies to players who first enroll in fall 2027. You enrolled before that, so you get whichever rules are better for you: the old clock with a redshirt year, or the new five. Adopted June 23, 2026."
+      ],
+      [
+        "The portal, only if it's right",
+        "We will never push you into the portal. Most of the time the right move is getting paid right where you are. If a move is right for your career and your fit, we're ready on day one: one window, Jan. 2–16, 2027, plus a separate window if a head coach changes."
       ],
       [
         "Local and national deals",
@@ -278,6 +286,11 @@
       "Every agreement read by Ryan. Nothing exclusive you didn't mean to sign. Structured to clear NIL Go."
     ],
     [
+      "The portal",
+      "Only if it's the right move for your career and fit. If it is, we map your market before the window opens and compare every offer on fit first, then the money. We will never push you to leave.",
+      "Only if it's the right move. We never push you to leave."
+    ],
+    [
       "Compliance",
       "Disclosures, school paperwork, eligibility. Done right, filed on time."
     ],
@@ -319,6 +332,10 @@
       "a": "Yes. Since April 2026, NCAA rules let college athletes hire agents for their deals, with a representative at the table for revenue-share talks with the school. Outside NIL deals of $600 or more are reviewed by the College Sports Commission. Everything we do is in writing and inside the rules."
     },
     {
+      "q": "Will you push him to transfer?",
+      "a": "No. Our job is the right career move, and most of the time that's staying and getting paid what he's worth where he is. If a move is truly better for his development and fit, we handle the portal start to finish, but that's his call and yours, never ours."
+    },
+    {
       "q": "What does it cost?",
       "a": "Nothing up front. The fee is written into the agreement before anything is signed, and we walk you through it in person."
     },
@@ -332,7 +349,8 @@
     }
   ],
   "included": [
-    "Revenue-share negotiation with the school",
+    "NIL and revenue-share negotiation",
+    "Transfer portal guidance, only when it's the right move",
     "NIL deal sourcing and review",
     "NIL Go submissions",
     "Eligibility and compliance",

@@ -29,7 +29,7 @@ No cookies, no analytics vendors, nothing shared with third parties.
 
 ## Three versions, one template (`"mode"` in the JSON)
 - `draft` — about to leave college, no agent yet (Eli). Draft-slot calculator, Combine/Draft timeline. Start from `eli-finley.json`.
-- `college` — freshly in college. "The plan" sliders, three-year timeline, NIL/brand. Transfer is never the frame; it appears once, in the parents' Q&A, as a protocol if needed. Start from `college-example.json`.
+- `college` — freshly in college. "The plan" sliders, three-year timeline, NIL/brand. The portal is on the page as "only if it's right": we never push a player to leave; NIL negotiation leads. Start from `college-example.json`.
 - `hs` — high school. "The decision" sliders, recruiting timeline (camps, offers, visits, signing), parents-heavy. Start from `hs-example.json`. HS NIL rules vary by state; Ryan confirms before any send.
 
 ## The code gate
