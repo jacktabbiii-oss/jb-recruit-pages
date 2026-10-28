@@ -370,17 +370,27 @@ body[data-pagemode="draft"] section[data-mode~="draft"],body[data-pagemode="coll
 @media (max-width:380px){.who{grid-template-columns:1fr}.who .ph-frame.tall{aspect-ratio:4/3}}
 /* the record: three deals that set a market, four careers that lasted (same facts on every page, any position) */
 .record{margin-top:18px}
-.record .hdr{display:block;font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin:16px 0 8px}
+.record .hdr{display:block;font-family:var(--mono);font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin:22px 0 10px}
 .record .hdr:first-child{margin-top:0}
 .record .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
 .record .grid.four{grid-template-columns:repeat(2,1fr)}
-.record .grid>div{background:var(--panel);padding:14px 12px;min-width:0;display:flex;gap:10px;align-items:flex-start}
-.record .grid img{width:44px;height:44px;border-radius:50%;object-fit:cover;object-position:top;flex:0 0 44px;border:1px solid var(--line)}
-.record .nm{font-family:var(--display);font-size:1.15rem;font-weight:800;text-transform:uppercase;letter-spacing:.02em;line-height:1.05}
-.record .tm{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:3px}
-.record .v{font-family:var(--display);font-size:1.9rem;font-weight:900;line-height:1;color:var(--blue);margin-top:8px}
-.record .k{font-size:.84rem;color:var(--muted);line-height:1.35;margin-top:5px}
-@media (max-width:640px){.record .grid{grid-template-columns:1fr}.record .grid.four{grid-template-columns:1fr}}
+.record .grid>div{background:var(--panel);min-width:0}
+/* the ceiling: photo panel on top, the number big */
+.record .top>div{display:flex;flex-direction:column}
+.record .top .ph{height:190px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;background:radial-gradient(70% 90% at 50% 100%,rgba(43,155,255,.28),transparent 70%)}
+.record .top .ph img{height:100%;width:auto;max-width:100%;object-fit:contain;object-position:bottom;filter:drop-shadow(0 10px 14px rgba(0,0,0,.55))}
+.record .top .bd{padding:14px 18px 18px;border-top:1px solid var(--line)}
+.record .top .v{font-size:2.8rem}
+.record .top .k{font-size:.92rem}
+/* the long haul: real faces, readable copy */
+.record .four>div{display:flex;gap:14px;align-items:flex-start;padding:16px 18px}
+.record .four img{width:64px;height:64px;flex:0 0 64px;border-radius:50%;object-fit:cover;object-position:50% 8%;background:radial-gradient(circle at 50% 70%,rgba(43,155,255,.3),var(--panel) 70%);border:1px solid var(--line)}
+.record .nm{font-family:var(--display);font-size:1.35rem;font-weight:800;text-transform:uppercase;letter-spacing:.02em;line-height:1.05}
+.record .tm{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.record .v{font-family:var(--display);font-weight:900;line-height:1;color:var(--blue);margin-top:10px}
+.record .k{font-size:.92rem;color:var(--muted);line-height:1.45;margin-top:6px}
+@media (min-width:900px){section#record>.record{grid-column:1/-1;margin-top:26px}section#record>h2{position:static}}
+@media (max-width:820px){.record .grid{grid-template-columns:1fr}.record .grid.four{grid-template-columns:1fr}.record .top>div{flex-direction:row}.record .top .ph{height:auto;width:120px;flex:0 0 120px;min-height:150px;align-items:center}.record .top .ph img{height:auto;width:100%;max-height:170px}.record .top .bd{border-top:0;border-left:1px solid var(--line)}.record .top .v{font-size:2.3rem}}
 body[data-intro] .switch #tabParents,body[data-intro] [data-aud="parents"],body[data-intro] .handoff{display:none}
 section[hidden]{display:none!important}
 .person h3{margin-bottom:2px}
@@ -716,7 +726,7 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
     <p class="lede muted" id="recordLede">Three that set a market, four that lasted. The position doesn't decide which one you are; the work does, and the same two people do it at every position.</p>
     <div class="record">
       <span class="hdr">The ceiling</span>
-      <div class="grid" id="recordTop"></div>
+      <div class="grid top" id="recordTop"></div>
       <span class="hdr">The long haul</span>
       <div class="grid four" id="recordLong"></div>
     </div>
@@ -958,7 +968,7 @@ if(RECRUIT.proofFirst!==false){const pr=$('#proof'),ath=document.querySelector('
    ['Connor Colby','OL · 49ers','/clients/card/colby.webp','Pick 249 of 257 in 2025. A seventh-round pick still gets a four-year deal and a bonus. The first contract is the floor.']]};
  const sec=$('#record');if(RECORD===false||!sec){if(sec)sec.remove()}else{
   if(RECORD.h)$('#recordH').innerHTML=RECORD.h;if(RECORD.lede)$('#recordLede').textContent=RECORD.lede;
-  $('#recordTop').innerHTML=RECORD.top.map(r=>`<div><img src="${r[2]}" alt="" loading="lazy"><div><div class="nm">${r[0]}</div><div class="tm">${r[1]}</div><div class="v">${r[3]}</div><div class="k">${r[4]}</div></div></div>`).join('');
+  $('#recordTop').innerHTML=RECORD.top.map(r=>`<div><div class="ph"><img src="${r[2]}" alt="${r[0]}" loading="lazy"></div><div class="bd"><div class="nm">${r[0]}</div><div class="tm">${r[1]}</div><div class="v">${r[3]}</div><div class="k">${r[4]}</div></div></div>`).join('');
   $('#recordLong').innerHTML=RECORD.long.map(r=>`<div><img src="${r[2]}" alt="" loading="lazy"><div><div class="nm">${r[0]}</div><div class="tm">${r[1]}</div><div class="k">${r[3]}</div></div></div>`).join('');
   const pr=$('#proof');if(pr)pr.after(sec)}}
 /* non-TE recruits: their own position group leads the wall */
