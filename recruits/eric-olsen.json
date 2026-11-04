@@ -18,39 +18,32 @@
   "draftClass": 2027,
   "photos": [
     {
-      "src": null,
+      "src": "/recruits/eric-olsen/g-arms.webp",
       "cap": "",
       "sub": "",
       "wm": "",
-      "focus": "50% 30%"
+      "focus": "55% 30%"
     },
     {
-      "src": null,
+      "src": "/recruits/eric-olsen/g-route.webp",
+      "cap": "",
+      "sub": "",
+      "wm": "",
+      "focus": "55% 30%"
+    },
+    {
+      "src": "/recruits/eric-olsen/g-td.webp",
+      "cap": "",
+      "sub": "",
+      "wm": "",
+      "focus": "55% 25%"
+    },
+    {
+      "src": "/recruits/eric-olsen/g-run.webp",
       "cap": "",
       "sub": "",
       "wm": "",
       "focus": "50% 25%"
-    },
-    {
-      "src": null,
-      "cap": "",
-      "sub": "",
-      "wm": "",
-      "focus": "50% 30%"
-    },
-    {
-      "src": null,
-      "cap": "",
-      "sub": "",
-      "wm": "",
-      "focus": "45% 35%"
-    },
-    {
-      "src": null,
-      "cap": "",
-      "sub": "",
-      "wm": "",
-      "focus": "40% 35%"
     }
   ],
   "plays": [],
@@ -455,9 +448,9 @@
       "/clients/card/ferguson.webp",
       "/clients/card/helm.webp"
     ],
-    "text": "<b>The JB tight end room.</b> Kittle: highest-paid TE in 2020 and again at 31. Kraft: up to $92M, the most ever for a TE. LaPorta and Ferguson: Pro Bowlers. Helm: Titans rookie TE record."
+    "text": "<b>You shared the Utah Tech tight end room with Eni Falayi.</b> He's a JB client, and so are Kittle, Kraft, LaPorta, Ferguson and Helm."
   },
-  "shareImage": null,
+  "shareImage": "/recruits/eric-olsen/share-1.jpg",
   "intro": true,
   "filmSoon": "Where you stand today",
   "fieldLede": "The numbers through this week, from the official stats.",
