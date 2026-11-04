@@ -445,7 +445,37 @@
   },
   "heroStyle": "bleed",
   "honors": [],
-  "comp": null,
+  "comp": {
+    "eyebrow": "Who we see",
+    "h": "We see Gunnar Helm",
+    "lede": "Same frame, same job: a 6-5 tight end who catches it and keeps going. Helm went in Round 4, set the Titans' rookie tight end record, and did it with us.",
+    "me": "/recruits/eric-olsen/comp-cut.webp",
+    "them": "/clients/card/helm.webp",
+    "themName": "Gunnar Helm",
+    "rows": [
+      [
+        "School",
+        "Oregon State · Pac-12",
+        "Texas · SEC"
+      ],
+      [
+        "Size",
+        "6-5 · 240",
+        "6-5 · 241 at the Combine"
+      ],
+      [
+        "Path",
+        "Utah Tech, then Oregon State",
+        "Rd 4 · Pick 120 · 2025"
+      ],
+      [
+        "Production",
+        "37 rec · 424 yds · 4 TD through 8 games",
+        "44 rec as a rookie, a Titans TE record"
+      ]
+    ],
+    "foot": "Helm is your size almost to the pound, and he caught 44 passes as a rookie. The same people who mapped his road would map yours."
+  },
   "room": null,
   "proofLine": {
     "faces": [
