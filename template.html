@@ -865,7 +865,7 @@ section>.eyebrow::before{content:"";display:inline-block;width:18px;height:2px;b
   <div class="contact" id="contact">
     <div class="line"><span><span class="k" id="contactName">Jack · text or call</span><br><span id="phone">(732) 675-0705</span></span><button type="button" data-copy="phone">Copy</button></div>
     <div class="line"><span><span class="k">Email</span><br><span id="email">jacktabb@nfladvisor.com</span></span><button type="button" data-copy="email">Copy</button></div>
-    <img src="/jb-logo.png" alt="JB Sports Inc" width="150" height="26" style="margin-top:6px"><div class="tagline"><span>Powerful ·</span> <span>Personal ·</span> <span>Professional</span></div><div class="foot">This page was made for <span id="footName"></span> and his family. Contract figures are approximate and based on the 2026 rookie scale; 2027 values are set by the league after the cap is announced. Past results are at the time of each contract and are not a guarantee of future outcomes.</div>
+    <img src="/jb-logo.png" alt="JB Sports Inc" width="150" height="26" style="margin-top:6px"><div class="tagline"><span>Powerful ·</span> <span>Personal ·</span> <span>Professional</span></div><div class="foot">This page was made for <span id="footName"></span> and his family. <span id="footCalc">Contract figures are approximate and based on the 2026 rookie scale; 2027 values are set by the league after the cap is announced. </span>Past results are at the time of each contract and are not a guarantee of future outcomes.</div>
   </div>
 
   <div class="cta">
@@ -1155,7 +1155,7 @@ const CTA=RECRUIT.cta||{label:"Set up a meeting",sms:`Hey ${C.name}, it's ${RECR
    try{await navigator.clipboard.writeText(url);btn.textContent='Link copied';setTimeout(()=>btn.textContent='Share this page',2200)}catch(e){prompt('Copy this link',url)}});}
 /* Jack's coaching résumé: name the players he coached only when they match this recruit's position */
 {const C={WR:', where his players included receivers Jayden Reed, Keon Coleman, Jalen Nailor and Germie Bernard'};const el=$('#coachedWho');if(el)el.textContent=RECRUIT.coachedWho!=null?RECRUIT.coachedWho:(C[RECRUIT.positionGroup]||'')}
-$('#footName').textContent=`${RECRUIT.first} ${RECRUIT.last}`;$('#contactName').textContent=`${C.name} · text or call`; $('#phone').textContent=C.phone; $('#email').textContent=C.email;
+$('#footName').textContent=`${RECRUIT.first} ${RECRUIT.last}`;{const fc=$('#footCalc');if(fc&&(RECRUIT.mode!=='draft'||RECRUIT.intro))fc.remove()}{const tl=$('#trainLede');const dc=String(RECRUIT.draftClass||'').match(/20\d\d/);if(tl&&/in the 2027 class/.test(tl.textContent))tl.textContent=tl.textContent.replace('best-prepared TE in the 2027 class',dc?`best-prepared TE in the ${dc[0]} class`:'best-prepared TE in your class')}$('#contactName').textContent=`${C.name} · text or call`; $('#phone').textContent=C.phone; $('#email').textContent=C.email;
 
 /* ============ TRACKING ============
    One "open" alert per session, one summary when they leave. No cookies, no third parties. */
